@@ -1,0 +1,15 @@
+{
+  "content_type": "application/pdf",
+  "elapsed_seconds": 0.009343099998659454,
+  "ended_utc": "2026-10-09T18:48:35.109084+00:00",
+  "http_status": 200,
+  "id": "FAIL",
+  "pages": 1,
+  "pages_sha256": "8d93e078a76fd93a90c59925b06ba2719c443950faa334a90956f1e3023ea92c",
+  "pdf_sha256": "ee8bd27e89d63e7565a34a5bffa74e8fb8304236b9c62ae7266ea85177da2241",
+  "resolved_url": "https://review.invalid/fail",
+  "started_utc": "2026-10-09T18:48:35.099740+00:00",
+  "status": "retrieved_and_extracted",
+  "text_sha256": "d5df3556fd6cacb13b6c5e1531c2e8d78fb6f927e73cf40eed7b552f4b5ab52c",
+  "url": "https://review.invalid/fail"
+}

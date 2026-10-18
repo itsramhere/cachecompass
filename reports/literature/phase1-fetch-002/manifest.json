@@ -1,0 +1,62 @@
+{
+  "boundary": "Extraction is not proof of manual relevant-section reading.",
+  "captured_utc": "2026-10-09T17:35:52.873708+00:00",
+  "config_sha256": "e148067b690db115b049c8e7ba7f0e61a06394698d55a0b085341226ef8623d3",
+  "retry_of": null,
+  "sources": [
+    {
+      "content_type": "application/pdf",
+      "elapsed_seconds": 19.078999999997905,
+      "ended_utc": "2026-10-09T17:35:40.455925+00:00",
+      "http_status": 200,
+      "id": "R10",
+      "landing_url": "https://www.vldb.org/cidrdb/2025/linear-elastic-caching-via-ski-rental.html",
+      "pages": 8,
+      "pages_sha256": "c82196711222b6cd884cb9663c8b194c33878c54c1f332953988a8b6c46221de",
+      "pdf_sha256": "f4a0c8a775f0c4a303f3774190c7b8a937a5839157a9dfd03d0d8c9eb75701ae",
+      "required": false,
+      "resolved_url": "https://vldb.org/cidrdb/papers/2025/p22-kumar.pdf",
+      "started_utc": "2026-10-09T17:35:21.382343+00:00",
+      "status": "retrieved_and_extracted",
+      "text_sha256": "45a7d69c984736fd09ccc29699784f490d8971bfe8a25163c6789694e586bc9f",
+      "title": "Linear Elastic Caching via Ski Rental",
+      "url": "https://vldb.org/cidrdb/papers/2025/p22-kumar.pdf"
+    },
+    {
+      "content_type": "application/pdf",
+      "elapsed_seconds": 1.6569999999992433,
+      "ended_utc": "2026-10-09T17:35:23.040403+00:00",
+      "http_status": 200,
+      "id": "R11",
+      "landing_url": "https://www.usenix.org/conference/hotcloud12/workshop-program/presentation/Zhu",
+      "pages": 5,
+      "pages_sha256": "02ac0700517e9bbae9572c59cd16fc89c6405f6660d65e4341a5b1ea2f5da235",
+      "pdf_sha256": "25861687723a567bfc5532c098aa68080f598dcf08a2b3b92dea31b5d17956c9",
+      "required": false,
+      "resolved_url": "https://www.usenix.org/system/files/conference/hotcloud12/hotcloud12-final73.pdf",
+      "started_utc": "2026-10-09T17:35:21.382343+00:00",
+      "status": "retrieved_and_extracted",
+      "text_sha256": "7c406618221bc31e834b1f326d717aa766fca4381cd65d96aae60cf82a5d2495",
+      "title": "Saving Cash by Using Less Cache",
+      "url": "https://www.usenix.org/system/files/conference/hotcloud12/hotcloud12-final73.pdf"
+    },
+    {
+      "content_type": "application/pdf",
+      "elapsed_seconds": 31.485000000000582,
+      "ended_utc": "2026-10-09T17:35:52.868697+00:00",
+      "http_status": 200,
+      "id": "R12",
+      "landing_url": "https://icpe2026.spec.org/preprint/Holpaca_Holistic_and_Adaptable_Cache_Management_for_Shared.pdf",
+      "pages": 13,
+      "pages_sha256": "0967a63c9f5293fced8de2181e6a073ae51a25977d3a626771f0fb88410c37a8",
+      "pdf_sha256": "d3f739c8095c824255d92b3b01fe770db231583294229297f6cc1fbbff9fb9b9",
+      "required": false,
+      "resolved_url": "https://icpe2026.spec.org/preprint/Holpaca_Holistic_and_Adaptable_Cache_Management_for_Shared.pdf",
+      "started_utc": "2026-10-09T17:35:21.383884+00:00",
+      "status": "retrieved_and_extracted",
+      "text_sha256": "aae36be6a0bf4de8a80711beda14787d17fd81f3f059c801106d06d94ab23d3c",
+      "title": "Holpaca: Holistic and Adaptable Cache Management for Shared Environments",
+      "url": "https://icpe2026.spec.org/preprint/Holpaca_Holistic_and_Adaptable_Cache_Management_for_Shared.pdf"
+    }
+  ]
+}

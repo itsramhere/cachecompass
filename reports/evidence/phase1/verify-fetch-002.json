@@ -1,0 +1,18 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "scripts/literature_sources.py",
+    "verify",
+    "--config",
+    "configs/literature_followups.json",
+    "--output",
+    "reports/literature/phase1-fetch-002"
+  ],
+  "elapsed_seconds": 0.35899999999674037,
+  "ended_utc": "2026-10-09T17:45:53.573217+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-09T17:45:53.216439+00:00",
+  "stderr": "",
+  "stdout": "{\"passed\": true, \"checks\": 18, \"verification\": \"reports\\\\literature\\\\phase1-fetch-002\\\\verification.json\"}"
+}

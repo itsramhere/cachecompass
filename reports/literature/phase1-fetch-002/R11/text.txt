@@ -1,0 +1,455 @@
+=== PDF PAGE 1 ===
+Saving Cash by Using Less Cache
+Timothy Zhu, Anshul Gandhi, Mor Harchol-Balter∗
+Carnegie Mellon University
+Michael A. Kozuch
+Intel Labs
+Abstract
+Everyone loves a large caching tier in their multi-
+tier cloud-based web service because it both alleviates
+database load and provides lower request latencies. Even
+when load drops severely, administrators are reluctant to
+scale down their caching tier. This paper makes the case
+that (i) scaling down the caching tier is viable with re-
+spect to performance, and (ii) the savings are potentially
+huge; e.g., a 4x drop in load can result in 90% savings in
+the caching tier size.
+1 Introduction
+With the advent of cloud computing, web service
+providers have the ability to dynamically scale their com-
+puting infrastructures to match demand. Further, be-
+cause cloud resources are often priced per-use, web ser-
+vice providers have a monetary incentive to minimize the
+number of resources consumed while still meeting the
+Service Level Agreements (SLAs) of the service.
+Web services are often composed of multiple tiers; a
+common example is shown in Figure 1. The frontend
+application tier consists of a set of stateless application
+servers that process requests using data from the back-
+end. The backend data tier consists of a persistent storage
+system, such as a database. To alleviate load at the back-
+end, a stateful, but non-persistent, distributed caching tier
+is often used to cache data or partial results.
+Each tier must be treated differently when scaling. The
+application tier is the easiest tier to scale down because it
+is stateless [9, 7]. In contrast, because web services often
+impose stringent data availability requirements, options
+for scaling the data tier are typically limited to adjusting
+the replication factor of the storage system [4, 14].
+Note that the tiers are typically of different sizes, with
+the servers in the application tier often outnumbering
+servers in the caching tier at a ratio somewhere around
+4:1. While this fact might initially suggest that scal-
+ing the caching tier may not lead to signiﬁcant savings,
+note that DRAM is an expensive resource. For exam-
+ple, if we were to instantiate our testbed of 28 servers
+on EC2 [3], our caching tier would represent 37% 1 of
+the operational cost, despite the fact that our caching tier
+only comprises 5 servers. Further, at times of lower uti-
+∗This work is supported by NSF CSR Grant 1116282 and an Intel
+ISTC grant.
+1Assuming application servers cost $0.165/hr/high-cpu instance [3]
+and cache servers cost $0.45/hr/high-memory instance [3].
+Figure 1: Multi-tier cloud service.
+lization, after the application tier has been scaled down,
+an unscaled caching tier becomes a more signiﬁcant frac-
+tion of the service’s operational cost. In the above exam-
+ple, if load were to drop by a factor of 4, and we were
+to scale down our application tier from 20 servers to 5
+servers, our caching tier would then represent 63% 1 of
+the operational cost.
+Scaling down the number of cache instances as the
+load decreases, therefore, could provide cost beneﬁts.
+However, two technical concerns come immediately to
+mind. First, as the caching tier scales down, the amount
+of cached data decreases. Will the cache misses that re-
+sult overwhelm the data tier? Second, how should the
+caching tier be managed so that “hot” data is preserved
+when cache instances are removed and distributed when
+cache instances are added?
+The key insight in answering the ﬁrst question is that
+when the overall load drops, we can afford a higher frac-
+tion of requests going to the data tier; hence, we can
+tolerate a lower cache hit rate, and this lower cache hit
+rate translates to a vast reduction in the amount of data
+cached. To correctly size the caching tier, we work back-
+wards – when the load drops, we determine the mini-
+mum cache hit rate needed to ensure that the response
+time SLA is met (thereby limiting how many requests go
+to the data tier). We then calculate the cache size that
+would provide that hit rate. A key parameter that de-
+termines the degree to which the cache capacity may be
+reduced without overwhelming the data tier is the distri-
+bution of requests. If the requested data items are uni-
+formly distributed, the degree to which cache capacity
+may be reduced is small. However, many studies have
+shown that web requests follow a very skewed distribu-
+tion (often modeled as a Zipf distribution [6, 2]). In such
+cases, we will show that signiﬁcant savings are possible.
+In Figure 2, we see that a relatively small change in the
+required hit rate – from 0.95 to 0.8 – may result in a sub-
+stantial reduction in the cache size needed under a Zipf
+distribution (79% to 34% of the data), but a more limited
+reduction (95% to 80%) if the distribution is Uniform.
+
+=== PDF PAGE 2 ===
+Figure 2: A small decrease in cache hit rate can lead to a
+large decrease in the amount of cached data.
+In answering the second question regarding cache
+management, we ﬁrst rely on consistent hashing tech-
+niques to ensure that excessive data migration is not
+needed as instances are added and removed from the
+caching tier. However, even with consistent hashing,
+na¨ıvely adding or removing a cache instance can cause
+signiﬁcant performance problems, because the hot data
+is distributed over all instances. In Section 4, we pro-
+vide a simple solution that reduces the number of cache
+misses during periods of scaling by redistributing cached
+items.
+Our contributions are:
+•We demonstrate that the caching tier can be ef-
+fectively scaled with load without violating perfor-
+mance goals.
+•We develop a model to calculate (i) the required
+hit rate as a function of load, and (ii) the resulting
+savings in the size of the caching tier from scaling
+down during low load (see Section 3).
+•We validate our theoretical results via implementa-
+tion on a 28-server testbed (see Section 3.4).
+•We propose a simple cache management mecha-
+nism to redistribute cached items as the caching tier
+scales up and down, signiﬁcantly reducing transient
+cache misses.
+2 Experimental setup
+We experiment with a testbed of 28 commodity
+servers, which are divided into multiple tiers as in Fig-
+ure 1. We employ one of these servers as the load
+generator running httperf [11]. Another server is used
+as the load-balancer running Apache
+TM
+HTTP Server,
+which distributes PHP requests from the load generator
+to 20 application servers. The application servers (IntelR⃝
+Xeon R⃝ E5520 processor-based) parse the incoming PHP
+requests and collect the required data from the caching
+tier and the data tier. In our experimental setup, we use a
+Figure 3: The Zipf popularity distribution.
+distributed cache, memcache [10]. The caching tier com-
+prises 20 memcache instances, each with up to 10GB of
+memory for caching, hosted on 5 servers (IntelR⃝ Xeon R⃝
+X5650 processor-based). The data tier comprises a
+server (Intel R⃝ Xeon R⃝ E5520 processor-based) with 5
+disks running an Oracle R⃝ BerkeleyDB [12] database
+with a billion key-value pairs (250GB).
+Each workload (HTTP) request is a PHP script that
+runs on the application server, and consists of 20 inde-
+pendent key-value fetches. The fetched keys follow a
+Zipf [6, 2] distribution. Each of the 20 key-value fetches
+either hits in the memcache, or, if it misses, goes to the
+database. If a key-value fetch hits in the memcache, its
+response time is Tmem = 0.3ms, which is the time to re-
+trieve a key-value pair from memcache. If a key-value
+fetch goes to the database, its response time is on the or-
+der of 8ms, depending on the contention at the database.
+In this paper, our performance goals take the form of re-
+sponse time SLAs: we require that the average response
+time for the entire request (collection of 20 key-value
+fetches), which we refer to as Tavg, should be no more
+than TSLA = 100ms. Thus, we require:
+Tavg ≤TSLA = 100ms. (1)
+3 How much cache can we save?
+In this section, we investigate the potential savings that
+can be achieved by scaling down the caching tier, with-
+out violating the response time SLA. We ﬁrst describe
+our theoretical framework that allows us to estimate these
+savings, and then report our experimental results, which
+validate our estimates.
+3.1 Popularity distribution
+Many websites report that their data popularity distri-
+bution is far from being Uniform or Random, and is often
+very skewed (that is, a small subset of the entire data set
+is responsible for most of the trafﬁc) [13, 6, 2, 8]. Assum-
+ing that we cache the most popular data items for a given
+
+=== PDF PAGE 3 ===
+(a) ppeak = 0.80
+ (b) ppeak = 0.95
+ (c) ppeak = 0.99
+Figure 4: Theoretical savings in cache for a given peak-to-min ratio. Crosses indicate experimental results.
+popularity distribution, we can estimate the amount of
+data to be cached to achieve a given hit rate.
+Researchers often use a Zipf distribution to represent
+the website popularity distribution [13, 6, 2]. Mathemat-
+ically, if the data items are sorted in decreasing order of
+popularity, the Zipf distribution states that the probability
+of seeing a request for data item i, Pr{i}, is:
+Pr{i}= C
+iα , (2)
+where α is a parameter of the distribution, andC is a nor-
+malization constant. For real-world website trafﬁc, α is
+typically between 0 .6 −1.0 [13, 6]. A higher value of
+α corresponds to a more skewed distribution. We can
+now use Equation (2) to estimate the amount of data
+to be cached to achieve a given hit rate, p. Figure 3
+shows these results for a Zipf popularity distribution with
+a range ofα values. When α is high, sayα = 1.0, we can
+achieve a hit rate of p = 0.8 by caching only 2% of the
+data. However, when α is low, say α = 0.6, we need to
+cache almost 60% of the data to achieve the samep = 0.8
+hit rate. For a Uniform distribution ( α = 0), we would
+have to cache 80% of the data to achievep = 0.8 hit rate.
+3.2 Theoretical model
+In Figure 3, we saw the relationship between the hit
+rate, p, and the amount of data cached. We now investi-
+gate the relationship between a given response time SLA,
+TSLA, and the minimum required hit rate, p. This allows
+us to calculate the amount of cache required to meetTSLA.
+The relationship between TSLA and p is given by:
+Tavg = 20(p ·Tmem + (1 −p) ·TDB) ≤TSLA = 100ms, (3)
+where Tmem = 0.3ms is the latency for fetching a key-
+value pair from memcache, and TDB is the latency for
+fetching a value from the database. Here, we use the
+fact that each request in our system is composed of 20
+individual key-value fetches.
+Note that TDB in Equation (3) is not a constant, and
+depends on the request rate into the database, λDB. As
+λDB increases, so does TDB. We model this relationship
+using an M/M/1 queueing model with load-dependent
+service rates. This gives us TDB as a function of λDB.
+If λ denotes the total arrival rate of requests into the
+system, then λDB is:
+λDB = 20 ·λ ·(1 −p). (4)
+If the request rate into the database,λDB, is too high, then
+TDB grows to inﬁnity. Thus, it is important to limit the
+request rate to the database by keeping(1−p) small (the
+hit rate, p, should therefore be high). Also, since Tmem
+is orders of magnitude smaller than TDB, it is desirable to
+keep p high so as to makeTavg less than TSLA. While both
+these goals point towards making p as high as possible,
+our objective in this paper is to ﬁnd the lowest possible
+p which still meets the desired TSLA constraint (this is
+because low p implies low cache size from Figure 3).
+Given the arrival rate into the system, we can solve
+Equation (3) for p, which in turn is used to calculate the
+desired cache size from Figure 3.
+3.3 Theoretical results
+Web services often exhibit huge variations in their re-
+quest rates, mostly due to the diurnal/periodic nature of
+trafﬁc. Assuming that the system is well provisioned to
+meet TSLA for peak request rate, we are interested in the
+potential for decreasing the cache size when the request
+rate decreases. We refer to the ratio between the peak
+request rate and the lower request rate as the peak-to-
+min ratio. We pick a range of peak-to-min ratios (1−10)
+and use our theoretical model to calculate the possible
+reduction in cache size. We also show results across
+different values of α: 1 .0 (heavily skewed), 0 .8, and
+0.6 (less skewed). Lastly, we vary the hit rate at the
+peak request rate: ppeak = 0.80 (Figure 4(a)), ppeak =
+0.95 (Figure 4(b)), and ppeak = 0.99 (Figure 4(c)). We
+choose these parameter values based on recent stud-
+ies [13, 5, 6, 2].
+Figure 4 indicates thatsigniﬁcant cache reductions (up
+to 90%) are possible even for a 2:1 peak-to-min ratio. In
+general, the potential savings in cache size are higher
+when α is high . This is because a higher value of α
+indicates a more skewed popularity distribution, which
+allows for more aggressive reduction in cache size (see
+Figures 2 and 3). Also, the observed potential savings
+
+=== PDF PAGE 4 ===
+(a) Remove memcache instance
+ (b) Add memcache instance
+Figure 5: Gradual is signiﬁcantly better than Na ¨ıve for (a) scaling down and (b) scaling up the caching tier. Here, the
+dashed line indicates TSLA = 100ms.
+in cache size are higher when p peak is low . This can
+be explained as follows. If the request rate into the sys-
+tem, λ, drops by a factor of (say) 2, then Equation (4)
+tells us the miss-rate, (1 −p), can increase by a factor
+of 2 while maintaining the same request rate into the
+database, λDB. For example, when the peak hit rate is
+low, say, ppeak = 0.8, the miss-rate (1 −ppeak) =0.2. If
+the request rate now drops by a factor of 2, our ﬁnal hit
+rate can be as low asp = 0.6, since the miss-rate,(1−p),
+can now be as high as 2 ·(1 −ppeak) =0.4. However,
+when the peak hit rate is ppeak = 0.99 and the request
+rate drops by a factor of 2, our ﬁnal hit rate can only be
+as low as p = 0.98. This implies that when the peak hit
+rate is low, we can afford a larger drop in hit rate, which
+in turn implies larger cache savings via Figure 3.
+These large cache savings translate to huge cash sav-
+ings. Consider an application hosted on EC2 [3] re-
+quiring a 4:1 ratio between application instances (cost-
+ing $0.165/hr/high-cpu instance [3]) and cache instances
+(costing $0.45/hr/high-memory instance [3]). Suppose
+load drops by a factor of 4. If we only scale the applica-
+tion tier (by a factor of 4), then we can save 45% of the
+peak operational cost. But if we also scale the caching
+tier (assuming a modest 50% cache reduction based on
+Figure 4), then we can save 65% of the peak operational
+cost. This is an additional 37% savings relative to only
+scaling the application tier.
+3.4 Experimental results
+In order to validate our theoretical results, we exper-
+imentally determine the lowest memcache size that we
+can afford without violating our SLA. We do this by
+monitoring the mean response time, Tavg, for different
+memcache sizes, and then picking the smallest mem-
+cache size which keeps Tavg below TSLA. The crosses
+in Figure 4 show our experimental results, which agree
+with the theoretical results.
+We also investigated 99 th percentile response times
+and preliminary results show similar cache savings as in
+Figure 4.
+4 Managing the caching tier
+Thus far, we have investigated how small the cache
+can be, assuming it contains the most popular data items.
+However, it is not obvious how to retain the most popu-
+lar data items when scaling the caching tier because the
+cached objects are distributed over the cache instances
+for good load balancing. When the number of cache in-
+stances is reduced, popular items may be lost. We use
+consistent hashing in the libMemcached library [1] to en-
+sure that only the data in the newly added/removed cache
+instance needs to change.
+4.1 Scaling down
+If we na ¨ıvely remove a cache instance, we immedi-
+ately lose all the cached data that was stored on the in-
+stance. This causes a drop in hit rate, which increases
+the request rate to the data tier as well as the average
+response times. For example, consider the case in Fig-
+ure 5(a) where we scale down from 4 to 3 cache in-
+stances at the 1 minute mark. In this experiment, we
+choose α = 1.2 to limit the amount of cached data that is
+lost. We also pessimistically force cache misses to result
+in database disk accesses by avoiding the database page
+cache. As observed in Figure 5(a), the Na ¨ıve solution
+(the circles) creates a spike in average response time.
+To avoid this spike in response times, we propose
+gradually migrating the most popular data off of the in-
+stance to be removed. Conceptually, we treat the instance
+to be removed as a second level cache for some period of
+time. If we miss in the rest of the cache, then we query
+this instance before going to the database. This will nat-
+urally migrate the popular items from this “retiring” in-
+stance to the rest of the caching tier.
+This leads to the question of how long to keep an in-
+stance in this retiring state. Intuitively, we want to stay
+in this retiring state until the probability of querying this
+instance is low enough that we can achieve our target
+hit rate, as calculated from Equation (3), even after this
+instance is removed. For each item i residing on this in-
+stance, let pi denote the probability of requesting that
+
+=== PDF PAGE 5 ===
+item. Suppose we have received N requests since en-
+tering this retiring state. Then the probability that item
+i has not yet migrated to the rest of the caching tier is
+(1−pi)N . Thus, the probability that the(N +1)th request
+queries this instance is:
+∑
+item i ∈instance
+pi(1 −pi)N . (5)
+Assuming all items are equally distributed among the
+instances, we can reasonably predict how large N needs
+to be so that the probability of querying this instance is
+low enough to achieve our target hit rate.
+In Figure 5(a), we see that the Gradual solution (solid
+line) eliminates the spike in response times. Here, the
+retiring instance acts as a “second-level cache” between
+the 1 minute and 5 minute marks, approximated by Equa-
+tion (5), at which point it is entirely removed.
+4.2 Scaling up
+If we na ¨ıvely add a cache instance, it has a “cold”
+cache and all requests to that instance result in misses.
+For example, consider the case in Figure 5(b) where we
+scale up from 3 to 4 cache instances at the 1 minute
+mark. We see that the Na ¨ıve solution (the circles) cre-
+ates a spike in average response time.
+To avoid this spike in response times, we propose
+gradually migrating the most popular data from the rest
+of the caching tier to this new instance. That is, when
+we miss in this new instance, we query the rest of the
+caching tier. This will naturally warm up the “hot” data
+without needing to go to the database. In Figure 5(b), we
+see that the Gradual solution (solid line) eliminates the
+spike in response times. Here, the new instance warms
+up between the 1 minute and 5 minute marks, approxi-
+mated by Equation (5), using the rest of the caching tier.
+Importantly, using the Gradual solution for both
+adding and removing a cache instance keeps our re-
+sponse times below the 100ms SLA.
+We also ﬁnd the same behavior when looking at 99 th
+percentile response times. The 99 th percentile response
+time under the Na¨ıve solution increases to about 16 sec-
+onds, but stays below 700ms under the Gradual solution.
+4.3 Alternative approaches
+While our proposed solution is very simple, addi-
+tional beneﬁts may be realized through more dramatic
+re-architecting of the caching tier. For example, by ex-
+posing the LRU lists of cached keys at each memcache
+instance, more intelligent adding/removing of cache in-
+stances may be possible. Further, integration of non-
+volatile storage, such as ﬂash, may allow removing a
+cache instance without requiring the migration of hot
+data from other instances on reactivation. However, this
+approach will require additional functionality to deter-
+mine the consistency of cached data upon reactivation.
+5 Conclusion
+While scaling of the stateless application tier has been
+proposed in many research papers, there has been al-
+most no discussion of scaling the stateful caching tier.
+The “seemingly small” beneﬁts associated with scaling
+the caching tier coupled with the fear of severe perfor-
+mance degradation due to cache misses has deterred this
+research. In this paper we demonstrate that, given the
+skewed popularity distribution for data accesses, signiﬁ-
+cant cost savings can be obtained by scaling the caching
+tier under dynamic load patterns (see Section 3). Further-
+more, performance problems associated with scaling the
+stateful caching tier can be avoided via a simple Grad-
+ual algorithm (see Section 4). By combining our stateful
+scaling solutions with existing stateless scaling solutions,
+one can realize fully load-proportional cloud systems.
+References
+[1] libmemcached. http://libmemcached.org/libMemcached.html.
+[2] A LMEIDA , V., B ESTAVROS , A., C ROVELLA , M., AND
+DE OLIVEIRA , A. Characterizing reference locality in the www.
+In DIS 1996 (Miami Beach, FL, United States), pp. 92–107.
+[3] A MAZON INC. Amazon elastic compute cloud (Amazon EC2).
+http://aws.amazon.com/ec2/.
+[4] A MUR , H., C IPAR , J., G UPTA , V., G ANGER , G. R., K OZUCH ,
+M. A., AND SCHWAN , K. Robust and ﬂexible power-
+proportional storage. In SOCC 2010 (Indianapolis, IN, USA),
+pp. 217–228.
+[5] B EAVER , D., K UMAR , S., L I, H. C., S OBEL , J., AND VAJGEL ,
+P. Finding a needle in haystack: facebook’s photo storage. In
+OSDI 2010 (Vancouver, BC, Canada), pp. 1–8.
+[6] B RESLAU , L., C AO, P., F AN, L., P HILLIPS , G., AND
+SHENKER , S. Web caching and zipf-like distributions: evidence
+and implications. In IEEE INFOCOM 1999 (New York, NY ,
+USA), pp. 126–134.
+[7] C HEN , G., H E, W., L IU, J., N ATH, S., R IGAS , L., X IAO , L.,
+AND ZHAO , F. Energy-aware server provisioning and load dis-
+patching for connection-intensive internet services. InNSDI 2008
+(San Francisco, CA, USA), pp. 337–350.
+[8] F ALOUTSOS , M., F ALOUTSOS , P., AND FALOUTSOS , C. On
+power-law relationships of the internet topology. In SIGCOMM
+1999 (Cambridge, MA, United States), pp. 251–262.
+[9] K RIOUKOV , A., M OHAN , P., A LSPAUGH , S., K EYS , L.,
+CULLER , D., AND KATZ, R. Napsac: Design and implemen-
+tation of a power-proportional web cluster. In ACM SIGCOMM
+Workshop on Green Networking(New Delhi, India), pp. 15–22.
+[10] M EMCACHED . A distributed memory object caching system.
+http://www.danga.com/memcached.
+[11] M OSBERGER , D., AND JIN, T. httperf—A Tool for Measuring
+Web Server Performance. ACM Sigmetrics: Performance Evalu-
+ation Review 26, 3 (1998), 31–37.
+[12] O LSON , M. A., B OSTIC , K., AND SELTZER , M. Berkeley db.
+In USENIX ATC 1999 (Monterey, CA, USA).
+[13] S HARMA , N., B ARKER , S., I RWIN , D., AND SHENOY, P. Blink:
+managing server clusters on intermittent power. InASPLOS 2011
+(Newport Beach, CA, USA), pp. 185–198.
+[14] T HERESKA , E., D ONNELLY , A., AND NARAYANAN , D. Sierra:
+practical power-proportionality for data center storage. In Eu-
+roSys 2011 (Salzburg, Austria), pp. 169–182.

@@ -1,0 +1,116 @@
+{
+  "captured_utc": "2026-10-09T18:27:19.877005+00:00",
+  "source": {
+    "matches": true,
+    "files": 49,
+    "sha256": "e06fb76ab140eb8e071b3484afd0941b7a961db4161b92cc7a4bce073262c2bd"
+  },
+  "evidence_seal": {
+    "files": 85,
+    "mismatches": [],
+    "aggregate_valid": true
+  },
+  "audits": {
+    "validator_recorded.json": {
+      "passed": true,
+      "checks": 135,
+      "captured_utc": "2026-10-09T18:25:29.699221+00:00"
+    },
+    "seal_recorded.json": {
+      "passed": true,
+      "checks": 85,
+      "captured_utc": "2026-10-09T18:25:29.925788+00:00"
+    },
+    "phase0_validator.json": {
+      "passed": true,
+      "checks": 9,
+      "captured_utc": "2026-10-09T18:23:35.919833+00:00"
+    }
+  },
+  "pdf_failure_reproduction": {
+    "exit_code": 1,
+    "error": "Traceback (most recent call last):\n  File \"C:\\Users\\ramst\\Documents\\antigravity\\paper2\\scripts\\literature_sources.py\", line 42, in retrieve\n    with urllib.request.urlopen(request, timeout=35) as response:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\completed_submission\\mock_debug.py\", line 15, in deny\n    raise urllib.error.HTTPError(request.full_url, 403, 'Forbidden', {}, io.BytesIO(b'reviewer error body'))\nurllib.error.HTTPError: HTTP Error 403: Forbidden\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\completed_submission\\mock_debug.py\", line 20, in <module>\n    runpy.run_path(str(root / 'scripts/literature_sources.py'), run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"C:\\Users\\ramst\\Documents\\antigravity\\paper2\\scripts\\literature_sources.py\", line 63, in <module>\n    sources = list(executor.map(retrieve, config['sources']))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ramst\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py\", line 619, in result_iterator\n    yield _result_or_cancel(fs.pop())\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ramst\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py\", line 317, in _result_or_cancel\n    return fut.result(timeout)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ramst\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py\", line 456, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ramst\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\Users\\ramst\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\thread.py\", line 59, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ramst\\Documents\\antigravity\\paper2\\scripts\\literature_sources.py\", line 58, in retrieve\n    record['error'] = {'type':type(error).__name(), 'message':str(error)}\n                              ^^^^^^^^^^^^^^^^^^\nAttributeError: type object 'HTTPError' has no attribute '__name'\n",
+    "stdout": "",
+    "stderr": ""
+  },
+  "pdf_failure_artifacts": {
+    "manifest_present": false,
+    "retrieval_record_present": false,
+    "per_source_files": []
+  },
+  "guide_failure_reproduction": {
+    "command": [
+      "scripts/literature_web_checks.py",
+      "--output",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\completed_submission\\mock_guide_failure_recorded"
+    ],
+    "network": "mocked",
+    "exit_code": 1,
+    "error": "Traceback (most recent call last):\n  File \"C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\completed_submission\\final_checks.py\", line 71, in <module>\n    runpy.run_path(str(ROOT / 'scripts/literature_web_checks.py'), run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"C:\\Users\\ramst\\Documents\\antigravity\\paper2\\scripts\\literature_web_checks.py\", line 51, in <module>\n    with urllib.request.urlopen(req, timeout=30) as response:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\completed_submission\\final_checks.py\", line 61, in fail_raw\n    raise urllib.error.HTTPError(url, 503, 'Service Unavailable', {}, io.BytesIO(b'review mock failure body'))\nurllib.error.HTTPError: HTTP Error 503: Service Unavailable\n",
+    "stdout": "",
+    "stderr": "",
+    "manifest_present": false,
+    "retained_files": [
+      "adaptcache-metadata.response",
+      "adaptcache-publisher.response",
+      "guide-commit.response"
+    ]
+  },
+  "live_publisher_reproduction": {
+    "url": "https://dl.acm.org/doi/10.1145/2988336.2988343",
+    "started_utc": "2026-10-09T18:25:30.170581+00:00",
+    "http_status": 403,
+    "error": "HTTP Error 403: Forbidden",
+    "response_file": "adaptcache_publisher.response",
+    "sha256": "89ab3c5e51b8c113c22d3645b1bae9ee70b2ac72448b4a56befab61b2ee7ea6b",
+    "record_boundary": "Transcribed from retained tool output; original response preserved."
+  },
+  "live_adaptcache_metadata": {
+    "http_status": 200,
+    "title": [
+      "AdaptCache"
+    ],
+    "subtitle": [
+      "Adaptive Data Partitioning and Migration for Distributed Object Caches"
+    ],
+    "DOI": "10.1145/2988336.2988343",
+    "response_sha256": "516306ca07282f90ae3ccec5bec61986a053d7d8a58ebbef842623e4e05e46cc"
+  },
+  "review_probe_failures": [
+    {
+      "attempt": 1,
+      "observation": "Reviewer expected a failed-PDF record; file absent, then FileNotFoundError.",
+      "diagnosis": "Separate mock_debug.py isolates submitted retriever AttributeError; original directories preserved."
+    },
+    {
+      "attempt": 2,
+      "observation": "Reviewer truncated a large GitHub commit JSON at its 1 MiB response limit, then JSONDecodeError.",
+      "diagnosis": "Reviewer-only response-size handling error. Truncated response preserved; use bounded commit-list metadata. No implementation finding based on this failure."
+    }
+  ],
+  "live_guide_checks": [
+    {
+      "url": "https://api.github.com/repos/babushkai/system-design-patterns/commits?sha=a6e583a999cbe9f8b82e688365a58bdd2f4d5687&per_page=1",
+      "started_utc": "2026-10-09T18:27:20.422674+00:00",
+      "status": "retrieved",
+      "http_status": 200,
+      "commit": "a6e583a999cbe9f8b82e688365a58bdd2f4d5687",
+      "committer_date": "2026-07-21T07:02:49Z",
+      "response_file": "guide_commit_metadata.response",
+      "sha256": "05b9b4879760d49a968ba58e9182c5fa1f2d342c5f4695ca712dc60cb15e028c",
+      "elapsed_seconds": 0.4539999999979045
+    },
+    {
+      "url": "https://raw.githubusercontent.com/babushkai/system-design-patterns/a6e583a999cbe9f8b82e688365a58bdd2f4d5687/04-caching/04-cache-stampede.md",
+      "started_utc": "2026-10-09T18:27:20.872030+00:00",
+      "status": "retrieved",
+      "http_status": 200,
+      "matches_retained": true,
+      "response_file": "guide_pinned_verified.response",
+      "sha256": "2cd8f7439eca14c22a94272b1a743751ecc828504c24393cb55508cb96197eaa",
+      "elapsed_seconds": 0.3899999999994179
+    }
+  ],
+  "source_unchanged_after_diagnostics": true,
+  "sealed_evidence_unchanged_after_diagnostics": true
+}

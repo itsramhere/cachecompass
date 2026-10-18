@@ -1,0 +1,55 @@
+{
+  "captured_utc": "2026-10-09T18:48:35.252539+00:00",
+  "checks": [
+    {
+      "elapsed_seconds": 0.0007345999983954243,
+      "ended_utc": "2026-10-09T18:48:35.205759+00:00",
+      "http_status": 200,
+      "id": "adaptcache-publisher",
+      "resolved_url": "https://dl.acm.org/doi/10.1145/2988336.2988343",
+      "response_file": "adaptcache-publisher.response",
+      "sha256": "328365ab6a8ac3ccf042ef91eb606e2f4efdadf3a9f7681c3fe39549954ea07e",
+      "started_utc": "2026-10-09T18:48:35.205040+00:00",
+      "status": "retrieved",
+      "url": "https://dl.acm.org/doi/10.1145/2988336.2988343"
+    },
+    {
+      "elapsed_seconds": 0.044486199993116315,
+      "ended_utc": "2026-10-09T18:48:35.250242+00:00",
+      "http_status": 200,
+      "id": "adaptcache-metadata",
+      "resolved_url": "https://api.crossref.org/works/10.1145/2988336.2988343",
+      "response_file": "adaptcache-metadata.response",
+      "sha256": "328365ab6a8ac3ccf042ef91eb606e2f4efdadf3a9f7681c3fe39549954ea07e",
+      "started_utc": "2026-10-09T18:48:35.205778+00:00",
+      "status": "retrieved",
+      "url": "https://api.crossref.org/works/10.1145/2988336.2988343"
+    },
+    {
+      "elapsed_seconds": 0.0014430000010179356,
+      "ended_utc": "2026-10-09T18:48:35.251704+00:00",
+      "http_status": 200,
+      "id": "guide-commit",
+      "resolved_url": "https://api.github.com/repos/babushkai/system-design-patterns/commits?path=04-caching/04-cache-stampede.md&per_page=1",
+      "response_file": "guide-commit.response",
+      "sha256": "6069a1e690bc5824e3bc7b5e18e94a7afe2e29b832b9e0b4e2639a97a4d5ebeb",
+      "started_utc": "2026-10-09T18:48:35.250273+00:00",
+      "status": "retrieved",
+      "url": "https://api.github.com/repos/babushkai/system-design-patterns/commits?path=04-caching/04-cache-stampede.md&per_page=1"
+    },
+    {
+      "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "commit_date": "2026-07-21T00:00:00Z",
+      "elapsed_seconds": 0.0007736999978078529,
+      "ended_utc": "2026-10-09T18:48:35.252515+00:00",
+      "http_status": 200,
+      "id": "guide-pinned",
+      "resolved_url": "https://raw.githubusercontent.com/babushkai/system-design-patterns/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/04-caching/04-cache-stampede.md",
+      "response_file": "guide.md",
+      "sha256": "64bf7c91e94ab4c56449710f15274437dac56d337ba8a9f7cd71753153047afb",
+      "started_utc": "2026-10-09T18:48:35.251753+00:00",
+      "status": "retrieved",
+      "url": "https://raw.githubusercontent.com/babushkai/system-design-patterns/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/04-caching/04-cache-stampede.md"
+    }
+  ]
+}

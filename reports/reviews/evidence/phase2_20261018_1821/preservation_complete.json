@@ -1,0 +1,13 @@
+{
+  "changed": [
+    "reports/DECISIONS.md",
+    "reports/ISSUE_INDEX.md",
+    "reports/STATUS.md",
+    "reports/phase_02.md"
+  ],
+  "checked": 196,
+  "final_source_matches": true,
+  "passed": true,
+  "unexpected": [],
+  "utc": "2026-10-18T18:59:51.293118+00:00"
+}

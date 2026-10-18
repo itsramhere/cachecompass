@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "scripts/validate_phase1.py",
+    "--config",
+    "configs/literature_review.json",
+    "--source-manifest",
+    "reports/source_state_phase1.json",
+    "--output",
+    "reports/verification-phase1-handoff.json",
+    "--handoff"
+  ],
+  "elapsed_seconds": 0.5160000000032596,
+  "ended_utc": "2026-10-09T17:51:08.507712+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-09T17:51:07.980349+00:00",
+  "stderr": "",
+  "stdout": "{\"passed\": true, \"checks\": 135, \"failed\": [], \"output\": \"reports\\\\verification-phase1-handoff.json\"}"
+}

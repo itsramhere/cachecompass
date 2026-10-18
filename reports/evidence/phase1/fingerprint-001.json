@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "scripts/capture_source.py",
+    "--output",
+    "reports/source_state_phase1.json"
+  ],
+  "elapsed_seconds": 1.1719999999986612,
+  "ended_utc": "2026-10-09T17:45:55.307178+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-09T17:45:54.142322+00:00",
+  "stderr": "",
+  "stdout": "e06fb76ab140eb8e071b3484afd0941b7a961db4161b92cc7a4bce073262c2bd"
+}

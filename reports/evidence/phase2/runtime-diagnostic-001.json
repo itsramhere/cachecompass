@@ -1,0 +1,11 @@
+{
+  "captured_utc": "2026-10-18T18:03:12.3514210Z",
+  "command": "Test local venv launcher and retained Python 3.12/3.13 installation paths using Test-Path; inspect python/py commands",
+  "observations": {
+    "venv_launcher_exists": true,
+    "python312_path": "access denied inside sandbox; Test-Path emitted UnauthorizedAccessException and returned false",
+    "python313_path": "access denied inside sandbox; Test-Path emitted UnauthorizedAccessException and returned false",
+    "python_or_py_on_sandbox_path": false
+  },
+  "conclusion": "The local launcher exists but cannot find its base interpreter. Installed-runtime existence cannot be determined inside the sandbox; use the previously authorized native execution boundary for the bounded test rerun."
+}

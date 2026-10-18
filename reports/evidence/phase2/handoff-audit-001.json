@@ -1,0 +1,15 @@
+{
+  "started_utc": "2026-10-18T18:10:00Z",
+  "ended_utc": "2026-10-18T18:10:01Z",
+  "command": "PowerShell static handoff audit: require 12 deliverables; parse six Phase 2 JSON records; enumerate seven policy catalog names and seven required protocols; verify final source manifest",
+  "exit_code": 0,
+  "result": {
+    "status": "passed",
+    "required_files": 12,
+    "json_records": 6,
+    "catalog_names": 7,
+    "interfaces": 7,
+    "source_files": 67,
+    "source_sha256": "b8e0d79837dddba4b11c176f7bd7610bcab772e83c0563b40e327cef6daff09d"
+  }
+}

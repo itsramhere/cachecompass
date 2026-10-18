@@ -1,0 +1,20 @@
+{
+  "started_utc": "2026-10-18T18:02:00Z",
+  "ended_utc": "2026-10-18T18:02:01Z",
+  "command": [
+    ".venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "No Python at '\"C:\\Users\\ramst\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\"'",
+  "result": "test process did not start; no contract tests executed"
+}

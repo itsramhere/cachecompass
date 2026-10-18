@@ -1,0 +1,243 @@
+{
+  "captured_utc": "2026-10-09T17:45:53.558119+00:00",
+  "checks": [
+    {
+      "check": "retrieval_config_hash",
+      "passed": true
+    },
+    {
+      "check": "effective_config",
+      "passed": true
+    },
+    {
+      "check": "source_ids",
+      "passed": true
+    },
+    {
+      "check": "retrieved",
+      "passed": true,
+      "source": "R01"
+    },
+    {
+      "check": "source.pdf",
+      "passed": true,
+      "source": "R01"
+    },
+    {
+      "check": "pages.json",
+      "passed": true,
+      "source": "R01"
+    },
+    {
+      "check": "text.txt",
+      "passed": true,
+      "source": "R01"
+    },
+    {
+      "check": "indexed_nonempty_pages",
+      "passed": true,
+      "source": "R01"
+    },
+    {
+      "check": "retrieved",
+      "passed": true,
+      "source": "R02"
+    },
+    {
+      "check": "source.pdf",
+      "passed": true,
+      "source": "R02"
+    },
+    {
+      "check": "pages.json",
+      "passed": true,
+      "source": "R02"
+    },
+    {
+      "check": "text.txt",
+      "passed": true,
+      "source": "R02"
+    },
+    {
+      "check": "indexed_nonempty_pages",
+      "passed": true,
+      "source": "R02"
+    },
+    {
+      "check": "retrieved",
+      "passed": true,
+      "source": "R03"
+    },
+    {
+      "check": "source.pdf",
+      "passed": true,
+      "source": "R03"
+    },
+    {
+      "check": "pages.json",
+      "passed": true,
+      "source": "R03"
+    },
+    {
+      "check": "text.txt",
+      "passed": true,
+      "source": "R03"
+    },
+    {
+      "check": "indexed_nonempty_pages",
+      "passed": true,
+      "source": "R03"
+    },
+    {
+      "check": "retrieved",
+      "passed": true,
+      "source": "R04"
+    },
+    {
+      "check": "source.pdf",
+      "passed": true,
+      "source": "R04"
+    },
+    {
+      "check": "pages.json",
+      "passed": true,
+      "source": "R04"
+    },
+    {
+      "check": "text.txt",
+      "passed": true,
+      "source": "R04"
+    },
+    {
+      "check": "indexed_nonempty_pages",
+      "passed": true,
+      "source": "R04"
+    },
+    {
+      "check": "retrieved",
+      "passed": true,
+      "source": "R05"
+    },
+    {
+      "check": "source.pdf",
+      "passed": true,
+      "source": "R05"
+    },
+    {
+      "check": "pages.json",
+      "passed": true,
+      "source": "R05"
+    },
+    {
+      "check": "text.txt",
+      "passed": true,
+      "source": "R05"
+    },
+    {
+      "check": "indexed_nonempty_pages",
+      "passed": true,
+      "source": "R05"
+    },
+    {
+      "check": "retrieved",
+      "passed": true,
+      "source": "R06"
+    },
+    {
+      "check": "source.pdf",
+      "passed": true,
+      "source": "R06"
+    },
+    {
+      "check": "pages.json",
+      "passed": true,
+      "source": "R06"
+    },
+    {
+      "check": "text.txt",
+      "passed": true,
+      "source": "R06"
+    },
+    {
+      "check": "indexed_nonempty_pages",
+      "passed": true,
+      "source": "R06"
+    },
+    {
+      "check": "retrieved",
+      "passed": true,
+      "source": "R07"
+    },
+    {
+      "check": "source.pdf",
+      "passed": true,
+      "source": "R07"
+    },
+    {
+      "check": "pages.json",
+      "passed": true,
+      "source": "R07"
+    },
+    {
+      "check": "text.txt",
+      "passed": true,
+      "source": "R07"
+    },
+    {
+      "check": "indexed_nonempty_pages",
+      "passed": true,
+      "source": "R07"
+    },
+    {
+      "check": "retrieved",
+      "passed": true,
+      "source": "R08"
+    },
+    {
+      "check": "source.pdf",
+      "passed": true,
+      "source": "R08"
+    },
+    {
+      "check": "pages.json",
+      "passed": true,
+      "source": "R08"
+    },
+    {
+      "check": "text.txt",
+      "passed": true,
+      "source": "R08"
+    },
+    {
+      "check": "indexed_nonempty_pages",
+      "passed": true,
+      "source": "R08"
+    },
+    {
+      "check": "retrieved",
+      "passed": true,
+      "source": "R09"
+    },
+    {
+      "check": "source.pdf",
+      "passed": true,
+      "source": "R09"
+    },
+    {
+      "check": "pages.json",
+      "passed": true,
+      "source": "R09"
+    },
+    {
+      "check": "text.txt",
+      "passed": true,
+      "source": "R09"
+    },
+    {
+      "check": "indexed_nonempty_pages",
+      "passed": true,
+      "source": "R09"
+    }
+  ],
+  "passed": true
+}

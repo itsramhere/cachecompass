@@ -1,0 +1,18 @@
+{
+  "content_type": "application/pdf",
+  "elapsed_seconds": 7.264999999999418,
+  "ended_utc": "2026-10-09T17:29:38.215691+00:00",
+  "http_status": 200,
+  "id": "R04",
+  "landing_url": "https://www.usenix.org/conference/hotcloud20/presentation/zhang-lei",
+  "pages": 8,
+  "pages_sha256": "ee02675f04c561e445df8b00b7b799ecfa4b1b9ba660a530051e36b71b504cd8",
+  "pdf_sha256": "d5373cfae9277aad8ea5f159b2d46d7189fa068681b2d41a9236a9a137344859",
+  "required": true,
+  "resolved_url": "https://www.usenix.org/system/files/hotcloud20_paper_zhang-lei.pdf",
+  "started_utc": "2026-10-09T17:29:30.958561+00:00",
+  "status": "retrieved_and_extracted",
+  "text_sha256": "c5f08576ebd129a5228f5f8a8002755cd3b6464134fd25a62760efd17fc82269",
+  "title": "When is the Cache Warm? Manufacturing a Rule of Thumb",
+  "url": "https://www.usenix.org/system/files/hotcloud20_paper_zhang-lei.pdf"
+}

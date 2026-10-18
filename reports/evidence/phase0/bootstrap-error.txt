@@ -1,0 +1,12 @@
+Supplemental transcription of first bootstrap tool output (transcript omits captured native stdout).
+Dependencies installed successfully: PyYAML-6.0.2 psycopg-3.2.10 psycopg-binary-3.2.10
+psycopg-pool-3.3.3 redis-6.4.0 typing_extensions-4.16.0 tzdata-2026.5.
+Python check:
+  File "<string>", line 1
+    import redis.asyncio, psycopg, psycopg_pool, yaml; print(Runtime
+                                                            ^
+SyntaxError: '(' was never closed
+Bootstrap shell exit code: 1.
+Pre-fix SHA256:
+scripts/bootstrap.ps1: 491f1b47ea68e8bca06d4ffe5b3ad090d93c583dddd8d76e3bced2897a91ae1c
+scripts/fingerprint.ps1: c622d1cdae29ec58714c5573f6c1424df71b910552b8797784d7e2ec416fd261

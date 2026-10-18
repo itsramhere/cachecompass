@@ -1,0 +1,18 @@
+{
+  "content_type": "application/pdf",
+  "elapsed_seconds": 5.296999999998661,
+  "ended_utc": "2026-10-09T17:29:47.094460+00:00",
+  "http_status": 200,
+  "id": "R09",
+  "landing_url": "https://www.usenix.org/conference/osdi22/presentation/huang-lexiang",
+  "pages": 19,
+  "pages_sha256": "0db9a56d4fac2db211b131b1f414fd1085ae6623cfe27ce4ed973e16df333b19",
+  "pdf_sha256": "9d1b8fad67420c07116f46cf41b9a682fc367c38c56870a57ebdb3c9ef3f9874",
+  "required": false,
+  "resolved_url": "https://www.usenix.org/system/files/osdi22-huang-lexiang.pdf",
+  "started_utc": "2026-10-09T17:29:41.792575+00:00",
+  "status": "retrieved_and_extracted",
+  "text_sha256": "54aa1fb89c107e085f9109708b70316e2e26b599fe0dd365b1ab5a12f6cd6b56",
+  "title": "Metastable Failures in the Wild",
+  "url": "https://www.usenix.org/system/files/osdi22-huang-lexiang.pdf"
+}

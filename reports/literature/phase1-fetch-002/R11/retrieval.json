@@ -1,0 +1,18 @@
+{
+  "content_type": "application/pdf",
+  "elapsed_seconds": 1.6569999999992433,
+  "ended_utc": "2026-10-09T17:35:23.040403+00:00",
+  "http_status": 200,
+  "id": "R11",
+  "landing_url": "https://www.usenix.org/conference/hotcloud12/workshop-program/presentation/Zhu",
+  "pages": 5,
+  "pages_sha256": "02ac0700517e9bbae9572c59cd16fc89c6405f6660d65e4341a5b1ea2f5da235",
+  "pdf_sha256": "25861687723a567bfc5532c098aa68080f598dcf08a2b3b92dea31b5d17956c9",
+  "required": false,
+  "resolved_url": "https://www.usenix.org/system/files/conference/hotcloud12/hotcloud12-final73.pdf",
+  "started_utc": "2026-10-09T17:35:21.382343+00:00",
+  "status": "retrieved_and_extracted",
+  "text_sha256": "7c406618221bc31e834b1f326d717aa766fca4381cd65d96aae60cf82a5d2495",
+  "title": "Saving Cash by Using Less Cache",
+  "url": "https://www.usenix.org/system/files/conference/hotcloud12/hotcloud12-final73.pdf"
+}

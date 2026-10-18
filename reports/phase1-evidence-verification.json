@@ -1,0 +1,349 @@
+{
+  "aggregate_sha256": "bbdf4929628266041c201970b3eb1cbc8ac14a59b51951ed395cbfba531be900",
+  "captured_utc": "2026-10-09T17:52:22.089122+00:00",
+  "checks": [
+    {
+      "passed": true,
+      "path": "reports/DECISIONS.md"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/adaptcache-browser-diagnostic.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/fingerprint-001.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/handoff-audit-001.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/phase0-retained-check-001.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/phase0-retained-validation.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/phase1_search_citations.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/phase1_search_final.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/reading_notes.md"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/seal_evidence.py"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/search-followups.md"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/search-reproduction-001.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/search-round-05.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/status-before-phase1.md"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/tool-install-001.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/validate-001.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/verify-fetch-001.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/evidence/phase1/verify-fetch-002.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/ISSUE_INDEX.md"
+    },
+    {
+      "passed": true,
+      "path": "reports/issues/ISSUE-0004.md"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/effective_config.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/manifest.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R01/pages.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R01/retrieval.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R01/source.pdf"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R01/text.txt"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R02/pages.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R02/retrieval.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R02/source.pdf"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R02/text.txt"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R03/pages.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R03/retrieval.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R03/source.pdf"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R03/text.txt"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R04/pages.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R04/retrieval.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R04/source.pdf"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R04/text.txt"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R05/pages.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R05/retrieval.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R05/source.pdf"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R05/text.txt"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R06/pages.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R06/retrieval.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R06/source.pdf"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R06/text.txt"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R07/pages.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R07/retrieval.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R07/source.pdf"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R07/text.txt"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R08/pages.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R08/retrieval.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R08/source.pdf"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R08/text.txt"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R09/pages.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R09/retrieval.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R09/source.pdf"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/R09/text.txt"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-001/verification.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/effective_config.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/manifest.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/R10/pages.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/R10/retrieval.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/R10/source.pdf"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/R10/text.txt"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/R11/pages.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/R11/retrieval.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/R11/source.pdf"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/R11/text.txt"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/R12/pages.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/R12/retrieval.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/R12/source.pdf"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/R12/text.txt"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-fetch-002/verification.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-web-001/adaptcache-metadata.response"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-web-001/adaptcache-publisher.response"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-web-001/guide-commit.response"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-web-001/guide.md"
+    },
+    {
+      "passed": true,
+      "path": "reports/literature/phase1-web-001/manifest.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/phase_01.md"
+    },
+    {
+      "passed": true,
+      "path": "reports/source_state_phase1.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/STATUS.md"
+    },
+    {
+      "passed": true,
+      "path": "reports/tools/wheels/pypdf-6.1.1-py3-none-any.whl"
+    },
+    {
+      "passed": true,
+      "path": "reports/verification-phase1-handoff.json"
+    },
+    {
+      "passed": true,
+      "path": "reports/verification-phase1.json"
+    }
+  ],
+  "files": 85,
+  "manifest_sha256": "d49d72598ebf94709122079231395912f6580d6a12c7cabff3751f17ec15f0f6",
+  "passed": true
+}

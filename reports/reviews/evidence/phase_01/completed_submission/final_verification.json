@@ -1,0 +1,16 @@
+﻿{
+    "captured_utc":  "2026-10-09T18:33:56.2682809Z",
+    "source_files_checked":  49,
+    "source_mismatches":  [
+
+                          ],
+    "sealed_files_checked":  85,
+    "sealed_evidence_mismatches":  [
+
+                                   ],
+    "broken_local_review_links":  [
+
+                                  ],
+    "report":  "reports/reviews/phase_01.md",
+    "report_sha256":  "c37cd523e51aeadf9788d4999814426bed0cbc48465ef7c5ed9ca463434974af"
+}

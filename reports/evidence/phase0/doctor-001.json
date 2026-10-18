@@ -1,0 +1,17 @@
+{
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-File",
+    "scripts/doctor.ps1",
+    "-Output",
+    "reports/environment.json"
+  ],
+  "elapsed_seconds": 7.093000000000757,
+  "ended_utc": "2026-10-09T15:33:51.234772+00:00",
+  "exit_code": 0,
+  "started_utc": "2026-10-09T15:33:44.140002+00:00",
+  "stderr": "",
+  "stdout": "{\"status\": \"verified\", \"gate_checks\": {\"runtime\": true, \"linux_engine\": true, \"required_containers_healthy_with_digests\": true}, \"output\": \"C:\\\\Users\\\\ramst\\\\Documents\\\\antigravity\\\\paper2\\\\reports\\\\environment.json\"}",
+  "step": "doctor"
+}

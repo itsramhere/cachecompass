@@ -1,0 +1,15 @@
+{
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-File",
+    "scripts/bootstrap.ps1"
+  ],
+  "elapsed_seconds": 4.9060000000026776,
+  "ended_utc": "2026-10-09T14:54:51.770380+00:00",
+  "exit_code": 0,
+  "started_utc": "2026-10-09T14:54:46.860992+00:00",
+  "stderr": "[notice] A new release of pip is available: 25.0.1 -> 26.2.1\r\n[notice] To update, run: C:\\Users\\ramst\\Documents\\antigravity\\paper2\\.venv\\Scripts\\python.exe -m pip install --upgrade pip",
+  "stdout": "Requirement already satisfied: psycopg==3.2.10 in c:\\users\\ramst\\documents\\antigravity\\paper2\\.venv\\lib\\site-packages (from -r requirements.lock (line 2)) (3.2.10)\r\nRequirement already satisfied: psycopg-binary==3.2.10 in c:\\users\\ramst\\documents\\antigravity\\paper2\\.venv\\lib\\site-packages (from -r requirements.lock (line 3)) (3.2.10)\r\nRequirement already satisfied: psycopg-pool==3.3.3 in c:\\users\\ramst\\documents\\antigravity\\paper2\\.venv\\lib\\site-packages (from -r requirements.lock (line 4)) (3.3.3)\r\nRequirement already satisfied: PyYAML==6.0.2 in c:\\users\\ramst\\documents\\antigravity\\paper2\\.venv\\lib\\site-packages (from -r requirements.lock (line 5)) (6.0.2)\r\nRequirement already satisfied: redis==6.4.0 in c:\\users\\ramst\\documents\\antigravity\\paper2\\.venv\\lib\\site-packages (from -r requirements.lock (line 6)) (6.4.0)\r\nRequirement already satisfied: typing_extensions==4.16.0 in c:\\users\\ramst\\documents\\antigravity\\paper2\\.venv\\lib\\site-packages (from -r requirements.lock (line 7)) (4.16.0)\r\nRequirement already satisfied: tzdata==2026.5 in c:\\users\\ramst\\documents\\antigravity\\paper2\\.venv\\lib\\site-packages (from -r requirements.lock (line 8)) (2026.5)\r\n{\"status\": \"imports_verified\", \"python\": \"3.12.10\", \"packages\": {\"redis\": \"6.4.0\", \"psycopg\": \"3.2.10\", \"psycopg-pool\": \"3.3.3\", \"PyYAML\": \"6.0.2\"}}",
+  "step": "bootstrap"
+}

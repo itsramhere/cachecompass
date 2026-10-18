@@ -1,0 +1,14 @@
+{
+  "elapsed_seconds": 0.0005153000020072795,
+  "ended_utc": "2026-10-09T18:48:34.990436+00:00",
+  "error": {
+    "body": "reviewer 403 failure body",
+    "message": "HTTP Error 403: Forbidden",
+    "type": "HTTPError"
+  },
+  "http_status": 403,
+  "id": "FAIL",
+  "started_utc": "2026-10-09T18:48:34.989911+00:00",
+  "status": "retrieval_failure",
+  "url": "https://review.invalid/fail"
+}

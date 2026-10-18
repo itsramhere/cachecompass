@@ -1,0 +1,18 @@
+{
+  "content_type": "application/pdf",
+  "elapsed_seconds": 6.796999999998661,
+  "ended_utc": "2026-10-09T17:29:42.335115+00:00",
+  "http_status": 200,
+  "id": "R05",
+  "landing_url": "https://www.usenix.org/conference/osdi20/presentation/yang",
+  "pages": 19,
+  "pages_sha256": "eb95365ed02a9527ef7f1b52cf258185c7bf29ba2f91f46364f860b705139927",
+  "pdf_sha256": "e1bc030aebef1e9d6a36cfb16db1753321cf87e9db4287a0cb1d87fe818da2d3",
+  "required": true,
+  "resolved_url": "https://www.usenix.org/system/files/osdi20-yang.pdf",
+  "started_utc": "2026-10-09T17:29:35.527309+00:00",
+  "status": "retrieved_and_extracted",
+  "text_sha256": "70a1a3b8b5c5552adc883c9a9c02d109be6d4cea8b8217e1f58f490d475805fb",
+  "title": "A large scale analysis of hundreds of in-memory cache clusters at Twitter",
+  "url": "https://www.usenix.org/system/files/osdi20-yang.pdf"
+}

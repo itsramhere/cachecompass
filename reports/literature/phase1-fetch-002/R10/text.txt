@@ -1,0 +1,977 @@
+=== PDF PAGE 1 ===
+Linear Elastic Caching via Ski Rental
+Ravi Kumar
+Google
+ravi.k53@gmail.com
+Todd Lipcon
+Google
+tlipcon@google.com
+Manish Purohit
+Google
+mpurohit@google.com
+Tamas Sarlos
+Google
+stamas@google.com
+ABSTRACT
+In this work we study the Linear Elastic Caching problem, where
+the goal is to minimize the total cost of a cache inclusive of not
+just its misses, but also its memory footprint integrated over time.
+We demonstrate a theoretical connection to the classic ski rental
+problem and propose a practical algorithm that combines online
+caching algorithms with ski rental policies. We also introduce a
+lightweight machine learning-based algorithm for ski rental that
+is optimized for production workloads and is easy to integrate
+within existing database systems. Evaluations on both production
+workloads in Google Spanner and publicly available traces show
+that the proposed elastic caching approach can significantly reduce
+the total cache cost compared to traditional fixed-size cache policies.
+1 INTRODUCTION
+In-memory caching is a cornerstone technique for achieving high
+performance in database management systems and cloud services.
+By storing frequently accessed data in main memory, caching re-
+duces costly disk I/O operations and improves latency. However,
+memory is expensive—for example, Amazon ElastiCache Serverless
+charges $3 per day for just 1GiB1. Given the high cost, provisioning
+these caches presents a fundamental challenge: substantial human
+effort might be needed to determine an optimal cache capacity,
+and statically allocating memory to meet peak demand can lead to
+significant resource underutilization for bursty workloads.
+Traditional caching systems typically assume fixed memory re-
+sources and focus on eviction policies to minimize misses. However,
+cloud environments offer new opportunities for cost optimization.
+For example, ElastiCache charges only for the average size of the
+maintained cache. Thus, one could minimize this cost by dynam-
+ically increasing or decreasing the cache capacity over time in
+response to the workload.
+In this paper, we formulate the linear elastic caching problem
+of designing a policy that minimizes the total cost incurred by the
+cache: both the direct storage cost of maintaining the cache in RAM,
+and the direct and indirect costs associated with cache misses.
+1https://aws.amazon.com/elasticache/pricing/ (as of November, 2024)
+This paper is published under the Creative Commons Attribution 4.0 International
+(CC-BY 4.0) license. Authors reserve their rights to disseminate the work on their
+personal and corporate Web sites with the appropriate attribution, provided that you
+attribute the original work to the authors and CIDR 2025. 15th Annual Conference
+on Innovative Data Systems Research (CIDR ’25). January 19-22, Amsterdam, The
+Netherlands
+Our work draws an interesting connection between linear elastic
+caching and the classic ski rental problem. We propose a practi-
+cal algorithm that integrates online caching algorithms with ski
+rental policies, determining a time-to-live (TTL) for each cached
+page based on its access patterns and associated costs. Theoretical
+analysis shows that separately optimizing the cache eviction policy
+and the ski rental policy suffices to minimize the total cost.
+This work was directly motivated by a desire to reduce cache
+costs in Spanner [9], a large globally distributed database system
+at Google. Since data access patterns encountered in production
+are far from adversarial, we opt for a lightweight machine learn-
+ing approach for designing an appropriate ski rental policy. We
+show that incorporating such a learned ski rental algorithm with
+Spanner’s existing cache eviction policy helps to minimize the total
+cost of cache ownership by over 5%. We also evaluate our approach
+through extensive experiments on publicly available traces. Results
+show that linear elastic caching significantly reduces the total cost
+incurred by the cache compared to fixed-size cache policies.
+2 PROBLEM FORMULATION
+We refer to entries in the cache as “pages” for simplicity. Unlike
+traditional caching problems where the cache size is fixed and the
+goal is to design an eviction policy to minimize cache misses, here
+we consider the setting where the cache size is variable and the
+goal is to strike a balance between the cost of cache misses and the
+cost of maintaining the cache (in RAM bytes ×seconds) over time.
+For a page 𝑝, let 𝑟(𝑝)denote the per-unit time cost of holding
+the page in cache, and 𝐵(𝑝)denote the cost of incurring a cache
+miss for the page2. Typically,𝑟(𝑝)is proportional to the size of the
+page and scales with RAM prices, while 𝐵(𝑝)captures the cost of
+the latency and/or I/O incurred due to the cache miss; however,
+these quantities can be arbitrary functions of the page contents or
+metadata. Let sz(𝑝)denote the size (in bytes) of page 𝑝.
+For a fixed universe 𝑈 of pages and a cache with maximum
+capacity 𝑘, an algorithm receives a sequence 𝜎 of page requests
+online and must decide how long to hold each page in cache with
+the goal of minimizing the total cost, i.e., the sum of the total cost
+of all cache misses and the total RAM cost. Formally, if 𝐴𝑡 is the
+set of pages in cache at time 𝑡 by some algorithm Afor request
+sequence 𝜎, then the total cache maintenance cost is defined as
+MemCost(A,𝜎)= Í
+𝑡
+Í
+𝑝∈𝐴𝑡 𝑟(𝑝)and the total cost due to cache
+evictions is defined as EvictCost(A,𝜎) = Í
+𝑡
+Í
+𝑝∈𝐴𝑡 −1∖𝐴𝑡 𝐵(𝑝)3.
+2We use symbols 𝑟 and 𝐵as they correspond to the cost for renting and buying in Ski
+Rental respectively.
+3As is standard in caching literature, we charge for cache evictions rather than cache
+misses. The two quantities only differ by a constant since any page 𝑝that is brought
+
+=== PDF PAGE 2 ===
+CIDR’25, January 19-22, 2025, Amsterdam, The Netherlands Ravi Kumar, Todd Lipcon, Manish Purohit, and Tamas Sarlos
+The total cost of ownership incurred by the algorithm is defined as:
+TCO(A,𝜎)= MemCost(A,𝜎)+EvictCost(A,𝜎).
+The goal of the linear elastic caching problem is to design an online
+algorithm Athat minimizes TCO(A,𝜎)subject to the constraint
+that the total size of pages in the cache at any time 𝑡 is at most 𝑘,
+i.e., Í
+𝑝∈𝐴𝑡 sz(𝑝)≤ 𝑘.
+As is standard in the analysis of online algorithms, we adopt the
+lens of competitive analysis, which provides a bound on the worst-
+case performance of the online algorithm. Formally, for any instance
+Iof a minimization problem, if cost(A,I)is the cost incurred by
+some online algorithm Aand OPT(I)is the cost incurred by an
+optimal offline algorithm, then the competitive ratio ofAis defined
+to be:
+competitive-ratio(A)= max
+I
+cost(A,I)
+OPT(I) .
+If the competitive ratio of Aequals 𝑐, we often use the shorthand
+that Ais 𝑐-competitive.
+Specifically, for the linear elastic caching problem, for any re-
+quest sequence 𝜎, let OPT(𝜎)denote the total cost incurred by the
+optimal offline algorithm that is aware of the entire sequence ahead
+of time. Then the competitive ratio of an algorithm Ais defined as:
+competitive-ratio(A)= max𝜎
+TCO(A,𝜎)
+OPT(𝜎) .
+3 RELATED WORK
+The problem of dynamically changing the cache size in response to
+the workload has been well-studied in the algorithms research com-
+munity. Gupta et al. [14] propose the generalelastic caching problem
+where the cache maintenance cost can be a general function of the
+set of pages stored in the cache. In their setting, 𝑓 : 2𝑈 →R+is
+an arbitrary non-negative set function and the cache maintenance
+cost incurred by an algorithm is Í
+𝑡 𝑓(𝐴𝑡)where 𝐴𝑡 is the set of
+pages held in cache at time 𝑡. They design an 𝑂(log𝑛)-competitive
+randomized online algorithm when the maintenance cost depends
+only on the cache size (rather than the identities of the pages in
+cache) and an 𝑛-competitive deterministic algorithm for arbitrary
+monotone functions where 𝑛 = |𝑈|. We note that the linear elas-
+tic caching problem studied in our paper is a special case where
+𝑓(𝐴𝑡)= Í
+𝑝∈𝐴𝑡 𝑟(𝑝)if the total size of pages in 𝐴𝑡 is at most 𝑘and
+𝑓(𝐴𝑡)= ∞otherwise.
+Dynamically adjusting the cache size has also been studied in
+the systems and database communities [5, 6, 15, 19, 25]. The broad
+goal there is to explore elastic resource management, when cache
+and cache maintenance costs become a factor; they observe that
+dynamic cache instantiation can provide substantial cost reductions.
+Perhaps the most directly relevant paper is by Carra et al. [ 6],
+where they consider horizontal scaling of the in-memory cache
+by dynamically adding/removing cache instances. They assume
+that page requests follow a Poisson arrival process and aim to
+dynamically optimize for the best single TTL that can be applied
+for all pages. The algorithm maintains a virtual TTL cache [13] and
+at the end of each epoch sets the number of cache instances based
+on the size of the virtual cache.
+into the cache must also get evicted, except for the pages in the cache at the end of the
+input instance.
+Optimizing storage costs by exploiting tiered storage options
+in the cloud has also been an active area of study [12, 20–23, 26].
+When there are multiple storage tiers with differing storage and
+access costs, these papers observe that (generalizations of) the ski
+rental problem can be applied in this setting. Puttaswamy et al. [26]
+propose a frugal cloud file system by automatically transferring
+data between hot and cold storage tiers and rederive the optimal
+deterministic and randomized ski rental algorithms. However, these
+papers do not provide theoretical guarantees that when the hot
+storage has limited size, the ski rental policies do not adversely
+interact with the cache eviction policy. In contrast, we provide
+a theoretical justification for incorporating ski rental algorithms
+side-by-side with existing cache eviction policies and show that
+optimizing for both separately does indeed suffice to minimize the
+total cost of ownership.
+4 CONNECTIONS WITH SKI RENTAL
+Our problem description was formulated suggestively to indicate
+the similarity with the classical ski rental [2] problem. Recall that
+in the ski rental problem , a skier wishes to ski for some unknown
+number 𝑑 of days and they can either rent a pair of skis at a cost of
+𝑟 per day or buy them at a higher cost of 𝐵and ski for free from
+then on. Clearly, if 𝑑 ≥𝐵
+𝑟 , an optimal solution is to buy the skis
+on the first day and incur a total cost of 𝐵; on the other hand, if
+𝑑 < 𝐵
+𝑟 , the optimal solution is to only rent skis and pay a total cost
+of 𝑑 ·𝑟 < 𝐵. However, 𝑑 is unknown to an online algorithm and
+each day when the skier wants to ski, the algorithm needs to decide
+whether to rent skis for the day or buy (and ski without cost for
+any future days).
+The ski rental problem is one of the prototypical examples of
+decision making under uncertainty and has been well studied in the
+classical competitive analysis framework. The goal of competitive
+analysis is to study the worst-case performance of online algorithms.
+In particular, consider the breakeven algorithm that rents skis for
+the first ⌊𝐵
+𝑟 ⌋days and then buys on the next day (if any). It can
+be readily observed via a simple case analysis that the total cost
+incurred by the breakeven algorithm is never more than twice the
+cost incurred by the optimal offline solution. Indeed, if 𝑑 ≤⌊ 𝐵
+𝑟 ⌋,
+then the breakeven algorithm simply rents the skis for all 𝑑 days
+and incurs the same cost as the optimal solution; on the other
+hand, if 𝑑 > ⌊𝐵
+𝑟 ⌋, then the breakeven algorithm incurs a total cost
+of ⌊𝐵
+𝑟 ⌋· 𝑟 +𝐵 ≤2𝐵 while the optimal solution buys on the first
+day and pays 𝐵. The breakeven algorithm is thus 2-competitive
+and this is best possible for deterministic algorithms. However,
+randomization helps and Karlin et al. [ 17] design a randomized
+algorithm that obtains a competitive ratio of 𝑒/(𝑒 −1)≈ 1.58. It
+is well known that any deterministic algorithm for ski rental is
+characterized by how long the algorithm rents skis before finally
+buying them, while any randomized algorithm is characterized by
+a distribution over such buy times.
+Now, focusing back on the linear elastic caching problem, con-
+sider a single request to page 𝑝 at some time 𝑡1. Suppose the next
+request to 𝑝 is at some time 𝑡2 > 𝑡1. Then considering this page in
+isolation, there are two alternatives available: (i) either, we hold the
+page in cache and incur a cache maintenance cost of 𝑟(𝑝)per unit
+time, or we (ii) evict the page 𝑝 and incur an eviction cost of 𝐵(𝑝).
+
+=== PDF PAGE 3 ===
+Linear Elastic Caching via Ski Rental CIDR’25, January 19-22, 2025, Amsterdam, The Netherlands
+Since the total length of this time interval (𝑡2 −𝑡1)is unknown
+when the page arrives (at time𝑡1), the problem faced by the caching
+algorithm is exactly the ski rental problem with holding the page
+in cache corresponding to renting and eviction corresponding to
+buying. We emphasize that this is simply an informal connection
+between the two problems and not a formal reduction—in linear
+elastic caching, we cannot treat each page in isolation as the total
+size of pages in cache at any time cannot exceed the maximum
+cache capacity 𝑘.
+5 MAIN RESULTS
+Since each page request in isolation leads to an instance of the ski
+rental problem, a natural strategy for linear elastic caching is to
+invoke an algorithm for the ski rental problem for each page request.
+Suppose for a particular page 𝑝that is requested at time 𝑡, and a ski
+rental algorithm responds with a buy time of 𝑏. Then one can set a
+TTL (time-to-live) of 𝑡+𝑏when admitting or accessing page 𝑝 in
+the cache. Thus renting for 𝑏time units followed by buying exactly
+corresponds to evicting the page from cache when its TTL expires.
+However, since such a strategy treats each page request inde-
+pendently, it may violate the maximum cache capacity 𝑘. A linear
+elastic caching algorithm needs to simultaneously solve these per-
+request ski rental instances while also maintaining that the cache
+size is always at most the capacity 𝑘.
+First, we show that one can combine an arbitrary online algo-
+rithm for regular caching (with a fixed size cache and a goal of
+minimizing the total miss cost) with an arbitrary ski rental algo-
+rithm, in a black box manner. The result relies on a reduction of
+linear elastic caching to the read-write caching problem [10] that we
+define next. In an instance of read-write caching, each page request
+is either a read request or a write request. On a read request to a
+page 𝑝, if 𝑝is not in the cache then the algorithm incurs amiss cost.
+On the other hand, on a write request to a page 𝑝, the algorithm
+incurs a write cost if 𝑝 is in the cache. The goal is to design an
+algorithm that minimizes the sum of miss costs and write costs.
+Theorem 5.1. Given an 𝛼-competitive online algorithm for caching
+and a 2-competitive deterministic algorithm for ski rental, there is an
+(𝛼+5)-competitive algorithm for linear elastic caching.
+Proof. We can reduce an instance of linear elastic caching to
+an instance of read-write caching as follows. Let 𝜎 be a sequence
+of page requests for the linear elastic caching instance. We create a
+new sequence 𝜎′of read-write page requests as follows: for each
+page 𝑝 that arrives at time 𝑡 in 𝜎, add a read request for page 𝑝 at
+time 𝑡 in 𝜎′. In addition, for each discrete time step, add a write
+request to every page in the universe. Each page 𝑝 has a write cost
+of 𝑟(𝑝)and a read cost of 𝐵(𝑝). It can be observed that for any
+caching algorithm A, the read-write cost on sequence 𝜎′equals
+the TCO(A,𝜎). The proof now follows from [10, Theorem 3]. □
+While Theorem 5.1 yields almost best-possible theoretical guar-
+antees for linear elastic caching, the proposed algorithm is not
+ideal to deploy in a production environment since it necessitates
+maintaining additional bookkeeping. The cache eviction algorithm
+Aworks under the assumption that the cache always has size 𝑘
+and maintains a ghost cache with a superset of pages that are ac-
+tually held in cache. In our next result, we show that when using
+practical cache eviction policies such as Least Recently Used (LRU),
+simply adding pages to the cache with a TTL that is determined
+by a ski rental algorithm suffices. We give a formal description
+in Algorithm 1. Informally, whenever a page request arrives, the
+ski rental algorithm determines a TTL for the page. The page gets
+evicted from the cache at its TTL unless it is requested again by
+that time (the TTL will then be recomputed). If at any point, the
+requested page is not in the cache and the cache is full, then the
+cache eviction algorithm determines which page(s) to evict.
+Input: Eviction Policy A, Ski Rental Algorithm B
+𝐶 ←∅;
+for time 𝑡 = 1,2,..., do
+/* Evict any pages whose TTLs have expired */
+for page 𝑝 ∈𝐶 do
+if ttl(𝑝)< 𝑡 then
+Evict 𝑝 from 𝐶;
+end
+end
+/* Process page requested at time 𝑡 if any */
+if page 𝑝𝑡 is requested at time 𝑡 then
+Send 𝑝𝑡 to A;
+buytime ←B(𝑝𝑡);
+ttl(𝑝𝑡)← 𝑡+buytime;
+end
+end
+Algorithm 1:Linear Elastic Caching algorithm (A+B ).
+We first introduce some notation to simplify the following discus-
+sion. Any page request sequence 𝜎 gives rise to many independent
+instances of the ski rental problem (one per page request). Let
+SkiCost(B,𝑝,𝑡 )be the cost incurred by the ski rental algorithm B
+on the instance corresponding to a request to page 𝑝 at time 𝑡 and
+let SkiCost(B,𝜎)= Í
+𝑡 SkiCost(B,𝑝𝑡,𝑡)be the total cost incurred
+by Algorithm Bon all the induced instances.
+Theorem 5.2. When the cache eviction algorithm Ais LRU, then
+for any request sequence 𝜎, Algorithm 1 satisfies
+TCO(A+B ,𝜎)≤ EvictCost(A,𝜎)+SkiCost(B,𝜎).
+Proof. Let TCO(A+B ,𝑝𝑡,𝑡)be the total cost incurred by the
+algorithm on page 𝑝𝑡 requested at time 𝑡. So by definition we
+have TCO(A+B,𝜎)= Í
+𝑡 TCO(A+B,𝑝𝑡,𝑡). Let buytime(𝑝𝑡,𝑡)=
+B(𝑝𝑡,𝑡)be the time duration for which algorithm Brecommends
+holding 𝑝𝑡 in cache. Let time-in-cache tic(𝑝𝑡,𝑡)denote the number
+of time units that page 𝑝𝑡 was actually held in the cache and let
+𝑑𝑡 be the number of time units until the next request of page 𝑝𝑡
+in 𝜎. Note that we have tic(𝑝𝑡,𝑡)≤ buytime(𝑝𝑡,𝑡)since 𝑝𝑡 may be
+evicted earlier by Algorithm A, and also tic(𝑝𝑡,𝑡)≤ 𝑑𝑡. Finally let
+I[𝑝𝑡 evicted]be an indicator variable that is 1 iff page 𝑝𝑡 is evicted.
+Then we have:
+TCO(A+B ,𝑝𝑡,𝑡)= tic(𝑝𝑡,𝑡)·𝑟(𝑝𝑡)+I[𝑝𝑡 evicted]·𝐵(𝑝𝑡).
+We now consider three cases depending on whether 𝑝𝑡 was
+evicted by the algorithm A+B .
+Case 1: 𝑝𝑡 was not evicted. Then we havebuytime(𝑝𝑡,𝑡)≥ tic(𝑝𝑡,𝑡)=
+𝑑𝑡 and hence: TCO(A+B ,𝑝𝑡,𝑡)= 𝑑𝑡 ·𝑟(𝑝)= SkiCost(B,𝑝𝑡,𝑡).
+
+=== PDF PAGE 4 ===
+CIDR’25, January 19-22, 2025, Amsterdam, The Netherlands Ravi Kumar, Todd Lipcon, Manish Purohit, and Tamas Sarlos
+Case 2: 𝑝𝑡 was evicted because its TTL expired. Then we have𝑑𝑡 ≥
+buytime(𝑝𝑡,𝑡)= tic(𝑝𝑡,𝑡). Hence, we have TCO(A+B ,𝑝𝑡,𝑡)=
+𝐵(𝑝𝑡)+buytime(𝑝𝑡,𝑡)·𝑟(𝑝𝑡)= SkiCost(B,𝑝𝑡,𝑡).
+Case 3: 𝑝𝑡 was evicted by Algorithm A. Once again, we have
+tic(𝑝𝑡,𝑡)≤ buytime(𝑝𝑡,𝑡)and hence SkiCost(B,𝑝𝑡,𝑡)≥ tic(𝑝𝑡,𝑡)·
+𝑟(𝑝𝑡). Using this, TCO(A+B ,𝑝𝑡,𝑡)= 𝐵(𝑝𝑡)+ tic(𝑝𝑡,𝑡)·𝑟(𝑝𝑡)≤
+𝐵(𝑝𝑡)+SkiCost(B,𝑝𝑡,𝑡).
+Combining all three cases above and summing over all page
+requests, we have:
+TCO(A+B ,𝜎)≤ SkiCost(B,𝜎)
++
+∑︁
+𝑡
+𝐵(𝑝𝑡)· I[𝑝𝑡 evicted by Algorithm A].
+We note that the second term on the RHS is the total eviction cost
+of all pages evicted by Algorithm Awhen invoked as part of Algo-
+rithm 1. This may not be equal to the cost that would be incurred
+if we ran Algorithm Aon the request sequence 𝜎 directly, i.e.,
+EvictCost(A,𝜎)≠ Í
+𝑡 𝐵(𝑝𝑡)· I[𝑝𝑡 evicted by Algorithm A]. However,
+the following lemma argues that when A= LRU, the total eviction
+cost incurred via this procedure does not exceed that of running
+LRU directly on 𝜎. The theorem thus follows. □
+Lemma 5.3. Let A= LRU. Then for any request sequence 𝜎,
+∑︁
+𝑡
+𝐵(𝑝𝑡)· I[𝑝𝑡 evicted by Algorithm A] ≤EvictCost(A,𝜎).
+Proof Sketch. For simplicity consider a single page 𝑝that gets
+evicted from the cache because its TTL expires. Let 𝑆 be the cache
+state maintained by LRU before 𝑝 is evicted and let 𝑆′be the state
+after the eviction. We show that for any future request sequence 𝜎,
+the number of evictions incurred by LRU starting from state 𝑆′is
+at most that incurred by LRU starting from state 𝑆. Let 𝑆𝑡 and 𝑆′
+𝑡
+denote the states after processing 𝑡 requests from 𝜎. We observe
+that for any 𝑡, the only page (if any) in 𝑆𝑡 ∖ 𝑆′
+𝑡 is 𝑝. Further, after
+page 𝑝 is requested or after 𝑝 gets evicted from 𝑆𝑡, we must have
+𝑆𝑡 = 𝑆′
+𝑡 and hence the two instances incur the same number of
+evictions from that point onwards. □
+We note that Lemma 5.3 and Theorem 5.2 are likely to hold
+(at least approximately) for many realistic cache eviction policies
+beyond LRU. The formal proof continues to hold for any eviction
+policy that maintains pages in a priority queue and the priority of a
+page only depends on the intrinsic characteristics of the page and its
+arrival time; in particular, the priority is only (re)-computed when
+it is requested and is independent of the past requests processed by
+the algorithm.
+Offline Setting. Finally, we also consider the offline version of
+linear elastic caching where the algorithm is aware of the entire
+page request sequence a priori. We note that when pages have
+different sizes, even the special case when the cache maintenance
+cost is zero is known as the generalized caching problem and is
+known to be NP-complete [ 16]. When pages have unit sizes but
+different eviction costs (and zero cache maintenance costs), then
+the problem is known as weighted paging and admits a polynomial
+time offline algorithm via a reduction to minimum cost flow [8].
+For offline linear elastic caching, we again show a reduction sim-
+ilar to Algorithm 1 and show that given two black box algorithms—
+one for the offline ski rental problem, and another for the offline
+caching problem (either weighted paging or generalized caching)—
+one can implement an offline elastic caching algorithm. At a high
+level, in the reduction, we subtract the eviction cost of any page by
+the cost incurred by the ski rental algorithm for that page request.
+Theorem 5.4. Let A∗be an offline optimal algorithm for weighted
+paging (or generalized caching if pages have non-uniform sizes) and
+let B∗be an offline optimal ski rental algorithm. We define a modified
+eviction cost 𝑤(𝑝𝑡) = 𝐵(𝑝𝑡)− SkiCost(B∗,𝑝𝑡). For any caching
+algorithm A, let A@B∗be an elastic caching algorithm that runs A
+with the modified eviction costs above. Then A∗@B∗is an optimal
+offline algorithm for linear elastic caching.
+Proof Sketch. We note that an optimal offline algorithm for
+(linear elastic) caching either evicts a page immediately after it is
+requested or holds it in cache until its next request. The theorem
+follows by arguing that for any page request 𝑝𝑡, the TCO incurred
+by A@Bexactly equals EvictCost incurred by Aand the SkiCost
+incurred by Bfor that page request. If a page 𝑝𝑡 is evicted, then
+the incurred TCO is 𝐵(𝑝𝑡)= 𝑤(𝑝𝑡)+ SkiCost(B∗,𝑝𝑡)as desired.
+On the other hand, if the page is not evicted, then the TCO exactly
+equals the ski cost incurred by B∗. □
+6 DESIGN AND IMPLEMENTATION
+We propose implementing linear elastic caching via a TTL cache.
+Whenever a page is inserted into the cache, it gets assigned a TTL. If
+no further requests are made to the page, then the page gets evicted
+at the assigned TTL. If the page does get requested, then the TTL is
+recomputed. Such a TTL cache is well suited for implementing ski
+rental based policies since the TTL for a page directly corresponds
+to the time at which the ski rental algorithm decides to “buy”.
+The theoretical results above demonstrate that incorporating
+such TTLs in addition to a classical eviction policy does not deterio-
+rate the performance of the original eviction policy. In addition, the
+total cost of the resulting elastic caching algorithm is at most the
+sum of costs experienced by the underlying cache eviction policy
+and the multiple independent ski rental instances constructed. Con-
+sequently, in order to minimize the elastic caching cost it suffices
+to optimize the ski rental algorithms independently of the cache
+eviction policy.
+7 EVALUATION
+7.1 Spanner Case Study
+Spanner [ 9] is a scalable, globally distributed database system
+at Google. Like most databases, Spanner issues all storage reads
+through an in-memory page cache. Because Spanner employs a
+form of log-structured merge trees [3] for its storage layer, the data
+behind the cache is immutable and cache entries may be safely
+evicted at any time. This cache represents approximately 45% of
+Spanner’s production memory footprint, which itself represents a
+substantial fraction of Google’s overall fleet memory.
+Spanner servers are deployed on Borg [27], Google’s cluster man-
+agement system. Although servers are deployed within containers
+with a specified memory limit, Borg overcommits memory at the
+
+=== PDF PAGE 5 ===
+Linear Elastic Caching via Ski Rental CIDR’25, January 19-22, 2025, Amsterdam, The Netherlands
+machine level [4], providing for substantial operational efficiencies
+within Google’s fleet when we are able to reduce usage within
+our containers. To that end, we have integrated the linear elastic
+caching algorithm into Spanner, and found that it can substantially
+reduce Spanner’s total cost of ownership (TCO).
+7.1.1 Integration. In order to ensure scalability of Spanner’s cache,
+it supports lock-free read accesses, and only enforces mutual ex-
+clusion between concurrent mutations (evictions and insertions).
+It is implemented using a strategy similar to BP-Wrapper [11], in
+which cache hits are buffered in a lock-free multi-producer single-
+consumer queue, and the eviction policy later processes batches of
+accesses while holding an exclusive latch.
+This made it quite simple to integrate linear elastic caching into
+Spanner’s cache: cache entries are inserted into a heap keyed by the
+eviction time computed by the ski rental oracle. When an entry is
+accessed, the eviction time is recomputed and the entry’s position
+in the heap is adjusted. A background thread periodically evicts any
+entries that have passed their TTL. Because the TTL calculation
+and heap maintenance is deferred off the critical path of cache
+hits, we did not need to implement lock-free priority queues or be
+concerned about introducing additional contention on the cache
+implementation.
+7.1.2 Learned Ski Rental Algorithm. In the classical adversarial
+model of online algorithms, the optimal deterministic policy is
+to buy at the breakeven time 𝐵
+𝑟 . However, we observe that page
+request patterns are far from adversarial, and we can exploit this
+observation to learn prediction models. As observed by [18], any
+(potentially machine-learned) algorithm for ski rental that buys
+at times in some interval [𝜆 ·𝐵
+𝑟, 1
+𝜆 ·𝐵
+𝑟 ]for any constant 𝜆 ≤1
+maintains a bounded worst-case competitive ratio. So, we consider
+algorithms that set 𝑡 = 𝜆·𝐵
+𝑟 where 𝜆is a learned function of the
+page attributes.
+7.1.3 Decision Tree Training. Because the ski rental policy must
+be consulted after every page access (billions of QPS), it is critical
+that it is extremely inexpensive to evaluate. We also strongly prefer
+interpretable models so that engineers and operators can easily
+compare them against their intuition of the problem domain. Given
+this, we use a shallow decision tree, which can be translated into
+a small snippet of C++ code and included into Spanner’s cache
+implementation.
+In order to train the model, we utilize a cache trace collected
+from a small sample of production servers. From this trace, we
+sample a dataset of page requests, each associated with a number
+of features including (i) page features (size, eviction cost, memory
+cost), (ii) cache entry state (e.g., time since prior request, number
+of cache hits), (iii) application features (e.g., Spanner operation cat-
+egory and priority). The label for each example instance is the
+(potentially-infinite) interval until the next request to the page.
+Categorical features are mapped into real numbers by substituting
+target means [24].
+Unfortunately, we cannot use a standard off-the-shelf decision
+tree algorithm (e.g., for squared-loss regression) since we seek to
+directly minimize the ski rental cost, which is discontinuous and
+non-monotonic. Instead, we use a greedy algorithm to train the
+decision tree to directly minimize the total ski rental loss over the
+training set.
+Given a set 𝑆 of ski rental instances, let SkiCost𝑆(𝜆)be the total
+cost over all instances in 𝑆 when using a given constant value of
+𝜆. Let 𝜆∗= arg min𝜆SkiCost𝑆(𝜆)be the minimizer and OPT(𝑆)=
+SkiCost𝑆(𝜆∗)be the optimal cost. We note thatSkiCost𝑆(·)is piece-
+wise linear and hence 𝜆∗can be found by enumerating over the
+𝑂(|𝑆|)pieces. In practice, we approximately find 𝜆∗by sweeping
+over a fixed set of candidates in the interval [0, 2].
+Each node of the tree corresponds to a set𝑆of training instances.
+We iterate over all features and all split points to generate a number
+of candidate partitionings of 𝑆. For each partition, say 𝑆1 and 𝑆2,
+we compute OPT(𝑆1)and OPT(𝑆2)and then choose the feature
+and threshold that minimizes the sum. We then recursively apply
+the same decision tree algorithm within each partition. In practice,
+we have found that there are minimal improvements past a depth
+of two or three, while interpretability suffers, so our production
+implementation only uses a depth of two, discovering optimal splits
+on the time in cache and Spanner-specific IsBackgroundOperation
+features.
+7.1.4 Experimental Results. We deployed our learned ski rental
+policy on a significant fraction of Spanner production servers over
+several months. Compared to a control group that used a fixed size
+cache, the elastic caching policy reduces cache usage by 15.5% while
+only increasing the total cache misses by a relative 5.5%. Because the
+policy is cost-aware, the increase in cache misses is concentrated on
+entries with a relatively lower refault cost, and so I/O costs increase
+by only 0.5%. The TCO, inclusive of the cache RAM, the computa-
+tion spent to maintain the policy, and the storage I/O beneath, is
+reduced by approximately 5%. This amounts to a substantial savings
+considering Spanner’s exabyte-scale footprint. Given the positive
+results in the experimental rollout, we subsequently enabled ski
+rental eviction in all production Spanner databases at Google.
+7.2 Public Traces
+Traces and Cache Simulator. We evaluate our ski rental based
+eviction policies on a number of publicly available cache traces. We
+utilize a subset of traces collected by [28] from five datasets (Tencent,
+Alibaba, MSR, Cloudphysics, FIU) containing 10 traces each. We
+implemented our ski rental based algorithms in libCacheSim [1].
+LibCacheSim is designed for high-throughput cache simulations
+and allows for efficient multi-threaded parallel simulations.
+Algorithms. We implement two classical online algorithms for
+solving the ski rental instances: (i) Breakeven is the 2-competitive
+deterministic algorithm that sets the TTL of a page 𝑝 to be 𝐵(𝑝)
+𝑟(𝑝),
+(ii) Randomized is the randomized 𝑒/(𝑒−1)≈ 1.582-competitive al-
+gorithm [17]. Since there are no application-level features available,
+we do not implement decision trees as the machine learned oracle.
+Instead, we consider the following very simple learning policy. We
+split each trace in half and use the first half for training. For each
+individual page in the training trace, we compute best TTL for the
+page that minimizes the cost over the training trace. We warm up
+all caches with one day’s worth of requests from the second half of
+the trace and use the rest for testing and measurements. During the
+test trace, if we encounter a page that was seen during training, we
+
+=== PDF PAGE 6 ===
+CIDR’25, January 19-22, 2025, Amsterdam, The Netherlands Ravi Kumar, Todd Lipcon, Manish Purohit, and Tamas Sarlos
+set the TTL to be precomputed best TTL for that page. Otherwise,
+we set the TTL using either the breakeven or randomized policies.
+Since different pages occupy different sizes in the cache, we
+mainly utilize the Greedy Dual Size Frequency (GDSF) [7] algorithm
+as the cache eviction policy. We note that we replicated the results
+using the new S3FIFO [28] eviction policy and the results remain
+qualitatively unchanged. In all subsequent results, algorithms la-
+beled as “Breakeven” implement Algorithm 1 using Breakeven as
+the Ski Rental algorithm and GDSF as the eviction policy, and simi-
+larly for the three other elastic caching algorithms. The algorithm
+labeled “GDSF” is the baseline that uses a fixed cache size and has
+no ski rental component.
+Costs. We note that the cost of a cache eviction relative to the cost
+of RAM-seconds is an important factor that determines the efficacy
+of linear elastic caching algorithms. Internal analysis using Spanner
+suggests a ratio of ≈109. This ratio ranges from ≈2 ·107 (custom
+VM RAM vs SSD IOPS on GCP) to ≈5 ·1010 (Amazon S3 Express
+vs Standard, or Azure Premium vs Hot blob stores) in public clouds.
+Unless otherwise specified, we present all experimental results
+using a ratio of 109; see Figure 4 for sensitivity analysis.
+0
+200 400 600 800
+Cache Capacity (MiB)
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+TCO (units hidden)
+1e10
+GDSF
+Breakeven
+Randomized
+Learned + Breakeven
+Learned + Randomized
+Figure 1: Variation of total cost with cache capacity.
+7.2.1 Experimental Results. Figure 1 shows the TCO for a Tencent
+Block trace for different cache capacities. We note that the𝑥-axis
+denotes the maximum cache capacity allocated rather than the
+actual size of the cache. Specifically, for the ski rental based policies,
+the actual cache used is much smaller (which contributes to the
+lower TCO). For small cache capacities, the cost of cache misses
+dominates but for larger caches, Figure 1 shows that the ski rental
+based algorithms significantly reduce the total cost.
+To get an aggregate view of TCO improvement across the dif-
+ferent traces, Figure 2 shows the mean percentage reduction in
+total cost over the different individual traces for each dataset. To
+compute the TCO improvement for a specific trace, we first run
+the algorithms with different cache capacities (as in Figure 1) and
+compare the best TCO obtained by GDSF with that obtained by
+the ski rental based policies. The figure demonstrates that the ski
+rental policies and especially the two learning-based policies give
+significant gains over using fixed cache size policies.
+Effect on Miss Rate. We have assumed for the purposes of com-
+puting TCO that the cost of cache misses (or evictions) can be
+-20% -15% -10% -5% 0% 5% 10% 15% 20%
+Mean Percentage TCO Reduction
+alibabaBlock
+cloudphysics
+fiu
+msr
+tencentBlockDatasets
+Breakeven
+Randomized
+Learned+Breakeven
+Learned+Randomized
+Figure 2: Mean TCO reduction per dataset (positive is better).
+precisely quantified. However, a large increase in cache misses can
+have a significant impact on user perceived latency. Figure 3 shows
+a plot of the cache miss rate of GDSF for different cache sizes for
+the Tencent Block trace. The markers for the ski rental policies
+correspond to the average cache size and miss rate obtained by the
+corresponding algorithms when using the largest cache capacity.
+The figure demonstrates that the ski rental based policies incur
+a significantly lower miss rate for a particular average cache size
+than the corresponding fixed cache size policy.
+0
+200 400 600 800
+Cache Size (MiB)
+0.0
+0.1
+0.2
+0.3
+0.4
+Miss rate
+GDSF
+Breakeven
+Randomized
+Learned + Breakeven
+Learned + Randomized
+Figure 3: Variation of miss rate with cache size.
+Sensitivity to the Cost Ratio. A dominant factor underlying the
+efficacy of elastic caching policies is the ratio of the cost of a cache
+eviction to the cost of RAM (per byte-second). Figure 4 shows a
+plot of TCO improvement for a wide range of different cost ratios
+for the Tencent Block trace. As the cost of evictions increases, the
+relative cost of maintaining the cache in RAM decreases and the
+gains due to elastic caching reduce.
+8 CONCLUSIONS
+We introduced and studied the linear elastic caching problem, mo-
+tivated by reducing both the cache miss cost and the cache main-
+tenance cost. Through an interesting connection to the ski rental
+problem, we developed simple and practical algorithms for linear
+elastic caching. These algorithms reduce the total cost of ownership
+on publicly available cache traces. We also propose a lightweight
+
+=== PDF PAGE 7 ===
+Linear Elastic Caching via Ski Rental CIDR’25, January 19-22, 2025, Amsterdam, The Netherlands
+107 108 109 1010 1011
+Cost Ratio
+-10%
+0%
+10%
+20%
+30%
+40%
+50%
+TCO Reduction
+Breakeven
+Randomized
+Learned + Breakeven
+Learned + Randomized
+Figure 4: TCO reduction vs Cost Ratio
+machine learning approach to design simple ski rental algorithms
+that are tailored to production workloads. They have also been
+deployed at scale in Spanner at Google.
+Potential future work includes strengthening Theorem 5.2 for
+other eviction policies beyond LRU. Such a result would also provide
+a strong justification for incorporating learned ski rental policies
+along with machine learned caching algorithms.
+REFERENCES
+[1] libCacheSim: A high performance cache simulator. https://github.com/1a1a11a/
+libCacheSim. Accessed: 08-01-2024.
+[2] Ski rental problem. https://en.wikipedia.org/wiki/Ski_rental_problem.
+[3] David F Bacon, Nathan Bales, Nico Bruno, Brian F Cooper, Adam Dickinson,
+Andrew Fikes, Campbell Fraser, Andrey Gubarev, Milind Joshi, Eugene Kogan,
+et al. Spanner: Becoming a SQL system. In SIGMOD, pages 331–343, 2017.
+[4] Noman Bashir, Nan Deng, Krzysztof Rzadca, David Irwin, Sree Kodak, and Rohit
+Jnagal. Take it to the limit: peak prediction-driven resource overcommitment in
+datacenters. In EuroSys, pages 556–573, 2021.
+[5] N. Carlsson and D. Eager. Optimized dynamic cache instantiation and accurate
+LRU approximations under time-varying request volume. IEEE ToCC, 11(1), 2023.
+[6] Damiano Carra, Giovanni Neglia, and Pietro Michiardi. Elastic provisioning of
+cloud caches: A cost-aware TTL approach. IEEE/ACM ToN, 28(3):1283–1296, 2020.
+[7] Ludmila Cherkasova. Improving WWW proxies performance with greedy-dual-
+size-frequency caching policy . Hewlett-Packard Laboratories Palo Alto, CA, 1998.
+[8] Marek Chrobak, H Karloff, Tom Payne, and Sundar Vishwanathan. New results
+on server problems. SIAM Journal on Discrete Mathematics , 4(2):172–181, 1991.
+[9] James C Corbett, Jeffrey Dean, Michael Epstein, Andrew Fikes, Christopher Frost,
+Jeffrey John Furman, Sanjay Ghemawat, Andrey Gubarev, Christopher Heiser,
+Peter Hochschild, et al. Spanner: Google’s globally distributed database. ACM
+TOCS, 31(3):1–22, 2013.
+[10] Anirban Dasgupta, Ravi Kumar, and Tamás Sarlós. Caching with dual costs. In
+WWW, pages 643–652, 2017.
+[11] Xiaoning Ding, Song Jiang, and Xiaodong Zhang. Bp-wrapper: A system frame-
+work making any replacement algorithms (almost) lock contention free. In ICDE,
+pages 369–380, 2009.
+[12] Abdelkarim Erradi and Yaser Mansouri. Online cost optimization algorithms for
+tiered cloud storage services. Journal of Systems and Software , 160:110457, 2020.
+[13] Nicaise Choungmo Fofack, Philippe Nain, Giovanni Neglia, and Don Towsley.
+Performance evaluation of hierarchical TTL-based cache networks. Comput.
+Netw., 65:212–231, 2014.
+[14] Anupam Gupta, Ravishankar Krishnaswamy, Amit Kumar, and Debmalya Pani-
+grahi. Elastic caching. In SODA, pages 143–156, 2019.
+[15] Ubaid Ullah Hafeez, Muhammad Wajahat, and Anshul Gandhi. Elmem: Towards
+an elastic Memcached system. In ICDCS, pages 278–289, 2018.
+[16] Sandy Irani. Page replacement with multi-size pages and applications to web
+caching. Algorithmica, 33(3), 2002.
+[17] Anna R. Karlin, Mark S. Manasse, Lyle A. McGeoch, and Susan Owicki. Compet-
+itive randomized algorithms for nonuniform problems. Algorithmica, 1994.
+[18] Ravi Kumar, Manish Purohit, and Zoya Svitkina. Improving online algorithms
+via ML predictions. In NeurIPS, pages 9684–9693, 2018.
+[19] Jeongho Kwak, Georgios Paschos, and George Iosifidis. Elastic femtocaching:
+Scale, cache, and route. IEEE Trans. Wireless Comm. , 20(7):4174–4189, 2021.
+[20] Mingyu Liu, Li Pan, and Shijun Liu. To transfer or not: An online cost optimization
+algorithm for using two-tier storage-as-a-service clouds. IEEE Access, 7, 2019.
+[21] Mingyu Liu, Li Pan, and Shijun Liu. Keep hot or go cold: A randomized online
+migration algorithm for cost optimization in STaaS clouds. IEEE Trans. Netw.
+Service Mgmt. , 18(4):4563–4575, 2021.
+[22] Mingyu Liu, Li Pan, and Shijun Liu. Cost optimization for cloud storage from
+user perspectives: Recent advances, taxonomy, and survey. ACM Computing
+Surveys, 55(13):1–37, 2023.
+[23] Yaser Mansouri and Abdelkarim Erradi. Cost optimization algorithms for hot
+and cool tiers cloud storage services. In CLOUD, pages 622–629, 2018.
+[24] Daniele Micci-Barreca. A preprocessing scheme for high-cardinality categorical
+attributes in classification and prediction problems. SIGKDD Explorations , 2001.
+[25] Thanasis Priovolos, Stathis Maroulis, and Vana Kalogeraki. Escape: Elastic
+caching for big data systems. In SRDS, pages 93–9309, 2019.
+[26] Krishna PN Puttaswamy, Thyaga Nandagopal, and Murali Kodialam. Frugal
+storage for cloud file systems. In EuroSys, pages 71–84, 2012.
+[27] Abhishek Verma, Luis Pedrosa, Madhukar Korupolu, David Oppenheimer, Eric
+Tune, and John Wilkes. Large-scale cluster management at Google with Borg. In
+EuroSys, pages 1–17, 2015.
+[28] Juncheng Yang, Yazhuo Zhang, Ziyue Qiu, Yao Yue, and Rashmi Vinayak. FIFO
+queues are all you need for cache eviction. In SOSP, pages 130–149, 2023.
+A DEFERRED PROOFS
+Lemma 5.3. Let A= LRU. Then for any request sequence 𝜎,
+∑︁
+𝑡
+𝐵(𝑝𝑡)· I[𝑝𝑡 evicted by Algorithm A] ≤EvictCost(A,𝜎).
+Proof. For simplicity, we assume that all pages have unit size;
+the proof extends seamlessly even for general page sizes. We recall
+that LRU maintains the pages held in cache in a priority queue with
+the most recently requested page at the head of the queue and the
+least recently requested page at the tail. Upon a cache miss, the
+newly requested page enters the queue at the head and the least
+recently used page at the tail gets evicted from the queue (and the
+cache). On a cache hit, the requested page moves from its initial
+position in the queue to the head. At any point during execution of
+the algorithm, we call this queue as the “state” of the algorithm.
+The lemma states that additional evictions caused due to TTL
+eviction in Algorithm 1 do not increase the total cost of evictions
+incurred by the cache eviction policy A. To prove this, consider
+a single page 𝑝 that gets evicted from the cache because its TTL
+expires; the proof then follows by successively arguing about each
+page evicted due to TTL expiry. Let𝑆be the cache state maintained
+(as a priority queue) by LRU before 𝑝 is evicted and let 𝑆′be the
+state after the eviction. For any state 𝑇 and request sequence 𝜎,
+let LRUCost(𝑇,𝜎 )be the number of evictions incurred by LRU on
+request sequence 𝜎when starting from state𝑇. Our goal is to show
+that LRUCost(𝑆′,𝜎)≤ LRUCost(𝑆,𝜎)for any request sequence 𝜎.
+Consider running two parallel instances of LRU on request se-
+quence 𝜎starting from states𝑆and 𝑆′; we call these algorithmsALG
+and ALG′respectively. We abuse notation slightly and use𝑆𝑡 (and
+𝑆′
+𝑡) to denote the states after 𝑡 pages from 𝜎 are processed. Further,
+let set(𝑆)denote the set of pages maintained in the cache in state
+𝑆, i.e., sans priority, (and similarly for𝑆′). We now claim that the
+following invariant is maintained. See Figure 5 for an illustration.
+Invariant A.1. If 𝑆𝑡 ≠ 𝑆′
+𝑡 then we must have set(𝑆𝑡)∖set(𝑆′
+𝑡)= {𝑝}
+and further either
+(1) set(𝑆′
+𝑡)⊂ set(𝑆𝑡), or
+(2) set(𝑆′
+𝑡)∖ set(𝑆𝑡)= {tail(𝑆′
+𝑡)}, where tail(𝑆)denotes the least
+recently used page in 𝑆.
+We first observe that this invariant is sufficient to show that
+LRUCost(𝑆′,𝜎)≤ LRUCost(𝑆,𝜎). Clearly, once 𝑆𝑡 = 𝑆′
+𝑡, then from
+
+=== PDF PAGE 8 ===
+CIDR’25, January 19-22, 2025, Amsterdam, The Netherlands Ravi Kumar, Todd Lipcon, Manish Purohit, and Tamas Sarlos
+p
+St
+S′
+t
+decreasing priority
+tail(S′
+t)
+tail(St)
+p
+St
+S′
+t
+decreasing priority
+tail(St)
+tail(S′
+t)
+or
+Figure 5: Illustration of Invariant A.1. The pages in the cache
+(apart from page𝑝 ∈𝑆𝑡) are arranged in priority order from
+left (highest priority) to right (lowest priority).
+that point onward both algorithms perform identical actions and
+incur the same cost. So suppose not and consider a request to some
+page 𝑥 ∉ 𝑆′
+𝑡 and 𝑥 ≠ 𝑝and suppose that ALG evicts page𝑦. Then by
+the invariant that set(𝑆𝑡+1)∖ set(𝑆′
+𝑡+1)= {𝑝}, we must have page
+𝑦 has already been evicted by ALG′. On the other hand, if 𝑥 = 𝑝,
+then we must have 𝑝 ∈𝑆′
+𝑡+1 and hence by the invariant𝑆𝑡+1 = 𝑆′
+𝑡+1.
+Thus, the claim follows.
+Finally, we prove the invariant by induction. For the base case, by
+definition, we haveset(𝑆0)∖set(𝑆′
+0)= {𝑝}and set(𝑆′
+0)⊂ set(𝑆0)as
+desired. Let 𝑥 be the (𝑡+1)th page. Since 𝑆𝑡 = 𝑆′
+𝑡 =⇒ 𝑆𝑡+1 = 𝑆′
+𝑡+1,
+here we assume that 𝑆𝑡 ≠ 𝑆′
+𝑡. We now have a few cases.
+Case 1: 𝑥 ∈set(𝑆′
+𝑡)∩ set(𝑆𝑡). Since neither algorithm incurs a
+cache miss, we have set(𝑆′
+𝑡+1)= set(𝑆′
+𝑡)and set(𝑆𝑡+1)= set(𝑆𝑡)
+and the invariant is maintained.
+Case 2: 𝑥 ∉ 𝑆′
+𝑡 and 𝑥 ≠ 𝑝. In this case, ALG incurs a cache
+miss and evicts tail(𝑆𝑡)so that set(𝑆𝑡+1)= set(𝑆𝑡)∪{𝑥}∖ tail(𝑆𝑡).
+Depending on whether or not 𝑆′
+𝑡 has an additional page, we have
+two slightly different subcases. The following figure illustrates the
+states after processing of page 𝑥 in both subcases.
+p
+St+1
+S′
+t+1
+decreasing priority
+tail(S′
+t)
+tail(St)
+p
+St+1
+S′
+t+1
+decreasing priority
+tail(St)
+tail(S′
+t)
+or
+x
+x
+Figure 6: Illustration of how Invariant A.1 is maintained
+when a page𝑥 ∉ 𝑆′
+𝑡 and 𝑥 ≠ 𝑝 is requested.
+In the first subcase suppose that set(𝑆′
+𝑡)∖ set(𝑆𝑡)= {tail(𝑆′
+𝑡)}.
+Then ALG′needs to evict tail(𝑆′
+𝑡)and fetch 𝑥 so that set(𝑆′
+𝑡+1)=
+set(𝑆′
+𝑡)∪{𝑥}∖tail(𝑆′
+𝑡). Also since pages maintain their priority order,
+we now havetail(𝑆′
+𝑡+1)= tail(𝑆𝑡)and thus maintain thatset(𝑆′
+𝑡+1)∖
+set(𝑆𝑡+1)= {tail(𝑆′
+𝑡+1)}as desired. This subcase is illustrated in left
+side of Figure 6.
+For the second subcase, suppose that set(𝑆′
+𝑡) ⊂set(𝑆𝑡), then
+|set(𝑆′
+𝑡)| < 𝑘 and ALG′does not evict any page and set(𝑆′
+𝑡+1)=
+set(𝑆′
+𝑡)∪{𝑥}. So we maintain that set(𝑆𝑡+1)∖ set(𝑆′
+𝑡+1)= {𝑝}and
+also have set(𝑆′
+𝑡+1)∖ set(𝑆𝑡+1)= tail(𝑆𝑡)= tail(𝑆′
+𝑡), where the last
+equality holds since the priority ordering of pages depends solely
+on their arrival order. This subcase is illustrated in right side of
+Figure 6.
+Case 3: 𝑥 = 𝑝. Since 𝑝 ∈set(𝑆𝑡), ALG does not incur a cache
+miss and we have set(𝑆𝑡+1)= set(𝑆𝑡). On the other hand, ALG′
+does incur a cache miss. Suppose we have set(𝑆′
+𝑡)⊂ set(𝑆𝑡), then
+|set(𝑆′
+𝑡)| < 𝑘 and ALG′does not evict any page and set(𝑆′
+𝑡+1)=
+set(𝑆′
+𝑡)∪{ 𝑝}= set(𝑆𝑡+1). On the other hand if set(𝑆′
+𝑡)∖ set(𝑆𝑡)=
+{tail(𝑆′
+𝑡)}, thenALG′evicts pagetail(𝑆′
+𝑡). Then we haveset(𝑆′
+𝑡+1)=
+set(𝑆′
+𝑡)∪{ 𝑝}∖ {tail(𝑆′
+𝑡)}= set(𝑆𝑡+1). Since the priority ordering
+of pages depends solely on their arrival order,set(𝑆′
+𝑡+1)= 𝑠𝑒𝑡(𝑆𝑡+1)
+implies that 𝑆′
+𝑡+1 = 𝑆𝑡+1 as desired. □
+Theorem 5.4. Let A∗be an offline optimal algorithm for weighted
+paging (or generalized caching if pages have non-uniform sizes) and
+let B∗be an offline optimal ski rental algorithm. We define a modified
+eviction cost 𝑤(𝑝𝑡) = 𝐵(𝑝𝑡)− SkiCost(B∗,𝑝𝑡). For any caching
+algorithm A, let A@B∗be an elastic caching algorithm that runs A
+with the modified eviction costs above. Then A∗@B∗is an optimal
+offline algorithm for linear elastic caching.
+Proof. We assume without loss of generality that A∗is eager,
+i.e., (i) it evicts any page 𝑝𝑡 immediately after time 𝑡 or does not
+evict it until the page is requested again, and (ii) it immediately
+evicts any page 𝑝with eviction cost 0. Note that it is easy to ensure
+that any offline optimal caching algorithm is eager.
+We first note that for an optimal offline elastic caching algorithm
+E∗, there exists an offline caching algorithm Asuch that E∗ =
+A@B∗. Indeed, we can consider Ato be the offline algorithm that
+takes exactly the same decisions as E∗.
+To complete the proof, it is now sufficient to show that for any
+offline caching algorithm A, if EvictCost(A,𝜎,𝑤 )is the total evic-
+tion cost incurred by Awith the modified weights 𝑤, then:
+TCO(A@B∗,𝜎)= EvictCost(A,𝜎,𝑤 )+SkiCost(B∗,𝜎).
+Consider any page𝑝𝑡 requested at time𝑡. Since Ais eager, either
+𝑝𝑡 gets evicted immediately at the end of time 𝑡 or stays in cache
+until it is requested again. Let 𝑑𝑡 be the number of time units until
+the next request to page 𝑝𝑡 in 𝜎. So we have two cases:
+Case 1: 𝑝𝑡 is evicted. We haveTCO(A@B∗,𝑝𝑡,𝑡)= 𝐵(𝑝𝑡)= 𝑤(𝑝𝑡)+
+SkiCost(B∗,𝑝𝑡,𝑡).
+Case 2: 𝑝𝑡 is not evicted. Since 𝑝𝑡 gets evicted whenever 𝑤(𝑝𝑡)= 0,
+we must have SkiCost(B∗,𝑝𝑡,𝑡)= 𝑑𝑡 ·𝑟(𝑡). Since 𝑝𝑡 is not evicted,
+we have EvictCost(A,𝑝𝑡,𝑡,𝑤 )= 0, and TCO(A@B∗,𝑝𝑡,𝑡)= 𝑑𝑡 ·
+𝑟(𝑡). The proof follows from summing over all page requests. □

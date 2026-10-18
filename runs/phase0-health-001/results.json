@@ -1,0 +1,51 @@
+{
+  "checks": [
+    {
+      "cleanup_verified": true,
+      "component": "cache-0",
+      "elapsed_seconds": 0.014999999999417923,
+      "eviction_policy": "allkeys-lru",
+      "maxmemory_bytes": 33554432,
+      "payload_sha256": "70a0c0c9f52b73aa72cd93f8ddfbb80a7894f465975e95d2ed80bc7acc54b715",
+      "port": 16379,
+      "server_run_id": "b654fc26a56067a6d53262be6bc9b84596d2c2d3",
+      "server_version": "7.4.11",
+      "status": "verified"
+    },
+    {
+      "cleanup_verified": true,
+      "component": "cache-1",
+      "elapsed_seconds": 0.01599999999598367,
+      "eviction_policy": "allkeys-lru",
+      "maxmemory_bytes": 33554432,
+      "payload_sha256": "de7850249e87a7f93d63ca50626a6ae49e748319e3e9fb8c64ed4590104ba903",
+      "port": 16380,
+      "server_run_id": "b04f57e0ff9a2b7676b2b1025aaebb27ab6e5e78",
+      "server_version": "7.4.11",
+      "status": "verified"
+    },
+    {
+      "cleanup_verified": true,
+      "component": "cache-2",
+      "elapsed_seconds": 0.01600000000325963,
+      "eviction_policy": "allkeys-lru",
+      "maxmemory_bytes": 33554432,
+      "payload_sha256": "6647e3fb8d47fc50da6c96bfb530a9421eb36fbc7cff19f82980f0120758be1c",
+      "port": 16381,
+      "server_run_id": "7aecbf5f126a718321e09af447673e11b2a99b6a",
+      "server_version": "7.4.11",
+      "status": "verified"
+    },
+    {
+      "cleanup_verified": true,
+      "client_libpq_version": 160009,
+      "component": "database",
+      "elapsed_seconds": 0.0930000000007567,
+      "payload_sha256": "a969a7b4c2311d7c35dcb30b7aa1e2909d9c289ad0b9a141e5910dade7efd50b",
+      "pool_max_size": 2,
+      "server_version": "PostgreSQL 17.11 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit",
+      "status": "verified"
+    }
+  ],
+  "error": null
+}

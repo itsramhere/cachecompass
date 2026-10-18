@@ -1,0 +1,51 @@
+{
+  "captured_utc": "2026-10-09T17:35:56.974519+00:00",
+  "checks": [
+    {
+      "elapsed_seconds": 0.125,
+      "ended_utc": "2026-10-09T17:35:55.327591+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "http_status": 403,
+      "id": "adaptcache-publisher",
+      "response_file": "adaptcache-publisher.response",
+      "sha256": "ebe6b6c075f940f1bd4e0023e11a1e52fc6bd3e1423bd7f2a02b7983e020d7bc",
+      "started_utc": "2026-10-09T17:35:55.214320+00:00",
+      "status": "retrieval_failure",
+      "url": "https://dl.acm.org/doi/10.1145/2988336.2988343"
+    },
+    {
+      "elapsed_seconds": 0.7649999999994179,
+      "ended_utc": "2026-10-09T17:35:56.092718+00:00",
+      "http_status": 200,
+      "id": "adaptcache-metadata",
+      "resolved_url": "https://api.crossref.org/works/10.1145/2988336.2988343",
+      "response_file": "adaptcache-metadata.response",
+      "sha256": "516306ca07282f90ae3ccec5bec61986a053d7d8a58ebbef842623e4e05e46cc",
+      "started_utc": "2026-10-09T17:35:55.327591+00:00",
+      "status": "retrieved",
+      "url": "https://api.crossref.org/works/10.1145/2988336.2988343"
+    },
+    {
+      "elapsed_seconds": 0.5,
+      "ended_utc": "2026-10-09T17:35:56.599296+00:00",
+      "http_status": 200,
+      "id": "guide-commit",
+      "resolved_url": "https://api.github.com/repos/babushkai/system-design-patterns/commits?path=04-caching/04-cache-stampede.md&per_page=1",
+      "response_file": "guide-commit.response",
+      "sha256": "05b9b4879760d49a968ba58e9182c5fa1f2d342c5f4695ca712dc60cb15e028c",
+      "started_utc": "2026-10-09T17:35:56.092718+00:00",
+      "status": "retrieved",
+      "url": "https://api.github.com/repos/babushkai/system-design-patterns/commits?path=04-caching/04-cache-stampede.md&per_page=1"
+    },
+    {
+      "commit": "a6e583a999cbe9f8b82e688365a58bdd2f4d5687",
+      "commit_date": "2026-07-21T07:02:49Z",
+      "ended_utc": "2026-10-09T17:35:56.974519+00:00",
+      "id": "guide-pinned",
+      "response_file": "guide.md",
+      "sha256": "2cd8f7439eca14c22a94272b1a743751ecc828504c24393cb55508cb96197eaa",
+      "status": "retrieved",
+      "url": "https://raw.githubusercontent.com/babushkai/system-design-patterns/a6e583a999cbe9f8b82e688365a58bdd2f4d5687/04-caching/04-cache-stampede.md"
+    }
+  ]
+}

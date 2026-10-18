@@ -1,0 +1,17 @@
+{
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-File",
+    "scripts/fingerprint.ps1",
+    "-Output",
+    "reports/source_state.json"
+  ],
+  "elapsed_seconds": 0.6720000000059372,
+  "ended_utc": "2026-10-09T15:36:07.677126+00:00",
+  "exit_code": 0,
+  "started_utc": "2026-10-09T15:36:06.997564+00:00",
+  "stderr": "",
+  "stdout": "a657f503705b75d360cf31f8ef0d3aa38f20b31751ad0fa003f00223ca4ee005",
+  "step": "fingerprint"
+}

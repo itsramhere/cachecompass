@@ -1,0 +1,576 @@
+{
+  "boundary": "Doctor checks prerequisites and container health; run health separately for client read/write verification.",
+  "captured_utc": "2026-10-09T15:33:50.455163+00:00",
+  "checks": [
+    {
+      "check": "runtime_and_dependency_lock",
+      "passed": true
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "version",
+        "--format",
+        "{{json .}}"
+      ],
+      "elapsed_seconds": 0.125,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"Client\":{\"Version\":\"29.8.0\",\"ApiVersion\":\"1.56\",\"DefaultAPIVersion\":\"1.56\",\"GitCommit\":\"88096ef\",\"GoVersion\":\"go1.26.8\",\"Os\":\"windows\",\"Arch\":\"amd64\",\"BuildTime\":\"Thu Sep  3 21:53:38 2026\",\"Context\":\"desktop-linux\"},\"Server\":{\"Platform\":{\"Name\":\"Docker Desktop 4.91.0 (239619)\"},\"Version\":\"29.8.0\",\"ApiVersion\":\"1.56\",\"MinAPIVersion\":\"1.40\",\"Os\":\"linux\",\"Arch\":\"amd64\",\"Components\":[{\"Name\":\"Engine\",\"Version\":\"29.8.0\",\"Details\":{\"ApiVersion\":\"1.56\",\"Arch\":\"amd64\",\"BuildTime\":\"Thu Sep  3 21:51:20 2026\",\"Experimental\":\"false\",\"GitCommit\":\"3ce5872\",\"GoVersion\":\"go1.26.8\",\"KernelVersion\":\"6.6.87.2-microsoft-standard-WSL2\",\"MinAPIVersion\":\"1.40\",\"Module\":\"github.com/moby/moby/v2\",\"ModuleVersion\":\"v2.0.0+unknown\",\"Os\":\"linux\"}},{\"Name\":\"containerd\",\"Version\":\"v2.3.4\",\"Details\":{\"GitCommit\":\"db8809540e1a7a9da5d518876894933ff55692ab\"}},{\"Name\":\"runc\",\"Version\":\"1.4.3\",\"Details\":{\"GitCommit\":\"v1.4.3-0-gbb14dabe\"}},{\"Name\":\"docker-init\",\"Version\":\"0.19.0\",\"Details\":{\"GitCommit\":\"de40ad0\"}}],\"GitCommit\":\"3ce5872\",\"GoVersion\":\"go1.26.8\",\"KernelVersion\":\"6.6.87.2-microsoft-standard-WSL2\",\"BuildTime\":\"2026-09-03T21:51:20.000000000+00:00\"}}"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "compose",
+        "version"
+      ],
+      "elapsed_seconds": 0.18699999999807915,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "Docker Compose version v5.5.1"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "info",
+        "--format",
+        "{\"os_type\":{{json .OSType}},\"architecture\":{{json .Architecture}},\"server_version\":{{json .ServerVersion}},\"cpus\":{{json .NCPU}},\"memory_bytes\":{{json .MemTotal}},\"kernel\":{{json .KernelVersion}},\"cgroup_version\":{{json .CgroupVersion}},\"storage_driver\":{{json .Driver}}}"
+      ],
+      "elapsed_seconds": 1.1560000000026776,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"os_type\":\"linux\",\"architecture\":\"x86_64\",\"server_version\":\"29.8.0\",\"cpus\":12,\"memory_bytes\":7920103424,\"kernel\":\"6.6.87.2-microsoft-standard-WSL2\",\"cgroup_version\":\"2\",\"storage_driver\":\"overlayfs\"}"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "ps",
+        "-aq",
+        "--filter",
+        "label=com.docker.compose.project=paper2-research"
+      ],
+      "elapsed_seconds": 0.14099999999598367,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "a23c461b2596\n4572788e8026\nabccf9467685\n637744c85dfb"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "inspect",
+        "a23c461b2596",
+        "--format",
+        "{\"id\":{{json .Id}},\"image_id\":{{json .Image}},\"image_reference\":{{json .Config.Image}},\"service\":{{json (index .Config.Labels \"com.docker.compose.service\")}},\"state\":{{json .State.Status}},\"health\":{{json .State.Health.Status}},\"memory_bytes\":{{json .HostConfig.Memory}},\"nano_cpus\":{{json .HostConfig.NanoCpus}},\"shm_bytes\":{{json .HostConfig.ShmSize}},\"ports\":{{json .NetworkSettings.Ports}}}"
+      ],
+      "elapsed_seconds": 0.07800000000133878,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"id\":\"a23c461b2596c30bd11f29e45d8e21818bb3ecfa3e4286e142777257a046a86e\",\"image_id\":\"sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24\",\"image_reference\":\"postgres@sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24\",\"service\":\"database\",\"state\":\"running\",\"health\":\"healthy\",\"memory_bytes\":536870912,\"nano_cpus\":1000000000,\"shm_bytes\":134217728,\"ports\":{\"5432/tcp\":[{\"HostIp\":\"127.0.0.1\",\"HostPort\":\"15432\"}]}}"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "image",
+        "inspect",
+        "sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24",
+        "--format",
+        "{\"digests\":{{json .RepoDigests}},\"os\":{{json .Os}},\"architecture\":{{json .Architecture}}}"
+      ],
+      "elapsed_seconds": 0.125,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"digests\":[\"postgres@sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24\"],\"os\":\"linux\",\"architecture\":\"amd64\"}"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "inspect",
+        "4572788e8026",
+        "--format",
+        "{\"id\":{{json .Id}},\"image_id\":{{json .Image}},\"image_reference\":{{json .Config.Image}},\"service\":{{json (index .Config.Labels \"com.docker.compose.service\")}},\"state\":{{json .State.Status}},\"health\":{{json .State.Health.Status}},\"memory_bytes\":{{json .HostConfig.Memory}},\"nano_cpus\":{{json .HostConfig.NanoCpus}},\"shm_bytes\":{{json .HostConfig.ShmSize}},\"ports\":{{json .NetworkSettings.Ports}}}"
+      ],
+      "elapsed_seconds": 0.07800000000133878,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"id\":\"4572788e8026682cd21f84383c9751b7b71288c833ee388b3e5f2e21b5ba995c\",\"image_id\":\"sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499\",\"image_reference\":\"redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499\",\"service\":\"cache-old-1\",\"state\":\"running\",\"health\":\"healthy\",\"memory_bytes\":134217728,\"nano_cpus\":500000000,\"shm_bytes\":67108864,\"ports\":{\"6379/tcp\":[{\"HostIp\":\"127.0.0.1\",\"HostPort\":\"16379\"}]}}"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "image",
+        "inspect",
+        "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+        "--format",
+        "{\"digests\":{{json .RepoDigests}},\"os\":{{json .Os}},\"architecture\":{{json .Architecture}}}"
+      ],
+      "elapsed_seconds": 0.125,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"digests\":[\"redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499\"],\"os\":\"linux\",\"architecture\":\"amd64\"}"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "inspect",
+        "abccf9467685",
+        "--format",
+        "{\"id\":{{json .Id}},\"image_id\":{{json .Image}},\"image_reference\":{{json .Config.Image}},\"service\":{{json (index .Config.Labels \"com.docker.compose.service\")}},\"state\":{{json .State.Status}},\"health\":{{json .State.Health.Status}},\"memory_bytes\":{{json .HostConfig.Memory}},\"nano_cpus\":{{json .HostConfig.NanoCpus}},\"shm_bytes\":{{json .HostConfig.ShmSize}},\"ports\":{{json .NetworkSettings.Ports}}}"
+      ],
+      "elapsed_seconds": 0.07800000000133878,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"id\":\"abccf9467685aad65c9f3328b6aeea6d0cf841ed71c58005b6912895c215d650\",\"image_id\":\"sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499\",\"image_reference\":\"redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499\",\"service\":\"cache-new\",\"state\":\"running\",\"health\":\"healthy\",\"memory_bytes\":134217728,\"nano_cpus\":500000000,\"shm_bytes\":67108864,\"ports\":{\"6379/tcp\":[{\"HostIp\":\"127.0.0.1\",\"HostPort\":\"16381\"}]}}"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "image",
+        "inspect",
+        "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+        "--format",
+        "{\"digests\":{{json .RepoDigests}},\"os\":{{json .Os}},\"architecture\":{{json .Architecture}}}"
+      ],
+      "elapsed_seconds": 0.125,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"digests\":[\"redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499\"],\"os\":\"linux\",\"architecture\":\"amd64\"}"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "inspect",
+        "637744c85dfb",
+        "--format",
+        "{\"id\":{{json .Id}},\"image_id\":{{json .Image}},\"image_reference\":{{json .Config.Image}},\"service\":{{json (index .Config.Labels \"com.docker.compose.service\")}},\"state\":{{json .State.Status}},\"health\":{{json .State.Health.Status}},\"memory_bytes\":{{json .HostConfig.Memory}},\"nano_cpus\":{{json .HostConfig.NanoCpus}},\"shm_bytes\":{{json .HostConfig.ShmSize}},\"ports\":{{json .NetworkSettings.Ports}}}"
+      ],
+      "elapsed_seconds": 0.07899999999790452,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"id\":\"637744c85dfb15d10a9f4b8443fa9d8b5e918d30d67e67fc8139b1a639a18b16\",\"image_id\":\"sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499\",\"image_reference\":\"redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499\",\"service\":\"cache-old-2\",\"state\":\"running\",\"health\":\"healthy\",\"memory_bytes\":134217728,\"nano_cpus\":500000000,\"shm_bytes\":67108864,\"ports\":{\"6379/tcp\":[{\"HostIp\":\"127.0.0.1\",\"HostPort\":\"16380\"}]}}"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "image",
+        "inspect",
+        "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+        "--format",
+        "{\"digests\":{{json .RepoDigests}},\"os\":{{json .Os}},\"architecture\":{{json .Architecture}}}"
+      ],
+      "elapsed_seconds": 0.13999999999941792,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"digests\":[\"redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499\"],\"os\":\"linux\",\"architecture\":\"amd64\"}"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-Command",
+        "$ErrorActionPreference=\"Stop\"; $o=Get-CimInstance Win32_OperatingSystem; $p=Get-CimInstance Win32_Processor; $d=Get-CimInstance Win32_LogicalDisk -Filter \"DeviceID='C:'\"; @{os=@{caption=$o.Caption;version=$o.Version;total_ram_kib=$o.TotalVisibleMemorySize;free_ram_kib=$o.FreePhysicalMemory};cpu=@{name=$p.Name;cores=$p.NumberOfCores;logical_processors=$p.NumberOfLogicalProcessors};disk=@{total_bytes=$d.Size;free_bytes=$d.FreeSpace}} | ConvertTo-Json -Depth 4 -Compress"
+      ],
+      "elapsed_seconds": 2.4689999999973224,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"cpu\":{\"name\":\"AMD Ryzen 7 7445HS w/ Radeon 740M Graphics     \",\"cores\":6,\"logical_processors\":12},\"disk\":{\"free_bytes\":247699410944,\"total_bytes\":510911311872},\"os\":{\"caption\":\"Microsoft Windows 11 Home Single Language\",\"free_ram_kib\":2713408,\"version\":\"10.0.26200\",\"total_ram_kib\":15973788}}"
+    },
+    {
+      "command": [
+        "wsl.exe",
+        "--version"
+      ],
+      "elapsed_seconds": 0.07800000000133878,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "WSL version: 2.6.3.0\r\nKernel version: 6.6.87.2-1\r\nWSLg version: 1.0.71\r\nMSRDC version: 1.2.6353\r\nDirect3D version: 1.611.1-81528511\r\nDXCore version: 10.0.26100.1-240331-1435.ge-release\r\nWindows version: 10.0.26200.9457"
+    },
+    {
+      "command": [
+        "wsl.exe",
+        "--list",
+        "--verbose"
+      ],
+      "elapsed_seconds": 0.07800000000133878,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "NAME              STATE           VERSION\r\n* Ubuntu            Stopped         2\r\n  docker-desktop    Running         2"
+    },
+    {
+      "command": [
+        "git",
+        "--version"
+      ],
+      "elapsed_seconds": 0.031000000002677552,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "git version 2.52.0.windows.1"
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "elapsed_seconds": 0.046999999998661224,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "C:/Users/ramst/Documents/antigravity"
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "HEAD"
+      ],
+      "elapsed_seconds": 0.046999999998661224,
+      "exit_code": 128,
+      "stderr": "fatal: Needed a single revision",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "git",
+        "status",
+        "--short",
+        "--",
+        "."
+      ],
+      "elapsed_seconds": 0.046999999998661224,
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "?? ./"
+    }
+  ],
+  "containers": [
+    {
+      "health": "healthy",
+      "id": "a23c461b2596c30bd11f29e45d8e21818bb3ecfa3e4286e142777257a046a86e",
+      "image": {
+        "architecture": "amd64",
+        "digests": [
+          "postgres@sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24"
+        ],
+        "os": "linux"
+      },
+      "image_id": "sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24",
+      "image_reference": "postgres@sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24",
+      "memory_bytes": 536870912,
+      "nano_cpus": 1000000000,
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "15432"
+          }
+        ]
+      },
+      "service": "database",
+      "shm_bytes": 134217728,
+      "state": "running"
+    },
+    {
+      "health": "healthy",
+      "id": "4572788e8026682cd21f84383c9751b7b71288c833ee388b3e5f2e21b5ba995c",
+      "image": {
+        "architecture": "amd64",
+        "digests": [
+          "redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499"
+        ],
+        "os": "linux"
+      },
+      "image_id": "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+      "image_reference": "redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+      "memory_bytes": 134217728,
+      "nano_cpus": 500000000,
+      "ports": {
+        "6379/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "16379"
+          }
+        ]
+      },
+      "service": "cache-old-1",
+      "shm_bytes": 67108864,
+      "state": "running"
+    },
+    {
+      "health": "healthy",
+      "id": "abccf9467685aad65c9f3328b6aeea6d0cf841ed71c58005b6912895c215d650",
+      "image": {
+        "architecture": "amd64",
+        "digests": [
+          "redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499"
+        ],
+        "os": "linux"
+      },
+      "image_id": "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+      "image_reference": "redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+      "memory_bytes": 134217728,
+      "nano_cpus": 500000000,
+      "ports": {
+        "6379/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "16381"
+          }
+        ]
+      },
+      "service": "cache-new",
+      "shm_bytes": 67108864,
+      "state": "running"
+    },
+    {
+      "health": "healthy",
+      "id": "637744c85dfb15d10a9f4b8443fa9d8b5e918d30d67e67fc8139b1a639a18b16",
+      "image": {
+        "architecture": "amd64",
+        "digests": [
+          "redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499"
+        ],
+        "os": "linux"
+      },
+      "image_id": "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+      "image_reference": "redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+      "memory_bytes": 134217728,
+      "nano_cpus": 500000000,
+      "ports": {
+        "6379/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "16380"
+          }
+        ]
+      },
+      "service": "cache-old-2",
+      "shm_bytes": 67108864,
+      "state": "running"
+    }
+  ],
+  "docker_engine": {
+    "architecture": "x86_64",
+    "cgroup_version": "2",
+    "cpus": 12,
+    "kernel": "6.6.87.2-microsoft-standard-WSL2",
+    "memory_bytes": 7920103424,
+    "os_type": "linux",
+    "server_version": "29.8.0",
+    "storage_driver": "overlayfs"
+  },
+  "gate_checks": {
+    "linux_engine": true,
+    "required_containers_healthy_with_digests": true,
+    "runtime": true
+  },
+  "hardware": {
+    "cpu": {
+      "cores": 6,
+      "logical_processors": 12,
+      "name": "AMD Ryzen 7 7445HS w/ Radeon 740M Graphics     "
+    },
+    "disk": {
+      "free_bytes": 247699410944,
+      "total_bytes": 510911311872
+    },
+    "os": {
+      "caption": "Microsoft Windows 11 Home Single Language",
+      "free_ram_kib": 2713408,
+      "total_ram_kib": 15973788,
+      "version": "10.0.26200"
+    }
+  },
+  "locked_packages": {
+    "PyYAML": {
+      "actual": "6.0.2",
+      "expected": "6.0.2"
+    },
+    "psycopg": {
+      "actual": "3.2.10",
+      "expected": "3.2.10"
+    },
+    "psycopg-binary": {
+      "actual": "3.2.10",
+      "expected": "3.2.10"
+    },
+    "psycopg-pool": {
+      "actual": "3.3.3",
+      "expected": "3.3.3"
+    },
+    "redis": {
+      "actual": "6.4.0",
+      "expected": "6.4.0"
+    },
+    "typing_extensions": {
+      "actual": "4.16.0",
+      "expected": "4.16.0"
+    },
+    "tzdata": {
+      "actual": "2026.5",
+      "expected": "2026.5"
+    }
+  },
+  "packages": {
+    "PyYAML": "6.0.2",
+    "psycopg": "3.2.10",
+    "psycopg-pool": "3.3.3",
+    "redis": "6.4.0"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "runtime": {
+    "executable": "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\.venv\\Scripts\\python.exe",
+    "implementation": "CPython",
+    "machine": "AMD64",
+    "version": "3.12.10"
+  },
+  "schema_version": 1,
+  "shell": "Native Windows PowerShell 5.1; not WSL execution",
+  "source": {
+    "aggregate_sha256": "a657f503705b75d360cf31f8ef0d3aa38f20b31751ad0fa003f00223ca4ee005",
+    "algorithm": "sha256",
+    "definition": "SHA256 of canonical JSON file list; excludes reports, runs, virtualenv, wheels, bytecode and secrets",
+    "files": [
+      {
+        "path": ".gitignore",
+        "sha256": "74a066fac27b96c7b745b92a160f1784acba782ae9f6119bac0a827c3b1c1b17"
+      },
+      {
+        "path": ".python-version",
+        "sha256": "d78a95f0a3ef15a09f267f6b95e40834b8256ac16e1056ed19eacd0ad4dae261"
+      },
+      {
+        "path": "AGENT_REPORTING_TEMPLATES.md",
+        "sha256": "9821105fe2e15c4ba9a48005e09b5c45ffee34beab14c44b790695892abeae85"
+      },
+      {
+        "path": "analysis/.gitkeep",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      {
+        "path": "configs/environment.json",
+        "sha256": "71a5f35aebe10011546923cf652c6cac85092cdd2c64620869a92dd670275aef"
+      },
+      {
+        "path": "docs/ENVIRONMENT_COMPATIBILITY.md",
+        "sha256": "c66a1b6fdea9496e7e024a35f47a0917565f8cde533faa986b5c775c8ba1b5c1"
+      },
+      {
+        "path": "docs/SCOPE.md",
+        "sha256": "030033ff79c2733fd63184a5c41e78698acfc130a7dfc5fa8a51624528aabb0e"
+      },
+      {
+        "path": "infra/compose.yaml",
+        "sha256": "76b0a829b55a808d1d0dd048864c53d8dddd4f7d5971fc05acaccb69a17fe885"
+      },
+      {
+        "path": "infra/images.env",
+        "sha256": "951eaeb84aa16cde86016b4f2e5231f5720d37b184b878e5b022abdb0abc39d7"
+      },
+      {
+        "path": "paper/.gitkeep",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      {
+        "path": "preventing-cache-expansion-from-temporarily-slowing-down-an--literature-review.md",
+        "sha256": "2d36f496bfa79a49eb24d1d2f0d2ecb51024074b72565c58c45802a486d66713"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "fc28e7a144d26d3ad0ccc20210b2474d9eae0c635415ca5d2888dd797696d69c"
+      },
+      {
+        "path": "README.md",
+        "sha256": "79bd28fa3f62b2d3402c4e110f25bcc9509eb872549ede089e434a64ad32f77b"
+      },
+      {
+        "path": "requirements.in",
+        "sha256": "6dd1bb6fc4c8a8bee05e13f2b825a02fe30b33f9df21b435a42f8dcddbe5d63b"
+      },
+      {
+        "path": "requirements.lock",
+        "sha256": "24ede01d0da9d29454f12a627ee61a74446df9b744a04742e480c8edd7b374a0"
+      },
+      {
+        "path": "RESEARCH_IMPLEMENTATION_PLAN.md",
+        "sha256": "54b41573f7f705c16a15994aba50b7190b7532b0a5e8cf094ca68567b5ae53cc"
+      },
+      {
+        "path": "scripts/bootstrap.ps1",
+        "sha256": "6590aa675124a058242627b29203e1edd735faa72b7cd6ab562499cb5118d2ed"
+      },
+      {
+        "path": "scripts/capture_source.py",
+        "sha256": "67c465b46e1fc2188a3a935fe50fd208701fea0e7c8583d044f572db16311fa1"
+      },
+      {
+        "path": "scripts/check_runtime.py",
+        "sha256": "d25b81aa703298d8545d567971a41df448dc45505e63f1ab30df7f9a3f10f3a7"
+      },
+      {
+        "path": "scripts/common.ps1",
+        "sha256": "a69123592db45a4be7268a040c40eb23066fc3eb38c5695f2e88ae816ef7e12b"
+      },
+      {
+        "path": "scripts/doctor.ps1",
+        "sha256": "9514b1da8d9601b87976a80b2a7114fd60497adf5cde7d6f437835b4270e7df1"
+      },
+      {
+        "path": "scripts/fingerprint.ps1",
+        "sha256": "6d987546a3a64e73bffd9895ecc45e939f1c7fd809ad203f0f7669e2b656d84c"
+      },
+      {
+        "path": "scripts/health.ps1",
+        "sha256": "787b4029edda14d6d4c966e263bec66e12565e2307c849254759ac4c3a1fb997"
+      },
+      {
+        "path": "scripts/lock_images.ps1",
+        "sha256": "8a3eea77708daaeb6eacabd8a9bd5d170b199cde44ed6c563ca5051481c775b1"
+      },
+      {
+        "path": "scripts/make_lock.py",
+        "sha256": "6d47c3a0c3321d86c2326b9a4fbdfb9322c345b3a9392f0642ec80a6fd776840"
+      },
+      {
+        "path": "scripts/record_phase0.py",
+        "sha256": "c9abf8c11f58d0d398065fd823e04b4ca177033cb505cb87501e2983f70745cf"
+      },
+      {
+        "path": "scripts/shutdown.ps1",
+        "sha256": "46af49350d6f981d169f17bd89caacf27536b8c7a04a6b184dd900c7c274ac62"
+      },
+      {
+        "path": "scripts/start.ps1",
+        "sha256": "d225ea8c98ab717578322aa9f10ff07472a79119e00bc27c4f798964b59c119f"
+      },
+      {
+        "path": "scripts/validate_phase0.py",
+        "sha256": "f2cc43df7bce8eff38fa6493a4da35422ebee303860b48ddee7bf38bf108d6cb"
+      },
+      {
+        "path": "src/cache_scaleout/__init__.py",
+        "sha256": "9a3ab11dc67b05aef65e9ef79a2c0b582b3b40ff8133bbd8afe9e40121f9ece3"
+      },
+      {
+        "path": "src/cache_scaleout/__main__.py",
+        "sha256": "66e652693c9f7ce67c5cd58b09c5e007e824a63e42b8c83c621912093635ce10"
+      },
+      {
+        "path": "src/cache_scaleout/environment.py",
+        "sha256": "ceb5d6447a979eaec3eb973c033189495455fdb1df19b60fa864b3cb224c773d"
+      },
+      {
+        "path": "src/cache_scaleout/evidence.py",
+        "sha256": "48f483136059aa3606f0b9222f54422b492cc55d6df54ff4eefba26ba69465ff"
+      },
+      {
+        "path": "src/cache_scaleout/health.py",
+        "sha256": "a5c33f89a704b5609e07b1a96d2898a658ac7ebb034b5b226871848f7bcf81be"
+      },
+      {
+        "path": "tests/.gitkeep",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      }
+    ]
+  },
+  "status": "verified"
+}

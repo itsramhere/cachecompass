@@ -1,0 +1,18 @@
+{
+  "content_type": "application/pdf",
+  "elapsed_seconds": 4.2960000000020955,
+  "ended_utc": "2026-10-09T17:29:35.245248+00:00",
+  "http_status": 200,
+  "id": "R03",
+  "landing_url": "https://www.usenix.org/conference/fast13/technical-sessions/presentation/zhang",
+  "pages": 14,
+  "pages_sha256": "f0446f4bee00052b93b90333666b42e7f720ee268490cc7e4eb69166d48af549",
+  "pdf_sha256": "6cfec3640571d45af98077e770c742f8c454375794b7d4591c42c5514be5a5b9",
+  "required": true,
+  "resolved_url": "https://www.usenix.org/system/files/conference/fast13/fast13-final118_0.pdf",
+  "started_utc": "2026-10-09T17:29:30.957564+00:00",
+  "status": "retrieved_and_extracted",
+  "text_sha256": "7be0c5881d1d70f7e2e972d2606e094c8e1a0d5cbae9749cf056c4fc032617fb",
+  "title": "Warming Up Storage-Level Caches with Bonfire",
+  "url": "https://www.usenix.org/system/files/conference/fast13/fast13-final118_0.pdf"
+}

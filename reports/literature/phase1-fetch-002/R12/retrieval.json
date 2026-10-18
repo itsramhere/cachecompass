@@ -1,0 +1,18 @@
+{
+  "content_type": "application/pdf",
+  "elapsed_seconds": 31.485000000000582,
+  "ended_utc": "2026-10-09T17:35:52.868697+00:00",
+  "http_status": 200,
+  "id": "R12",
+  "landing_url": "https://icpe2026.spec.org/preprint/Holpaca_Holistic_and_Adaptable_Cache_Management_for_Shared.pdf",
+  "pages": 13,
+  "pages_sha256": "0967a63c9f5293fced8de2181e6a073ae51a25977d3a626771f0fb88410c37a8",
+  "pdf_sha256": "d3f739c8095c824255d92b3b01fe770db231583294229297f6cc1fbbff9fb9b9",
+  "required": false,
+  "resolved_url": "https://icpe2026.spec.org/preprint/Holpaca_Holistic_and_Adaptable_Cache_Management_for_Shared.pdf",
+  "started_utc": "2026-10-09T17:35:21.383884+00:00",
+  "status": "retrieved_and_extracted",
+  "text_sha256": "aae36be6a0bf4de8a80711beda14787d17fd81f3f059c801106d06d94ab23d3c",
+  "title": "Holpaca: Holistic and Adaptable Cache Management for Shared Environments",
+  "url": "https://icpe2026.spec.org/preprint/Holpaca_Holistic_and_Adaptable_Cache_Management_for_Shared.pdf"
+}

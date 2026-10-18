@@ -1,0 +1,44 @@
+{
+  "boundary": "Phase 0 integrity and health only; no offered request accounting yet.",
+  "captured_utc": "2026-10-09T17:46:27.552312+00:00",
+  "checks": [
+    {
+      "check": "checksum:manifest.json",
+      "passed": true
+    },
+    {
+      "check": "checksum:results.json",
+      "passed": true
+    },
+    {
+      "check": "checksum:source.json",
+      "passed": true
+    },
+    {
+      "check": "checksum:effective_config.json",
+      "passed": true
+    },
+    {
+      "check": "checksum:events.jsonl",
+      "passed": true
+    },
+    {
+      "check": "source_fingerprint",
+      "passed": true
+    },
+    {
+      "check": "identity",
+      "passed": true
+    },
+    {
+      "check": "real_service_health",
+      "passed": true
+    },
+    {
+      "check": "three_independent_caches",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "run": "runs\\phase0-health-001"
+}

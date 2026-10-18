@@ -1,0 +1,15 @@
+﻿{
+    "captured_utc":  "2026-10-09T15:40:19.4420318Z",
+    "source_sha256":  "a657f503705b75d360cf31f8ef0d3aa38f20b31751ad0fa003f00223ca4ee005",
+    "source_file_count":  35,
+    "source_file_mismatches":  [
+
+                               ],
+    "execution_source_matches":  true,
+    "health_completed":  true,
+    "environment_verified":  true,
+    "artifact_integrity_verified":  true,
+    "clean_shutdown_verified":  true,
+    "required_handoff_files_present":  true,
+    "original_background_sha256":  "2d36f496bfa79a49eb24d1d2f0d2ecb51024074b72565c58c45802a486d66713"
+}

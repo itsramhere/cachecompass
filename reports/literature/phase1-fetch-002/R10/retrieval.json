@@ -1,0 +1,18 @@
+{
+  "content_type": "application/pdf",
+  "elapsed_seconds": 19.078999999997905,
+  "ended_utc": "2026-10-09T17:35:40.455925+00:00",
+  "http_status": 200,
+  "id": "R10",
+  "landing_url": "https://www.vldb.org/cidrdb/2025/linear-elastic-caching-via-ski-rental.html",
+  "pages": 8,
+  "pages_sha256": "c82196711222b6cd884cb9663c8b194c33878c54c1f332953988a8b6c46221de",
+  "pdf_sha256": "f4a0c8a775f0c4a303f3774190c7b8a937a5839157a9dfd03d0d8c9eb75701ae",
+  "required": false,
+  "resolved_url": "https://vldb.org/cidrdb/papers/2025/p22-kumar.pdf",
+  "started_utc": "2026-10-09T17:35:21.382343+00:00",
+  "status": "retrieved_and_extracted",
+  "text_sha256": "45a7d69c984736fd09ccc29699784f490d8971bfe8a25163c6789694e586bc9f",
+  "title": "Linear Elastic Caching via Ski Rental",
+  "url": "https://vldb.org/cidrdb/papers/2025/p22-kumar.pdf"
+}

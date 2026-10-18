@@ -1,0 +1,18 @@
+{
+  "content_type": "application/pdf",
+  "elapsed_seconds": 7.23399999999674,
+  "ended_utc": "2026-10-09T17:29:38.185299+00:00",
+  "http_status": 200,
+  "id": "R02",
+  "landing_url": "https://www3.cs.stonybrook.edu/~anshul/icdcs18_elmem.pdf",
+  "pages": 12,
+  "pages_sha256": "06a959ffea87ec15c5769f3ef3cc69218c4e8fca97f0d16bf7fab1487e14d43a",
+  "pdf_sha256": "2d5f5fc0e31466353b9bffcfbb3b34083e9c8d9edc8e91b5d1aefc325111b593",
+  "required": true,
+  "resolved_url": "https://www3.cs.stonybrook.edu/~anshul/icdcs18_elmem.pdf",
+  "started_utc": "2026-10-09T17:29:30.955043+00:00",
+  "status": "retrieved_and_extracted",
+  "text_sha256": "4c2a3482b99509ad62530c2bf9bceacf97e847b90a809365df496b5102f01d82",
+  "title": "ElMem: Towards an Elastic Memcached System",
+  "url": "https://www3.cs.stonybrook.edu/~anshul/icdcs18_elmem.pdf"
+}

@@ -1,0 +1,12 @@
+{
+  "sources": [
+    {
+      "id": "FAIL",
+      "url": "https://review.invalid/fail"
+    },
+    {
+      "id": "OK",
+      "url": "https://review.invalid/ok"
+    }
+  ]
+}

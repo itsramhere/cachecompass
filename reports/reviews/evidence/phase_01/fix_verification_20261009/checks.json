@@ -1,0 +1,431 @@
+{
+  "captured_utc": "2026-10-09T18:48:34.868567+00:00",
+  "network": "All retrieval probes mocked; no live HTTP requests.",
+  "source_before": {
+    "algorithm": "sha256",
+    "aggregate_sha256": "971148f793851b47368b2cacf8b0f935f0eef48e7def6d1a9e01d2ab18a15d26",
+    "definition": "SHA256 of canonical JSON file list; excludes reports, runs, virtualenv, wheels, bytecode and secrets",
+    "files": [
+      {
+        "path": ".gitignore",
+        "sha256": "74a066fac27b96c7b745b92a160f1784acba782ae9f6119bac0a827c3b1c1b17"
+      },
+      {
+        "path": ".python-version",
+        "sha256": "d78a95f0a3ef15a09f267f6b95e40834b8256ac16e1056ed19eacd0ad4dae261"
+      },
+      {
+        "path": "AGENT_REPORTING_TEMPLATES.md",
+        "sha256": "9821105fe2e15c4ba9a48005e09b5c45ffee34beab14c44b790695892abeae85"
+      },
+      {
+        "path": "analysis/.gitkeep",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      {
+        "path": "configs/environment.json",
+        "sha256": "71a5f35aebe10011546923cf652c6cac85092cdd2c64620869a92dd670275aef"
+      },
+      {
+        "path": "configs/literature_followups.json",
+        "sha256": "e148067b690db115b049c8e7ba7f0e61a06394698d55a0b085341226ef8623d3"
+      },
+      {
+        "path": "configs/literature_review.json",
+        "sha256": "8302244c431cd309088d9fa10f53355c697bf612ff4a795d4192d4058836a710"
+      },
+      {
+        "path": "configs/literature_sources.json",
+        "sha256": "55d5d5e25321ee014a9f926344a647b0c444e3d394e3d5179492c9b26d0a56c7"
+      },
+      {
+        "path": "docs/BIBLIOGRAPHY.md",
+        "sha256": "0aa57d7ecb8b5d9af20237db8ed6bd260faaa58fe18258bb4ec01f0df3300b94"
+      },
+      {
+        "path": "docs/CANDIDATE_CONTRIBUTION.md",
+        "sha256": "c942756701902a5802663bd0df0718203a2623ee70e0d5bd70f5b6a5bf738f55"
+      },
+      {
+        "path": "docs/ENVIRONMENT_COMPATIBILITY.md",
+        "sha256": "c66a1b6fdea9496e7e024a35f47a0917565f8cde533faa986b5c775c8ba1b5c1"
+      },
+      {
+        "path": "docs/HYPOTHESES.md",
+        "sha256": "8354a049e53437f3e80f434f60b257c8f3bc155e7ae6c03bf516f6fe3c68eec7"
+      },
+      {
+        "path": "docs/LITERATURE_MATRIX.md",
+        "sha256": "acf2cb276d7265be7129eec57d03e4b40ee09a6d2df99948c0c55eb1729dd670"
+      },
+      {
+        "path": "docs/LITERATURE_SEARCH.md",
+        "sha256": "4de6105bb4603c0bd9b9cca68c28b19024b552e54cc9af60a0dac2191bded502"
+      },
+      {
+        "path": "docs/SCOPE.md",
+        "sha256": "030033ff79c2733fd63184a5c41e78698acfc130a7dfc5fa8a51624528aabb0e"
+      },
+      {
+        "path": "infra/compose.yaml",
+        "sha256": "76b0a829b55a808d1d0dd048864c53d8dddd4f7d5971fc05acaccb69a17fe885"
+      },
+      {
+        "path": "infra/images.env",
+        "sha256": "951eaeb84aa16cde86016b4f2e5231f5720d37b184b878e5b022abdb0abc39d7"
+      },
+      {
+        "path": "paper/.gitkeep",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      {
+        "path": "paper/references.bib",
+        "sha256": "1ad812f1925d30168563cb6968d91af329d41901462c7d5d681fc1b44ff9baf9"
+      },
+      {
+        "path": "preventing-cache-expansion-from-temporarily-slowing-down-an--literature-review.md",
+        "sha256": "2d36f496bfa79a49eb24d1d2f0d2ecb51024074b72565c58c45802a486d66713"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "fc28e7a144d26d3ad0ccc20210b2474d9eae0c635415ca5d2888dd797696d69c"
+      },
+      {
+        "path": "README.md",
+        "sha256": "96316d8a748f9a7c4597f9d3810cfae829c53599cd0aa8ee6a273757dc53e6e5"
+      },
+      {
+        "path": "requirements-literature.lock",
+        "sha256": "8e6e1c88241be68968b9397962cc77afc59f78bbed882eddf72e729ccc761dc7"
+      },
+      {
+        "path": "requirements.in",
+        "sha256": "6dd1bb6fc4c8a8bee05e13f2b825a02fe30b33f9df21b435a42f8dcddbe5d63b"
+      },
+      {
+        "path": "requirements.lock",
+        "sha256": "24ede01d0da9d29454f12a627ee61a74446df9b744a04742e480c8edd7b374a0"
+      },
+      {
+        "path": "RESEARCH_IMPLEMENTATION_PLAN.md",
+        "sha256": "54b41573f7f705c16a15994aba50b7190b7532b0a5e8cf094ca68567b5ae53cc"
+      },
+      {
+        "path": "scripts/bootstrap.ps1",
+        "sha256": "6590aa675124a058242627b29203e1edd735faa72b7cd6ab562499cb5118d2ed"
+      },
+      {
+        "path": "scripts/capture_source.py",
+        "sha256": "67c465b46e1fc2188a3a935fe50fd208701fea0e7c8583d044f572db16311fa1"
+      },
+      {
+        "path": "scripts/check_runtime.py",
+        "sha256": "d25b81aa703298d8545d567971a41df448dc45505e63f1ab30df7f9a3f10f3a7"
+      },
+      {
+        "path": "scripts/common.ps1",
+        "sha256": "a69123592db45a4be7268a040c40eb23066fc3eb38c5695f2e88ae816ef7e12b"
+      },
+      {
+        "path": "scripts/doctor.ps1",
+        "sha256": "9514b1da8d9601b87976a80b2a7114fd60497adf5cde7d6f437835b4270e7df1"
+      },
+      {
+        "path": "scripts/fingerprint.ps1",
+        "sha256": "6d987546a3a64e73bffd9895ecc45e939f1c7fd809ad203f0f7669e2b656d84c"
+      },
+      {
+        "path": "scripts/health.ps1",
+        "sha256": "787b4029edda14d6d4c966e263bec66e12565e2307c849254759ac4c3a1fb997"
+      },
+      {
+        "path": "scripts/literature_sources.py",
+        "sha256": "6b1d0f3138619bd75f48c0a1ca85cb1aaa696a9a56d6810da80fd7bfe01fdbc2"
+      },
+      {
+        "path": "scripts/literature_web_checks.py",
+        "sha256": "75c4776047447790f6d8cd165d95d1468b24b2f29439f4ddfe6b81ae829d779c"
+      },
+      {
+        "path": "scripts/lock_images.ps1",
+        "sha256": "8a3eea77708daaeb6eacabd8a9bd5d170b199cde44ed6c563ca5051481c775b1"
+      },
+      {
+        "path": "scripts/make_lock.py",
+        "sha256": "6d47c3a0c3321d86c2326b9a4fbdfb9322c345b3a9392f0642ec80a6fd776840"
+      },
+      {
+        "path": "scripts/record_command.py",
+        "sha256": "536eb40292400a8a7a98f4ddfa72842993ec26164809953cc82900e1ae35190b"
+      },
+      {
+        "path": "scripts/record_phase0.py",
+        "sha256": "c9abf8c11f58d0d398065fd823e04b4ca177033cb505cb87501e2983f70745cf"
+      },
+      {
+        "path": "scripts/shutdown.ps1",
+        "sha256": "46af49350d6f981d169f17bd89caacf27536b8c7a04a6b184dd900c7c274ac62"
+      },
+      {
+        "path": "scripts/start.ps1",
+        "sha256": "d225ea8c98ab717578322aa9f10ff07472a79119e00bc27c4f798964b59c119f"
+      },
+      {
+        "path": "scripts/validate_phase0.py",
+        "sha256": "f2cc43df7bce8eff38fa6493a4da35422ebee303860b48ddee7bf38bf108d6cb"
+      },
+      {
+        "path": "scripts/validate_phase1.py",
+        "sha256": "93c38324041992a6d87163a16aba5196fbb8885110c9d77f6cc4be26cd386858"
+      },
+      {
+        "path": "src/cache_scaleout/__init__.py",
+        "sha256": "9a3ab11dc67b05aef65e9ef79a2c0b582b3b40ff8133bbd8afe9e40121f9ece3"
+      },
+      {
+        "path": "src/cache_scaleout/__main__.py",
+        "sha256": "66e652693c9f7ce67c5cd58b09c5e007e824a63e42b8c83c621912093635ce10"
+      },
+      {
+        "path": "src/cache_scaleout/environment.py",
+        "sha256": "ceb5d6447a979eaec3eb973c033189495455fdb1df19b60fa864b3cb224c773d"
+      },
+      {
+        "path": "src/cache_scaleout/evidence.py",
+        "sha256": "48f483136059aa3606f0b9222f54422b492cc55d6df54ff4eefba26ba69465ff"
+      },
+      {
+        "path": "src/cache_scaleout/health.py",
+        "sha256": "a5c33f89a704b5609e07b1a96d2898a658ac7ebb034b5b226871848f7bcf81be"
+      },
+      {
+        "path": "test_config.json",
+        "sha256": "6cd366e59cdd6b2f099123a9ab7473e1b7ff4a8594d676aed391c96f8d897a49"
+      },
+      {
+        "path": "test_out/effective_config.json",
+        "sha256": "06efb4509d114de74f900dbd433c45e4f2929f04650c11d375c9619463d83e7f"
+      },
+      {
+        "path": "test_out/manifest.json",
+        "sha256": "f3c947c17d259a0fd690baa234e671460d6b908a88fc2177780a2c6b88a2a07e"
+      },
+      {
+        "path": "test_out/test-fail/retrieval.json",
+        "sha256": "c2fcfa13c154b883b67972b762b01cddccd54caf6b46277cfc16150668cd93b0"
+      },
+      {
+        "path": "test_out/test-success/pages.json",
+        "sha256": "87e5946045855d6ac22960e20bd21672a01afe54a11849bab538a3b021f93061"
+      },
+      {
+        "path": "test_out/test-success/retrieval.json",
+        "sha256": "690c0a58c3e60c6c32d8fe0f358773a463cf92bbf9850f558e675d2c6a701a30"
+      },
+      {
+        "path": "test_out/test-success/source.pdf",
+        "sha256": "3df79d34abbca99308e79cb94461c1893582604d68329a41fd4bec1885e6adb4"
+      },
+      {
+        "path": "test_out/test-success/text.txt",
+        "sha256": "069387a213ec4da787171777f1d5ff5750f0542e7a9937e1f14da6cab9df75ca"
+      },
+      {
+        "path": "tests/.gitkeep",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      {
+        "path": "verify_f01.py",
+        "sha256": "5d836bc88cffea28b42957969a670507b9d9ce503651e41d75bb2d90040ad295"
+      },
+      {
+        "path": "verify_f02.py",
+        "sha256": "d4fd2a928e2556cba07b9b9f954aeb802896f9df3e565b17398970be868f1087"
+      }
+    ]
+  },
+  "pdf_mixed": {
+    "argv": [
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\scripts\\literature_sources.py",
+      "fetch",
+      "--config",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\fix_verification_20261009\\mock_sources.json",
+      "--output",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\fix_verification_20261009\\pdf_mixed"
+    ],
+    "exit_code": 1,
+    "exception": null,
+    "stdout": "[\n  {\n    \"id\": \"FAIL\",\n    \"status\": \"retrieval_failure\",\n    \"pages\": null,\n    \"error\": {\n      \"type\": \"HTTPError\",\n      \"message\": \"HTTP Error 403: Forbidden\",\n      \"body\": \"reviewer 403 failure body\"\n    }\n  },\n  {\n    \"id\": \"OK\",\n    \"status\": \"retrieved_and_extracted\",\n    \"pages\": 1,\n    \"error\": null\n  }\n]\n",
+    "stderr": "",
+    "assertions": {
+      "exit_one_without_exception": true,
+      "all_sources_accounted": true,
+      "failure_record_retained": true,
+      "failure_status_type_body": true,
+      "success_record_retained": true,
+      "timings_present": true
+    }
+  },
+  "pdf_retry": {
+    "argv": [
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\scripts\\literature_sources.py",
+      "fetch",
+      "--config",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\fix_verification_20261009\\mock_sources.json",
+      "--output",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\fix_verification_20261009\\pdf_retry",
+      "--retry-of",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\fix_verification_20261009\\pdf_mixed\\manifest.json"
+    ],
+    "exit_code": 0,
+    "exception": null,
+    "stdout": "[\n  {\n    \"id\": \"FAIL\",\n    \"status\": \"retrieved_and_extracted\",\n    \"pages\": 1,\n    \"error\": null\n  },\n  {\n    \"id\": \"OK\",\n    \"status\": \"retrieved_and_extracted\",\n    \"pages\": 1,\n    \"error\": null\n  }\n]\n",
+    "stderr": "",
+    "assertions": {
+      "exit_zero": true,
+      "parent_link": true,
+      "parent_preserved": true,
+      "retry_verification_passed": true
+    }
+  },
+  "pdf_retry_verify": {
+    "argv": [
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\scripts\\literature_sources.py",
+      "verify",
+      "--config",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\fix_verification_20261009\\mock_sources.json",
+      "--output",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\fix_verification_20261009\\pdf_retry"
+    ],
+    "exit_code": 0,
+    "exception": null,
+    "stdout": "{\"passed\": true, \"checks\": 14, \"verification\": \"C:\\\\Users\\\\ramst\\\\Documents\\\\antigravity\\\\paper2\\\\reports\\\\reviews\\\\evidence\\\\phase_01\\\\fix_verification_20261009\\\\pdf_retry\\\\verification.json\"}\n",
+    "stderr": ""
+  },
+  "web_503": {
+    "argv": [
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\scripts\\literature_web_checks.py",
+      "--output",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\fix_verification_20261009\\web_503"
+    ],
+    "exit_code": 1,
+    "exception": null,
+    "stdout": "[\n  {\n    \"id\": \"adaptcache-publisher\",\n    \"url\": \"https://dl.acm.org/doi/10.1145/2988336.2988343\",\n    \"started_utc\": \"2026-10-09T18:48:35.160641+00:00\",\n    \"status\": \"retrieved\",\n    \"http_status\": 200,\n    \"resolved_url\": \"https://dl.acm.org/doi/10.1145/2988336.2988343\",\n    \"response_file\": \"adaptcache-publisher.response\",\n    \"sha256\": \"328365ab6a8ac3ccf042ef91eb606e2f4efdadf3a9f7681c3fe39549954ea07e\",\n    \"ended_utc\": \"2026-10-09T18:48:35.161855+00:00\",\n    \"elapsed_seconds\": 0.001232500006153714\n  },\n  {\n    \"id\": \"adaptcache-metadata\",\n    \"url\": \"https://api.crossref.org/works/10.1145/2988336.2988343\",\n    \"started_utc\": \"2026-10-09T18:48:35.161876+00:00\",\n    \"status\": \"retrieved\",\n    \"http_status\": 200,\n    \"resolved_url\": \"https://api.crossref.org/works/10.1145/2988336.2988343\",\n    \"response_file\": \"adaptcache-metadata.response\",\n    \"sha256\": \"328365ab6a8ac3ccf042ef91eb606e2f4efdadf3a9f7681c3fe39549954ea07e\",\n    \"ended_utc\": \"2026-10-09T18:48:35.162712+00:00\",\n    \"elapsed_seconds\": 0.0008490999971400015\n  },\n  {\n    \"id\": \"guide-commit\",\n    \"url\": \"https://api.github.com/repos/babushkai/system-design-patterns/commits?path=04-caching/04-cache-stampede.md&per_page=1\",\n    \"started_utc\": \"2026-10-09T18:48:35.162730+00:00\",\n    \"status\": \"retrieved\",\n    \"http_status\": 200,\n    \"resolved_url\": \"https://api.github.com/repos/babushkai/system-design-patterns/commits?path=04-caching/04-cache-stampede.md&per_page=1\",\n    \"response_file\": \"guide-commit.response\",\n    \"sha256\": \"6069a1e690bc5824e3bc7b5e18e94a7afe2e29b832b9e0b4e2639a97a4d5ebeb\",\n    \"ended_utc\": \"2026-10-09T18:48:35.163728+00:00\",\n    \"elapsed_seconds\": 0.001010100000712555\n  },\n  {\n    \"id\": \"guide-pinned\",\n    \"url\": \"https://raw.githubusercontent.com/babushkai/system-design-patterns/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/04-caching/04-cache-stampede.md\",\n    \"commit\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\n    \"commit_date\": \"2026-07-21T00:00:00Z\",\n    \"started_utc\": \"2026-10-09T18:48:35.163780+00:00\",\n    \"status\": \"retrieval_failure\",\n    \"http_status\": 503,\n    \"error\": \"HTTP Error 503: Service Unavailable\",\n    \"response_file\": \"guide.md\",\n    \"sha256\": \"a759b9b404ac310945c88fbe26d8311d69730df77591d6e5bc35e2a11b534b2d\",\n    \"ended_utc\": \"2026-10-09T18:48:35.164616+00:00\",\n    \"elapsed_seconds\": 0.0008483999990858138\n  }\n]\n",
+    "stderr": "",
+    "manifest_present": true,
+    "retained_files": [
+      "adaptcache-metadata.response",
+      "adaptcache-publisher.response",
+      "guide-commit.response",
+      "guide.md",
+      "manifest.json"
+    ],
+    "assertions": {
+      "exit_matches_outcome": true,
+      "four_requests_accounted": true,
+      "all_response_hashes_match": true,
+      "pinned_status_correct": true,
+      "pinned_commit_and_timing": true,
+      "failure_body_and_status": true
+    }
+  },
+  "web_success": {
+    "argv": [
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\scripts\\literature_web_checks.py",
+      "--output",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\fix_verification_20261009\\web_success"
+    ],
+    "exit_code": 0,
+    "exception": null,
+    "stdout": "[\n  {\n    \"id\": \"adaptcache-publisher\",\n    \"url\": \"https://dl.acm.org/doi/10.1145/2988336.2988343\",\n    \"started_utc\": \"2026-10-09T18:48:35.205040+00:00\",\n    \"status\": \"retrieved\",\n    \"http_status\": 200,\n    \"resolved_url\": \"https://dl.acm.org/doi/10.1145/2988336.2988343\",\n    \"response_file\": \"adaptcache-publisher.response\",\n    \"sha256\": \"328365ab6a8ac3ccf042ef91eb606e2f4efdadf3a9f7681c3fe39549954ea07e\",\n    \"ended_utc\": \"2026-10-09T18:48:35.205759+00:00\",\n    \"elapsed_seconds\": 0.0007345999983954243\n  },\n  {\n    \"id\": \"adaptcache-metadata\",\n    \"url\": \"https://api.crossref.org/works/10.1145/2988336.2988343\",\n    \"started_utc\": \"2026-10-09T18:48:35.205778+00:00\",\n    \"status\": \"retrieved\",\n    \"http_status\": 200,\n    \"resolved_url\": \"https://api.crossref.org/works/10.1145/2988336.2988343\",\n    \"response_file\": \"adaptcache-metadata.response\",\n    \"sha256\": \"328365ab6a8ac3ccf042ef91eb606e2f4efdadf3a9f7681c3fe39549954ea07e\",\n    \"ended_utc\": \"2026-10-09T18:48:35.250242+00:00\",\n    \"elapsed_seconds\": 0.044486199993116315\n  },\n  {\n    \"id\": \"guide-commit\",\n    \"url\": \"https://api.github.com/repos/babushkai/system-design-patterns/commits?path=04-caching/04-cache-stampede.md&per_page=1\",\n    \"started_utc\": \"2026-10-09T18:48:35.250273+00:00\",\n    \"status\": \"retrieved\",\n    \"http_status\": 200,\n    \"resolved_url\": \"https://api.github.com/repos/babushkai/system-design-patterns/commits?path=04-caching/04-cache-stampede.md&per_page=1\",\n    \"response_file\": \"guide-commit.response\",\n    \"sha256\": \"6069a1e690bc5824e3bc7b5e18e94a7afe2e29b832b9e0b4e2639a97a4d5ebeb\",\n    \"ended_utc\": \"2026-10-09T18:48:35.251704+00:00\",\n    \"elapsed_seconds\": 0.0014430000010179356\n  },\n  {\n    \"id\": \"guide-pinned\",\n    \"url\": \"https://raw.githubusercontent.com/babushkai/system-design-patterns/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/04-caching/04-cache-stampede.md\",\n    \"commit\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\n    \"commit_date\": \"2026-07-21T00:00:00Z\",\n    \"started_utc\": \"2026-10-09T18:48:35.251753+00:00\",\n    \"status\": \"retrieved\",\n    \"http_status\": 200,\n    \"resolved_url\": \"https://raw.githubusercontent.com/babushkai/system-design-patterns/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/04-caching/04-cache-stampede.md\",\n    \"response_file\": \"guide.md\",\n    \"sha256\": \"64bf7c91e94ab4c56449710f15274437dac56d337ba8a9f7cd71753153047afb\",\n    \"ended_utc\": \"2026-10-09T18:48:35.252515+00:00\",\n    \"elapsed_seconds\": 0.0007736999978078529\n  }\n]\n",
+    "stderr": "",
+    "manifest_present": true,
+    "retained_files": [
+      "adaptcache-metadata.response",
+      "adaptcache-publisher.response",
+      "guide-commit.response",
+      "guide.md",
+      "manifest.json"
+    ],
+    "assertions": {
+      "exit_matches_outcome": true,
+      "four_requests_accounted": true,
+      "all_response_hashes_match": true,
+      "pinned_status_correct": true,
+      "pinned_commit_and_timing": true,
+      "failure_body_and_status": true
+    }
+  },
+  "web_invalid_metadata": {
+    "argv": [
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\scripts\\literature_web_checks.py",
+      "--output",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\fix_verification_20261009\\web_invalid_metadata"
+    ],
+    "exit_code": 1,
+    "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\fix_verification_20261009\\review_fixes.py\", line 39, in run\n    runpy.run_path(argv[0], run_name='__main__')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"C:\\Users\\ramst\\Documents\\antigravity\\paper2\\scripts\\literature_web_checks.py\", line 46, in <module>\n    commits = json.loads(data)\n  File \"C:\\Users\\ramst\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"C:\\Users\\ramst\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\decoder.py\", line 345, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ramst\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\decoder.py\", line 363, in raw_decode\n    raise JSONDecodeError(\"Expecting value\", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n",
+    "stdout": "",
+    "stderr": "",
+    "manifest_present": false,
+    "retained_files": [
+      "adaptcache-metadata.response",
+      "adaptcache-publisher.response",
+      "guide-commit.response"
+    ]
+  },
+  "phase1_audit": {
+    "argv": [
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\scripts\\validate_phase1.py",
+      "--config",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\configs\\literature_review.json",
+      "--source-manifest",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\source_state_phase1.json",
+      "--output",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase_01\\fix_verification_20261009\\validator.json",
+      "--handoff"
+    ],
+    "exit_code": 1,
+    "exception": null,
+    "stdout": "{\"passed\": false, \"checks\": 135, \"failed\": [{\"check\": \"final_source_matches_manifest\", \"passed\": false}], \"output\": \"C:\\\\Users\\\\ramst\\\\Documents\\\\antigravity\\\\paper2\\\\reports\\\\reviews\\\\evidence\\\\phase_01\\\\fix_verification_20261009\\\\validator.json\"}\n",
+    "stderr": "",
+    "checks": 135,
+    "passed": false,
+    "failed": [
+      {
+        "check": "final_source_matches_manifest",
+        "passed": false
+      }
+    ]
+  },
+  "changed_since_original_capture": [
+    "configs/literature_review.json",
+    "docs/BIBLIOGRAPHY.md",
+    "paper/references.bib",
+    "scripts/literature_sources.py",
+    "scripts/literature_web_checks.py",
+    "scripts/validate_phase1.py",
+    "test_config.json",
+    "test_out/effective_config.json",
+    "test_out/manifest.json",
+    "test_out/test-fail/retrieval.json",
+    "test_out/test-success/pages.json",
+    "test_out/test-success/retrieval.json",
+    "test_out/test-success/source.pdf",
+    "test_out/test-success/text.txt",
+    "verify_f01.py",
+    "verify_f02.py"
+  ],
+  "citation_assertions": {
+    "registry_full_title": true,
+    "bibliography_full_title": true,
+    "bibtex_full_title": true,
+    "validator_subtitle_check_passed": true
+  },
+  "preservation": {
+    "source_unchanged_by_review": true,
+    "sealed_evidence_count": 85,
+    "sealed_evidence_mismatches": [],
+    "seal_aggregate_valid": true,
+    "previous_reviewer_evidence_unchanged": true
+  }
+}

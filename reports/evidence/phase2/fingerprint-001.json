@@ -1,0 +1,8 @@
+{
+  "started_utc": "2026-10-18T18:07:40Z",
+  "ended_utc": "2026-10-18T18:07:44Z",
+  "command": ["C:\\Users\\ramst\\AppData\\Local\\Programs\\Python\\Python312\\python.exe", "-B", "scripts/capture_source.py", "--output", "reports/source_state_phase2.json"],
+  "exit_code": 0,
+  "aggregate_sha256": "b70d3fb8d7ab517d8f4c6031e93f267c9c9bcdd4faf1cccdfabfe1ba42808aa1",
+  "status": "retained intermediate fingerprint; superseded by fingerprint-002 after adding final interface import check"
+}

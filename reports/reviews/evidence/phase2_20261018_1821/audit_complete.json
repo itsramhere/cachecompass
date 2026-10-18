@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "name": "submitted_source_reproduced",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "final_source_matches",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "final_tests_use_final_source",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "baseline_tests",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "negative_failure_preserved",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "corrected_tests",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "rerun_link",
+      "passed": true
+    },
+    {
+      "detail": [
+        "README.md",
+        "docs/ARCHITECTURE.md",
+        "docs/DATA_SCHEMAS.md",
+        "docs/INVARIANTS.md",
+        "docs/PHASE2_EXECUTION_CONTRACT.md",
+        "docs/POLICIES.md",
+        "src/cache_scaleout/contracts.py",
+        "src/cache_scaleout/interfaces.py",
+        "src/cache_scaleout/policies.py",
+        "tests/test_phase2_contracts.py",
+        "tests/test_phase2_review.py"
+      ],
+      "name": "scoped_source_delta",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "original_changed_files_preserved",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "historical_preservation",
+      "passed": true
+    },
+    {
+      "detail": {
+        "checked": 78,
+        "missing": []
+      },
+      "name": "local_document_links",
+      "passed": true
+    }
+  ],
+  "command": [
+    "C:\\Users\\ramst\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "reports\\reviews\\evidence\\phase2_20261018_1821\\review_driver.py",
+    "audit",
+    "--label",
+    "complete"
+  ],
+  "passed": true,
+  "scope": "Offline integrity/link/source checks only; semantic review is manual.",
+  "utc": "2026-10-18T18:59:54.604996+00:00"
+}

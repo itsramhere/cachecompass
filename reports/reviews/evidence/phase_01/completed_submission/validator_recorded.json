@@ -1,0 +1,549 @@
+{
+  "boundary": "Artifact integrity, provenance and presence of manually assessed gate evidence only. Not independent semantic literature review, novelty proof, or performance validation.",
+  "captured_utc": "2026-10-09T18:25:29.699221+00:00",
+  "checks": [
+    {
+      "check": "unique_reference_ids",
+      "passed": true
+    },
+    {
+      "check": "five_mandatory_sources",
+      "passed": true
+    },
+    {
+      "check": "R01:bibliography_identity",
+      "passed": true
+    },
+    {
+      "check": "R01:matrix_coverage",
+      "passed": true
+    },
+    {
+      "check": "R01:manifest_record",
+      "passed": true
+    },
+    {
+      "check": "R01:source.pdf",
+      "passed": true
+    },
+    {
+      "check": "R01:pages.json",
+      "passed": true
+    },
+    {
+      "check": "R01:text.txt",
+      "passed": true
+    },
+    {
+      "check": "R01:reading_coverage_in_bounds",
+      "passed": true
+    },
+    {
+      "check": "R02:bibliography_identity",
+      "passed": true
+    },
+    {
+      "check": "R02:matrix_coverage",
+      "passed": true
+    },
+    {
+      "check": "R02:manifest_record",
+      "passed": true
+    },
+    {
+      "check": "R02:source.pdf",
+      "passed": true
+    },
+    {
+      "check": "R02:pages.json",
+      "passed": true
+    },
+    {
+      "check": "R02:text.txt",
+      "passed": true
+    },
+    {
+      "check": "R02:reading_coverage_in_bounds",
+      "passed": true
+    },
+    {
+      "check": "R03:bibliography_identity",
+      "passed": true
+    },
+    {
+      "check": "R03:matrix_coverage",
+      "passed": true
+    },
+    {
+      "check": "R03:manifest_record",
+      "passed": true
+    },
+    {
+      "check": "R03:source.pdf",
+      "passed": true
+    },
+    {
+      "check": "R03:pages.json",
+      "passed": true
+    },
+    {
+      "check": "R03:text.txt",
+      "passed": true
+    },
+    {
+      "check": "R03:reading_coverage_in_bounds",
+      "passed": true
+    },
+    {
+      "check": "R04:bibliography_identity",
+      "passed": true
+    },
+    {
+      "check": "R04:matrix_coverage",
+      "passed": true
+    },
+    {
+      "check": "R04:manifest_record",
+      "passed": true
+    },
+    {
+      "check": "R04:source.pdf",
+      "passed": true
+    },
+    {
+      "check": "R04:pages.json",
+      "passed": true
+    },
+    {
+      "check": "R04:text.txt",
+      "passed": true
+    },
+    {
+      "check": "R04:reading_coverage_in_bounds",
+      "passed": true
+    },
+    {
+      "check": "R05:bibliography_identity",
+      "passed": true
+    },
+    {
+      "check": "R05:matrix_coverage",
+      "passed": true
+    },
+    {
+      "check": "R05:manifest_record",
+      "passed": true
+    },
+    {
+      "check": "R05:source.pdf",
+      "passed": true
+    },
+    {
+      "check": "R05:pages.json",
+      "passed": true
+    },
+    {
+      "check": "R05:text.txt",
+      "passed": true
+    },
+    {
+      "check": "R05:reading_coverage_in_bounds",
+      "passed": true
+    },
+    {
+      "check": "R06:bibliography_identity",
+      "passed": true
+    },
+    {
+      "check": "R06:matrix_coverage",
+      "passed": true
+    },
+    {
+      "check": "R06:manifest_record",
+      "passed": true
+    },
+    {
+      "check": "R06:source.pdf",
+      "passed": true
+    },
+    {
+      "check": "R06:pages.json",
+      "passed": true
+    },
+    {
+      "check": "R06:text.txt",
+      "passed": true
+    },
+    {
+      "check": "R06:reading_coverage_in_bounds",
+      "passed": true
+    },
+    {
+      "check": "R07:bibliography_identity",
+      "passed": true
+    },
+    {
+      "check": "R07:matrix_coverage",
+      "passed": true
+    },
+    {
+      "check": "R07:manifest_record",
+      "passed": true
+    },
+    {
+      "check": "R07:source.pdf",
+      "passed": true
+    },
+    {
+      "check": "R07:pages.json",
+      "passed": true
+    },
+    {
+      "check": "R07:text.txt",
+      "passed": true
+    },
+    {
+      "check": "R07:reading_coverage_in_bounds",
+      "passed": true
+    },
+    {
+      "check": "R08:bibliography_identity",
+      "passed": true
+    },
+    {
+      "check": "R08:matrix_coverage",
+      "passed": true
+    },
+    {
+      "check": "R08:manifest_record",
+      "passed": true
+    },
+    {
+      "check": "R08:source.pdf",
+      "passed": true
+    },
+    {
+      "check": "R08:pages.json",
+      "passed": true
+    },
+    {
+      "check": "R08:text.txt",
+      "passed": true
+    },
+    {
+      "check": "R08:reading_coverage_in_bounds",
+      "passed": true
+    },
+    {
+      "check": "R09:bibliography_identity",
+      "passed": true
+    },
+    {
+      "check": "R09:matrix_coverage",
+      "passed": true
+    },
+    {
+      "check": "R09:manifest_record",
+      "passed": true
+    },
+    {
+      "check": "R09:source.pdf",
+      "passed": true
+    },
+    {
+      "check": "R09:pages.json",
+      "passed": true
+    },
+    {
+      "check": "R09:text.txt",
+      "passed": true
+    },
+    {
+      "check": "R09:reading_coverage_in_bounds",
+      "passed": true
+    },
+    {
+      "check": "R10:bibliography_identity",
+      "passed": true
+    },
+    {
+      "check": "R10:matrix_coverage",
+      "passed": true
+    },
+    {
+      "check": "R10:manifest_record",
+      "passed": true
+    },
+    {
+      "check": "R10:source.pdf",
+      "passed": true
+    },
+    {
+      "check": "R10:pages.json",
+      "passed": true
+    },
+    {
+      "check": "R10:text.txt",
+      "passed": true
+    },
+    {
+      "check": "R10:reading_coverage_in_bounds",
+      "passed": true
+    },
+    {
+      "check": "R11:bibliography_identity",
+      "passed": true
+    },
+    {
+      "check": "R11:matrix_coverage",
+      "passed": true
+    },
+    {
+      "check": "R11:manifest_record",
+      "passed": true
+    },
+    {
+      "check": "R11:source.pdf",
+      "passed": true
+    },
+    {
+      "check": "R11:pages.json",
+      "passed": true
+    },
+    {
+      "check": "R11:text.txt",
+      "passed": true
+    },
+    {
+      "check": "R11:reading_coverage_in_bounds",
+      "passed": true
+    },
+    {
+      "check": "R12:bibliography_identity",
+      "passed": true
+    },
+    {
+      "check": "R12:matrix_coverage",
+      "passed": true
+    },
+    {
+      "check": "R12:manifest_record",
+      "passed": true
+    },
+    {
+      "check": "R12:source.pdf",
+      "passed": true
+    },
+    {
+      "check": "R12:pages.json",
+      "passed": true
+    },
+    {
+      "check": "R12:text.txt",
+      "passed": true
+    },
+    {
+      "check": "R12:reading_coverage_in_bounds",
+      "passed": true
+    },
+    {
+      "check": "R13:bibliography_identity",
+      "passed": true
+    },
+    {
+      "check": "R13:matrix_coverage",
+      "passed": true
+    },
+    {
+      "check": "R13:explicit_unresolved",
+      "passed": true
+    },
+    {
+      "check": "phase1-fetch-001:config_hash",
+      "passed": true
+    },
+    {
+      "check": "phase1-fetch-001:effective_config",
+      "passed": true
+    },
+    {
+      "check": "phase1-fetch-001:verification",
+      "passed": true
+    },
+    {
+      "check": "phase1-fetch-002:config_hash",
+      "passed": true
+    },
+    {
+      "check": "phase1-fetch-002:effective_config",
+      "passed": true
+    },
+    {
+      "check": "phase1-fetch-002:verification",
+      "passed": true
+    },
+    {
+      "check": "adaptcache-publisher:retained_response_hash",
+      "passed": true
+    },
+    {
+      "check": "adaptcache-metadata:retained_response_hash",
+      "passed": true
+    },
+    {
+      "check": "guide-commit:retained_response_hash",
+      "passed": true
+    },
+    {
+      "check": "guide-pinned:retained_response_hash",
+      "passed": true
+    },
+    {
+      "check": "adaptcache:failure_preserved",
+      "passed": true
+    },
+    {
+      "check": "adaptcache:verified_metadata_only",
+      "passed": true
+    },
+    {
+      "check": "guide:pinned_before_cutoff",
+      "passed": true
+    },
+    {
+      "check": "gate:nearest_verified_direct",
+      "passed": true
+    },
+    {
+      "check": "gate:testable_difference_documented",
+      "passed": true
+    },
+    {
+      "check": "gate:refutation_and_adequate_simple_control",
+      "passed": true
+    },
+    {
+      "check": "gate:overlap_disclosed",
+      "passed": true
+    },
+    {
+      "check": "search:mechanism_queries_retained",
+      "passed": true
+    },
+    {
+      "check": "link:LITERATURE_MATRIX.md:BIBLIOGRAPHY.md",
+      "passed": true
+    },
+    {
+      "check": "link:LITERATURE_MATRIX.md:../configs/literature_review.json",
+      "passed": true
+    },
+    {
+      "check": "link:LITERATURE_MATRIX.md:../reports/literature/phase1-web-001/guide.md",
+      "passed": true
+    },
+    {
+      "check": "link:LITERATURE_MATRIX.md:../reports/literature/phase1-web-001/manifest.json",
+      "passed": true
+    },
+    {
+      "check": "link:LITERATURE_MATRIX.md:../reports/literature/phase1-web-001/adaptcache-metadata.response",
+      "passed": true
+    },
+    {
+      "check": "link:LITERATURE_MATRIX.md:../reports/issues/ISSUE-0004.md",
+      "passed": true
+    },
+    {
+      "check": "link:BIBLIOGRAPHY.md:../configs/literature_review.json",
+      "passed": true
+    },
+    {
+      "check": "link:BIBLIOGRAPHY.md:../paper/references.bib",
+      "passed": true
+    },
+    {
+      "check": "link:HYPOTHESES.md:LITERATURE_MATRIX.md",
+      "passed": true
+    },
+    {
+      "check": "link:HYPOTHESES.md:CANDIDATE_CONTRIBUTION.md",
+      "passed": true
+    },
+    {
+      "check": "link:CANDIDATE_CONTRIBUTION.md:LITERATURE_MATRIX.md",
+      "passed": true
+    },
+    {
+      "check": "link:CANDIDATE_CONTRIBUTION.md:HYPOTHESES.md",
+      "passed": true
+    },
+    {
+      "check": "link:LITERATURE_SEARCH.md:../configs/literature_review.json",
+      "passed": true
+    },
+    {
+      "check": "link:LITERATURE_SEARCH.md:../reports/literature/phase1-fetch-001/manifest.json",
+      "passed": true
+    },
+    {
+      "check": "link:LITERATURE_SEARCH.md:../reports/literature/phase1-fetch-002/manifest.json",
+      "passed": true
+    },
+    {
+      "check": "link:LITERATURE_SEARCH.md:../reports/evidence/phase1/search-round-05.json",
+      "passed": true
+    },
+    {
+      "check": "link:LITERATURE_SEARCH.md:../reports/evidence/phase1/phase1_search_citations.json",
+      "passed": true
+    },
+    {
+      "check": "link:LITERATURE_SEARCH.md:../reports/evidence/phase1/phase1_search_final.json",
+      "passed": true
+    },
+    {
+      "check": "preserved:RESEARCH_IMPLEMENTATION_PLAN.md",
+      "passed": true
+    },
+    {
+      "check": "preserved:AGENT_REPORTING_TEMPLATES.md",
+      "passed": true
+    },
+    {
+      "check": "preserved:AGENT_REPORTING_TEMPLATES.md",
+      "passed": true
+    },
+    {
+      "check": "preserved:preventing-cache-expansion-from-temporarily-slowing-down-an--literature-review.md",
+      "passed": true
+    },
+    {
+      "check": "preserved:RESEARCH_IMPLEMENTATION_PLAN.md",
+      "passed": true
+    },
+    {
+      "check": "runtime_lock_preserved",
+      "passed": true
+    },
+    {
+      "check": "final_source_matches_manifest",
+      "passed": true
+    },
+    {
+      "check": "isolated_tool_wheel_hash",
+      "passed": true
+    },
+    {
+      "check": "handoff:complete_phase_record",
+      "passed": true
+    },
+    {
+      "check": "handoff:access_limit_disclosed",
+      "passed": true
+    }
+  ],
+  "config": "configs\\literature_review.json",
+  "passed": true,
+  "source_manifest": "reports\\source_state_phase1.json"
+}

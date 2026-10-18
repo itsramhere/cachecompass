@@ -1,0 +1,26 @@
+Original interactive inspection, 2026-10-09 (UTC timestamps captured in subsequent structured records).
+Native sandbox: PowerShell Desktop 5.1.26100.9444.
+Get-CimInstance Win32_OperatingSystem/Win32_Processor/Win32_LogicalDisk: Access denied (HRESULT 0x80041003).
+python --version: command not recognized.
+docker version: command not recognized.
+wsl --list --verbose: Wsl/EnumerateDistros/Service/E_ACCESSDENIED.
+These were nonterminating PowerShell errors; the combined shell exit code did not certify individual checks.
+
+Approved unsandboxed inspection:
+Windows 11 Home Single Language, 10.0.26200, 64-bit.
+AMD Ryzen 7 7445HS, 6 cores, 12 logical processors.
+RAM: 15973788 KiB total visible; 4293064 KiB free at inspection.
+C: disk: 510911311872 bytes total; 245136003072 bytes free at inspection.
+WSL 2 distributions: Ubuntu (Stopped), docker-desktop (Stopped).
+WSL 2.6.3.0; kernel 6.6.87.2-1.
+Ubuntu Python 3.12.3; native installed Python 3.12.10.
+Ubuntu docker shim reports: command docker could not be found in this WSL 2 distro; enable WSL integration.
+Native Docker executable: C:\Users\ramst\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe
+Docker client 29.8.0, Compose v5.5.1, desktop plugin v0.4.4, context desktop-linux.
+docker version: failed to connect to docker API at npipe:////./pipe/dockerDesktopLinuxEngine;
+open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+Git 2.52.0.windows.1; parent repository root C:/Users/ramst/Documents/antigravity;
+git rev-parse HEAD: fatal: ambiguous argument HEAD: unknown revision or path not in the working tree.
+No project or ancestor AGENTS.md found in the paths checked. No pre-existing reports/issues.
+This file transcribes observed tool outputs; it is not a raw redirected shell log.
+

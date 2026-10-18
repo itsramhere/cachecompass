@@ -1,0 +1,15 @@
+{
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-File",
+    "scripts/shutdown.ps1"
+  ],
+  "elapsed_seconds": 2.125,
+  "ended_utc": "2026-10-09T15:34:18.167065+00:00",
+  "exit_code": 0,
+  "started_utc": "2026-10-09T15:34:16.043113+00:00",
+  "stderr": "Container paper2-research-database-1 Stopping \n Container paper2-research-cache-old-1-1 Stopping \n Container paper2-research-cache-new-1 Stopping \n Container paper2-research-cache-old-2-1 Stopping \n Container paper2-research-cache-old-2-1 Stopped \n Container paper2-research-cache-old-2-1 Removing \n Container paper2-research-cache-old-2-1 Removed \n Container paper2-research-cache-old-1-1 Stopped \n Container paper2-research-cache-old-1-1 Removing \n Container paper2-research-cache-old-1-1 Removed \n Container paper2-research-database-1 Stopped \n Container paper2-research-database-1 Removing \n Container paper2-research-database-1 Removed \n Container paper2-research-cache-new-1 Stopped \n Container paper2-research-cache-new-1 Removing \n Container paper2-research-cache-new-1 Removed \n Network paper2-research_default Removing \n Network paper2-research_default Removed",
+  "stdout": "Shutdown verified: no paper2-research containers remain.",
+  "step": "shutdown"
+}

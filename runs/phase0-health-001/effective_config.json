@@ -1,0 +1,29 @@
+{
+  "cache": {
+    "eviction_policy": "allkeys-lru",
+    "host": "127.0.0.1",
+    "max_connections": 4,
+    "maxmemory_bytes": 33554432,
+    "ports": [
+      16379,
+      16380,
+      16381
+    ],
+    "socket_timeout_seconds": 3
+  },
+  "compose_file": "infra/compose.yaml",
+  "compose_project": "paper2-research",
+  "database": {
+    "dbname": "paper2_research",
+    "host": "127.0.0.1",
+    "password_env": "PAPER2_DB_PASSWORD",
+    "pool_max_size": 2,
+    "pool_min_size": 1,
+    "port": 15432,
+    "timeout_seconds": 5,
+    "user": "paper2_research"
+  },
+  "health_timeout_seconds": 20,
+  "image_lock": "infra/images.env",
+  "schema_version": 1
+}

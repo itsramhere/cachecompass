@@ -1,0 +1,16 @@
+{
+  "record_kind": "Reviewer transcription of tool results; diagnostic timestamps were not captured",
+  "sandbox_check": {
+    "command": "& .\\.venv\\Scripts\\python.exe -B --version",
+    "exit_code": 1,
+    "output": "No Python at '\"C:\\Users\\ramst\\AppData\\Local\\Programs\\Python\\Python312\\python.exe'",
+    "sandbox_permissions": "use_default"
+  },
+  "approved_check": {
+    "command": "& .\\.venv\\Scripts\\python.exe -B --version",
+    "exit_code": 0,
+    "output": "Python 3.12.10",
+    "sandbox_permissions": "require_escalated"
+  },
+  "interpretation": "The identical runtime invocation fails in the sandbox and succeeds with approved execution. This corroborates the recorded execution-boundary limitation; it does not establish a missing runtime or remove that limitation."
+}

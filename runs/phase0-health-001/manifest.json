@@ -1,0 +1,15 @@
+{
+  "boundary": "Connection/read/write/cleanup check; not a scale-out experiment.",
+  "config_path": "configs/environment.json",
+  "config_sha256": "71a5f35aebe10011546923cf652c6cac85092cdd2c64620869a92dd670275aef",
+  "elapsed_seconds": 0.3430000000007567,
+  "ended_utc": "2026-10-09T15:33:52.562777+00:00",
+  "exit_code": 0,
+  "issue_id": null,
+  "kind": "phase0_service_health",
+  "retry_of": null,
+  "run_id": "phase0-health-001",
+  "source_sha256": "a657f503705b75d360cf31f8ef0d3aa38f20b31751ad0fa003f00223ca4ee005",
+  "started_utc": "2026-10-09T15:33:52.216269+00:00",
+  "status": "completed"
+}

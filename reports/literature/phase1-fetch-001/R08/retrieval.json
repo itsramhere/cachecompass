@@ -1,0 +1,18 @@
+{
+  "content_type": "application/pdf",
+  "elapsed_seconds": 3.4840000000040163,
+  "ended_utc": "2026-10-09T17:29:41.747486+00:00",
+  "http_status": 200,
+  "id": "R08",
+  "landing_url": "https://www.usenix.org/conference/osdi20/presentation/li-jialin",
+  "pages": 21,
+  "pages_sha256": "58fb29a9d0aa4a907622ed845ee1d7717d3d51df8399055c3fa77f475e153402",
+  "pdf_sha256": "98771e0b0d120ed902f1bead1adbf46969d4a891dae421087f6ac29ab3d64c11",
+  "required": false,
+  "resolved_url": "https://www.usenix.org/system/files/osdi20-li_jialin.pdf",
+  "started_utc": "2026-10-09T17:29:38.260350+00:00",
+  "status": "retrieved_and_extracted",
+  "text_sha256": "5d171e788de62b4aa04ad4e6f031262d110b8e9bf1308e236c68a5798ee7db31",
+  "title": "Pegasus: Tolerating Skewed Workloads in Distributed Storage with In-Network Coherence Directories",
+  "url": "https://www.usenix.org/system/files/osdi20-li_jialin.pdf"
+}

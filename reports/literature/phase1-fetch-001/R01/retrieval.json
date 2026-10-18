@@ -1,0 +1,18 @@
+{
+  "content_type": "application/pdf",
+  "elapsed_seconds": 7.311999999998079,
+  "ended_utc": "2026-10-09T17:29:38.258342+00:00",
+  "http_status": 200,
+  "id": "R01",
+  "landing_url": "https://www.usenix.org/conference/nsdi13/technical-sessions/presentation/nishtala",
+  "pages": 14,
+  "pages_sha256": "59fdf3c41fbf6d8fa4fdbe6f627ca29885426dc4b509bc80f75a003013e0a6e2",
+  "pdf_sha256": "d9d788538f999a0320da8f115edc3d4cf8f39aacbd6d8fe0ed9fedf82b395647",
+  "required": true,
+  "resolved_url": "https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final170_update.pdf",
+  "started_utc": "2026-10-09T17:29:30.955043+00:00",
+  "status": "retrieved_and_extracted",
+  "text_sha256": "92f09b3e6aef76bf5a266c81de9c8fbfbf6de43c73e99c18741cab13975ccd94",
+  "title": "Scaling Memcache at Facebook",
+  "url": "https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final170_update.pdf"
+}

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-File",
+    "scripts/health.ps1",
+    "-RunId",
+    "phase0-health-001"
+  ],
+  "elapsed_seconds": 1.2960000000020955,
+  "ended_utc": "2026-10-09T15:33:52.683413+00:00",
+  "exit_code": 0,
+  "started_utc": "2026-10-09T15:33:51.384103+00:00",
+  "stderr": "",
+  "stdout": "{\"run_id\": \"phase0-health-001\", \"status\": \"completed\", \"exit_code\": 0, \"evidence\": \"C:\\\\Users\\\\ramst\\\\Documents\\\\antigravity\\\\paper2\\\\runs\\\\phase0-health-001\", \"error\": null}",
+  "step": "health"
+}

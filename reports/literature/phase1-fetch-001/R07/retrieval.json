@@ -1,0 +1,18 @@
+{
+  "content_type": "application/pdf",
+  "elapsed_seconds": 19.218999999997322,
+  "ended_utc": "2026-10-09T17:29:57.443080+00:00",
+  "http_status": 200,
+  "id": "R07",
+  "landing_url": "https://6gmobile.fel.cvut.cz/publication/Kishani_IEEE_TPDS_MEC.pdf",
+  "pages": 17,
+  "pages_sha256": "86d4126a3ae93c6cdcf38f5d93fe5e2aca8d35b82ff65befaa5fdc011d46d201",
+  "pdf_sha256": "3526d216ff38e02869f85e859a2a02dda6626b1007a10e8e6ec689938493d107",
+  "required": false,
+  "resolved_url": "https://6gmobile.fel.cvut.cz/publication/Kishani_IEEE_TPDS_MEC.pdf",
+  "started_utc": "2026-10-09T17:29:38.217259+00:00",
+  "status": "retrieved_and_extracted",
+  "text_sha256": "34194b4c9b11a00ba16cffbd6ca823554e0eedb827a3eb7299bc4085a4d05450",
+  "title": "ELICA: Efficient and Load Balanced I/O Cache Architecture for Hyperconverged Infrastructures",
+  "url": "https://6gmobile.fel.cvut.cz/publication/Kishani_IEEE_TPDS_MEC.pdf"
+}

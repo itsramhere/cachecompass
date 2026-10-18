@@ -1,0 +1,70 @@
+{
+  "pdf_tool": "pypdf==6.1.1",
+  "schema_version": 1,
+  "search_cutoff": "2026-10-09",
+  "sources": [
+    {
+      "id": "R01",
+      "landing_url": "https://www.usenix.org/conference/nsdi13/technical-sessions/presentation/nishtala",
+      "required": true,
+      "title": "Scaling Memcache at Facebook",
+      "url": "https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final170_update.pdf"
+    },
+    {
+      "id": "R02",
+      "landing_url": "https://www3.cs.stonybrook.edu/~anshul/icdcs18_elmem.pdf",
+      "required": true,
+      "title": "ElMem: Towards an Elastic Memcached System",
+      "url": "https://www3.cs.stonybrook.edu/~anshul/icdcs18_elmem.pdf"
+    },
+    {
+      "id": "R03",
+      "landing_url": "https://www.usenix.org/conference/fast13/technical-sessions/presentation/zhang",
+      "required": true,
+      "title": "Warming Up Storage-Level Caches with Bonfire",
+      "url": "https://www.usenix.org/system/files/conference/fast13/fast13-final118_0.pdf"
+    },
+    {
+      "id": "R04",
+      "landing_url": "https://www.usenix.org/conference/hotcloud20/presentation/zhang-lei",
+      "required": true,
+      "title": "When is the Cache Warm? Manufacturing a Rule of Thumb",
+      "url": "https://www.usenix.org/system/files/hotcloud20_paper_zhang-lei.pdf"
+    },
+    {
+      "id": "R05",
+      "landing_url": "https://www.usenix.org/conference/osdi20/presentation/yang",
+      "required": true,
+      "title": "A large scale analysis of hundreds of in-memory cache clusters at Twitter",
+      "url": "https://www.usenix.org/system/files/osdi20-yang.pdf"
+    },
+    {
+      "id": "R06",
+      "landing_url": "https://www.usenix.org/conference/fast24/presentation/zhu",
+      "required": false,
+      "title": "In-Memory Key-Value Store Live Migration with NetMigrate",
+      "url": "https://www.usenix.org/system/files/fast24-zhu.pdf"
+    },
+    {
+      "id": "R07",
+      "landing_url": "https://6gmobile.fel.cvut.cz/publication/Kishani_IEEE_TPDS_MEC.pdf",
+      "required": false,
+      "title": "ELICA: Efficient and Load Balanced I/O Cache Architecture for Hyperconverged Infrastructures",
+      "url": "https://6gmobile.fel.cvut.cz/publication/Kishani_IEEE_TPDS_MEC.pdf"
+    },
+    {
+      "id": "R08",
+      "landing_url": "https://www.usenix.org/conference/osdi20/presentation/li-jialin",
+      "required": false,
+      "title": "Pegasus: Tolerating Skewed Workloads in Distributed Storage with In-Network Coherence Directories",
+      "url": "https://www.usenix.org/system/files/osdi20-li_jialin.pdf"
+    },
+    {
+      "id": "R09",
+      "landing_url": "https://www.usenix.org/conference/osdi22/presentation/huang-lexiang",
+      "required": false,
+      "title": "Metastable Failures in the Wild",
+      "url": "https://www.usenix.org/system/files/osdi22-huang-lexiang.pdf"
+    }
+  ]
+}

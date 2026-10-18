@@ -1,0 +1,18 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "reports/evidence/phase1/seal_evidence.py",
+    "verify",
+    "--manifest",
+    "reports/phase1-evidence-checksums.json",
+    "--output",
+    "reports/phase1-evidence-verification.json"
+  ],
+  "elapsed_seconds": 0.35899999999674037,
+  "ended_utc": "2026-10-09T17:52:22.104149+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-09T17:52:21.748440+00:00",
+  "stderr": "",
+  "stdout": "{\"passed\": true, \"files\": 85, \"aggregate_sha256\": \"bbdf4929628266041c201970b3eb1cbc8ac14a59b51951ed395cbfba531be900\"}"
+}

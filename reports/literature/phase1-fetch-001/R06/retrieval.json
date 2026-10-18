@@ -1,0 +1,18 @@
+{
+  "content_type": "application/pdf",
+  "elapsed_seconds": 6.875,
+  "ended_utc": "2026-10-09T17:29:45.060484+00:00",
+  "http_status": 200,
+  "id": "R06",
+  "landing_url": "https://www.usenix.org/conference/fast24/presentation/zhu",
+  "pages": 17,
+  "pages_sha256": "2f13837f5f143bffa7fafaaf32572624099030fb5b374dc92e0d0f5323dfb9ca",
+  "pdf_sha256": "8c405cb497264406670d11e2f54148f5f0c896340dc871f56cf6a16ff20fd238",
+  "required": false,
+  "resolved_url": "https://www.usenix.org/system/files/fast24-zhu.pdf",
+  "started_utc": "2026-10-09T17:29:38.188299+00:00",
+  "status": "retrieved_and_extracted",
+  "text_sha256": "f68f58ab4da84d269dc34860fade4ed27fd851eaca8b3af51a244cef2d9c6d06",
+  "title": "In-Memory Key-Value Store Live Migration with NetMigrate",
+  "url": "https://www.usenix.org/system/files/fast24-zhu.pdf"
+}

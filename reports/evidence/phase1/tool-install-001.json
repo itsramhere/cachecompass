@@ -1,0 +1,25 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pip",
+    "install",
+    "--upgrade",
+    "--no-index",
+    "--find-links",
+    "reports/tools/wheels",
+    "--require-hashes",
+    "--no-deps",
+    "--target",
+    "reports/tools/python",
+    "-r",
+    "requirements-literature.lock"
+  ],
+  "elapsed_seconds": 4.60899999999674,
+  "ended_utc": "2026-10-09T17:42:39.831062+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-09T17:42:35.219843+00:00",
+  "stderr": "",
+  "stdout": "Looking in links: reports/tools/wheels\r\nProcessing c:\\users\\ramst\\documents\\antigravity\\paper2\\reports\\tools\\wheels\\pypdf-6.1.1-py3-none-any.whl (from -r requirements-literature.lock (line 2))\r\nInstalling collected packages: pypdf\r\nSuccessfully installed pypdf-6.1.1"
+}

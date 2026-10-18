@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\.venv\\Scripts\\python.exe",
+    "scripts/validate_phase0.py",
+    "--run",
+    "runs/phase0-health-001",
+    "--output",
+    "reports/verification-after-duplicate.json"
+  ],
+  "elapsed_seconds": 0.14100000000325963,
+  "ended_utc": "2026-10-09T15:34:15.919114+00:00",
+  "exit_code": 0,
+  "started_utc": "2026-10-09T15:34:15.776141+00:00",
+  "stderr": "",
+  "stdout": "{\"passed\": true, \"checks\": 9, \"output\": \"reports\\\\verification-after-duplicate.json\"}",
+  "step": "validate"
+}

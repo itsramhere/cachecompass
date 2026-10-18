@@ -1,0 +1,111 @@
+﻿{
+    "captured_utc":  "2026-10-09T16:42:05.5921034Z",
+    "visible_matching_processes":  [
+                                       {
+                                           "Id":  388,
+                                           "ProcessName":  "com.docker.backend",
+                                           "CPU":  2.75
+                                       },
+                                       {
+                                           "Id":  9028,
+                                           "ProcessName":  "com.docker.backend",
+                                           "CPU":  89.3125
+                                       },
+                                       {
+                                           "Id":  10696,
+                                           "ProcessName":  "com.docker.build",
+                                           "CPU":  1.15625
+                                       },
+                                       {
+                                           "Id":  13156,
+                                           "ProcessName":  "Docker Desktop",
+                                           "CPU":  1.078125
+                                       },
+                                       {
+                                           "Id":  22784,
+                                           "ProcessName":  "Docker Desktop",
+                                           "CPU":  null
+                                       },
+                                       {
+                                           "Id":  24084,
+                                           "ProcessName":  "Docker Desktop",
+                                           "CPU":  181.78125
+                                       },
+                                       {
+                                           "Id":  24908,
+                                           "ProcessName":  "Docker Desktop",
+                                           "CPU":  0.109375
+                                       },
+                                       {
+                                           "Id":  24568,
+                                           "ProcessName":  "docker-agent",
+                                           "CPU":  1.296875
+                                       },
+                                       {
+                                           "Id":  2684,
+                                           "ProcessName":  "GameInputRedistService",
+                                           "CPU":  0.359375
+                                       },
+                                       {
+                                           "Id":  6424,
+                                           "ProcessName":  "GameInputRedistService",
+                                           "CPU":  null
+                                       },
+                                       {
+                                           "Id":  7272,
+                                           "ProcessName":  "postgres",
+                                           "CPU":  null
+                                       },
+                                       {
+                                           "Id":  7412,
+                                           "ProcessName":  "postgres",
+                                           "CPU":  null
+                                       },
+                                       {
+                                           "Id":  7420,
+                                           "ProcessName":  "postgres",
+                                           "CPU":  null
+                                       },
+                                       {
+                                           "Id":  7452,
+                                           "ProcessName":  "postgres",
+                                           "CPU":  null
+                                       },
+                                       {
+                                           "Id":  7528,
+                                           "ProcessName":  "postgres",
+                                           "CPU":  null
+                                       },
+                                       {
+                                           "Id":  8184,
+                                           "ProcessName":  "postgres",
+                                           "CPU":  null
+                                       },
+                                       {
+                                           "Id":  9076,
+                                           "ProcessName":  "postgres",
+                                           "CPU":  null
+                                       },
+                                       {
+                                           "Id":  10988,
+                                           "ProcessName":  "postgres",
+                                           "CPU":  null
+                                       },
+                                       {
+                                           "Id":  10996,
+                                           "ProcessName":  "postgres",
+                                           "CPU":  null
+                                       },
+                                       {
+                                           "Id":  11008,
+                                           "ProcessName":  "postgres",
+                                           "CPU":  null
+                                       },
+                                       {
+                                           "Id":  6716,
+                                           "ProcessName":  "wslservice",
+                                           "CPU":  null
+                                       }
+                                   ],
+    "boundary":  "Sandbox-visible process snapshot only; absence does not prove host/container inactivity. Checks were bounded and lightweight regardless."
+}

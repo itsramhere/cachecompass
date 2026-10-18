@@ -1,0 +1,40 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261009191603
+Username: LAPTOP-6O160KFN\ramst
+RunAs User: LAPTOP-6O160KFN\ramst
+Configuration Name: 
+Machine: LAPTOP-6O160KFN (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+Start-Transcript -Path reports\evidence\phase0\bootstrap.log; & .\scripts\bootstrap.ps1; $code = $LASTEXITCODE; Stop-Transcript; exit $code
+Process ID: 24160
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is reports\evidence\phase0\bootstrap.log
+
+
+PS>TerminatingError(): "Command failed with exit code 1 : C:\Users\ramst\Documents\antigravity\paper2\.venv\Scripts\python.exe -c import redis.asyncio, psycopg, psycopg_pool, yaml; print("Runtime imports OK")"
+>> TerminatingError(): "Command failed with exit code 1 : C:\Users\ramst\Documents\antigravity\paper2\.venv\Scripts\python.exe -c import redis.asyncio, psycopg, psycopg_pool, yaml; print("Runtime imports OK")"
+>> TerminatingError(): "Command failed with exit code 1 : C:\Users\ramst\Documents\antigravity\paper2\.venv\Scripts\python.exe -c import redis.asyncio, psycopg, psycopg_pool, yaml; print("Runtime imports OK")"
+Command failed with exit code 1 : C:\Users\ramst\Documents\antigravity\paper2\.venv\Scripts\python.exe -c import
+redis.asyncio, psycopg, psycopg_pool, yaml; print("Runtime imports OK")
+At C:\Users\ramst\Documents\antigravity\paper2\scripts\common.ps1:19 char:32
++ ... DE -ne 0) { throw "Command failed with exit code $LASTEXITCODE : $Exe ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Command failed ...me imports OK"):String) [], RuntimeException
+    + FullyQualifiedErrorId : Command failed with exit code 1 : C:\Users\ramst\Documents\antigravity\paper2\.venv\Scri
+   pts\python.exe -c import redis.asyncio, psycopg, psycopg_pool, yaml; print("Runtime imports OK")
+
+PS>$global:?
+False
+**********************
+Windows PowerShell transcript end
+End time: 20261009191621
+**********************

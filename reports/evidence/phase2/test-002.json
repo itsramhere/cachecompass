@@ -1,0 +1,33 @@
+{
+  "started_utc": "2026-10-18T18:05:00Z",
+  "ended_utc": "2026-10-18T18:05:31Z",
+  "command": [
+    "C:\\Users\\ramst\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "execution_boundary": "approved native execution outside the restricted sandbox; same existing CPython 3.12.10 recorded by Phase 0",
+  "exit_code": 0,
+  "observed": "Ran 12 tests in 0.002s; OK",
+  "tests": [
+    "bucket transitions are irreversible and sequential",
+    "future pressure samples are rejected",
+    "in-flight requests retain captured owner and epoch",
+    "DB attempts require foreground DB accounting",
+    "demand snapshots are bounded and causal",
+    "existing foreground DB demand is charged once",
+    "observation staleness is explicit",
+    "catalog contains six controls and one candidate",
+    "request-weighted and key-count coverage differ",
+    "retry policy is finite",
+    "unknown/expired/evicted/stale residency is not warm",
+    "unsubmitted requests remain explicitly accounted"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "captured_utc": "2026-10-09T18:48:35.142025+00:00",
+  "checks": [
+    {
+      "check": "retrieval_config_hash",
+      "passed": true
+    },
+    {
+      "check": "effective_config",
+      "passed": true
+    },
+    {
+      "check": "source_ids",
+      "passed": true
+    },
+    {
+      "check": "retry_parent_retained",
+      "passed": true
+    },
+    {
+      "check": "retrieved",
+      "passed": true,
+      "source": "FAIL"
+    },
+    {
+      "check": "source.pdf",
+      "passed": true,
+      "source": "FAIL"
+    },
+    {
+      "check": "pages.json",
+      "passed": true,
+      "source": "FAIL"
+    },
+    {
+      "check": "text.txt",
+      "passed": true,
+      "source": "FAIL"
+    },
+    {
+      "check": "indexed_nonempty_pages",
+      "passed": true,
+      "source": "FAIL"
+    },
+    {
+      "check": "retrieved",
+      "passed": true,
+      "source": "OK"
+    },
+    {
+      "check": "source.pdf",
+      "passed": true,
+      "source": "OK"
+    },
+    {
+      "check": "pages.json",
+      "passed": true,
+      "source": "OK"
+    },
+    {
+      "check": "text.txt",
+      "passed": true,
+      "source": "OK"
+    },
+    {
+      "check": "indexed_nonempty_pages",
+      "passed": true,
+      "source": "OK"
+    }
+  ],
+  "passed": true
+}

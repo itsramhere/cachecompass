@@ -1,0 +1,9 @@
+{
+  "started_utc": "2026-10-18T18:08:35Z",
+  "ended_utc": "2026-10-18T18:08:59Z",
+  "command": ["C:\\Users\\ramst\\AppData\\Local\\Programs\\Python\\Python312\\python.exe", "-B", "scripts/capture_source.py", "--output", "reports/source_state_phase2_final.json"],
+  "exit_code": 0,
+  "aggregate_sha256": "b8e0d79837dddba4b11c176f7bd7610bcab772e83c0563b40e327cef6daff09d",
+  "file_count": 67,
+  "status": "final Phase 2 source/config fingerprint; historical and intermediate manifests preserved"
+}
