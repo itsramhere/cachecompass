@@ -18,6 +18,9 @@ __pycache__/
 .coverage.*
 htmlcov/
 /test_out/
+AGENT_REPORTING_TEMPLATES.md
+preventing-cache-expansion-from-temporarily-slowing-down-an--literature-review.md
+RESEARCH_IMPLEMENTATION_PLAN.md
 
 # Local credentials and environment overrides
 .env

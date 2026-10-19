@@ -1,0 +1,45 @@
+{
+  "config_path": "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\configs\\phase4_calibration.yaml",
+  "git": {
+    "describe": "186c3dd Complete Phase 3 runtime and independent correctness review",
+    "revision": "186c3ddb4daf36c2a8dbe7884a82dfb929381ba1",
+    "status_porcelain": "M src/cache_scaleout/__main__.py\n M src/cache_scaleout/adapters.py\n?? analysis/phase4_analysis.py\n?? configs/phase4_calibration.yaml\n?? runs/p4cal_pilot_cpu20k_r12_a/\n?? runs/p4cal_pilot_cpu20k_r24_a/\n?? runs/p4cal_pilot_r12_a/\n?? runs/p4cal_pilot_r12_b/\n?? runs/p4cal_pilot_r12_c/\n?? runs/p4cal_pilot_r192_a/\n?? runs/p4cal_pilot_r24_a/\n?? runs/p4cal_pilot_r36_a/\n?? runs/p4cal_pilot_r48_a/\n?? runs/p4cal_pilot_r48_b/\n?? runs/p4cal_pilot_r72_a/\n?? runs/p4cal_pilot_r96_a/\n?? runs/p4exp_pilot_control_r192_a/\n?? runs/p4exp_pilot_control_r192_b/\n?? runs/p4exp_pilot_immediate_r192_b/\n?? scripts/phase4_run.ps1\n?? src/cache_scaleout/phase4.py"
+  },
+  "initial_service_state": {
+    "new": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "new",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "35beb8697c30b5b8a9b3facd91fca130c7b48603",
+      "used_memory": 1061184
+    },
+    "old-1": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-1",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "dbf41fdf6042ab34a3e8b03de617d5e03605ffd6",
+      "used_memory": 1061216
+    },
+    "old-2": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-2",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "926635e71f578387265c362de420a5a7149fd71a",
+      "used_memory": 1061248
+    }
+  },
+  "kind": "calibration",
+  "rate": 24.0,
+  "run_id": "p4cal_pilot_cpu20k_r24_a",
+  "source_fingerprint": "3a8c297260cb2b14f1de597df901af56da7003f9d101e91a0f71189d429168e7",
+  "started_utc": "2026-10-19T02:50:08.312252+00:00"
+}

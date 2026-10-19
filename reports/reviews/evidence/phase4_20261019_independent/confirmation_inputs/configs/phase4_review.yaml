@@ -1,0 +1,51 @@
+schema_version: 1
+purpose: Corrected independent Phase 4 characterization; no later policies
+dataset: {seed: 404, keys: 512, value_bytes: 1024}
+routing:
+  mapping_seed: 20261019
+  virtual_buckets: 64
+  old_nodes: [old-1, old-2]
+  final_nodes: [old-1, old-2, new]
+  destination: new
+services:
+  cache: {host: 127.0.0.1, ports: [16379, 16380, 16381], socket_timeout_seconds: 1.0, maxmemory_bytes: 33554432, eviction_policy: allkeys-lru}
+  database: {host: 127.0.0.1, port: 15432, dbname: paper2_research, user: paper2_research, password_env: PAPER2_DB_PASSWORD, pool_timeout_seconds: 2.0, statement_timeout_ms: 1500, query_cpu_rounds: 20000}
+resources:
+  foreground_db_connections: 4
+  background_db_connections: 1
+  foreground_cache_connections_per_node: 8
+  background_cache_connections_per_node: 1
+  migration_workers: 1
+  max_inflight_requests: 128
+  max_coalesced_keys: 64
+  max_pending_migration_tasks: 128
+  max_pending_metric_records: 12000
+  max_buffered_payload_bytes: 2048
+timing:
+  request_timeout_seconds: 1.0
+  calibration_seconds: 12.0
+  expansion_seconds: 8.0
+  expansion_at_seconds: 3.0
+  first_arrival_seconds: 0.5
+  observation_interval_seconds: 0.5
+  observation_timeout_seconds: 0.4
+  cleanup_timeout_seconds: 1.0
+  latency_target_ms: 100.0
+warm_stability: {windows: 3, seconds: 1.0, rate: 36, maximum_p95_ms: 100, maximum_p95_spread_ms: 30}
+workload:
+  zipf_exponent: 1.15
+  affected_share: 0.8
+  offered_rate: 36.0
+  confirmation_repetitions: 3
+  calibration_rates: [12, 24, 36]
+  warm_prefix_requests: 128
+  warm_prefix_max_misses: 0
+retries:
+  foreground_cache: {max_attempts: 1, attempt_timeout_seconds: 0.4, backoff_seconds: []}
+  foreground_database: {max_attempts: 1, attempt_timeout_seconds: 1.0, backoff_seconds: []}
+  foreground_fill_write: {max_attempts: 1, attempt_timeout_seconds: 0.4, backoff_seconds: []}
+evidence_replacements:
+  calibration: runs/p4cal_confirm_*
+  expansion: runs/p4exp_confirm_*
+  reason: ISSUE-0023; common probes, isolated cache pools, workload, warm stability, fixed horizon and raw validation corrected
+provisional: true

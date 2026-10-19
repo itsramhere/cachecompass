@@ -1,0 +1,13 @@
+{
+  "calibration_curve": [],
+  "invalid_runs": [
+    "p4cal_confirm_r24_1"
+  ],
+  "paired_p95_delta_uncertainty": null,
+  "pairs": [],
+  "replication_unit": "independent physically recreated run; requests are descriptive within-run observations",
+  "selected_c_safe_foreground_rps": null,
+  "selection_rule": "3+ valid independent runs; every offer issued/completed, zero violations, p95 below configured target, max dispatch lag <=50ms; common probe overhead; duration-limited empirical boundary",
+  "source_identities": [],
+  "valid_runs": 0
+}

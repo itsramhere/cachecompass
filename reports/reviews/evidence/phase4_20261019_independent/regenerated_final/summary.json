@@ -1,0 +1,127 @@
+{
+  "calibration_curve": [
+    {
+      "all_offer_violations_by_run": [
+        3,
+        2,
+        0
+      ],
+      "eligible": false,
+      "independent_runs": 3,
+      "offered_rate": 12.0,
+      "p95_ms": {
+        "caution": "n=3; normal run-effects assumption unverified; exploratory interval, no equivalence claim",
+        "independent_runs": 3,
+        "maximum": 63.0,
+        "mean": 59.111111333333334,
+        "minimum": 56.666667,
+        "normal_model_t95_interval": [
+          50.65314542416745,
+          67.56907724249922
+        ]
+      }
+    },
+    {
+      "all_offer_violations_by_run": [
+        0,
+        0,
+        0
+      ],
+      "eligible": true,
+      "independent_runs": 3,
+      "offered_rate": 24.0,
+      "p95_ms": {
+        "caution": "n=3; normal run-effects assumption unverified; exploratory interval, no equivalence claim",
+        "independent_runs": 3,
+        "maximum": 62.0,
+        "mean": 54.31111129999992,
+        "minimum": 45.13333344999988,
+        "normal_model_t95_interval": [
+          33.11809644761332,
+          75.50412615238653
+        ]
+      }
+    },
+    {
+      "all_offer_violations_by_run": [
+        356,
+        352,
+        329
+      ],
+      "eligible": false,
+      "independent_runs": 3,
+      "offered_rate": 36.0,
+      "p95_ms": {
+        "caution": "n=3; normal run-effects assumption unverified; exploratory interval, no equivalence claim",
+        "independent_runs": 3,
+        "maximum": 952.6111111499999,
+        "mean": 922.9444447166667,
+        "minimum": 888.888889,
+        "normal_model_t95_interval": [
+          843.2358563397354,
+          1002.653033093598
+        ]
+      }
+    }
+  ],
+  "invalid_runs": [],
+  "paired_p95_delta_uncertainty": {
+    "caution": "n=3; normal run-effects assumption unverified; exploratory interval, no equivalence claim",
+    "independent_runs": 3,
+    "maximum": 38.42777780000006,
+    "mean": 31.42407421666669,
+    "minimum": 24.555556,
+    "normal_model_t95_interval": [
+      14.19136530341013,
+      48.65678312992325
+    ]
+  },
+  "pairs": [
+    {
+      "control": "p4final_control_1_20261019",
+      "control_p95_ms": 21.333334,
+      "control_violations": 0,
+      "db_attempt_delta": 26,
+      "errors": [],
+      "immediate": "p4final_immediate_1_20261019",
+      "immediate_p95_ms": 52.622222850000014,
+      "immediate_violations": 0,
+      "p95_delta_ms": 31.288888850000014,
+      "pair_id": "final-pair-1",
+      "valid": true
+    },
+    {
+      "control": "p4final_control_2_20261019",
+      "control_p95_ms": 25.45555590000001,
+      "control_violations": 0,
+      "db_attempt_delta": 26,
+      "errors": [],
+      "immediate": "p4final_immediate_2_20261019",
+      "immediate_p95_ms": 63.88333370000007,
+      "immediate_violations": 2,
+      "p95_delta_ms": 38.42777780000006,
+      "pair_id": "final-pair-2",
+      "valid": true
+    },
+    {
+      "control": "p4final_control_3_20261019",
+      "control_p95_ms": 24.555556,
+      "control_violations": 0,
+      "db_attempt_delta": 26,
+      "errors": [],
+      "immediate": "p4final_immediate_3_20261019",
+      "immediate_p95_ms": 49.111112,
+      "immediate_violations": 0,
+      "p95_delta_ms": 24.555556,
+      "pair_id": "final-pair-3",
+      "valid": true
+    }
+  ],
+  "replication_unit": "independent physically recreated run; requests are descriptive within-run observations",
+  "selected_c_safe_foreground_rps": 24.0,
+  "selection_rule": "3+ valid independent runs; every offer issued/completed, zero violations, p95 below configured target, max dispatch lag <=50ms; common probe overhead; duration-limited empirical boundary",
+  "source_identities": [
+    "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa"
+  ],
+  "valid_runs": 16
+}

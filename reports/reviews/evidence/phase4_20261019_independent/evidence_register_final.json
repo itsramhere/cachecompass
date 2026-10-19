@@ -1,0 +1,2001 @@
+{
+  "command_index": [
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "reports/reviews/evidence/phase4_20261019_independent/diagnose_cleanup.ps1"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/cleanup_diagnostic.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "reports/reviews/evidence/phase4_20261019_independent/diagnose_cleanup.ps1",
+        "-Rate",
+        "48",
+        "-Suffix",
+        "_r48"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/cleanup_diagnostic48.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "reports/reviews/evidence/phase4_20261019_independent/confirmation_audit.py"
+      ],
+      "exit_code": 1,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/confirmation_raw_audit_initial.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_phase4_independent",
+        "-v"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/corrected_negatives.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_phase4_independent.DatabaseExpiryRace",
+        "-v"
+      ],
+      "exit_code": 1,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/expired_acquisition_before.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_phase4_independent",
+        "-v"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/expiry_corrected.json"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\.venv\\Scripts\\python.exe",
+        "-B",
+        "analysis/phase4_analysis.py",
+        "--runs",
+        "p4final_cal12_1_20261019",
+        "p4final_cal12_2_20261019",
+        "p4final_cal12_3_20261019",
+        "p4final_cal24_1_20261019",
+        "p4final_cal24_2_20261019",
+        "p4final_cal24_3_20261019",
+        "p4final_cal36_1_20261019",
+        "p4final_cal36_2_20261019",
+        "p4final_cal36_3_20261019",
+        "p4final_control_1_20261019",
+        "p4final_immediate_1_20261019",
+        "p4final_control_2_20261019",
+        "p4final_immediate_2_20261019",
+        "p4final_control_3_20261019",
+        "p4final_immediate_3_20261019",
+        "p4final_headroom144_20261019",
+        "--output",
+        "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\analysis\\phase4_independent_final_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/final_analysis.json"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\.venv\\Scripts\\python.exe",
+        "-B",
+        "analysis/phase4_analysis.py",
+        "--runs",
+        "p4final_cal12_1_20261019",
+        "p4final_cal12_2_20261019",
+        "p4final_cal12_3_20261019",
+        "p4final_cal24_1_20261019",
+        "p4final_cal24_2_20261019",
+        "p4final_cal24_3_20261019",
+        "p4final_cal36_1_20261019",
+        "p4final_cal36_2_20261019",
+        "p4final_cal36_3_20261019",
+        "p4final_control_1_20261019",
+        "p4final_immediate_1_20261019",
+        "p4final_control_2_20261019",
+        "p4final_immediate_2_20261019",
+        "p4final_control_3_20261019",
+        "p4final_immediate_3_20261019",
+        "p4final_headroom144_20261019",
+        "--output",
+        "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase4_20261019_independent\\regenerated_final"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/final_analysis_reproduction.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "reports/reviews/evidence/phase4_20261019_independent/run_buffer_final.ps1"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/final_buffer_command.json"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/final_full_live_suite.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/shutdown.ps1"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/final_live_shutdown.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/start.ps1"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/final_live_start.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "reports/reviews/evidence/phase4_20261019_independent/confirmation_audit.py",
+        "--prefix",
+        "p4final",
+        "--output",
+        "reports/reviews/evidence/phase4_20261019_independent/raw_final_audit.json"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/final_raw_audit.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "reports/reviews/evidence/phase4_20261019_independent/finish_analysis.py"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/final_regeneration.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_phase4_independent",
+        "-v"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/focused_expanded.json"
+    },
+    {
+      "command": [
+        "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/full_live_suite.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/shutdown.ps1"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/live_shutdown.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/start.ps1"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/live_start.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "reports/reviews/evidence/phase4_20261019_independent/metrics_digest.py"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/metrics_digest.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "reports/reviews/evidence/phase4_20261019_independent/regenerate_original.py"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/original_regeneration.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4final_cal12_1_20261019",
+        "-Rate",
+        "12",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4review_cal12_1_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_cal12_1_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4final_cal12_2_20261019",
+        "-Rate",
+        "12",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4review_cal12_2_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_cal12_2_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4final_cal12_3_20261019",
+        "-Rate",
+        "12",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4review_cal12_3_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_cal12_3_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4final_cal24_1_20261019",
+        "-Rate",
+        "24",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4review_cal24_1_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_cal24_1_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4final_cal24_2_20261019",
+        "-Rate",
+        "24",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4review_cal24_2_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_cal24_2_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4final_cal24_3_20261019",
+        "-Rate",
+        "24",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4review_cal24_3_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_cal24_3_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4final_cal36_1_20261019",
+        "-Rate",
+        "36",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4review_cal36_1_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_cal36_1_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4final_cal36_2_20261019",
+        "-Rate",
+        "36",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4review_cal36_2_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_cal36_2_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4final_cal36_3_20261019",
+        "-Rate",
+        "36",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4review_cal36_3_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_cal36_3_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4final_control_1_20261019",
+        "-Rate",
+        "36",
+        "-Condition",
+        "control",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-PairId",
+        "final-pair-1",
+        "-RetryOf",
+        "p4review_control_1_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_control_1_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4final_control_2_20261019",
+        "-Rate",
+        "36",
+        "-Condition",
+        "control",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-PairId",
+        "final-pair-2",
+        "-RetryOf",
+        "p4review_control_2_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_control_2_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4final_control_3_20261019",
+        "-Rate",
+        "36",
+        "-Condition",
+        "control",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-PairId",
+        "final-pair-3",
+        "-RetryOf",
+        "p4review_control_3_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_control_3_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4final_headroom144_20261019",
+        "-Rate",
+        "144",
+        "-Condition",
+        "control",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4review_headroom144_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_headroom144_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4final_immediate_1_20261019",
+        "-Rate",
+        "36",
+        "-Condition",
+        "immediate",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-PairId",
+        "final-pair-1",
+        "-RetryOf",
+        "p4review_immediate_1_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_immediate_1_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4final_immediate_2_20261019",
+        "-Rate",
+        "36",
+        "-Condition",
+        "immediate",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-PairId",
+        "final-pair-2",
+        "-RetryOf",
+        "p4review_immediate_2_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_immediate_2_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4final_immediate_3_20261019",
+        "-Rate",
+        "36",
+        "-Condition",
+        "immediate",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-PairId",
+        "final-pair-3",
+        "-RetryOf",
+        "p4review_immediate_3_20261019"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4final_immediate_3_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4review_cal12_1_20261019",
+        "-Rate",
+        "12",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4cal_confirm_r12_1"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_cal12_1_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4review_cal12_2_20261019",
+        "-Rate",
+        "12",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4cal_confirm_r12_2"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_cal12_2_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4review_cal12_3_20261019",
+        "-Rate",
+        "12",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4cal_confirm_r12_3"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_cal12_3_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4review_cal24_1_20261019",
+        "-Rate",
+        "24",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4cal_confirm_r24_1"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_cal24_1_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4review_cal24_2_20261019",
+        "-Rate",
+        "24",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4cal_confirm_r24_2"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_cal24_2_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4review_cal24_3_20261019",
+        "-Rate",
+        "24",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4cal_confirm_r24_3"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_cal24_3_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4review_cal36_1_20261019",
+        "-Rate",
+        "36",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4cal_confirm_r36_1"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_cal36_1_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4review_cal36_2_20261019",
+        "-Rate",
+        "36",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4cal_confirm_r36_2"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_cal36_2_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4review_cal36_3_20261019",
+        "-Rate",
+        "36",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-RetryOf",
+        "p4cal_confirm_r36_3"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_cal36_3_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4review_control_1_20261019",
+        "-Rate",
+        "36",
+        "-Condition",
+        "control",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-PairId",
+        "review-pair-1",
+        "-RetryOf",
+        "p4exp_confirm_control_1"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_control_1_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4review_control_2_20261019",
+        "-Rate",
+        "36",
+        "-Condition",
+        "control",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-PairId",
+        "review-pair-2",
+        "-RetryOf",
+        "p4exp_confirm_control_2"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_control_2_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4review_control_3_20261019",
+        "-Rate",
+        "36",
+        "-Condition",
+        "control",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-PairId",
+        "review-pair-3",
+        "-RetryOf",
+        "p4exp_confirm_control_3"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_control_3_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4review_headroom144_20261019",
+        "-Rate",
+        "144",
+        "-Condition",
+        "control",
+        "-Config",
+        "configs/phase4_review.yaml"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_headroom144_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4review_immediate_1_20261019",
+        "-Rate",
+        "36",
+        "-Condition",
+        "immediate",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-PairId",
+        "review-pair-1",
+        "-RetryOf",
+        "p4exp_confirm_immediate_1"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_immediate_1_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4review_immediate_2_20261019",
+        "-Rate",
+        "36",
+        "-Condition",
+        "immediate",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-PairId",
+        "review-pair-2",
+        "-RetryOf",
+        "p4exp_confirm_immediate_2"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_immediate_2_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4review_immediate_3_20261019",
+        "-Rate",
+        "36",
+        "-Condition",
+        "immediate",
+        "-Config",
+        "configs/phase4_review.yaml",
+        "-PairId",
+        "review-pair-3",
+        "-RetryOf",
+        "p4exp_confirm_immediate_3"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/p4review_immediate_3_20261019.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "calibrate",
+        "-RunId",
+        "p4review_pilot_cal24_20261019",
+        "-Rate",
+        "24",
+        "-Config",
+        "configs/phase4_review.yaml"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/pilot_cal24.json"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-File",
+        "scripts/phase4_run.ps1",
+        "-Mode",
+        "immediate",
+        "-RunId",
+        "p4review_pilot_immediate_20261019",
+        "-Rate",
+        "36",
+        "-Condition",
+        "immediate",
+        "-Config",
+        "configs/phase4_review.yaml"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/pilot_immediate.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_phase4_independent",
+        "-v"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/preconfirmation_suite.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "reports/reviews/evidence/phase4_20261019_independent/raw_audit.py"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/raw_audit_corrected.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "reports/reviews/evidence/phase4_20261019_independent/raw_audit.py"
+      ],
+      "exit_code": 1,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/raw_audit_initial.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "reports/reviews/evidence/phase4_20261019_independent/replay_negatives.py",
+        "expiry"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/replay_expiry_corrected.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "reports/reviews/evidence/phase4_20261019_independent/replay_negatives.py",
+        "expiry"
+      ],
+      "exit_code": 1,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/replay_expiry_final.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "reports/reviews/evidence/phase4_20261019_independent/replay_negatives.py",
+        "submission"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/replay_submission_checked.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "reports/reviews/evidence/phase4_20261019_independent/replay_negatives.py",
+        "submission"
+      ],
+      "exit_code": 0,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/replay_submission_final.json"
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_phase4_independent",
+        "-v"
+      ],
+      "exit_code": 1,
+      "record": "reports/reviews/evidence/phase4_20261019_independent/submitted_negatives.json"
+    }
+  ],
+  "rule": "Overlay classifications do not mutate historical evidence. All original labels/bytes remain retained.",
+  "runs": [
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:55:10.602328+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4cal_confirm_r12_1",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:55:32.302227+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4cal_confirm_r12_2",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:55:52.594657+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4cal_confirm_r12_3",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:56:12.948319+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4cal_confirm_r24_1",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:56:33.254361+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4cal_confirm_r24_2",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:56:52.449591+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4cal_confirm_r24_3",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:57:12.951376+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4cal_confirm_r36_1",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:57:34.323037+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4cal_confirm_r36_2",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:57:53.659823+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4cal_confirm_r36_3",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:49:44.035654+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4cal_pilot_cpu20k_r12_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3a8c297260cb2b14f1de597df901af56da7003f9d101e91a0f71189d429168e7",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:50:13.374108+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4cal_pilot_cpu20k_r24_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3a8c297260cb2b14f1de597df901af56da7003f9d101e91a0f71189d429168e7",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:50:30.708956+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4cal_pilot_cpu20k_r36_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3a8c297260cb2b14f1de597df901af56da7003f9d101e91a0f71189d429168e7",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:43:06.433742+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4cal_pilot_r12_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "8fd86851938c1e19a8f91f813d78a04b52aa75d92bf21f5b3422bdca8e538825",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:44:01.223168+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4cal_pilot_r12_b",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "6d514593e1c346c2db85c5acccadf907bee5b1582ca505a8872f00e1bf950f4b",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:44:41.299752+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4cal_pilot_r12_c",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "41d898dc1a2312338fddeaaddceed53efee0e1390fa65f96dd32fcc397431272",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:47:19.695534+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4cal_pilot_r192_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "41d898dc1a2312338fddeaaddceed53efee0e1390fa65f96dd32fcc397431272",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:45:13.365693+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4cal_pilot_r24_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "41d898dc1a2312338fddeaaddceed53efee0e1390fa65f96dd32fcc397431272",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:45:29.972769+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4cal_pilot_r36_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "41d898dc1a2312338fddeaaddceed53efee0e1390fa65f96dd32fcc397431272",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:45:46.712959+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4cal_pilot_r48_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "41d898dc1a2312338fddeaaddceed53efee0e1390fa65f96dd32fcc397431272",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:46:03.177669+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4cal_pilot_r48_b",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "41d898dc1a2312338fddeaaddceed53efee0e1390fa65f96dd32fcc397431272",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:46:36.475629+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4cal_pilot_r72_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "41d898dc1a2312338fddeaaddceed53efee0e1390fa65f96dd32fcc397431272",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:46:53.335846+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4cal_pilot_r96_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "41d898dc1a2312338fddeaaddceed53efee0e1390fa65f96dd32fcc397431272",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:58:18.510417+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4exp_confirm_control_1",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:59:08.145683+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4exp_confirm_control_2",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:59:56.782935+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4exp_confirm_control_3",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:58:43.125611+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4exp_confirm_immediate_1",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:59:32.435502+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4exp_confirm_immediate_2",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:00:21.578797+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs",
+      "retry_of": null,
+      "run_id": "p4exp_confirm_immediate_3",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:51:31.484887+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4exp_pilot_control_cpu20k_r24_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3a8c297260cb2b14f1de597df901af56da7003f9d101e91a0f71189d429168e7",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:52:47.856906+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4exp_pilot_control_cpu20k_r36_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3a8c297260cb2b14f1de597df901af56da7003f9d101e91a0f71189d429168e7",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:47:53.024903+00:00",
+        "error": "TypeError(\"'float' object is not iterable\")",
+        "status": "infrastructure_failure"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4exp_pilot_control_r192_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "41d898dc1a2312338fddeaaddceed53efee0e1390fa65f96dd32fcc397431272",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:48:33.796051+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4exp_pilot_control_r192_b",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "39485fee5a458c4c2298ad382d3e1d85e485fbc3cdb56e626edae95f05878b18",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:51:52.715280+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4exp_pilot_immediate_cpu20k_r24_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3a8c297260cb2b14f1de597df901af56da7003f9d101e91a0f71189d429168e7",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:53:09.969780+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4exp_pilot_immediate_cpu20k_r36_a",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "3a8c297260cb2b14f1de597df901af56da7003f9d101e91a0f71189d429168e7",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T02:49:05.375794+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0023/0024: corrected accounting/workload/stability claims require fresh runs; exploratory pilot, not confirmation",
+      "retry_of": null,
+      "run_id": "p4exp_pilot_immediate_r192_b",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "39485fee5a458c4c2298ad382d3e1d85e485fbc3cdb56e626edae95f05878b18",
+      "use": "historical_submission_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:54:33.069026+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_cal12_1_20261019",
+      "run_id": "p4final_cal12_1_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:57:34.936027+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_cal12_2_20261019",
+      "run_id": "p4final_cal12_2_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T04:00:32.149020+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_cal12_3_20261019",
+      "run_id": "p4final_cal12_3_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:55:04.591218+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_cal24_1_20261019",
+      "run_id": "p4final_cal24_1_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:58:07.148398+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_cal24_2_20261019",
+      "run_id": "p4final_cal24_2_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:59:31.559920+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_cal24_3_20261019",
+      "run_id": "p4final_cal24_3_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:55:37.408350+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_cal36_1_20261019",
+      "run_id": "p4final_cal36_1_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:57:03.718417+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_cal36_2_20261019",
+      "run_id": "p4final_cal36_2_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T04:00:02.467464+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_cal36_3_20261019",
+      "run_id": "p4final_cal36_3_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:56:06.074270+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_control_1_20261019",
+      "run_id": "p4final_control_1_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:59:01.681341+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_control_2_20261019",
+      "run_id": "p4final_control_2_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T04:00:58.403203+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_control_3_20261019",
+      "run_id": "p4final_control_3_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T04:01:52.420592+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_headroom144_20261019",
+      "run_id": "p4final_headroom144_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "separate_headroom_diagnostic"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:56:32.401497+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_immediate_1_20261019",
+      "run_id": "p4final_immediate_1_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:58:35.208234+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_immediate_2_20261019",
+      "run_id": "p4final_immediate_2_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T04:01:25.936809+00:00",
+        "status": "completed"
+      },
+      "reason": "raw validator verdict",
+      "retry_of": "p4review_immediate_3_20261019",
+      "run_id": "p4final_immediate_3_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+      "use": "corrected_confirmation"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:42:15.654312+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0025 changed issuance/observation timing; entire matrix replaced, including favorable runs",
+      "retry_of": "p4cal_confirm_r12_1",
+      "run_id": "p4review_cal12_1_20261019",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:45:09.098556+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0025 changed issuance/observation timing; entire matrix replaced, including favorable runs",
+      "retry_of": "p4cal_confirm_r12_2",
+      "run_id": "p4review_cal12_2_20261019",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:48:05.823015+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0025 changed issuance/observation timing; entire matrix replaced, including favorable runs",
+      "retry_of": "p4cal_confirm_r12_3",
+      "run_id": "p4review_cal12_3_20261019",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:42:46.416482+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0025 changed issuance/observation timing; entire matrix replaced, including favorable runs",
+      "retry_of": "p4cal_confirm_r24_1",
+      "run_id": "p4review_cal24_1_20261019",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:45:39.518736+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0025 changed issuance/observation timing; entire matrix replaced, including favorable runs",
+      "retry_of": "p4cal_confirm_r24_2",
+      "run_id": "p4review_cal24_2_20261019",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:47:04.753953+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0025 changed issuance/observation timing; entire matrix replaced, including favorable runs",
+      "retry_of": "p4cal_confirm_r24_3",
+      "run_id": "p4review_cal24_3_20261019",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:43:16.384515+00:00",
+        "status": "completed"
+      },
+      "reason": "DB adapter orphan/quarantine/issuance stop; original completed label superseded by this overlay",
+      "retry_of": "p4cal_confirm_r36_1",
+      "run_id": "p4review_cal36_1_20261019",
+      "scientific_status": "infrastructure_failure",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:44:38.243488+00:00",
+        "status": "completed"
+      },
+      "reason": "DB adapter orphan/quarantine/issuance stop; original completed label superseded by this overlay",
+      "retry_of": "p4cal_confirm_r36_2",
+      "run_id": "p4review_cal36_2_20261019",
+      "scientific_status": "infrastructure_failure",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:47:36.199400+00:00",
+        "status": "completed"
+      },
+      "reason": "DB adapter orphan/quarantine/issuance stop; original completed label superseded by this overlay",
+      "retry_of": "p4cal_confirm_r36_3",
+      "run_id": "p4review_cal36_3_20261019",
+      "scientific_status": "infrastructure_failure",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:50:09.610487+00:00",
+        "status": "completed"
+      },
+      "reason": "not in frozen confirmation matrix",
+      "retry_of": null,
+      "run_id": "p4review_cleanup_diagnostic_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "diagnostic_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:51:14.904882+00:00",
+        "status": "completed"
+      },
+      "reason": "not in frozen confirmation matrix",
+      "retry_of": null,
+      "run_id": "p4review_cleanup_diagnostic_r48_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "diagnostic_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:43:42.200075+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0025 changed issuance/observation timing; entire matrix replaced, including favorable runs",
+      "retry_of": "p4exp_confirm_control_1",
+      "run_id": "p4review_control_1_20261019",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:46:31.799435+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0025 changed issuance/observation timing; entire matrix replaced, including favorable runs",
+      "retry_of": "p4exp_confirm_control_2",
+      "run_id": "p4review_control_2_20261019",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:48:31.529334+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0025 changed issuance/observation timing; entire matrix replaced, including favorable runs",
+      "retry_of": "p4exp_confirm_control_3",
+      "run_id": "p4review_control_3_20261019",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:49:23.528949+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0025 changed issuance/observation timing; entire matrix replaced, including favorable runs",
+      "retry_of": null,
+      "run_id": "p4review_headroom144_20261019",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:44:08.469324+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0025 changed issuance/observation timing; entire matrix replaced, including favorable runs",
+      "retry_of": "p4exp_confirm_immediate_1",
+      "run_id": "p4review_immediate_1_20261019",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:46:06.023854+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0025 changed issuance/observation timing; entire matrix replaced, including favorable runs",
+      "retry_of": "p4exp_confirm_immediate_2",
+      "run_id": "p4review_immediate_2_20261019",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:48:57.596956+00:00",
+        "status": "completed"
+      },
+      "reason": "ISSUE-0025 changed issuance/observation timing; entire matrix replaced, including favorable runs",
+      "retry_of": "p4exp_confirm_immediate_3",
+      "run_id": "p4review_immediate_3_20261019",
+      "scientific_status": "invalid_measurement",
+      "source_fingerprint": "e452b05bc7b494575c89ff7094b9fe02138f01562f4534909c564c079a2c521f",
+      "use": "superseded_first_review_matrix"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:35:05.664700+00:00",
+        "status": "completed"
+      },
+      "reason": "not in frozen confirmation matrix",
+      "retry_of": null,
+      "run_id": "p4review_pilot_cal24_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "8dabf36a4788fef80106f52bbdb908bfa8630912b0922b11fd4972dfac9f2d87",
+      "use": "diagnostic_only"
+    },
+    {
+      "errors": [],
+      "original_status": {
+        "ended_utc": "2026-10-19T03:38:35.767621+00:00",
+        "status": "completed"
+      },
+      "reason": "not in frozen confirmation matrix",
+      "retry_of": null,
+      "run_id": "p4review_pilot_immediate_20261019",
+      "scientific_status": "completed",
+      "source_fingerprint": "79c915ccb09f150e7ac65a0fe5cbdf84da9e2f52910f488bf06905b3147a1c0b",
+      "use": "diagnostic_only"
+    }
+  ],
+  "updated_utc": "2026-10-19T04:06:27.889697+00:00"
+}

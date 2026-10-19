@@ -1,0 +1,69 @@
+{
+  "command": {
+    "command": [
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\.venv\\Scripts\\python.exe",
+      "-B",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase4_20261019_independent\\original\\analysis\\phase4_analysis.py",
+      "--runs",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4cal_confirm_r12_1",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4cal_confirm_r12_2",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4cal_confirm_r12_3",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4cal_confirm_r24_1",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4cal_confirm_r24_2",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4cal_confirm_r24_3",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4cal_confirm_r36_1",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4cal_confirm_r36_2",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4cal_confirm_r36_3",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4exp_confirm_control_1",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4exp_confirm_immediate_1",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4exp_confirm_control_2",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4exp_confirm_immediate_2",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4exp_confirm_control_3",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\runs\\p4exp_confirm_immediate_3",
+      "--output",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase4_20261019_independent\\original_regeneration"
+    ],
+    "elapsed_seconds": 0.35899999999674037,
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "comparisons": [
+    {
+      "byte_identical": true,
+      "file": "calibration.csv",
+      "original_exists": true
+    },
+    {
+      "byte_identical": true,
+      "file": "calibration_p95.svg",
+      "original_exists": true
+    },
+    {
+      "byte_identical": true,
+      "file": "calibration_record.json",
+      "original_exists": true
+    },
+    {
+      "byte_identical": true,
+      "file": "expansion.csv",
+      "original_exists": true
+    },
+    {
+      "byte_identical": true,
+      "file": "expansion_db_attempts.svg",
+      "original_exists": true
+    },
+    {
+      "byte_identical": true,
+      "file": "summary.json",
+      "original_exists": true
+    },
+    {
+      "byte_identical": true,
+      "file": "validation.json",
+      "original_exists": true
+    }
+  ],
+  "meaning": "Numerical/plot regeneration check only. Original validity and hard-coded capacity are not certified."
+}

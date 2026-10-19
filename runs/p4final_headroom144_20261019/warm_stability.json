@@ -1,0 +1,713 @@
+{
+  "cache_services": {
+    "new": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "new",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "d1aaafaf3703196a3e4c4d7e50dfc3a863924244",
+      "used_memory": 1119952
+    },
+    "old-1": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-1",
+      "physical_key_count": 265,
+      "redis_version": "7.4.11",
+      "server_run_id": "61088036c77b78c0d52d735d5474b0d5810214ae",
+      "used_memory": 1615264
+    },
+    "old-2": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-2",
+      "physical_key_count": 247,
+      "redis_version": "7.4.11",
+      "server_run_id": "17d98015eabeb9bee99d8621e1034cbaa57b5a31",
+      "used_memory": 1588416
+    }
+  },
+  "criterion": {
+    "maximum_p95_ms": 100,
+    "maximum_p95_spread_ms": 30,
+    "rate": 36,
+    "seconds": 1.0,
+    "windows": 3
+  },
+  "database_verification": {
+    "actual_payload_checksum": "3028f728b0dadceb3f19ccbf08dc6ded923f6762e8ec97a522c8c32367d6b00c",
+    "count": 512,
+    "identity_sha256": "511dd7b8cc22cf652d3c0f223ef54f3df38f5a83065c780589f2238aa4b3a34d"
+  },
+  "foreground_db_preparation_reads": 4,
+  "valid": true,
+  "windows": [
+    {
+      "p95_ms": 3.277125,
+      "requests": [
+        {
+          "hit": true,
+          "key": "key-00000000",
+          "latency_ms": 1.1591,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000001",
+          "latency_ms": 2.3207,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000002",
+          "latency_ms": 1.5246,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000003",
+          "latency_ms": 2.0605,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000004",
+          "latency_ms": 2.2284,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000005",
+          "latency_ms": 2.4122,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000006",
+          "latency_ms": 1.9335,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000007",
+          "latency_ms": 2.1847,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000008",
+          "latency_ms": 2.036,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000009",
+          "latency_ms": 1.8303,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000010",
+          "latency_ms": 2.2669,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000011",
+          "latency_ms": 3.1893,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000012",
+          "latency_ms": 2.6122,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000013",
+          "latency_ms": 2.8305,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000014",
+          "latency_ms": 2.4239,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000015",
+          "latency_ms": 2.5284,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000016",
+          "latency_ms": 2.3157,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000017",
+          "latency_ms": 2.4726,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000018",
+          "latency_ms": 2.246,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000019",
+          "latency_ms": 2.3861,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000020",
+          "latency_ms": 2.9597,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000021",
+          "latency_ms": 2.4498,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000022",
+          "latency_ms": 2.9301,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000023",
+          "latency_ms": 2.4818,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000024",
+          "latency_ms": 3.6222,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000025",
+          "latency_ms": 2.4074,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000026",
+          "latency_ms": 3.5406,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000027",
+          "latency_ms": 2.1984,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000028",
+          "latency_ms": 1.9721,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000029",
+          "latency_ms": 2.2737,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000030",
+          "latency_ms": 2.4005,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000031",
+          "latency_ms": 2.7152,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000032",
+          "latency_ms": 2.7273,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000033",
+          "latency_ms": 1.9843,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000034",
+          "latency_ms": 2.8445,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000035",
+          "latency_ms": 2.6922,
+          "payload_ok": true
+        }
+      ]
+    },
+    {
+      "p95_ms": 2.9566500000000002,
+      "requests": [
+        {
+          "hit": true,
+          "key": "key-00000000",
+          "latency_ms": 2.1169,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000001",
+          "latency_ms": 2.6786,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000002",
+          "latency_ms": 1.9502,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000003",
+          "latency_ms": 2.3521,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000004",
+          "latency_ms": 2.4169,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000005",
+          "latency_ms": 2.3582,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000006",
+          "latency_ms": 2.2811,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000007",
+          "latency_ms": 2.3121,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000008",
+          "latency_ms": 2.7687,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000009",
+          "latency_ms": 2.0928,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000010",
+          "latency_ms": 2.1678,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000011",
+          "latency_ms": 2.4275,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000012",
+          "latency_ms": 2.6887,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000013",
+          "latency_ms": 1.7702,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000014",
+          "latency_ms": 1.9807,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000015",
+          "latency_ms": 2.6106,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000016",
+          "latency_ms": 2.6709,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000017",
+          "latency_ms": 2.216,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000018",
+          "latency_ms": 2.4001,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000019",
+          "latency_ms": 2.8328,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000020",
+          "latency_ms": 2.3583,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000021",
+          "latency_ms": 2.3238,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000022",
+          "latency_ms": 3.3282,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000023",
+          "latency_ms": 1.7435,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000024",
+          "latency_ms": 2.1259,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000025",
+          "latency_ms": 2.1072,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000026",
+          "latency_ms": 2.6282,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000027",
+          "latency_ms": 1.3944,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000028",
+          "latency_ms": 2.2504,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000029",
+          "latency_ms": 2.0774,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000030",
+          "latency_ms": 3.7974,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000031",
+          "latency_ms": 2.5478,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000032",
+          "latency_ms": 1.5244,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000033",
+          "latency_ms": 2.5166,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000034",
+          "latency_ms": 2.5077,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000035",
+          "latency_ms": 2.2436,
+          "payload_ok": true
+        }
+      ]
+    },
+    {
+      "p95_ms": 4.125425,
+      "requests": [
+        {
+          "hit": true,
+          "key": "key-00000000",
+          "latency_ms": 1.893,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000001",
+          "latency_ms": 2.4968,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000002",
+          "latency_ms": 2.1534,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000003",
+          "latency_ms": 3.2916,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000004",
+          "latency_ms": 2.099,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000005",
+          "latency_ms": 2.2954,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000006",
+          "latency_ms": 2.4677,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000007",
+          "latency_ms": 2.1839,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000008",
+          "latency_ms": 2.5257,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000009",
+          "latency_ms": 4.6586,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000010",
+          "latency_ms": 1.9704,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000011",
+          "latency_ms": 1.8412,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000012",
+          "latency_ms": 2.4595,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000013",
+          "latency_ms": 2.8406,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000014",
+          "latency_ms": 2.2752,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000015",
+          "latency_ms": 2.6573,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000016",
+          "latency_ms": 5.3404,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000017",
+          "latency_ms": 2.2545,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000018",
+          "latency_ms": 2.78,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000019",
+          "latency_ms": 2.108,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000020",
+          "latency_ms": 2.2578,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000021",
+          "latency_ms": 2.25,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000022",
+          "latency_ms": 2.5058,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000023",
+          "latency_ms": 3.3281,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000024",
+          "latency_ms": 2.1384,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000025",
+          "latency_ms": 2.2254,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000026",
+          "latency_ms": 2.5168,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000027",
+          "latency_ms": 1.915,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000028",
+          "latency_ms": 1.927,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000029",
+          "latency_ms": 2.1241,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000030",
+          "latency_ms": 2.0553,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000031",
+          "latency_ms": 3.9477,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000032",
+          "latency_ms": 1.9814,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000033",
+          "latency_ms": 2.3159,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000034",
+          "latency_ms": 2.9078,
+          "payload_ok": true
+        },
+        {
+          "hit": true,
+          "key": "key-00000035",
+          "latency_ms": 2.1416,
+          "payload_ok": true
+        }
+      ]
+    }
+  ]
+}

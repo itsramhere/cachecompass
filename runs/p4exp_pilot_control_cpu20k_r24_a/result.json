@@ -1,0 +1,5365 @@
+{
+  "cache_final": {
+    "new": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "new",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "636292fc903b8c862252a1f7471ef864d6d243ac",
+      "used_memory": 1121072
+    },
+    "old-1": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-1",
+      "physical_key_count": 265,
+      "redis_version": "7.4.11",
+      "server_run_id": "ce6102db2aaed2ecf15eaee00bb56192c008a498",
+      "used_memory": 1640056
+    },
+    "old-2": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-2",
+      "physical_key_count": 247,
+      "redis_version": "7.4.11",
+      "server_run_id": "68b706270817293e0e6ce2731b963cd77aac07cc",
+      "used_memory": 1613280
+    }
+  },
+  "condition": "control",
+  "database_pool": {
+    "background": {
+      "connections_ms": 15,
+      "connections_num": 1,
+      "observed_max_concurrency": 1,
+      "pool_available": 1,
+      "pool_max": 1,
+      "pool_min": 0,
+      "pool_size": 1,
+      "requests_num": 18,
+      "requests_queued": 1,
+      "requests_wait_ms": 31,
+      "requests_waiting": 0,
+      "usage_ms": 170
+    },
+    "cancelled_operations": 0,
+    "discarded_connections": 0,
+    "foreground": {
+      "observed_max_concurrency": 0,
+      "pool_available": 0,
+      "pool_max": 4,
+      "pool_min": 0,
+      "pool_size": 0,
+      "requests_waiting": 0
+    }
+  },
+  "observations": [
+    {
+      "ended_ns": 24312765000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 16.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1121792,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24312718000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1616976,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24312734000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1590064,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 2,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 31.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24312765000000,
+          "reason": "same_query_probe_ms=31.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24312750000000,
+          "reason": "ping_ms=0.000;bundle_ms=16.000;memory_fraction=0.033432;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24312734000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.048190;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24312734000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.047388;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24312734000000
+    },
+    {
+      "ended_ns": 24313281000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1122816,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24313250000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1659344,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24312734000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594160,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 3,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 31.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24313281000000,
+          "reason": "same_query_probe_ms=31.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24313250000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.033463;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24313250000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.049452;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24313250000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.047510;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24313250000000
+    },
+    {
+      "ended_ns": 24313765000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1124864,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 16.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24313734000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1645008,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 15.0,
+                "observed_at_ns": 24313718000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594160,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 4,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 31.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24313765000000,
+          "reason": "same_query_probe_ms=31.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24313734000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.033524;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24313750000000,
+          "reason": "ping_ms=0.000;bundle_ms=16.000;memory_fraction=0.049025;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24313734000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.047510;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24313734000000
+    },
+    {
+      "ended_ns": 24314281000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1128960,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 16.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 16.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 16.0,
+                "observed_at_ns": 24314250000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1647056,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 31.0,
+                "observed_at_ns": 24314156000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594160,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 5,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 31.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24314281000000,
+          "reason": "same_query_probe_ms=31.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24314250000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.033646;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24314250000000,
+          "reason": "ping_ms=16.000;bundle_ms=16.000;memory_fraction=0.049086;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24314250000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.047510;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24314234000000
+    },
+    {
+      "ended_ns": 24314828000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 46.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 46.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1128960,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 46.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 46.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 15.0,
+                "observed_at_ns": 24314796000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1647056,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 1,
+          "bundle_ms": 46.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 46.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24314703000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1632432,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 6,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 78.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24314828000000,
+          "reason": "same_query_probe_ms=78.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24314796000000,
+          "reason": "ping_ms=46.000;bundle_ms=46.000;memory_fraction=0.033646;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24314796000000,
+          "reason": "ping_ms=46.000;bundle_ms=46.000;memory_fraction=0.049086;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24314796000000,
+          "reason": "ping_ms=46.000;bundle_ms=46.000;memory_fraction=0.048650;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24314750000000
+    },
+    {
+      "ended_ns": 24315375000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 62.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 46.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1128960,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 1,
+          "bundle_ms": 78.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 46.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 46.0,
+                "observed_at_ns": 24315296000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1685312,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 62.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 46.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24315078000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1617328,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 7,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 125.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24315375000000,
+          "reason": "same_query_probe_ms=125.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24315312000000,
+          "reason": "ping_ms=46.000;bundle_ms=62.000;memory_fraction=0.033646;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24315328000000,
+          "reason": "ping_ms=46.000;bundle_ms=78.000;memory_fraction=0.050226;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24315312000000,
+          "reason": "ping_ms=46.000;bundle_ms=62.000;memory_fraction=0.048200;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24315250000000
+    },
+    {
+      "ended_ns": 24315796000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 15.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 15.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1128960,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 15.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 15.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 15.0,
+                "observed_at_ns": 24315765000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1667136,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 15.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24315703000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1611440,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 8,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 46.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24315796000000,
+          "reason": "same_query_probe_ms=46.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24315765000000,
+          "reason": "ping_ms=15.000;bundle_ms=15.000;memory_fraction=0.033646;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24315765000000,
+          "reason": "ping_ms=15.000;bundle_ms=15.000;memory_fraction=0.049685;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24315765000000,
+          "reason": "ping_ms=0.000;bundle_ms=15.000;memory_fraction=0.048025;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24315750000000
+    },
+    {
+      "ended_ns": 24316281000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 15.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1128960,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 15.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24316250000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1667136,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24315875000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1614000,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 9,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 31.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24316281000000,
+          "reason": "same_query_probe_ms=31.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24316265000000,
+          "reason": "ping_ms=0.000;bundle_ms=15.000;memory_fraction=0.033646;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24316265000000,
+          "reason": "ping_ms=0.000;bundle_ms=15.000;memory_fraction=0.049685;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24316250000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.048101;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24316250000000
+    },
+    {
+      "ended_ns": 24316765000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1128960,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 16.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 16.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24316750000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1667136,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 15.0,
+                "observed_at_ns": 24316718000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1619120,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 10,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 15.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24316765000000,
+          "reason": "same_query_probe_ms=15.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24316750000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.033646;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24316750000000,
+          "reason": "ping_ms=16.000;bundle_ms=16.000;memory_fraction=0.049685;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24316750000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.048254;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24316734000000
+    },
+    {
+      "ended_ns": 24317265000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1128960,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 16.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 16.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 16.0,
+                "observed_at_ns": 24317250000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1667136,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24317125000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1598648,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 11,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 15.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24317265000000,
+          "reason": "same_query_probe_ms=15.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24317250000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.033646;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24317250000000,
+          "reason": "ping_ms=16.000;bundle_ms=16.000;memory_fraction=0.049685;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24317250000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.047643;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24317234000000
+    },
+    {
+      "ended_ns": 24317781000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1128960,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24317750000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1668416,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24317656000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1598648,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 12,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 31.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24317781000000,
+          "reason": "same_query_probe_ms=31.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24317750000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.033646;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24317750000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.049723;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24317750000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.047643;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24317750000000
+    },
+    {
+      "ended_ns": 24318281000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1128960,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24318218000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1650504,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24318250000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1619120,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 13,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 31.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24318281000000,
+          "reason": "same_query_probe_ms=31.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24318250000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.033646;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24318250000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.049189;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24318250000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.048254;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24318250000000
+    },
+    {
+      "ended_ns": 24318781000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1128960,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24318750000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1648456,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24318656000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1620144,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 14,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 31.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24318781000000,
+          "reason": "same_query_probe_ms=31.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24318750000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.033646;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24318750000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.049128;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24318750000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.048284;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24318750000000
+    },
+    {
+      "ended_ns": 24319281000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 16.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 16.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1128960,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 16.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 16.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24319250000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1649480,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 16.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 16.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 15.0,
+                "observed_at_ns": 24319218000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1620144,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 15,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 47.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24319281000000,
+          "reason": "same_query_probe_ms=47.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24319250000000,
+          "reason": "ping_ms=16.000;bundle_ms=16.000;memory_fraction=0.033646;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24319250000000,
+          "reason": "ping_ms=16.000;bundle_ms=16.000;memory_fraction=0.049158;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24319250000000,
+          "reason": "ping_ms=16.000;bundle_ms=16.000;memory_fraction=0.048284;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24319234000000
+    },
+    {
+      "ended_ns": 24319781000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 15.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1128960,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24319703000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1649480,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 15.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24319750000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1620144,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 16,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 31.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24319781000000,
+          "reason": "same_query_probe_ms=31.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24319765000000,
+          "reason": "ping_ms=0.000;bundle_ms=15.000;memory_fraction=0.033646;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24319750000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.049158;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24319765000000,
+          "reason": "ping_ms=0.000;bundle_ms=15.000;memory_fraction=0.048284;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24319750000000
+    },
+    {
+      "ended_ns": 24320281000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 15.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1128960,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24320250000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1649480,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 15.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24320203000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1611184,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 17,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 31.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24320281000000,
+          "reason": "same_query_probe_ms=31.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24320265000000,
+          "reason": "ping_ms=0.000;bundle_ms=15.000;memory_fraction=0.033646;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24320250000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.049158;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24320265000000,
+          "reason": "ping_ms=0.000;bundle_ms=15.000;memory_fraction=0.048017;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24320250000000
+    },
+    {
+      "ended_ns": 24320765000000,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {}
+          },
+          "used_memory": 1121792,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 31.0,
+                "observed_at_ns": 24320734000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1640520,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 0.0,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.0,
+          "real_classes": {
+            "0": {
+              "read": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24320734000000,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.0,
+                "observed_at_ns": 24310953000000,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1611440,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 15,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 18,
+            "requests_queued": 1,
+            "requests_wait_ms": 31,
+            "requests_waiting": 0,
+            "usage_ms": 170
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "observed_max_concurrency": 0,
+            "pool_available": 0,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 0,
+            "requests_waiting": 0
+          }
+        },
+        "probe_ms": 31.0,
+        "real_classes": {}
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 24320765000000,
+          "reason": "same_query_probe_ms=31.000",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 24320734000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.033432;evicted_keys=0;run_id=636292fc903b8c862252a1f7471ef864d6d243ac",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 24320734000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.048891;evicted_keys=0;run_id=ce6102db2aaed2ecf15eaee00bb56192c008a498",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 24320734000000,
+          "reason": "ping_ms=0.000;bundle_ms=0.000;memory_fraction=0.048025;evicted_keys=0;run_id=68b706270817293e0e6ce2731b963cd77aac07cc",
+          "state": "safe"
+        }
+      },
+      "started_ns": 24320734000000
+    }
+  ],
+  "offered_rate": 24.0,
+  "post_event": {
+    "all_offer_latency_violations": 0,
+    "all_offer_violation_fraction": 0.0,
+    "completed": 84,
+    "database_attempts": 0,
+    "new_cache_reads": 0,
+    "offered": 84,
+    "old_cache_reads": 84,
+    "submitted": 84,
+    "successful_p50_ms": 10.666667,
+    "successful_p95_ms": 25.666667,
+    "successful_p99_ms": 28.386667000000028
+  },
+  "pre_event": {
+    "all_offer_latency_violations": 0,
+    "all_offer_violation_fraction": 0.0,
+    "completed": 60,
+    "database_attempts": 0,
+    "new_cache_reads": 0,
+    "offered": 60,
+    "old_cache_reads": 60,
+    "submitted": 60,
+    "successful_p50_ms": 10.666667,
+    "successful_p95_ms": 47.26666669999999,
+    "successful_p99_ms": 62.0
+  },
+  "reconciliation": {
+    "complete": true,
+    "offered": 192,
+    "reasons": [],
+    "submitted": 192,
+    "terminal": 192,
+    "unsubmitted": 0
+  },
+  "router": {
+    "maximum_coalesced_keys": 0,
+    "maximum_inflight": 2,
+    "operations": [
+      {
+        "absolute_deadline_ns": 24313650000000,
+        "actual_bytes": null,
+        "issued_ns": 24313250000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000001",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00000",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24313250000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24313681000000,
+        "actual_bytes": null,
+        "issued_ns": 24313281000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000002",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00001",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24313281000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24313728000000,
+        "actual_bytes": null,
+        "issued_ns": 24313328000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000003",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00002",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24313328000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24313775000000,
+        "actual_bytes": null,
+        "issued_ns": 24313375000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000004",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00003",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24313375000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24313806000000,
+        "actual_bytes": null,
+        "issued_ns": 24313406000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000005",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00004",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24313406000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24313853000000,
+        "actual_bytes": null,
+        "issued_ns": 24313453000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000006",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00005",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24313453000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24313900000000,
+        "actual_bytes": null,
+        "issued_ns": 24313500000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000007",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00006",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24313500000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24313931000000,
+        "actual_bytes": null,
+        "issued_ns": 24313531000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000008",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00007",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24313531000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24313978000000,
+        "actual_bytes": null,
+        "issued_ns": 24313578000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000009",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00008",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24313578000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314025000000,
+        "actual_bytes": null,
+        "issued_ns": 24313625000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000010",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00009",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24313625000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314056000000,
+        "actual_bytes": null,
+        "issued_ns": 24313656000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000011",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00010",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24313656000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314103000000,
+        "actual_bytes": null,
+        "issued_ns": 24313703000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000012",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00011",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24313718000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314134000000,
+        "actual_bytes": null,
+        "issued_ns": 24313734000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000013",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00012",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24313734000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314196000000,
+        "actual_bytes": null,
+        "issued_ns": 24313796000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000014",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00013",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24313796000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314228000000,
+        "actual_bytes": null,
+        "issued_ns": 24313828000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000015",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00014",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24313828000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314275000000,
+        "actual_bytes": null,
+        "issued_ns": 24313875000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000016",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00015",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24313875000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314306000000,
+        "actual_bytes": null,
+        "issued_ns": 24313906000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000017",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00016",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24313906000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314353000000,
+        "actual_bytes": null,
+        "issued_ns": 24313953000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000018",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00017",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24313953000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314400000000,
+        "actual_bytes": null,
+        "issued_ns": 24314000000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000019",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00018",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24314000000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314431000000,
+        "actual_bytes": null,
+        "issued_ns": 24314031000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000020",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00019",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314031000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314478000000,
+        "actual_bytes": null,
+        "issued_ns": 24314078000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000021",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00020",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314078000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314525000000,
+        "actual_bytes": null,
+        "issued_ns": 24314125000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000022",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00021",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24314156000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314556000000,
+        "actual_bytes": null,
+        "issued_ns": 24314156000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000023",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00022",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314171000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314603000000,
+        "actual_bytes": null,
+        "issued_ns": 24314203000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000024",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00023",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314218000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314634000000,
+        "actual_bytes": null,
+        "issued_ns": 24314234000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000025",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00024",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314250000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314681000000,
+        "actual_bytes": null,
+        "issued_ns": 24314281000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000026",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00025",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314281000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314728000000,
+        "actual_bytes": null,
+        "issued_ns": 24314328000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000027",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00026",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314343000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314775000000,
+        "actual_bytes": null,
+        "issued_ns": 24314375000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000028",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00027",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24314375000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314806000000,
+        "actual_bytes": null,
+        "issued_ns": 24314406000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000029",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00028",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24314406000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314853000000,
+        "actual_bytes": null,
+        "issued_ns": 24314453000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000030",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00029",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24314453000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314900000000,
+        "actual_bytes": null,
+        "issued_ns": 24314500000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000031",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00030",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314500000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314931000000,
+        "actual_bytes": null,
+        "issued_ns": 24314531000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000032",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00031",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314531000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24314978000000,
+        "actual_bytes": null,
+        "issued_ns": 24314578000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000033",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00032",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314578000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315025000000,
+        "actual_bytes": null,
+        "issued_ns": 24314625000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000034",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00033",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314625000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315056000000,
+        "actual_bytes": null,
+        "issued_ns": 24314656000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000035",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00034",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314656000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315103000000,
+        "actual_bytes": null,
+        "issued_ns": 24314703000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000036",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00035",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24314703000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315181000000,
+        "actual_bytes": null,
+        "issued_ns": 24314781000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000037",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00037",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314796000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315150000000,
+        "actual_bytes": null,
+        "issued_ns": 24314796000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000038",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00036",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24314796000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315228000000,
+        "actual_bytes": null,
+        "issued_ns": 24314828000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000039",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00038",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314828000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315275000000,
+        "actual_bytes": null,
+        "issued_ns": 24314875000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000040",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00039",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314875000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315306000000,
+        "actual_bytes": null,
+        "issued_ns": 24314906000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000041",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00040",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24314906000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315353000000,
+        "actual_bytes": null,
+        "issued_ns": 24314953000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000042",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00041",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24314953000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315400000000,
+        "actual_bytes": null,
+        "issued_ns": 24315000000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000043",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00042",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315015000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315431000000,
+        "actual_bytes": null,
+        "issued_ns": 24315031000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000044",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00043",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315031000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315478000000,
+        "actual_bytes": null,
+        "issued_ns": 24315078000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000045",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00044",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24315078000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315525000000,
+        "actual_bytes": null,
+        "issued_ns": 24315125000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000046",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00045",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315125000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315556000000,
+        "actual_bytes": null,
+        "issued_ns": 24315156000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000047",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00046",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315156000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315603000000,
+        "actual_bytes": null,
+        "issued_ns": 24315203000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000048",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00047",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315203000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315650000000,
+        "actual_bytes": null,
+        "issued_ns": 24315250000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000049",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00048",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315296000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315681000000,
+        "actual_bytes": null,
+        "issued_ns": 24315312000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000050",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00049",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315328000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315728000000,
+        "actual_bytes": null,
+        "issued_ns": 24315328000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000051",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00050",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315359000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315759000000,
+        "actual_bytes": null,
+        "issued_ns": 24315359000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000052",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00051",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315375000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315806000000,
+        "actual_bytes": null,
+        "issued_ns": 24315406000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000053",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00052",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315406000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315853000000,
+        "actual_bytes": null,
+        "issued_ns": 24315453000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000054",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00053",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315453000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315900000000,
+        "actual_bytes": null,
+        "issued_ns": 24315500000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000055",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00054",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24315500000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315931000000,
+        "actual_bytes": null,
+        "issued_ns": 24315531000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000056",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00055",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315531000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24315978000000,
+        "actual_bytes": null,
+        "issued_ns": 24315578000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000057",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00056",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315578000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316025000000,
+        "actual_bytes": null,
+        "issued_ns": 24315625000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000058",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00057",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315625000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316056000000,
+        "actual_bytes": null,
+        "issued_ns": 24315656000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000059",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00058",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315656000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316103000000,
+        "actual_bytes": null,
+        "issued_ns": 24315703000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000060",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00059",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24315703000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316150000000,
+        "actual_bytes": null,
+        "issued_ns": 24315750000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000061",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00060",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315765000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316181000000,
+        "actual_bytes": null,
+        "issued_ns": 24315781000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000062",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00061",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24315781000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316228000000,
+        "actual_bytes": null,
+        "issued_ns": 24315828000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000063",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00062",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24315828000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316275000000,
+        "actual_bytes": null,
+        "issued_ns": 24315875000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000064",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00063",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24315875000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316306000000,
+        "actual_bytes": null,
+        "issued_ns": 24315906000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000065",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00064",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315906000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316353000000,
+        "actual_bytes": null,
+        "issued_ns": 24315953000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000066",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00065",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24315953000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316400000000,
+        "actual_bytes": null,
+        "issued_ns": 24316000000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000067",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00066",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316000000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316431000000,
+        "actual_bytes": null,
+        "issued_ns": 24316031000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000068",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00067",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316031000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316478000000,
+        "actual_bytes": null,
+        "issued_ns": 24316078000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000069",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00068",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316078000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316525000000,
+        "actual_bytes": null,
+        "issued_ns": 24316125000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000070",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00069",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316125000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316556000000,
+        "actual_bytes": null,
+        "issued_ns": 24316156000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000071",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00070",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316156000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316603000000,
+        "actual_bytes": null,
+        "issued_ns": 24316203000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000072",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00071",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316203000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316650000000,
+        "actual_bytes": null,
+        "issued_ns": 24316250000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000073",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00072",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316250000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316681000000,
+        "actual_bytes": null,
+        "issued_ns": 24316281000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000074",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00073",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316281000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316728000000,
+        "actual_bytes": null,
+        "issued_ns": 24316328000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000075",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00074",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316328000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316775000000,
+        "actual_bytes": null,
+        "issued_ns": 24316375000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000076",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00075",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24316375000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316806000000,
+        "actual_bytes": null,
+        "issued_ns": 24316406000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000077",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00076",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316406000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316853000000,
+        "actual_bytes": null,
+        "issued_ns": 24316453000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000078",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00077",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316468000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316884000000,
+        "actual_bytes": null,
+        "issued_ns": 24316484000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000079",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00078",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316500000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316931000000,
+        "actual_bytes": null,
+        "issued_ns": 24316531000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000080",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00079",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24316546000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24316978000000,
+        "actual_bytes": null,
+        "issued_ns": 24316578000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000081",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00080",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24316593000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317009000000,
+        "actual_bytes": null,
+        "issued_ns": 24316625000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000082",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00081",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316625000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317056000000,
+        "actual_bytes": null,
+        "issued_ns": 24316656000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000083",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00082",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316671000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317103000000,
+        "actual_bytes": null,
+        "issued_ns": 24316703000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000084",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00083",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24316718000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317150000000,
+        "actual_bytes": null,
+        "issued_ns": 24316750000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000085",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00084",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316750000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317196000000,
+        "actual_bytes": null,
+        "issued_ns": 24316796000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000086",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00085",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316796000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317228000000,
+        "actual_bytes": null,
+        "issued_ns": 24316828000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000087",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00086",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316828000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317275000000,
+        "actual_bytes": null,
+        "issued_ns": 24316875000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000088",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00087",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316875000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317306000000,
+        "actual_bytes": null,
+        "issued_ns": 24316906000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000089",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00088",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316906000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317353000000,
+        "actual_bytes": null,
+        "issued_ns": 24316953000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000090",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00089",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24316953000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317400000000,
+        "actual_bytes": null,
+        "issued_ns": 24317000000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000091",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00090",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24317000000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317431000000,
+        "actual_bytes": null,
+        "issued_ns": 24317031000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000092",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00091",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317031000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317478000000,
+        "actual_bytes": null,
+        "issued_ns": 24317078000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000093",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00092",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317078000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317525000000,
+        "actual_bytes": null,
+        "issued_ns": 24317125000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000094",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00093",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24317125000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317556000000,
+        "actual_bytes": null,
+        "issued_ns": 24317156000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000095",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00094",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317171000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317603000000,
+        "actual_bytes": null,
+        "issued_ns": 24317203000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000096",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00095",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317218000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317634000000,
+        "actual_bytes": null,
+        "issued_ns": 24317234000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000097",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00096",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317250000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317681000000,
+        "actual_bytes": null,
+        "issued_ns": 24317281000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000098",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00097",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317296000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317743000000,
+        "actual_bytes": null,
+        "issued_ns": 24317343000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000099",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00098",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24317343000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317775000000,
+        "actual_bytes": null,
+        "issued_ns": 24317375000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000100",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00099",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317375000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317806000000,
+        "actual_bytes": null,
+        "issued_ns": 24317406000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000101",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00100",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24317437000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317868000000,
+        "actual_bytes": null,
+        "issued_ns": 24317468000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000102",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00101",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317468000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317900000000,
+        "actual_bytes": null,
+        "issued_ns": 24317500000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000103",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00102",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317500000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317946000000,
+        "actual_bytes": null,
+        "issued_ns": 24317546000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000104",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00103",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317546000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24317978000000,
+        "actual_bytes": null,
+        "issued_ns": 24317578000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000105",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00104",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317578000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318025000000,
+        "actual_bytes": null,
+        "issued_ns": 24317625000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000106",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00105",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317625000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318056000000,
+        "actual_bytes": null,
+        "issued_ns": 24317656000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000107",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00106",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24317656000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318103000000,
+        "actual_bytes": null,
+        "issued_ns": 24317703000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000108",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00107",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317703000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318150000000,
+        "actual_bytes": null,
+        "issued_ns": 24317750000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000109",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00108",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317750000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318181000000,
+        "actual_bytes": null,
+        "issued_ns": 24317781000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000110",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00109",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24317781000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318228000000,
+        "actual_bytes": null,
+        "issued_ns": 24317828000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000111",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00110",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317828000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318275000000,
+        "actual_bytes": null,
+        "issued_ns": 24317875000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000112",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00111",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317875000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318306000000,
+        "actual_bytes": null,
+        "issued_ns": 24317906000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000113",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00112",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24317906000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318353000000,
+        "actual_bytes": null,
+        "issued_ns": 24317953000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000114",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00113",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24317953000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318400000000,
+        "actual_bytes": null,
+        "issued_ns": 24318000000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000115",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00114",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318000000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318431000000,
+        "actual_bytes": null,
+        "issued_ns": 24318031000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000116",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00115",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318046000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318478000000,
+        "actual_bytes": null,
+        "issued_ns": 24318078000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000117",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00116",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24318093000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318509000000,
+        "actual_bytes": null,
+        "issued_ns": 24318109000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000118",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00117",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318125000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318556000000,
+        "actual_bytes": null,
+        "issued_ns": 24318156000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000119",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00118",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24318171000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318618000000,
+        "actual_bytes": null,
+        "issued_ns": 24318218000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000120",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00119",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318218000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318650000000,
+        "actual_bytes": null,
+        "issued_ns": 24318250000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000121",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00120",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24318250000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318681000000,
+        "actual_bytes": null,
+        "issued_ns": 24318281000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000122",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00121",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318281000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318728000000,
+        "actual_bytes": null,
+        "issued_ns": 24318328000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000123",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00122",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318328000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318775000000,
+        "actual_bytes": null,
+        "issued_ns": 24318375000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000124",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00123",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24318375000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318806000000,
+        "actual_bytes": null,
+        "issued_ns": 24318406000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000125",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00124",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318406000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318853000000,
+        "actual_bytes": null,
+        "issued_ns": 24318453000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000126",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00125",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318453000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318900000000,
+        "actual_bytes": null,
+        "issued_ns": 24318500000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000127",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00126",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24318500000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318931000000,
+        "actual_bytes": null,
+        "issued_ns": 24318531000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000128",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00127",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318531000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24318978000000,
+        "actual_bytes": null,
+        "issued_ns": 24318578000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000129",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00128",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24318578000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319025000000,
+        "actual_bytes": null,
+        "issued_ns": 24318625000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000130",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00129",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318625000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319056000000,
+        "actual_bytes": null,
+        "issued_ns": 24318656000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000131",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00130",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24318656000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319103000000,
+        "actual_bytes": null,
+        "issued_ns": 24318703000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000132",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00131",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318703000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319150000000,
+        "actual_bytes": null,
+        "issued_ns": 24318750000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000133",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00132",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318750000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319181000000,
+        "actual_bytes": null,
+        "issued_ns": 24318781000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000134",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00133",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318781000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319228000000,
+        "actual_bytes": null,
+        "issued_ns": 24318828000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000135",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00134",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318828000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319275000000,
+        "actual_bytes": null,
+        "issued_ns": 24318875000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000136",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00135",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318875000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319306000000,
+        "actual_bytes": null,
+        "issued_ns": 24318906000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000137",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00136",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24318906000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319353000000,
+        "actual_bytes": null,
+        "issued_ns": 24318953000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000138",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00137",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24318953000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319400000000,
+        "actual_bytes": null,
+        "issued_ns": 24319000000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000139",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00138",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319000000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319431000000,
+        "actual_bytes": null,
+        "issued_ns": 24319031000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000140",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00139",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319031000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319478000000,
+        "actual_bytes": null,
+        "issued_ns": 24319078000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000141",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00140",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319078000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319525000000,
+        "actual_bytes": null,
+        "issued_ns": 24319125000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000142",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00141",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319125000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319556000000,
+        "actual_bytes": null,
+        "issued_ns": 24319156000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000143",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00142",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319171000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319603000000,
+        "actual_bytes": null,
+        "issued_ns": 24319203000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000144",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00143",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24319218000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319650000000,
+        "actual_bytes": null,
+        "issued_ns": 24319250000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000145",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00144",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319250000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319681000000,
+        "actual_bytes": null,
+        "issued_ns": 24319281000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000146",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00145",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319281000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319728000000,
+        "actual_bytes": null,
+        "issued_ns": 24319328000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000147",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00146",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24319343000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319759000000,
+        "actual_bytes": null,
+        "issued_ns": 24319359000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000148",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00147",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319375000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319806000000,
+        "actual_bytes": null,
+        "issued_ns": 24319406000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000149",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00148",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319421000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319853000000,
+        "actual_bytes": null,
+        "issued_ns": 24319453000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000150",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00149",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319453000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319900000000,
+        "actual_bytes": null,
+        "issued_ns": 24319500000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000151",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00150",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319500000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319931000000,
+        "actual_bytes": null,
+        "issued_ns": 24319531000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000152",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00151",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319531000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24319978000000,
+        "actual_bytes": null,
+        "issued_ns": 24319578000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000153",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00152",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319578000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320025000000,
+        "actual_bytes": null,
+        "issued_ns": 24319625000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000154",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00153",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24319625000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320056000000,
+        "actual_bytes": null,
+        "issued_ns": 24319656000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000155",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00154",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24319656000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320103000000,
+        "actual_bytes": null,
+        "issued_ns": 24319703000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000156",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00155",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319703000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320150000000,
+        "actual_bytes": null,
+        "issued_ns": 24319750000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000157",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00156",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24319750000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320181000000,
+        "actual_bytes": null,
+        "issued_ns": 24319781000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000158",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00157",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24319781000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320228000000,
+        "actual_bytes": null,
+        "issued_ns": 24319828000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000159",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00158",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319828000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320275000000,
+        "actual_bytes": null,
+        "issued_ns": 24319875000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000160",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00159",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319875000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320321000000,
+        "actual_bytes": null,
+        "issued_ns": 24319921000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000161",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00160",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24319921000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320353000000,
+        "actual_bytes": null,
+        "issued_ns": 24319953000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000162",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00161",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24319953000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320400000000,
+        "actual_bytes": null,
+        "issued_ns": 24320000000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000163",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00162",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24320000000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320431000000,
+        "actual_bytes": null,
+        "issued_ns": 24320031000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000164",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00163",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24320031000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320478000000,
+        "actual_bytes": null,
+        "issued_ns": 24320078000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000165",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00164",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24320078000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320525000000,
+        "actual_bytes": null,
+        "issued_ns": 24320125000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000166",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00165",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24320125000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320556000000,
+        "actual_bytes": null,
+        "issued_ns": 24320156000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000167",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00166",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24320156000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320603000000,
+        "actual_bytes": null,
+        "issued_ns": 24320203000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000168",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00167",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24320203000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320650000000,
+        "actual_bytes": null,
+        "issued_ns": 24320250000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000169",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00168",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24320250000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320681000000,
+        "actual_bytes": null,
+        "issued_ns": 24320281000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000170",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00169",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24320281000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320728000000,
+        "actual_bytes": null,
+        "issued_ns": 24320328000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000171",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00170",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24320328000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320775000000,
+        "actual_bytes": null,
+        "issued_ns": 24320375000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000172",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00171",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24320375000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320806000000,
+        "actual_bytes": null,
+        "issued_ns": 24320406000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000173",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00172",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24320406000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320853000000,
+        "actual_bytes": null,
+        "issued_ns": 24320453000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000174",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00173",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24320453000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320900000000,
+        "actual_bytes": null,
+        "issued_ns": 24320500000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000175",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00174",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24320500000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320931000000,
+        "actual_bytes": null,
+        "issued_ns": 24320531000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000176",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00175",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24320531000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24320978000000,
+        "actual_bytes": null,
+        "issued_ns": 24320578000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000177",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00176",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24320578000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321009000000,
+        "actual_bytes": null,
+        "issued_ns": 24320609000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000178",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00177",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24320625000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321056000000,
+        "actual_bytes": null,
+        "issued_ns": 24320656000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000179",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00178",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24320671000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321103000000,
+        "actual_bytes": null,
+        "issued_ns": 24320703000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000180",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00179",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24320734000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321134000000,
+        "actual_bytes": null,
+        "issued_ns": 24320734000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000181",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00180",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24320734000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321181000000,
+        "actual_bytes": null,
+        "issued_ns": 24320781000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000182",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00181",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24320781000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321228000000,
+        "actual_bytes": null,
+        "issued_ns": 24320828000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000183",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00182",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24320843000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321259000000,
+        "actual_bytes": null,
+        "issued_ns": 24320859000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000184",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00183",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24320875000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321306000000,
+        "actual_bytes": null,
+        "issued_ns": 24320906000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000185",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00184",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24320921000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321368000000,
+        "actual_bytes": null,
+        "issued_ns": 24320968000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000186",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00185",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24320968000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321400000000,
+        "actual_bytes": null,
+        "issued_ns": 24321000000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000187",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00186",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24321000000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321431000000,
+        "actual_bytes": null,
+        "issued_ns": 24321031000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000188",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00187",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24321031000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321478000000,
+        "actual_bytes": null,
+        "issued_ns": 24321078000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000189",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00188",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24321078000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321525000000,
+        "actual_bytes": null,
+        "issued_ns": 24321125000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000190",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00189",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24321125000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321556000000,
+        "actual_bytes": null,
+        "issued_ns": 24321156000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000191",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00190",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "terminal_ns": 24321156000000,
+        "work_class": "foreground_cache"
+      },
+      {
+        "absolute_deadline_ns": 24321603000000,
+        "actual_bytes": null,
+        "issued_ns": 24321203000000,
+        "operation": "cache_read",
+        "operation_id": "fg-00000192",
+        "outcome": "completed",
+        "payload_bytes": 1024,
+        "request_id": "app-00191",
+        "reserved_bytes": 3072,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "terminal_ns": 24321203000000,
+        "work_class": "foreground_cache"
+      }
+    ]
+  },
+  "routing": {
+    "affected_buckets": [
+      13,
+      19,
+      23,
+      24,
+      25,
+      31,
+      33,
+      43,
+      44,
+      45,
+      46,
+      49,
+      50,
+      52,
+      56,
+      61
+    ],
+    "bucket_count": 64,
+    "checksum": "608da9ba90a40e815e7dc9a1a9eab3740f14ad9690e87f12267d0749253d2fc5",
+    "destination": "new",
+    "final_nodes": [
+      "old-1",
+      "old-2",
+      "new"
+    ],
+    "final_owners": {
+      "0": "old-1",
+      "1": "old-1",
+      "10": "old-2",
+      "11": "old-1",
+      "12": "old-2",
+      "13": "new",
+      "14": "old-1",
+      "15": "old-2",
+      "16": "old-2",
+      "17": "old-2",
+      "18": "old-2",
+      "19": "new",
+      "2": "old-1",
+      "20": "old-2",
+      "21": "old-1",
+      "22": "old-1",
+      "23": "new",
+      "24": "new",
+      "25": "new",
+      "26": "old-1",
+      "27": "old-2",
+      "28": "old-2",
+      "29": "old-1",
+      "3": "old-1",
+      "30": "old-2",
+      "31": "new",
+      "32": "old-2",
+      "33": "new",
+      "34": "old-1",
+      "35": "old-1",
+      "36": "old-2",
+      "37": "old-2",
+      "38": "old-2",
+      "39": "old-1",
+      "4": "old-2",
+      "40": "old-1",
+      "41": "old-2",
+      "42": "old-1",
+      "43": "new",
+      "44": "new",
+      "45": "new",
+      "46": "new",
+      "47": "old-2",
+      "48": "old-1",
+      "49": "new",
+      "5": "old-2",
+      "50": "new",
+      "51": "old-1",
+      "52": "new",
+      "53": "old-1",
+      "54": "old-1",
+      "55": "old-1",
+      "56": "new",
+      "57": "old-2",
+      "58": "old-1",
+      "59": "old-2",
+      "6": "old-1",
+      "60": "old-2",
+      "61": "new",
+      "62": "old-2",
+      "63": "old-2",
+      "7": "old-2",
+      "8": "old-1",
+      "9": "old-1"
+    },
+    "mapping_seed": 20261019,
+    "old_nodes": [
+      "old-1",
+      "old-2"
+    ],
+    "old_owners": {
+      "0": "old-1",
+      "1": "old-1",
+      "10": "old-2",
+      "11": "old-1",
+      "12": "old-2",
+      "13": "old-1",
+      "14": "old-1",
+      "15": "old-2",
+      "16": "old-2",
+      "17": "old-2",
+      "18": "old-2",
+      "19": "old-2",
+      "2": "old-1",
+      "20": "old-2",
+      "21": "old-1",
+      "22": "old-1",
+      "23": "old-1",
+      "24": "old-2",
+      "25": "old-2",
+      "26": "old-1",
+      "27": "old-2",
+      "28": "old-2",
+      "29": "old-1",
+      "3": "old-1",
+      "30": "old-2",
+      "31": "old-2",
+      "32": "old-2",
+      "33": "old-1",
+      "34": "old-1",
+      "35": "old-1",
+      "36": "old-2",
+      "37": "old-2",
+      "38": "old-2",
+      "39": "old-1",
+      "4": "old-2",
+      "40": "old-1",
+      "41": "old-2",
+      "42": "old-1",
+      "43": "old-1",
+      "44": "old-1",
+      "45": "old-2",
+      "46": "old-2",
+      "47": "old-2",
+      "48": "old-1",
+      "49": "old-2",
+      "5": "old-2",
+      "50": "old-2",
+      "51": "old-1",
+      "52": "old-1",
+      "53": "old-1",
+      "54": "old-1",
+      "55": "old-1",
+      "56": "old-1",
+      "57": "old-2",
+      "58": "old-1",
+      "59": "old-2",
+      "6": "old-1",
+      "60": "old-2",
+      "61": "old-1",
+      "62": "old-2",
+      "63": "old-2",
+      "7": "old-2",
+      "8": "old-1",
+      "9": "old-1"
+    }
+  },
+  "transition": {
+    "all_offer_latency_violations": 0,
+    "all_offer_violation_fraction": 0.0,
+    "completed": 48,
+    "database_attempts": 0,
+    "new_cache_reads": 0,
+    "offered": 48,
+    "old_cache_reads": 48,
+    "submitted": 48,
+    "successful_p50_ms": 16.0,
+    "successful_p95_ms": 25.666667,
+    "successful_p99_ms": 33.82666702000001
+  },
+  "warm_prefix": {
+    "criterion": "zero direct Redis misses; no evictions before experiment",
+    "misses": 0,
+    "requests": 128
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "config_path": "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\configs\\phase4_calibration.yaml",
+  "git": {
+    "describe": "186c3dd Complete Phase 3 runtime and independent correctness review",
+    "revision": "186c3ddb4daf36c2a8dbe7884a82dfb929381ba1",
+    "status_porcelain": "M src/cache_scaleout/__main__.py\n M src/cache_scaleout/adapters.py\n?? analysis/phase4_analysis.py\n?? configs/phase4_calibration.yaml\n?? runs/p4cal_pilot_cpu20k_r12_a/\n?? runs/p4cal_pilot_r12_a/\n?? runs/p4cal_pilot_r12_b/\n?? runs/p4cal_pilot_r12_c/\n?? runs/p4cal_pilot_r192_a/\n?? runs/p4cal_pilot_r24_a/\n?? runs/p4cal_pilot_r36_a/\n?? runs/p4cal_pilot_r48_a/\n?? runs/p4cal_pilot_r48_b/\n?? runs/p4cal_pilot_r72_a/\n?? runs/p4cal_pilot_r96_a/\n?? runs/p4exp_pilot_control_r192_a/\n?? runs/p4exp_pilot_control_r192_b/\n?? runs/p4exp_pilot_immediate_r192_b/\n?? scripts/phase4_run.ps1\n?? src/cache_scaleout/phase4.py"
+  },
+  "initial_service_state": {
+    "new": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "new",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "ccc1d4ae2732ed61b81fd193d3cb77dbf230a6e0",
+      "used_memory": 1061344
+    },
+    "old-1": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-1",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "30b4a0445221cdeeb3c07f383a6efb5d4e556827",
+      "used_memory": 1061216
+    },
+    "old-2": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-2",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "25c233263b4d76e70a01d7ec426737ae033689b7",
+      "used_memory": 1061216
+    }
+  },
+  "kind": "calibration",
+  "rate": 12.0,
+  "run_id": "p4cal_pilot_cpu20k_r12_a",
+  "source_fingerprint": "3a8c297260cb2b14f1de597df901af56da7003f9d101e91a0f71189d429168e7",
+  "started_utc": "2026-10-19T02:49:38.958601+00:00"
+}

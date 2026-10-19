@@ -1,0 +1,67 @@
+{
+  "applicability": "512x1KiB immutable dataset; indexed lookup plus 20,000 SQL CPU rounds; PostgreSQL 1 CPU/512MiB container; four foreground connections; local Windows client and 100ms provisional target",
+  "calibration_curve": [
+    {
+      "all_offer_violations": 1,
+      "all_offers_submitted_and_issued": true,
+      "independent_runs": 3,
+      "offered": 144,
+      "offered_rate": 12.0,
+      "p95_ms_max": 56.666667,
+      "p95_ms_mean": 56.0888893,
+      "p95_ms_min": 55.80000044999999
+    },
+    {
+      "all_offer_violations": 0,
+      "all_offers_submitted_and_issued": true,
+      "independent_runs": 3,
+      "offered": 288,
+      "offered_rate": 24.0,
+      "p95_ms_max": 52.333334,
+      "p95_ms_mean": 50.91666716666666,
+      "p95_ms_min": 48.0833335
+    },
+    {
+      "all_offer_violations": 260,
+      "all_offers_submitted_and_issued": true,
+      "independent_runs": 3,
+      "offered": 432,
+      "offered_rate": 36.0,
+      "p95_ms_max": 511.777778,
+      "p95_ms_mean": 314.70000045,
+      "p95_ms_min": 79.111112
+    }
+  ],
+  "paired_transition_results": [
+    {
+      "control_db_attempts": 0,
+      "control_p95_ms": 30.388888950000002,
+      "immediate_all_offer_violations": 0,
+      "immediate_db_attempts": 25,
+      "immediate_p95_ms": 55.89444490000001,
+      "p95_delta_ms": 25.50555595000001,
+      "pair": "1"
+    },
+    {
+      "control_db_attempts": 0,
+      "control_p95_ms": 28.277777950000004,
+      "immediate_all_offer_violations": 1,
+      "immediate_db_attempts": 25,
+      "immediate_p95_ms": 56.666667,
+      "p95_delta_ms": 28.388889049999992,
+      "pair": "2"
+    },
+    {
+      "control_db_attempts": 0,
+      "control_p95_ms": 27.166666950000003,
+      "immediate_all_offer_violations": 0,
+      "immediate_db_attempts": 25,
+      "immediate_p95_ms": 50.222223,
+      "p95_delta_ms": 23.055556049999996,
+      "pair": "3"
+    }
+  ],
+  "schema_version": 1,
+  "selected_c_safe_rps": 24,
+  "selection_rule": "highest confirmed rate with all three runs submitted/issued, p95 below 100 ms, and zero all-offer violations; 36 rps failed this rule in two of three runs"
+}

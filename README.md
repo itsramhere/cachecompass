@@ -82,6 +82,20 @@ The submitted Phase 3 evidence remains under `reports/evidence/phase3/` and the 
 
 The functional run dispatches persisted absolute offers independently of responses and samples pressure throughout a fixed horizon. Cache foreground and background pools are distinct. Redis values carry an original-expiry header; old formats require fresh disposable resets. Full encoded wire bytes are null where the drivers do not expose them; conservative encoded-byte reservations are enforced separately. `phase3-run` refuses physically nonempty caches and unrecognized database tables. Use the reset-cycle entry point for a fresh run; it label-checks the disposable project before recreation. These are provisional correctness settings, with no calibrated capacity or performance-gain claim.
 
+Phase 4 passed after independent corrections: [review](reports/reviews/phase_04_independent_20261019_0354.md), [handoff](reports/HANDOFF_PHASE4.md), [corrected protocol](docs/PHASE4_REVIEW_PROTOCOL.md). All 107 checks (17 actual-client cases) and 16 fresh measurement runs passed raw validation. Immediate cutover increased transition p95 by 24.6–38.4 ms across three matched pairs (mean 31.4 ms; exploratory t95 interval 14.2–48.7 ms). The 24-attempt/s foreground calibration point is conditional on the recorded probes/query/pools; it is not physical DB peak capacity or an uncharged total DB budget. Original failures and both superseded matrices remain retained. No Phase 5 baseline suite, Phase 6 controller or improvement claim is delivered; services are down.
+
+Reproduce one physically reset Phase 4 run and regenerate the retained confirmation analysis:
+
+```powershell
+Set-Location -LiteralPath 'C:\Users\ramst\Documents\antigravity\paper2'
+& .\scripts\phase4_run.ps1 -Mode immediate -RunId phase4-review-immediate -Rate 36 -Condition immediate
+& .\.venv\Scripts\python.exe -B analysis\phase4_analysis.py `
+  --runs p4final_cal12_1_20261019 p4final_cal12_2_20261019 p4final_cal12_3_20261019 p4final_cal24_1_20261019 p4final_cal24_2_20261019 p4final_cal24_3_20261019 p4final_cal36_1_20261019 p4final_cal36_2_20261019 p4final_cal36_3_20261019 p4final_control_1_20261019 p4final_immediate_1_20261019 p4final_control_2_20261019 p4final_immediate_2_20261019 p4final_control_3_20261019 p4final_immediate_3_20261019 p4final_headroom144_20261019 `
+  --output reports/analysis/phase4_review
+```
+
+The analysis refuses an existing output directory and exits nonzero for invalid raw evidence. C_safe is derived only from eligible independent repetitions; missing measurements produce null. Each run persists schedule/terminal/payload/issued-operation records, separate probes, latency-stability windows, measured component resources, artifact seals and source/config identity. The wrapper recreates and shuts down the disposable project. Conservative reservation bytes are not measured wire traffic. Exact test/rerun records and limitations are linked in the independent review; stop before Phase 5.
+
 The focused Phase 2 checks require no services or third-party imports:
 
 ```powershell

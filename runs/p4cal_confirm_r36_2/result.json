@@ -1,0 +1,79 @@
+{
+  "all_offer_latency_violations": 132,
+  "all_offer_violation_fraction": 0.9166666666666666,
+  "cache_services": {
+    "new": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "new",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "e81e60518368e162057b573f73c58786152a41ec",
+      "used_memory": 1119952
+    },
+    "old-1": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-1",
+      "physical_key_count": 265,
+      "redis_version": "7.4.11",
+      "server_run_id": "17cfbf25e3069bab449c3ba2221da2ef5adb0c1d",
+      "used_memory": 1610072
+    },
+    "old-2": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-2",
+      "physical_key_count": 247,
+      "redis_version": "7.4.11",
+      "server_run_id": "59d3c8bad1c62b0eb813f0819ef61f7e7f670a69",
+      "used_memory": 1583368
+    }
+  },
+  "completed": 144,
+  "database_attempts": 0,
+  "db_pool": {
+    "background": {
+      "connections_ms": 32,
+      "connections_num": 1,
+      "observed_max_concurrency": 1,
+      "pool_available": 1,
+      "pool_max": 1,
+      "pool_min": 0,
+      "pool_size": 1,
+      "requests_num": 1,
+      "requests_queued": 1,
+      "requests_wait_ms": 32,
+      "requests_waiting": 0,
+      "usage_ms": 186
+    },
+    "cancelled_operations": 0,
+    "discarded_connections": 0,
+    "foreground": {
+      "connections_ms": 76,
+      "connections_num": 4,
+      "observed_max_concurrency": 4,
+      "pool_available": 4,
+      "pool_max": 4,
+      "pool_min": 0,
+      "pool_size": 4,
+      "requests_num": 144,
+      "requests_queued": 5,
+      "requests_wait_ms": 61,
+      "requests_waiting": 0
+    }
+  },
+  "duration_seconds": 4.0,
+  "issued": 144,
+  "new_cache_reads": 0,
+  "offered": 144,
+  "old_cache_reads": 0,
+  "rate": 36.0,
+  "submitted": 144,
+  "successful_p50_ms": 347.2222225,
+  "successful_p95_ms": 511.777778,
+  "successful_p99_ms": 549.31444527
+}

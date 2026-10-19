@@ -1,0 +1,107 @@
+[
+  {
+    "computed": {
+      "all_offer_latency_violations": 0,
+      "all_offer_violation_fraction": 0.0,
+      "capacity_eligible": false,
+      "completed": 96,
+      "database_attempts": 0,
+      "db_issue_latency_p95_ms": 0.0,
+      "dispatch_lag_max_ms": 25.666667,
+      "dispatch_lag_p95_ms": 25.666667,
+      "duration_seconds": 4.0,
+      "issued": 96,
+      "issued_foreground_db_attempts": 96,
+      "issued_observation_db_attempts": 0,
+      "new_cache_reads": 0,
+      "offered": 96,
+      "old_cache_reads": 0,
+      "rate": 24.0,
+      "submitted": 96,
+      "successful_p50_ms": 36.333334,
+      "successful_p95_ms": 48.0833335,
+      "successful_p99_ms": 62.26666669999999,
+      "time_bins": [
+        {
+          "all_offer_latency_violations": 0,
+          "all_offer_violation_fraction": 0.0,
+          "completed": 96,
+          "database_attempts": 0,
+          "new_cache_reads": 0,
+          "offered": 96,
+          "old_cache_reads": 0,
+          "submitted": 96,
+          "successful_p50_ms": 36.333334,
+          "successful_p95_ms": 48.0833335,
+          "successful_p99_ms": 62.26666669999999
+        }
+      ]
+    },
+    "condition": null,
+    "errors": [
+      "arrival event reconciliation",
+      "fixed observation horizon missing",
+      "legacy measurement; corrected protocol not executed",
+      "missing DB probe operation records",
+      "missing artifact checksums",
+      "missing cache probe records",
+      "missing complete initial state",
+      "missing measured component headroom",
+      "missing warm latency stability evidence",
+      "returned DB payload mismatch",
+      "undeclared background/diagnostic work"
+    ],
+    "headroom": null,
+    "kind": "calibration",
+    "manifest": {
+      "config_path": "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\configs\\phase4_calibration.yaml",
+      "git": {
+        "describe": "186c3dd Complete Phase 3 runtime and independent correctness review",
+        "revision": "186c3ddb4daf36c2a8dbe7884a82dfb929381ba1",
+        "status_porcelain": "M reports/DECISIONS.md\n M reports/ISSUE_INDEX.md\n M src/cache_scaleout/__main__.py\n M src/cache_scaleout/adapters.py\n?? analysis/phase4_analysis.py\n?? configs/phase4_calibration.yaml\n?? docs/PHASE4_CONFIRMATION_PROTOCOL.md\n?? reports/issues/ISSUE-0021.md\n?? runs/p4cal_confirm_r12_1/\n?? runs/p4cal_confirm_r12_2/\n?? runs/p4cal_confirm_r12_3/\n?? runs/p4cal_confirm_r24_1/\n?? runs/p4cal_pilot_cpu20k_r12_a/\n?? runs/p4cal_pilot_cpu20k_r24_a/\n?? runs/p4cal_pilot_cpu20k_r36_a/\n?? runs/p4cal_pilot_r12_a/\n?? runs/p4cal_pilot_r12_b/\n?? runs/p4cal_pilot_r12_c/\n?? runs/p4cal_pilot_r192_a/\n?? runs/p4cal_pilot_r24_a/\n?? runs/p4cal_pilot_r36_a/\n?? runs/p4cal_pilot_r48_a/\n?? runs/p4cal_pilot_r48_b/\n?? runs/p4cal_pilot_r72_a/\n?? runs/p4cal_pilot_r96_a/\n?? runs/p4exp_pilot_control_cpu20k_r24_a/\n?? runs/p4exp_pilot_control_cpu20k_r36_a/\n?? runs/p4exp_pilot_control_r192_a/\n?? runs/p4exp_pilot_control_r192_b/\n?? runs/p4exp_pilot_immediate_cpu20k_r24_a/\n?? runs/p4exp_pilot_immediate_cpu20k_r36_a/\n?? runs/p4exp_pilot_immediate_r192_b/\n?? scripts/phase4_run.ps1\n?? src/cache_scaleout/phase4.py"
+      },
+      "initial_service_state": {
+        "new": {
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "maxmemory_policy": "allkeys-lru",
+          "node_id": "new",
+          "physical_key_count": 0,
+          "redis_version": "7.4.11",
+          "server_run_id": "b059e914aa1ba90b9892dd343345dc226078c763",
+          "used_memory": 1061216
+        },
+        "old-1": {
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "maxmemory_policy": "allkeys-lru",
+          "node_id": "old-1",
+          "physical_key_count": 0,
+          "redis_version": "7.4.11",
+          "server_run_id": "c3ea98fd09186d5d6b6094308ab93cd0dee249e8",
+          "used_memory": 1061216
+        },
+        "old-2": {
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "maxmemory_policy": "allkeys-lru",
+          "node_id": "old-2",
+          "physical_key_count": 0,
+          "redis_version": "7.4.11",
+          "server_run_id": "85be330cb30aed743cf4e0873d88a55bff0d650e",
+          "used_memory": 1061216
+        }
+      },
+      "kind": "calibration",
+      "rate": 24.0,
+      "run_id": "p4cal_confirm_r24_1",
+      "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+      "started_utc": "2026-10-19T02:56:07.827322+00:00"
+    },
+    "pair_id": null,
+    "resources": null,
+    "run_id": "p4cal_confirm_r24_1",
+    "source": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+    "valid": false
+  }
+]

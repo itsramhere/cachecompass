@@ -355,13 +355,16 @@ class PostgresDatabaseAdapter:
     def __init__(self, *, connection_kwargs: dict[str, Any], foreground_max_size: int,
                  background_max_size: int, pool_timeout_seconds: float,
                  statement_timeout_ms: int, pressure_latency_upper_ms: float,
-                 cleanup_timeout_seconds: float = 1.) -> None:
+                 cleanup_timeout_seconds: float = 1., query_cpu_rounds: int = 0) -> None:
         if foreground_max_size < 1 or background_max_size < 1:
             raise ValueError("separate positive DB pool bounds required")
         self._kwargs = dict(connection_kwargs)
         self._timeout = pool_timeout_seconds
         self._statement_timeout_ms = statement_timeout_ms
         self._pressure_latency_upper_ms = pressure_latency_upper_ms
+        if type(query_cpu_rounds) is not int or query_cpu_rounds < 0:
+            raise ValueError('query_cpu_rounds must be a nonnegative integer')
+        self.query_cpu_rounds = query_cpu_rounds
         self.foreground_pool = AsyncConnectionPool("", kwargs=self._kwargs, min_size=0,
                                                    max_size=foreground_max_size,
                                                    timeout=pool_timeout_seconds, open=False)
@@ -404,9 +407,16 @@ class PostgresDatabaseAdapter:
         async def query(connection):
             async with connection.transaction():
                 await connection.execute(f"SET LOCAL statement_timeout = {int(self._statement_timeout_ms)}")
+                # The Phase 4 mix keeps the indexed authoritative lookup and,
+                # when configured, adds deterministic CPU work inside PostgreSQL.
+                # This is deliberately database work, not a client sleep.
                 row = await (await connection.execute(
-                    "SELECT payload, version, absolute_expiry_ns FROM phase3_dataset WHERE key = %s",
-                    (str(key),))).fetchone()
+                    "SELECT d.payload, d.version, d.absolute_expiry_ns "
+                    "FROM phase3_dataset AS d CROSS JOIN LATERAL "
+                    "(SELECT sum(length(md5(g::text || d.key))) AS work "
+                    " FROM generate_series(1, GREATEST(%s, 1)) AS g) AS cpu "
+                    "WHERE d.key = %s AND cpu.work >= 0",
+                    (self.query_cpu_rounds, str(key)))).fetchone()
                 if row is None:
                     raise KeyError(str(key))
                 return CacheValue(bytes(row[0]), row[2], row[1])
@@ -453,10 +463,17 @@ class PostgresDatabaseAdapter:
                     connection = await pool.getconn(timeout=_remaining_seconds(deadline_ns))
                     task = None
                     try:
+                        # Acquisition can finish at the deadline (notably with
+                        # coarse Windows monotonic ticks). Do not create a query
+                        # before checking that this idle connection may be used.
+                        _remaining_seconds(deadline_ns)
                         notify_issued()
                         task = asyncio.create_task(query(connection), name='postgres-read')
                         try:
-                            done, _ = await asyncio.wait({task}, timeout=_remaining_seconds(deadline_ns))
+                            # Once a task exists, even an expired deadline must
+                            # take the bounded cancel/drain path. A synchronous
+                            # _remaining_seconds exception here orphaned the task.
+                            done, _ = await asyncio.wait({task}, timeout=max(0., (deadline_ns-time.monotonic_ns())/1e9))
                             if not done:
                                 await discard(connection, task)
                                 raise TimeoutError('database query deadline exceeded')
@@ -591,6 +608,8 @@ class PostgresDatabaseAdapter:
 
     def pool_summary(self) -> dict[str, Any]:
         return {
+            'issuance_stopped':self._stopped,
+            'quarantined_operations':len(self._quarantined),
             "foreground": {**self.foreground_pool.get_stats(),
                            "observed_max_concurrency": self._foreground_limit.maximum},
             "background": {**self.background_pool.get_stats(),

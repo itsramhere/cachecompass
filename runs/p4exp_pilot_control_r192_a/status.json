@@ -1,0 +1,5 @@
+{
+  "ended_utc": "2026-10-19T02:47:53.024903+00:00",
+  "error": "TypeError(\"'float' object is not iterable\")",
+  "status": "infrastructure_failure"
+}

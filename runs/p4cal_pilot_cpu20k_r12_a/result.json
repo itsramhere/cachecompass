@@ -1,0 +1,79 @@
+{
+  "all_offer_latency_violations": 0,
+  "all_offer_violation_fraction": 0.0,
+  "cache_services": {
+    "new": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "new",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "ccc1d4ae2732ed61b81fd193d3cb77dbf230a6e0",
+      "used_memory": 1120048
+    },
+    "old-1": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-1",
+      "physical_key_count": 265,
+      "redis_version": "7.4.11",
+      "server_run_id": "30b4a0445221cdeeb3c07f383a6efb5d4e556827",
+      "used_memory": 1610040
+    },
+    "old-2": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-2",
+      "physical_key_count": 247,
+      "redis_version": "7.4.11",
+      "server_run_id": "25c233263b4d76e70a01d7ec426737ae033689b7",
+      "used_memory": 1583368
+    }
+  },
+  "completed": 48,
+  "database_attempts": 0,
+  "db_pool": {
+    "background": {
+      "connections_ms": 15,
+      "connections_num": 1,
+      "observed_max_concurrency": 1,
+      "pool_available": 1,
+      "pool_max": 1,
+      "pool_min": 0,
+      "pool_size": 1,
+      "requests_num": 1,
+      "requests_queued": 1,
+      "requests_wait_ms": 15,
+      "requests_waiting": 0,
+      "usage_ms": 155
+    },
+    "cancelled_operations": 0,
+    "discarded_connections": 0,
+    "foreground": {
+      "connections_ms": 60,
+      "connections_num": 2,
+      "observed_max_concurrency": 2,
+      "pool_available": 2,
+      "pool_max": 4,
+      "pool_min": 0,
+      "pool_size": 2,
+      "requests_num": 48,
+      "requests_queued": 2,
+      "requests_wait_ms": 44,
+      "requests_waiting": 0
+    }
+  },
+  "duration_seconds": 4.0,
+  "issued": 48,
+  "new_cache_reads": 0,
+  "offered": 48,
+  "old_cache_reads": 0,
+  "rate": 12.0,
+  "submitted": 48,
+  "successful_p50_ms": 36.333334,
+  "successful_p95_ms": 60.133333449999995,
+  "successful_p99_ms": 83.76333400000003
+}

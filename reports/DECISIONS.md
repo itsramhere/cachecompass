@@ -1,5 +1,27 @@
 # Decision records
 
+## DECISION-0013: Repeat the complete Phase 4 matrix after independent accounting and deadline corrections
+
+Time: 2026-10-19T03:54:00Z
+Phase: 4 independent review
+Context: Submitted calibration lacked common probes/isolated cache pools and a latency-stability criterion, while analysis hard-coded capacity. The first corrected independent matrix then reproduced an expired-acquisition orphan in the DB adapter under overload; diagnostic trace and deterministic regression establish the cause. Original results cannot certify corrected claims.
+Options considered: reuse favorable runs; relabel client issuance stops as database capacity; correct the common paths and repeat the complete prespecified comparison.
+Decision: Preserve every original/first-review artifact, fix the demonstrated race and accounting/validation defects, and replace all calibration/control/immediate/headroom runs with fresh linked `p4final_*` IDs under the unchanged rates, SQL CPU work, quotas, retry counts, latency target and fixed windows. Record same-query probe demand separately. Capacity remains conditional on the query/host/pool configuration and measured overhead; run/pair uncertainty is exploratory with three repetitions.
+Reason: The fixes affect issued work, workload and observation timing. Full reruns avoid selecting only successful measurements. The frozen review protocol and amendment precede replacement confirmation; no later policy is implemented.
+Effect on correctness, comparability, or claims: Original `C_safe=24` and gate are withdrawn. A final gate requires raw-valid capacity, headroom and attributed positive/negative characterization. Driver failure is not DB capacity; conservative reservations are not measured traffic. If essential evidence is still absent, Phase 4 remains unmet.
+Verification: `submitted_negatives.json`, `expired_acquisition_before.json`, `expiry_corrected.json`; final source and actual-client/rerun records under `reports/reviews/evidence/phase4_20261019_independent/`. Final 107-check live suite and all 16 replacement runs pass raw validation; two regenerated analyses match bytes/CSV/raw/SVG coordinates. The independent review passes Phase 4 for the attributable 24.6–38.4 ms paired penalty with explicit conditional capacity and uncertainty limits. Services are down; stop before Phase 5.
+
+## DECISION-0012: Use a real PostgreSQL CPU-bound query mix and freeze a small Phase 4 confirmation matrix
+
+Time: 2026-10-19T02:50:00Z
+Phase: 4
+Context: The 1,200-round actual-query pilot showed cold misses but no material DB pressure even at 192 rps. The 20,000-round PostgreSQL query variant had p95 near 60 ms at 12/24 rps and exceeded 200 ms at 36 rps.
+Options considered: retain a non-constraining query mix; add fixed client/server sleeps; increase deterministic SQL CPU work under the existing one-CPU PostgreSQL quota.
+Decision: Use the measured 20,000-round SQL query mix, retain the 100 ms provisional target, confirm DB rates 12/24/36 and matched immediate/control expansion runs at 36 rps, three independent repetitions each.
+Reason: It creates actual DB work and a finite capacity knee without disguising a sleep as database pressure. The matrix is small enough for repeated physical resets.
+Effect on correctness, comparability, or claims: Findings apply only to this PostgreSQL query mix, container quota, local host and 100 ms provisional threshold. No Phase 5 policy or improvement claim follows.
+Verification: `docs/PHASE4_CONFIRMATION_PROTOCOL.md`; raw pilots under `runs/p4cal_pilot_cpu20k_*` and `runs/p4exp_pilot_*`.
+
 ## DECISION-0001: Use the existing native Windows runtime with Linux Docker services
 
 Time: 2026-10-09T13:00:00Z

@@ -1,0 +1,47 @@
+# Local Python environments and downloaded dependencies
+.venv/
+.venv-*/
+venv/
+.wheelhouse/
+/reports/tools/
+
+# Python build and test caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+/build/
+/dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+/test_out/
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+!.env.sample
+.aws/
+*.pem
+*.key
+
+# Editor and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+
+# Local agent state and transient runtime coordination; retain research evidence.
+/.codex/
+/.cache/
+/runs/.locks/
+/reports/.scratch/
+
+# Research reports, literature, and run evidence are intentionally versioned.
+

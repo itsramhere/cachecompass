@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "search_cutoff": "2026-10-09",
+  "pdf_tool": "pypdf==6.1.1",
+  "sources": [
+    {"id":"R10","required":false,"title":"Linear Elastic Caching via Ski Rental","landing_url":"https://www.vldb.org/cidrdb/2025/linear-elastic-caching-via-ski-rental.html","url":"https://vldb.org/cidrdb/papers/2025/p22-kumar.pdf"},
+    {"id":"R11","required":false,"title":"Saving Cash by Using Less Cache","landing_url":"https://www.usenix.org/conference/hotcloud12/workshop-program/presentation/Zhu","url":"https://www.usenix.org/system/files/conference/hotcloud12/hotcloud12-final73.pdf"},
+    {"id":"R12","required":false,"title":"Holpaca: Holistic and Adaptable Cache Management for Shared Environments","landing_url":"https://icpe2026.spec.org/preprint/Holpaca_Holistic_and_Adaptable_Cache_Management_for_Shared.pdf","url":"https://icpe2026.spec.org/preprint/Holpaca_Holistic_and_Adaptable_Cache_Management_for_Shared.pdf"}
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "dataset": {
+    "keys": 512,
+    "seed": 404,
+    "value_bytes": 1024
+  },
+  "evidence_replacements": {
+    "calibration": "runs/p4cal_confirm_*",
+    "expansion": "runs/p4exp_confirm_*",
+    "reason": "ISSUE-0023; common probes, isolated cache pools, workload, warm stability, fixed horizon and raw validation corrected"
+  },
+  "provisional": true,
+  "purpose": "Corrected independent Phase 4 characterization; no later policies",
+  "resources": {
+    "background_cache_connections_per_node": 1,
+    "background_db_connections": 1,
+    "foreground_cache_connections_per_node": 8,
+    "foreground_db_connections": 4,
+    "max_buffered_payload_bytes": 2048,
+    "max_coalesced_keys": 64,
+    "max_inflight_requests": 128,
+    "max_pending_metric_records": 12000,
+    "max_pending_migration_tasks": 128,
+    "migration_workers": 1
+  },
+  "retries": {
+    "foreground_cache": {
+      "attempt_timeout_seconds": 0.4,
+      "backoff_seconds": [],
+      "max_attempts": 1
+    },
+    "foreground_database": {
+      "attempt_timeout_seconds": 1.0,
+      "backoff_seconds": [],
+      "max_attempts": 1
+    },
+    "foreground_fill_write": {
+      "attempt_timeout_seconds": 0.4,
+      "backoff_seconds": [],
+      "max_attempts": 1
+    }
+  },
+  "routing": {
+    "destination": "new",
+    "final_nodes": [
+      "old-1",
+      "old-2",
+      "new"
+    ],
+    "mapping_seed": 20261019,
+    "old_nodes": [
+      "old-1",
+      "old-2"
+    ],
+    "virtual_buckets": 64
+  },
+  "schema_version": 1,
+  "services": {
+    "cache": {
+      "eviction_policy": "allkeys-lru",
+      "host": "127.0.0.1",
+      "maxmemory_bytes": 33554432,
+      "ports": [
+        16379,
+        16380,
+        16381
+      ],
+      "socket_timeout_seconds": 1.0
+    },
+    "database": {
+      "dbname": "paper2_research",
+      "host": "127.0.0.1",
+      "password_env": "PAPER2_DB_PASSWORD",
+      "pool_timeout_seconds": 2.0,
+      "port": 15432,
+      "query_cpu_rounds": 20000,
+      "statement_timeout_ms": 1500,
+      "user": "paper2_research"
+    }
+  },
+  "timing": {
+    "calibration_seconds": 12.0,
+    "cleanup_timeout_seconds": 1.0,
+    "expansion_at_seconds": 3.0,
+    "expansion_seconds": 8.0,
+    "first_arrival_seconds": 0.5,
+    "latency_target_ms": 100.0,
+    "observation_interval_seconds": 0.5,
+    "observation_timeout_seconds": 0.4,
+    "request_timeout_seconds": 1.0
+  },
+  "warm_stability": {
+    "maximum_p95_ms": 100,
+    "maximum_p95_spread_ms": 30,
+    "rate": 36,
+    "seconds": 1.0,
+    "windows": 3
+  },
+  "workload": {
+    "affected_share": 0.8,
+    "calibration_rates": [
+      12,
+      24,
+      36
+    ],
+    "confirmation_repetitions": 3,
+    "offered_rate": 36.0,
+    "warm_prefix_max_misses": 0,
+    "warm_prefix_requests": 128,
+    "zipf_exponent": 1.15
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "analysis_files": {
+    "calibration.csv": "eb73eb492856c69d1ad06aa45b2a4b4be97b9cd9d306563a39681e2ee0023a32",
+    "calibration_p95.svg": "b2e6224e51736d13810b37c3e95d851a58c7ca7c456c002c97270a4a0fbe58cb",
+    "expansion.csv": "cbd2e153bb81d244dfda189b37141c6cef4983480d74e2a551e42a69f74c3771",
+    "expansion_p95.svg": "89adeec5ab2b45036a7c9384896a3b1e59f2d5fe14da5d6f7e893445453e9512",
+    "summary.json": "23b9ad568d6e0668d94f3ea853e96efb3cfcd522d3eb8238eab7371077c3f60f",
+    "validation.json": "a24b4f940e86978bb87c10a4036f0ed86fab81d81b2ea4b732da25465716b5ac"
+  },
+  "byte_different_regenerations": [],
+  "invalid_runs": [],
+  "svg_errors": [],
+  "table_errors": []
+}

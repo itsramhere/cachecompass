@@ -1,0 +1,13 @@
+# Preserve the exact bytes covered by source and retained-evidence SHA256 manifests.
+/* -text
+/src/** -text
+/tests/** -text
+/scripts/** -text
+/configs/** -text
+/docs/** -text
+/infra/** -text
+/analysis/** -text
+/paper/** -text
+/reports/evidence/phase3/** -text
+/reports/reviews/evidence/phase3_20261019_independent/** -text
+/runs/phase3-*/** -text

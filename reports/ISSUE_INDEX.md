@@ -22,6 +22,11 @@
 | ISSUE-0018 | 3 independent review | verified | Worker/grant/token/byte bounds and renewal corrected | [Record](issues/ISSUE-0018.md) |
 | ISSUE-0019 | 3 independent review | verified | Actual pools, cancellation, TTL and periodic sampling corrected | [Record](issues/ISSUE-0019.md) |
 | ISSUE-0020 | 3 independent review | verified | Independent offered/reset/raw evidence and validation corrected | [Record](issues/ISSUE-0020.md) |
+| ISSUE-0021 | 4 | verified | Pre-preparation schedule origin and Zipf builder defects invalidated early pilots; corrected reruns retained | [Record](issues/ISSUE-0021.md) |
+| ISSUE-0022 | 4 | verified | Zero-work SQL compatibility lookup dropped rows; linked actual-client rerun passed | [Record](issues/ISSUE-0022.md) |
+| ISSUE-0023 | 4 independent review | verified | Common probes, isolated pools, workload and warm/horizon accounting verified by complete replacement matrix | [Record](issues/ISSUE-0023.md) |
+| ISSUE-0024 | 4 independent review | verified | Raw fail-closed inference, run-level uncertainty and exact table/figure regeneration verified | [Record](issues/ISSUE-0024.md) |
+| ISSUE-0025 | 4 independent review | verified | Expired-acquisition orphan fixed; 107 tests and all replacement runs pass without stopped issuance | [Record](issues/ISSUE-0025.md) |
 
 No open Phase 0 blocker. Failed bootstrap.log/bootstrap-error.txt and original inspection are retained; successful bootstrap-rerun.json, doctor-001.json and phase0-health-001 explicitly provide their corrective verification. Duplicate-run-guard.json has expected exit 1 and is a successful preservation check, not an incident or scientific failed run.
 

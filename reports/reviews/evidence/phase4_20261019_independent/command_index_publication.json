@@ -1,0 +1,1093 @@
+[
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "reports/reviews/evidence/phase4_20261019_independent/diagnose_cleanup.ps1"
+    ],
+    "exit_code": 0,
+    "record": "cleanup_diagnostic.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "reports/reviews/evidence/phase4_20261019_independent/diagnose_cleanup.ps1",
+      "-Rate",
+      "48",
+      "-Suffix",
+      "_r48"
+    ],
+    "exit_code": 0,
+    "record": "cleanup_diagnostic48.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase4_20261019_independent/confirmation_audit.py"
+    ],
+    "exit_code": 1,
+    "record": "confirmation_raw_audit_initial.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase4_independent",
+      "-v"
+    ],
+    "exit_code": 0,
+    "record": "corrected_negatives.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase4_independent.DatabaseExpiryRace",
+      "-v"
+    ],
+    "exit_code": 1,
+    "record": "expired_acquisition_before.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase4_independent",
+      "-v"
+    ],
+    "exit_code": 0,
+    "record": "expiry_corrected.json"
+  },
+  {
+    "command": [
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\.venv\\Scripts\\python.exe",
+      "-B",
+      "analysis/phase4_analysis.py",
+      "--runs",
+      "p4final_cal12_1_20261019",
+      "p4final_cal12_2_20261019",
+      "p4final_cal12_3_20261019",
+      "p4final_cal24_1_20261019",
+      "p4final_cal24_2_20261019",
+      "p4final_cal24_3_20261019",
+      "p4final_cal36_1_20261019",
+      "p4final_cal36_2_20261019",
+      "p4final_cal36_3_20261019",
+      "p4final_control_1_20261019",
+      "p4final_immediate_1_20261019",
+      "p4final_control_2_20261019",
+      "p4final_immediate_2_20261019",
+      "p4final_control_3_20261019",
+      "p4final_immediate_3_20261019",
+      "p4final_headroom144_20261019",
+      "--output",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\analysis\\phase4_independent_final_20261019"
+    ],
+    "exit_code": 0,
+    "record": "final_analysis.json"
+  },
+  {
+    "command": [
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\.venv\\Scripts\\python.exe",
+      "-B",
+      "analysis/phase4_analysis.py",
+      "--runs",
+      "p4final_cal12_1_20261019",
+      "p4final_cal12_2_20261019",
+      "p4final_cal12_3_20261019",
+      "p4final_cal24_1_20261019",
+      "p4final_cal24_2_20261019",
+      "p4final_cal24_3_20261019",
+      "p4final_cal36_1_20261019",
+      "p4final_cal36_2_20261019",
+      "p4final_cal36_3_20261019",
+      "p4final_control_1_20261019",
+      "p4final_immediate_1_20261019",
+      "p4final_control_2_20261019",
+      "p4final_immediate_2_20261019",
+      "p4final_control_3_20261019",
+      "p4final_immediate_3_20261019",
+      "p4final_headroom144_20261019",
+      "--output",
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\reports\\reviews\\evidence\\phase4_20261019_independent\\regenerated_final"
+    ],
+    "exit_code": 0,
+    "record": "final_analysis_reproduction.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "reports/reviews/evidence/phase4_20261019_independent/run_buffer_final.ps1"
+    ],
+    "exit_code": 0,
+    "record": "final_buffer_command.json"
+  },
+  {
+    "command": [
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "record": "final_full_live_suite.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/shutdown.ps1"
+    ],
+    "exit_code": 0,
+    "record": "final_live_shutdown.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/start.ps1"
+    ],
+    "exit_code": 0,
+    "record": "final_live_start.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase4_20261019_independent/confirmation_audit.py",
+      "--prefix",
+      "p4final",
+      "--output",
+      "reports/reviews/evidence/phase4_20261019_independent/raw_final_audit.json"
+    ],
+    "exit_code": 0,
+    "record": "final_raw_audit.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase4_20261019_independent/finish_analysis.py"
+    ],
+    "exit_code": 0,
+    "record": "final_regeneration.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase4_independent",
+      "-v"
+    ],
+    "exit_code": 0,
+    "record": "focused_expanded.json"
+  },
+  {
+    "command": [
+      "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "record": "full_live_suite.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "analysis/phase4_analysis.py",
+      "--runs",
+      "p4cal_confirm_r24_1",
+      "--output",
+      "reports/reviews/evidence/phase4_20261019_independent/invalid_analysis_check"
+    ],
+    "exit_code": 1,
+    "record": "invalid_analysis_exit.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/shutdown.ps1"
+    ],
+    "exit_code": 0,
+    "record": "live_shutdown.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/start.ps1"
+    ],
+    "exit_code": 0,
+    "record": "live_start.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase4_20261019_independent/metrics_digest.py"
+    ],
+    "exit_code": 0,
+    "record": "metrics_digest.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase4_20261019_independent/regenerate_original.py"
+    ],
+    "exit_code": 0,
+    "record": "original_regeneration.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4final_cal12_1_20261019",
+      "-Rate",
+      "12",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4review_cal12_1_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_cal12_1_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4final_cal12_2_20261019",
+      "-Rate",
+      "12",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4review_cal12_2_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_cal12_2_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4final_cal12_3_20261019",
+      "-Rate",
+      "12",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4review_cal12_3_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_cal12_3_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4final_cal24_1_20261019",
+      "-Rate",
+      "24",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4review_cal24_1_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_cal24_1_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4final_cal24_2_20261019",
+      "-Rate",
+      "24",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4review_cal24_2_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_cal24_2_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4final_cal24_3_20261019",
+      "-Rate",
+      "24",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4review_cal24_3_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_cal24_3_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4final_cal36_1_20261019",
+      "-Rate",
+      "36",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4review_cal36_1_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_cal36_1_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4final_cal36_2_20261019",
+      "-Rate",
+      "36",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4review_cal36_2_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_cal36_2_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4final_cal36_3_20261019",
+      "-Rate",
+      "36",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4review_cal36_3_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_cal36_3_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4final_control_1_20261019",
+      "-Rate",
+      "36",
+      "-Condition",
+      "control",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-PairId",
+      "final-pair-1",
+      "-RetryOf",
+      "p4review_control_1_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_control_1_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4final_control_2_20261019",
+      "-Rate",
+      "36",
+      "-Condition",
+      "control",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-PairId",
+      "final-pair-2",
+      "-RetryOf",
+      "p4review_control_2_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_control_2_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4final_control_3_20261019",
+      "-Rate",
+      "36",
+      "-Condition",
+      "control",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-PairId",
+      "final-pair-3",
+      "-RetryOf",
+      "p4review_control_3_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_control_3_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4final_headroom144_20261019",
+      "-Rate",
+      "144",
+      "-Condition",
+      "control",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4review_headroom144_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_headroom144_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4final_immediate_1_20261019",
+      "-Rate",
+      "36",
+      "-Condition",
+      "immediate",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-PairId",
+      "final-pair-1",
+      "-RetryOf",
+      "p4review_immediate_1_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_immediate_1_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4final_immediate_2_20261019",
+      "-Rate",
+      "36",
+      "-Condition",
+      "immediate",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-PairId",
+      "final-pair-2",
+      "-RetryOf",
+      "p4review_immediate_2_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_immediate_2_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4final_immediate_3_20261019",
+      "-Rate",
+      "36",
+      "-Condition",
+      "immediate",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-PairId",
+      "final-pair-3",
+      "-RetryOf",
+      "p4review_immediate_3_20261019"
+    ],
+    "exit_code": 0,
+    "record": "p4final_immediate_3_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4review_cal12_1_20261019",
+      "-Rate",
+      "12",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4cal_confirm_r12_1"
+    ],
+    "exit_code": 0,
+    "record": "p4review_cal12_1_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4review_cal12_2_20261019",
+      "-Rate",
+      "12",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4cal_confirm_r12_2"
+    ],
+    "exit_code": 0,
+    "record": "p4review_cal12_2_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4review_cal12_3_20261019",
+      "-Rate",
+      "12",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4cal_confirm_r12_3"
+    ],
+    "exit_code": 0,
+    "record": "p4review_cal12_3_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4review_cal24_1_20261019",
+      "-Rate",
+      "24",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4cal_confirm_r24_1"
+    ],
+    "exit_code": 0,
+    "record": "p4review_cal24_1_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4review_cal24_2_20261019",
+      "-Rate",
+      "24",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4cal_confirm_r24_2"
+    ],
+    "exit_code": 0,
+    "record": "p4review_cal24_2_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4review_cal24_3_20261019",
+      "-Rate",
+      "24",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4cal_confirm_r24_3"
+    ],
+    "exit_code": 0,
+    "record": "p4review_cal24_3_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4review_cal36_1_20261019",
+      "-Rate",
+      "36",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4cal_confirm_r36_1"
+    ],
+    "exit_code": 0,
+    "record": "p4review_cal36_1_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4review_cal36_2_20261019",
+      "-Rate",
+      "36",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4cal_confirm_r36_2"
+    ],
+    "exit_code": 0,
+    "record": "p4review_cal36_2_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4review_cal36_3_20261019",
+      "-Rate",
+      "36",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-RetryOf",
+      "p4cal_confirm_r36_3"
+    ],
+    "exit_code": 0,
+    "record": "p4review_cal36_3_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4review_control_1_20261019",
+      "-Rate",
+      "36",
+      "-Condition",
+      "control",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-PairId",
+      "review-pair-1",
+      "-RetryOf",
+      "p4exp_confirm_control_1"
+    ],
+    "exit_code": 0,
+    "record": "p4review_control_1_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4review_control_2_20261019",
+      "-Rate",
+      "36",
+      "-Condition",
+      "control",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-PairId",
+      "review-pair-2",
+      "-RetryOf",
+      "p4exp_confirm_control_2"
+    ],
+    "exit_code": 0,
+    "record": "p4review_control_2_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4review_control_3_20261019",
+      "-Rate",
+      "36",
+      "-Condition",
+      "control",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-PairId",
+      "review-pair-3",
+      "-RetryOf",
+      "p4exp_confirm_control_3"
+    ],
+    "exit_code": 0,
+    "record": "p4review_control_3_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4review_headroom144_20261019",
+      "-Rate",
+      "144",
+      "-Condition",
+      "control",
+      "-Config",
+      "configs/phase4_review.yaml"
+    ],
+    "exit_code": 0,
+    "record": "p4review_headroom144_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4review_immediate_1_20261019",
+      "-Rate",
+      "36",
+      "-Condition",
+      "immediate",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-PairId",
+      "review-pair-1",
+      "-RetryOf",
+      "p4exp_confirm_immediate_1"
+    ],
+    "exit_code": 0,
+    "record": "p4review_immediate_1_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4review_immediate_2_20261019",
+      "-Rate",
+      "36",
+      "-Condition",
+      "immediate",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-PairId",
+      "review-pair-2",
+      "-RetryOf",
+      "p4exp_confirm_immediate_2"
+    ],
+    "exit_code": 0,
+    "record": "p4review_immediate_2_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4review_immediate_3_20261019",
+      "-Rate",
+      "36",
+      "-Condition",
+      "immediate",
+      "-Config",
+      "configs/phase4_review.yaml",
+      "-PairId",
+      "review-pair-3",
+      "-RetryOf",
+      "p4exp_confirm_immediate_3"
+    ],
+    "exit_code": 0,
+    "record": "p4review_immediate_3_20261019.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "calibrate",
+      "-RunId",
+      "p4review_pilot_cal24_20261019",
+      "-Rate",
+      "24",
+      "-Config",
+      "configs/phase4_review.yaml"
+    ],
+    "exit_code": 0,
+    "record": "pilot_cal24.json"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase4_run.ps1",
+      "-Mode",
+      "immediate",
+      "-RunId",
+      "p4review_pilot_immediate_20261019",
+      "-Rate",
+      "36",
+      "-Condition",
+      "immediate",
+      "-Config",
+      "configs/phase4_review.yaml"
+    ],
+    "exit_code": 0,
+    "record": "pilot_immediate.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase4_independent",
+      "-v"
+    ],
+    "exit_code": 0,
+    "record": "preconfirmation_suite.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase4_20261019_independent/raw_audit.py"
+    ],
+    "exit_code": 0,
+    "record": "raw_audit_corrected.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase4_20261019_independent/raw_audit.py"
+    ],
+    "exit_code": 1,
+    "record": "raw_audit_initial.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase4_20261019_independent/evidence_register.py"
+    ],
+    "exit_code": 0,
+    "record": "register_evidence.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase4_20261019_independent/replay_negatives.py",
+      "expiry"
+    ],
+    "exit_code": 0,
+    "record": "replay_expiry_corrected.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase4_20261019_independent/replay_negatives.py",
+      "expiry"
+    ],
+    "exit_code": 1,
+    "record": "replay_expiry_final.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase4_20261019_independent/replay_negatives.py",
+      "submission"
+    ],
+    "exit_code": 0,
+    "record": "replay_submission_checked.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase4_20261019_independent/replay_negatives.py",
+      "submission"
+    ],
+    "exit_code": 0,
+    "record": "replay_submission_final.json"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase4_independent",
+      "-v"
+    ],
+    "exit_code": 1,
+    "record": "submitted_negatives.json"
+  }
+]

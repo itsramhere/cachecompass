@@ -1,0 +1,45 @@
+{
+  "config_path": "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\configs\\phase4_calibration.yaml",
+  "git": {
+    "describe": "186c3dd Complete Phase 3 runtime and independent correctness review",
+    "revision": "186c3ddb4daf36c2a8dbe7884a82dfb929381ba1",
+    "status_porcelain": "M src/cache_scaleout/__main__.py\n M src/cache_scaleout/adapters.py\n?? analysis/phase4_analysis.py\n?? configs/phase4_calibration.yaml\n?? runs/p4cal_pilot_r12_a/\n?? runs/p4cal_pilot_r12_b/\n?? runs/p4cal_pilot_r12_c/\n?? runs/p4cal_pilot_r24_a/\n?? runs/p4cal_pilot_r36_a/\n?? runs/p4cal_pilot_r48_a/\n?? runs/p4cal_pilot_r48_b/\n?? runs/p4cal_pilot_r72_a/\n?? scripts/phase4_run.ps1\n?? src/cache_scaleout/phase4.py"
+  },
+  "initial_service_state": {
+    "new": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "new",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "771d2fb81063768ff524850899bc1afbd84b2a41",
+      "used_memory": 1061216
+    },
+    "old-1": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-1",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "4e1c27e5387cb587e766ef2ec42409b48b802ba5",
+      "used_memory": 1061216
+    },
+    "old-2": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-2",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "2bfadea1c66403e4209096e3a3048fa0554b9ebe",
+      "used_memory": 1061216
+    }
+  },
+  "kind": "calibration",
+  "rate": 72.0,
+  "run_id": "p4cal_pilot_r72_a",
+  "source_fingerprint": "41d898dc1a2312338fddeaaddceed53efee0e1390fa65f96dd32fcc397431272",
+  "started_utc": "2026-10-19T02:46:31.402936+00:00"
+}

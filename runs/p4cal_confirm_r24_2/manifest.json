@@ -1,0 +1,45 @@
+{
+  "config_path": "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\configs\\phase4_calibration.yaml",
+  "git": {
+    "describe": "186c3dd Complete Phase 3 runtime and independent correctness review",
+    "revision": "186c3ddb4daf36c2a8dbe7884a82dfb929381ba1",
+    "status_porcelain": "M reports/DECISIONS.md\n M reports/ISSUE_INDEX.md\n M src/cache_scaleout/__main__.py\n M src/cache_scaleout/adapters.py\n?? analysis/phase4_analysis.py\n?? configs/phase4_calibration.yaml\n?? docs/PHASE4_CONFIRMATION_PROTOCOL.md\n?? reports/issues/ISSUE-0021.md\n?? runs/p4cal_confirm_r12_1/\n?? runs/p4cal_confirm_r12_2/\n?? runs/p4cal_confirm_r12_3/\n?? runs/p4cal_confirm_r24_1/\n?? runs/p4cal_confirm_r24_2/\n?? runs/p4cal_pilot_cpu20k_r12_a/\n?? runs/p4cal_pilot_cpu20k_r24_a/\n?? runs/p4cal_pilot_cpu20k_r36_a/\n?? runs/p4cal_pilot_r12_a/\n?? runs/p4cal_pilot_r12_b/\n?? runs/p4cal_pilot_r12_c/\n?? runs/p4cal_pilot_r192_a/\n?? runs/p4cal_pilot_r24_a/\n?? runs/p4cal_pilot_r36_a/\n?? runs/p4cal_pilot_r48_a/\n?? runs/p4cal_pilot_r48_b/\n?? runs/p4cal_pilot_r72_a/\n?? runs/p4cal_pilot_r96_a/\n?? runs/p4exp_pilot_control_cpu20k_r24_a/\n?? runs/p4exp_pilot_control_cpu20k_r36_a/\n?? runs/p4exp_pilot_control_r192_a/\n?? runs/p4exp_pilot_control_r192_b/\n?? runs/p4exp_pilot_immediate_cpu20k_r24_a/\n?? runs/p4exp_pilot_immediate_cpu20k_r36_a/\n?? runs/p4exp_pilot_immediate_r192_b/\n?? scripts/phase4_run.ps1\n?? src/cache_scaleout/phase4.py"
+  },
+  "initial_service_state": {
+    "new": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "new",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "507edb684e26768de3a53489dadd7b9bd401e6e9",
+      "used_memory": 1061184
+    },
+    "old-1": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-1",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "265f08e6b8917eedd98a89f5bf87dd1d261c1887",
+      "used_memory": 1061216
+    },
+    "old-2": {
+      "evicted_keys": 0,
+      "maxmemory": 33554432,
+      "maxmemory_policy": "allkeys-lru",
+      "node_id": "old-2",
+      "physical_key_count": 0,
+      "redis_version": "7.4.11",
+      "server_run_id": "42aaa11773de3c24bb8c8d8fc8ebcfbe93ee81e0",
+      "used_memory": 1061152
+    }
+  },
+  "kind": "calibration",
+  "rate": 24.0,
+  "run_id": "p4cal_confirm_r24_2",
+  "source_fingerprint": "3cef5cb665ea34f4cb986325842aaa4679571ccfdfe6841ab435ebe7d9b59ddc",
+  "started_utc": "2026-10-19T02:56:28.151192+00:00"
+}

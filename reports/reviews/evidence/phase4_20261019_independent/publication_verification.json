@@ -1,0 +1,38 @@
+{
+  "added_inputs": [],
+  "all_disposable_services_removed_evidence": [
+    "final_live_shutdown.json",
+    "p4final_headroom144_20261019.json",
+    "final_buffer_command.json"
+  ],
+  "archive_mismatches": [],
+  "broken_handoff_links": [],
+  "changed_inputs_since_execution": [
+    ".gitattributes",
+    "README.md"
+  ],
+  "executed_source": "cda5257b9974cd72e8e99a5ab0a94dca462e02a241d505a056e93902589c03fa",
+  "final_archived_files_checked": 88,
+  "frozen_107_live_checks_verified": true,
+  "historical_files_checked": 535,
+  "historical_mismatches": [],
+  "invalid_analysis_rejected_with_null_capacity": true,
+  "invalid_final_runs": [],
+  "publication_only_delta_verified": true,
+  "publication_source": "bb0c127404cc29a702daca482a91d0912ad60cec049963cfafd92b13e4af3738",
+  "removed_inputs": [],
+  "updated_utc": "2026-10-19T04:09:23.206809+00:00",
+  "whitespace_check": {
+    "command": [
+      "git",
+      "-c",
+      "core.whitespace=cr-at-eol",
+      "diff",
+      "--check"
+    ],
+    "elapsed_seconds": 0.09400000000096043,
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  }
+}
