@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_phase5_tuning_independent.py",
+    "-v"
+  ],
+  "elapsed_seconds": 1.2951899999998204,
+  "ended_utc": "2026-10-19T05:36:07.471055+00:00",
+  "exit_code": 1,
+  "retry_of": null,
+  "started_utc": "2026-10-19T05:36:06.175833+00:00",
+  "stderr": "test_all_fixed_components_use_same_selected_profile (test_phase5_tuning_independent.TuningSelection.test_all_fixed_components_use_same_selected_profile) ... FAIL\ntest_both_failure_profiles_use_declared_A_fallback (test_phase5_tuning_independent.TuningSelection.test_both_failure_profiles_use_declared_A_fallback) ... FAIL\n\n======================================================================\nFAIL: test_all_fixed_components_use_same_selected_profile (test_phase5_tuning_independent.TuningSelection.test_all_fixed_components_use_same_selected_profile)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/cachecompass/tests/test_phase5_tuning_independent.py\", line 23, in test_all_fixed_components_use_same_selected_profile\n    self.assertEqual(s['fixed_gradual_handover']['selected_setting'],s['warmup_only_adaptation']['selected_setting'])\nAssertionError: 'A' != 'B'\n- A\n+ B\n\n\n======================================================================\nFAIL: test_both_failure_profiles_use_declared_A_fallback (test_phase5_tuning_independent.TuningSelection.test_both_failure_profiles_use_declared_A_fallback)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/cachecompass/tests/test_phase5_tuning_independent.py\", line 27, in test_both_failure_profiles_use_declared_A_fallback\n    self.assertTrue(all(v['selected_setting']=='A' for v in s.values()))\nAssertionError: False is not true\n\n----------------------------------------------------------------------\nRan 2 tests in 0.862s\n\nFAILED (failures=2)",
+  "stdout": ""
+}

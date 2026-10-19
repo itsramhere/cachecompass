@@ -1,0 +1,14 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "reports/reviews/evidence/phase5_independent_20261019_051928/token_diagnostic.py"
+  ],
+  "elapsed_seconds": 0.05385192799985816,
+  "ended_utc": "2026-10-19T05:54:12.518593+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-19T05:54:12.464720+00:00",
+  "stderr": "",
+  "stdout": "{\n  \"violations\": [\n    {\n      \"event\": 217,\n      \"at\": 5060444670833,\n      \"dim\": \"destination_write_bytes\",\n      \"deficit\": -5.2735508480000135,\n      \"rates\": {\n        \"background_db_operations\": 2.0,\n        \"destination_write_bytes\": 131072.0,\n        \"destination_write_operations\": 64.0,\n        \"donor_bytes\": 131072.0,\n        \"donor_operations\": 64.0\n      },\n      \"previous\": {\n        \"amounts\": {\n          \"donor_bytes\": 2048,\n          \"donor_operations\": 1\n        },\n        \"at_ns\": 5060444145453,\n        \"event_id\": 216,\n        \"kind\": \"acquire\"\n      }\n    },\n    {\n      \"event\": 217,\n      \"at\": 5060444670833,\n      \"dim\": \"destination_write_operations\",\n      \"deficit\": -0.0025749760000000066,\n      \"rates\": {\n        \"background_db_operations\": 2.0,\n        \"destination_write_bytes\": 131072.0,\n        \"destination_write_operations\": 64.0,\n        \"donor_bytes\": 131072.0,\n        \"donor_operations\": 64.0\n      },\n      \"previous\": {\n        \"amounts\": {\n          \"donor_bytes\": 2048,\n          \"donor_operations\": 1\n        },\n        \"at_ns\": 5060444145453,\n        \"event_id\": 216,\n        \"kind\": \"acquire\"\n      }\n    },\n    {\n      \"event\": 232,\n      \"at\": 5060554066005,\n      \"dim\": \"destination_write_bytes\",\n      \"deficit\": -2.629566463999481,\n      \"rates\": {\n        \"background_db_operations\": 2.0,\n        \"destination_write_bytes\": 131072.0,\n        \"destination_write_operations\": 64.0,\n        \"donor_bytes\": 131072.0,\n        \"donor_operations\": 64.0\n      },\n      \"previous\": {\n        \"amounts\": {\n          \"donor_bytes\": 2048,\n          \"donor_operations\": 1\n        },\n        \"at_ns\": 5060553384420,\n        \"event_id\": 231,\n        \"kind\": \"acquire\"\n      }\n    },\n    {\n      \"event\": 232,\n      \"at\": 5060554066005,\n      \"dim\": \"destination_write_operations\",\n      \"deficit\": -0.0012839679999997466,\n      \"rates\": {\n        \"background_db_operations\": 2.0,\n        \"destination_write_bytes\": 131072.0,\n        \"destination_write_operations\": 64.0,\n        \"donor_bytes\": 131072.0,\n        \"donor_operations\": 64.0\n      },\n      \"previous\": {\n        \"amounts\": {\n          \"donor_bytes\": 2048,\n          \"donor_operations\": 1\n        },\n        \"at_ns\": 5060553384420,\n        \"event_id\": 231,\n        \"kind\": \"acquire\"\n      }\n    }\n  ],\n  \"n\": 4\n}"
+}

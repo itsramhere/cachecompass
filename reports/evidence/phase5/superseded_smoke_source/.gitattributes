@@ -1,0 +1,24 @@
+# Preserve the exact bytes covered by source and retained-evidence SHA256 manifests.
+/* -text
+/src/** -text
+/tests/** -text
+/scripts/** -text
+/configs/** -text
+/docs/** -text
+/infra/** -text
+/analysis/** -text
+/paper/** -text
+/reports/evidence/phase3/** -text
+/reports/reviews/evidence/phase3_20261019_independent/** -text
+/runs/phase3-*/** -text
+/reports/evidence/phase4/** -text
+/reports/reviews/evidence/phase4_20261019_independent/** -text
+/reports/analysis/phase4*/** -text
+/runs/p4*/** -text
+/reports/STATUS.md -text
+/reports/DECISIONS.md -text
+/reports/ISSUE_INDEX.md -text
+/reports/phase_04.md -text
+/reports/HANDOFF_PHASE4.md -text
+/reports/reviews/phase_04_independent_20261019_0354.md -text
+/reports/issues/ISSUE-002[12345].md -text

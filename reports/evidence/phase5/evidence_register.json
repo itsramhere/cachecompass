@@ -1,0 +1,233 @@
+{
+  "utc": "2026-10-19T05:00:15.640682+00:00",
+  "runs": [
+    {
+      "run_id": "p5matrix_v1_20261019_boundary_deadline",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:48:23.261519+00:00",
+        "status": "policy_failure"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_boundary_zero",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:48:03.071180+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_smoke0",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:46:03.471605+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_smoke1",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:46:23.336374+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_smoke2",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:46:43.678989+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_smoke3",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:47:03.637541+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_smoke4",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:47:23.467647+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_smoke5",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:47:43.118053+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune0A",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:42:01.994686+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "5fe8b1dc8481844552a5129c217fcf797492559b9ea5f78fda14579675e6bce9"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune0B",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:42:21.916172+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "5fe8b1dc8481844552a5129c217fcf797492559b9ea5f78fda14579675e6bce9"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune1A",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:42:41.806142+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "5fe8b1dc8481844552a5129c217fcf797492559b9ea5f78fda14579675e6bce9"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune1B",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:43:01.670171+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "5fe8b1dc8481844552a5129c217fcf797492559b9ea5f78fda14579675e6bce9"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune2A",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:43:21.555092+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "5fe8b1dc8481844552a5129c217fcf797492559b9ea5f78fda14579675e6bce9"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune2B",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:43:41.803020+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune3A",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:44:02.224606+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune3B",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:44:22.651038+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune4A",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:44:42.900388+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune4B",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:45:03.192227+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune5A",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:45:23.329227+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune5B",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:45:43.205820+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": false,
+      "classification": "superseded_comparison_evidence_ISSUE0027",
+      "source": "c37cacbc03169bb07bf3026ac87d026d48a63accd18c74e8bc1dec1c69bb3b16"
+    },
+    {
+      "run_id": "p5mix12_v1_20261019",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:36:29.783747+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": null,
+      "classification": "applicable_mixed_pool_supplement",
+      "source": "938e8ee7bb959bbad8b0d3cf2ef5e0b23493734ef5a80e26e16b818d924972dd"
+    },
+    {
+      "run_id": "p5mix8_v1_20261019",
+      "original_status": {
+        "ended_utc": "2026-10-19T04:35:47.285120+00:00",
+        "status": "completed"
+      },
+      "comparison_eligible": null,
+      "classification": "applicable_mixed_pool_supplement",
+      "source": "6a70d92e4445269b61aee54b67372a9eab601169c5a57c41c1ced5e9bdda3964"
+    }
+  ],
+  "replacement": {
+    "prefix": "p5matrix_v2_20261019",
+    "status": "not_executed",
+    "blocker": "ISSUE-0028",
+    "additional_tuning_points": 0
+  },
+  "final_suite": "full_live_tests_final.json",
+  "final_source": "source_replacement.json"
+}

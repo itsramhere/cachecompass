@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_phase5_baselines.py",
+    "-v"
+  ],
+  "elapsed_seconds": 0.5223481079999601,
+  "ended_utc": "2026-10-19T04:43:13.360535+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-19T04:43:12.837741+00:00",
+  "stderr": "test_duplicate_unsafe_observation_revokes_without_ramping (test_phase5_baselines.CoverageDecisionExpiry.test_duplicate_unsafe_observation_revokes_without_ramping) ... ok\ntest_positive_coverage_expires_between_collection_and_decision (test_phase5_baselines.CoverageDecisionExpiry.test_positive_coverage_expires_between_collection_and_decision) ... ok\ntest_redis_millisecond_uncertainty_is_charged_with_high_resolution_python (test_phase5_baselines.ExpiryRegression.test_redis_millisecond_uncertainty_is_charged_with_high_resolution_python) ... ok\ntest_atomic_immediate_installs_zero_grants (test_phase5_baselines.MigrationPolicyTests.test_atomic_immediate_installs_zero_grants) ... ok\ntest_missing_donor_disabled_fallback_and_zero_budget_are_finite (test_phase5_baselines.MigrationPolicyTests.test_missing_donor_disabled_fallback_and_zero_budget_are_finite) ... ok\ntest_retry_and_fallback_explicit_no_refund_and_order_callback (test_phase5_baselines.MigrationPolicyTests.test_retry_and_fallback_explicit_no_refund_and_order_callback) ... ok\ntest_stale_action_installs_neither_map_nor_grant (test_phase5_baselines.MigrationPolicyTests.test_stale_action_installs_neither_map_nor_grant) ... ok\ntest_all_at_once_waits_entire_pass_even_unknown (test_phase5_baselines.PolicyTests.test_all_at_once_waits_entire_pass_even_unknown) ... ok\ntest_all_six_and_forbidden_joint (test_phase5_baselines.PolicyTests.test_all_six_and_forbidden_joint) ... ok\ntest_decision_rejects_future (test_phase5_baselines.PolicyTests.test_decision_rejects_future) ... ok\ntest_deterministic_decisions_no_state_before_commit (test_phase5_baselines.PolicyTests.test_deterministic_decisions_no_state_before_commit) ... ok\ntest_fixed_rates_ignore_pressure_traffic_only_does_not_adapt_rates (test_phase5_baselines.PolicyTests.test_fixed_rates_ignore_pressure_traffic_only_does_not_adapt_rates) ... ok\ntest_fixed_tick_blocked_no_catchup_no_leapfrog (test_phase5_baselines.PolicyTests.test_fixed_tick_blocked_no_catchup_no_leapfrog) ... ok\ntest_fresh_windows_ramp_reset_and_no_duplicate_grant (test_phase5_baselines.PolicyTests.test_fresh_windows_ramp_reset_and_no_duplicate_grant) ... ok\ntest_open_subwindow_does_not_evict_closed_evidence (test_phase5_baselines.PolicyTests.test_open_subwindow_does_not_evict_closed_evidence) ... ok\ntest_pending_reserve_held_until_window_start_after_cutover (test_phase5_baselines.PolicyTests.test_pending_reserve_held_until_window_start_after_cutover) ... ok\ntest_pressure_hysteresis_and_unknown (test_phase5_baselines.PolicyTests.test_pressure_hysteresis_and_unknown) ... ok\ntest_retry_aware_positive_difference_and_zero_cap (test_phase5_baselines.PolicyTests.test_retry_aware_positive_difference_and_zero_cap) ... ok\ntest_stability_inconclusive_and_wrong_routing (test_phase5_baselines.PolicyTests.test_stability_inconclusive_and_wrong_routing) ... ok\ntest_stale_at_decision_zeroes_adaptive_work (test_phase5_baselines.PolicyTests.test_stale_at_decision_zeroes_adaptive_work) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 0.084s\n\nOK",
+  "stdout": ""
+}

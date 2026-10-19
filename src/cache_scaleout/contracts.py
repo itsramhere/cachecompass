@@ -450,10 +450,14 @@ class ControllerObservation:
     destination_owner: NodeId
     old_owner_db_rate_lower: Mapping[BucketId, float]
     observation_db_rate_upper: float
+    coverage_valid_until_ns: Mapping[BucketId, int] = field(default_factory=dict)
+    foreground_db_known: bool = True
 
     def __post_init__(self) -> None:
         for name in ("observed_at_ns", "routing_epoch", "foreground_db_observed_at_ns", "max_signal_age_ns"):
             _integer(getattr(self, name), name)
+        if type(self.foreground_db_known) is not bool:
+            raise ValueError("foreground known flag must be boolean")
         if self.foreground_db_observed_at_ns > self.observed_at_ns:
             raise ValueError("future foreground DB estimate")
         if self.demand.window.observed_at_ns != self.observed_at_ns:
@@ -486,8 +490,12 @@ class ControllerObservation:
                 raise ValueError("coverage provenance/counts disagree with observation")
         if sum(self.old_owner_db_rate_lower.values()) > self.foreground_db_rate_upper:
             raise ValueError("displaced old-owner lower rates cannot exceed existing foreground demand")
+        if self.coverage_valid_until_ns and set(self.coverage_valid_until_ns) != set(self.bucket_states):
+            raise ValueError("coverage validity must describe every affected bucket")
+        for bound in self.coverage_valid_until_ns.values():
+            _integer(bound,"coverage validity")
         _freeze(self, "bucket_coverage", "bucket_states", "candidate_request_rate_upper",
-                "uncertain_miss_reserve_rate", "old_owner_db_rate_lower")
+                "uncertain_miss_reserve_rate", "old_owner_db_rate_lower", "coverage_valid_until_ns")
 
     @property
     def admissions_safe(self) -> bool:
@@ -497,7 +505,7 @@ class ControllerObservation:
         _integer(decided_at_ns, "decided_at_ns")
         if decided_at_ns < self.observed_at_ns:
             raise ValueError("decision precedes its observation")
-        return (decided_at_ns - self.demand.window.end_ns <= self.demand.window.max_age_ns
+        return (self.foreground_db_known and decided_at_ns - self.demand.window.end_ns <= self.demand.window.max_age_ns
                 and decided_at_ns - self.foreground_db_observed_at_ns <= self.max_signal_age_ns
                 and all(p.effective_state(as_of_ns=decided_at_ns, max_age_ns=self.max_signal_age_ns)
                         is PressureState.SAFE for p in

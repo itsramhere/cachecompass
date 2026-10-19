@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "scripts/phase5_matrix.py",
+    "--prefix",
+    "p5ind_20261019_m1",
+    "--retry-prefix",
+    "p5matrix_v1_20261019"
+  ],
+  "elapsed_seconds": 180.0140057109993,
+  "ended_utc": "2026-10-19T05:47:35.183452+00:00",
+  "error": "Command '['.venv/bin/python', '-B', 'scripts/phase5_matrix.py', '--prefix', 'p5ind_20261019_m1', '--retry-prefix', 'p5matrix_v1_20261019']' timed out after 180 seconds",
+  "exit_code": null,
+  "retry_of": null,
+  "started_utc": "2026-10-19T05:44:35.169403+00:00"
+}

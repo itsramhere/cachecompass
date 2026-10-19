@@ -1,0 +1,5986 @@
+{
+  "cache_pools": {
+    "new": {
+      "background_max": 1,
+      "foreground_max": 1
+    },
+    "old-1": {
+      "background_max": 1,
+      "foreground_max": 1
+    },
+    "old-2": {
+      "background_max": 1,
+      "foreground_max": 1
+    }
+  },
+  "cache_probes": {
+    "new": [
+      {
+        "absolute_deadline_ns": 550287632031,
+        "actual_bytes": null,
+        "issued_ns": 549891608912,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-1",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 549892369085,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 550287632031,
+        "actual_bytes": null,
+        "issued_ns": 549892400262,
+        "operation": "info",
+        "operation_id": "observation-cache-new-2",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 549893709992,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 550788420302,
+        "actual_bytes": null,
+        "issued_ns": 550388947234,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-3",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 550389333866,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 550788420302,
+        "actual_bytes": null,
+        "issued_ns": 550389367566,
+        "operation": "info",
+        "operation_id": "observation-cache-new-4",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 550390201761,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 551288687689,
+        "actual_bytes": null,
+        "issued_ns": 550889078286,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-5",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 550890339944,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 551288687689,
+        "actual_bytes": null,
+        "issued_ns": 550890367075,
+        "operation": "info",
+        "operation_id": "observation-cache-new-6",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 550891679639,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 551788513116,
+        "actual_bytes": null,
+        "issued_ns": 551388956593,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-7",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 551389946332,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 551788513116,
+        "actual_bytes": null,
+        "issued_ns": 551389971289,
+        "operation": "info",
+        "operation_id": "observation-cache-new-8",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 551390691462,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 552288619867,
+        "actual_bytes": null,
+        "issued_ns": 551889144456,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-9",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 551894990348,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 552288619867,
+        "actual_bytes": null,
+        "issued_ns": 551895126923,
+        "operation": "info",
+        "operation_id": "observation-cache-new-10",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 551901135390,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 552787928272,
+        "actual_bytes": null,
+        "issued_ns": 552388350256,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-11",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 552388741304,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 552787928272,
+        "actual_bytes": null,
+        "issued_ns": 552388764810,
+        "operation": "info",
+        "operation_id": "observation-cache-new-12",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 552390003793,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 553288173305,
+        "actual_bytes": null,
+        "issued_ns": 552888491444,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-13",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 552888853318,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 553288173305,
+        "actual_bytes": null,
+        "issued_ns": 552888874860,
+        "operation": "info",
+        "operation_id": "observation-cache-new-14",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 552890271090,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 553788460553,
+        "actual_bytes": null,
+        "issued_ns": 553388955197,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-15",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 553389413206,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 553788460553,
+        "actual_bytes": null,
+        "issued_ns": 553389456942,
+        "operation": "info",
+        "operation_id": "observation-cache-new-16",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 553390746561,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 554288703501,
+        "actual_bytes": null,
+        "issued_ns": 553889838027,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-17",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 553891367267,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 554288703501,
+        "actual_bytes": null,
+        "issued_ns": 553891397823,
+        "operation": "info",
+        "operation_id": "observation-cache-new-18",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 553892298738,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 554788036656,
+        "actual_bytes": null,
+        "issued_ns": 554388489487,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-19",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 554389090301,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 554788036656,
+        "actual_bytes": null,
+        "issued_ns": 554389162730,
+        "operation": "info",
+        "operation_id": "observation-cache-new-20",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 554390060610,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 555288301583,
+        "actual_bytes": null,
+        "issued_ns": 554888685830,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-21",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 554889735920,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 555288301583,
+        "actual_bytes": null,
+        "issued_ns": 554889760507,
+        "operation": "info",
+        "operation_id": "observation-cache-new-22",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 554891192420,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 555787914247,
+        "actual_bytes": null,
+        "issued_ns": 555388490744,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-23",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 555390157521,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 555787914247,
+        "actual_bytes": null,
+        "issued_ns": 555390193325,
+        "operation": "info",
+        "operation_id": "observation-cache-new-24",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 555391888635,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 556288339305,
+        "actual_bytes": null,
+        "issued_ns": 555888754980,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-25",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 555889504517,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 556288339305,
+        "actual_bytes": null,
+        "issued_ns": 555889527962,
+        "operation": "info",
+        "operation_id": "observation-cache-new-26",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 555891519838,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 556788157194,
+        "actual_bytes": null,
+        "issued_ns": 556388596685,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-27",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 556389212491,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 556788157194,
+        "actual_bytes": null,
+        "issued_ns": 556389241124,
+        "operation": "info",
+        "operation_id": "observation-cache-new-28",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 556390673258,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 557288470818,
+        "actual_bytes": null,
+        "issued_ns": 556888902337,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-29",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 556889773066,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 557288470818,
+        "actual_bytes": null,
+        "issued_ns": 556890070734,
+        "operation": "info",
+        "operation_id": "observation-cache-new-30",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 556892416823,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 557788514792,
+        "actual_bytes": null,
+        "issued_ns": 557388852830,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-31",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 557389918363,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 557788514792,
+        "actual_bytes": null,
+        "issued_ns": 557389947567,
+        "operation": "info",
+        "operation_id": "observation-cache-new-32",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 557391046480,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 558288534505,
+        "actual_bytes": null,
+        "issued_ns": 557889371503,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-33",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 557892057193,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 558288534505,
+        "actual_bytes": null,
+        "issued_ns": 557892091995,
+        "operation": "info",
+        "operation_id": "observation-cache-new-34",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 557892932379,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 558788618063,
+        "actual_bytes": null,
+        "issued_ns": 558389209953,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-35",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 558390439903,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 558788618063,
+        "actual_bytes": null,
+        "issued_ns": 558390463759,
+        "operation": "info",
+        "operation_id": "observation-cache-new-36",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 558391728622,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 559289499527,
+        "actual_bytes": null,
+        "issued_ns": 558890630538,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-37",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 558893010788,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 559289499527,
+        "actual_bytes": null,
+        "issued_ns": 558893041213,
+        "operation": "info",
+        "operation_id": "observation-cache-new-38",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 558895147401,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 559790015030,
+        "actual_bytes": null,
+        "issued_ns": 559390496384,
+        "operation": "ping",
+        "operation_id": "observation-cache-new-39",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 559391485281,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 559790015030,
+        "actual_bytes": null,
+        "issued_ns": 559391514445,
+        "operation": "info",
+        "operation_id": "observation-cache-new-40",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "new_cache",
+        "target_owner": "new",
+        "task_id": "observer:new",
+        "terminal_ns": 559392699077,
+        "work_class": "observation_cache"
+      }
+    ],
+    "old-1": [
+      {
+        "absolute_deadline_ns": 550287632031,
+        "actual_bytes": null,
+        "issued_ns": 549891288120,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-1",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 549891969715,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 550287632031,
+        "actual_bytes": null,
+        "issued_ns": 549892043966,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-2",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 549893477753,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 550788420302,
+        "actual_bytes": null,
+        "issued_ns": 550388576146,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-3",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 550392272656,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 550788420302,
+        "actual_bytes": null,
+        "issued_ns": 550392328009,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-4",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 550393049664,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 551288687689,
+        "actual_bytes": null,
+        "issued_ns": 550888835060,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-5",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 550890158471,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 551288687689,
+        "actual_bytes": null,
+        "issued_ns": 550890187284,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-6",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 550891416473,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 551788513116,
+        "actual_bytes": null,
+        "issued_ns": 551388624524,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-7",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 551389326209,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 551788513116,
+        "actual_bytes": null,
+        "issued_ns": 551389354031,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-8",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 551390366413,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 552288619867,
+        "actual_bytes": null,
+        "issued_ns": 551888844645,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-9",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 551889757698,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 552288619867,
+        "actual_bytes": null,
+        "issued_ns": 551889821794,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-10",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 551900185902,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 552787928272,
+        "actual_bytes": null,
+        "issued_ns": 552388082524,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-11",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 552389082898,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 552787928272,
+        "actual_bytes": null,
+        "issued_ns": 552389113734,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-12",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 552390194850,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 553288173305,
+        "actual_bytes": null,
+        "issued_ns": 552888288178,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-13",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 552889306940,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 553288173305,
+        "actual_bytes": null,
+        "issued_ns": 552889334261,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-14",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 552890480085,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 553788460553,
+        "actual_bytes": null,
+        "issued_ns": 553388644520,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-15",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 553389263220,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 553788460553,
+        "actual_bytes": null,
+        "issued_ns": 553389304102,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-16",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 553391395087,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 554288703501,
+        "actual_bytes": null,
+        "issued_ns": 553888876772,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-17",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 553889993091,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 554288703501,
+        "actual_bytes": null,
+        "issued_ns": 553890048314,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-18",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 553891312185,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 554788036656,
+        "actual_bytes": null,
+        "issued_ns": 554388163156,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-19",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 554388707715,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 554788036656,
+        "actual_bytes": null,
+        "issued_ns": 554388735137,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-20",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 554389849012,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 555288301583,
+        "actual_bytes": null,
+        "issued_ns": 554888433341,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-21",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 554890256543,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 555288301583,
+        "actual_bytes": null,
+        "issued_ns": 554890287419,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-22",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 554891889569,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 555787914247,
+        "actual_bytes": null,
+        "issued_ns": 555388185025,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-23",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 555389592862,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 555787914247,
+        "actual_bytes": null,
+        "issued_ns": 555389689477,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-24",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 555391610777,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 556288339305,
+        "actual_bytes": null,
+        "issued_ns": 555888466336,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-25",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 555889187651,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 556288339305,
+        "actual_bytes": null,
+        "issued_ns": 555889224055,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-26",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 555890617441,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 556788157194,
+        "actual_bytes": null,
+        "issued_ns": 556388339418,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-27",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 556388989716,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 556788157194,
+        "actual_bytes": null,
+        "issued_ns": 556389019511,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-28",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 556390258154,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 557288470818,
+        "actual_bytes": null,
+        "issued_ns": 556888625390,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-29",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 556889304932,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 557288470818,
+        "actual_bytes": null,
+        "issued_ns": 556889334166,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-30",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 556892666048,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 557788514792,
+        "actual_bytes": null,
+        "issued_ns": 557388627482,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-31",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 557389514646,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 557788514792,
+        "actual_bytes": null,
+        "issued_ns": 557389572202,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-32",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 557390742553,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 558288534505,
+        "actual_bytes": null,
+        "issued_ns": 557888678040,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-33",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 557889785166,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 558288534505,
+        "actual_bytes": null,
+        "issued_ns": 557889847760,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-34",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 557891202137,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 558788618063,
+        "actual_bytes": null,
+        "issued_ns": 558388769080,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-35",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 558389738819,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 558788618063,
+        "actual_bytes": null,
+        "issued_ns": 558389892240,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-36",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 558391328089,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 559289499527,
+        "actual_bytes": null,
+        "issued_ns": 558889816744,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-37",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 558892090103,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 559289499527,
+        "actual_bytes": null,
+        "issued_ns": 558892144715,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-38",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 558894335730,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 559790015030,
+        "actual_bytes": null,
+        "issued_ns": 559390231175,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-1-39",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 559391104068,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 559790015030,
+        "actual_bytes": null,
+        "issued_ns": 559391127092,
+        "operation": "info",
+        "operation_id": "observation-cache-old-1-40",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-1",
+        "task_id": "observer:old-1",
+        "terminal_ns": 559392497293,
+        "work_class": "observation_cache"
+      }
+    ],
+    "old-2": [
+      {
+        "absolute_deadline_ns": 550287632031,
+        "actual_bytes": null,
+        "issued_ns": 549891407339,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-1",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 549892149896,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 550287632031,
+        "actual_bytes": null,
+        "issued_ns": 549892214062,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-2",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 549893925566,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 550788420302,
+        "actual_bytes": null,
+        "issued_ns": 550388762546,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-3",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 550390255071,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 550788420302,
+        "actual_bytes": null,
+        "issued_ns": 550390287981,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-4",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 550390939901,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 551288687689,
+        "actual_bytes": null,
+        "issued_ns": 550888999368,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-5",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 550889583346,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 551288687689,
+        "actual_bytes": null,
+        "issued_ns": 550889613461,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-6",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 550890853636,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 551788513116,
+        "actual_bytes": null,
+        "issued_ns": 551388753918,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-7",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 551389783096,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 551788513116,
+        "actual_bytes": null,
+        "issued_ns": 551389844118,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-8",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 551391205165,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 552288619867,
+        "actual_bytes": null,
+        "issued_ns": 551889045327,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-9",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 551890947708,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 552288619867,
+        "actual_bytes": null,
+        "issued_ns": 551890985625,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-10",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 551900595969,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 552787928272,
+        "actual_bytes": null,
+        "issued_ns": 552388278168,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-11",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 552388558810,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 552787928272,
+        "actual_bytes": null,
+        "issued_ns": 552388586231,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-12",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 552389631473,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 553288173305,
+        "actual_bytes": null,
+        "issued_ns": 552888413206,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-13",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 552888739246,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 553288173305,
+        "actual_bytes": null,
+        "issued_ns": 552888767529,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-14",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 552890077489,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 553788460553,
+        "actual_bytes": null,
+        "issued_ns": 553388861536,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-15",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 553389532876,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 553788460553,
+        "actual_bytes": null,
+        "issued_ns": 553389560598,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-16",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 553390440020,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 554288703501,
+        "actual_bytes": null,
+        "issued_ns": 553889001930,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-17",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 553890523048,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 554288703501,
+        "actual_bytes": null,
+        "issued_ns": 553890731892,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-18",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 553892096244,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 554788036656,
+        "actual_bytes": null,
+        "issued_ns": 554388307704,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-19",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 554388930260,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 554788036656,
+        "actual_bytes": null,
+        "issued_ns": 554388984952,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-20",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 554390529385,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 555288301583,
+        "actual_bytes": null,
+        "issued_ns": 554888538789,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-21",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 554889622179,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 555288301583,
+        "actual_bytes": null,
+        "issued_ns": 554889654487,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-22",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 554890887792,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 555787914247,
+        "actual_bytes": null,
+        "issued_ns": 555388410073,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-23",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 555389829538,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 555787914247,
+        "actual_bytes": null,
+        "issued_ns": 555389862237,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-24",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 555391121471,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 556288339305,
+        "actual_bytes": null,
+        "issued_ns": 555888652836,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-25",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 555889385308,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 556288339305,
+        "actual_bytes": null,
+        "issued_ns": 555889411167,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-26",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 555891007237,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 556788157194,
+        "actual_bytes": null,
+        "issued_ns": 556388474541,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-27",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 556389102666,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 556788157194,
+        "actual_bytes": null,
+        "issued_ns": 556389132130,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-28",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 556390926419,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 557288470818,
+        "actual_bytes": null,
+        "issued_ns": 556888778000,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-29",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 556889391352,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 557288470818,
+        "actual_bytes": null,
+        "issued_ns": 556889412935,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-30",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 556890958029,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 557788514792,
+        "actual_bytes": null,
+        "issued_ns": 557388753181,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-31",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 557390010472,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 557788514792,
+        "actual_bytes": null,
+        "issued_ns": 557390317363,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-32",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 557391288404,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 558288534505,
+        "actual_bytes": null,
+        "issued_ns": 557889293576,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-33",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 557890562635,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 558288534505,
+        "actual_bytes": null,
+        "issued_ns": 557890597547,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-34",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 557891616320,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 558788618063,
+        "actual_bytes": null,
+        "issued_ns": 558389137194,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-35",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 558390337750,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 558788618063,
+        "actual_bytes": null,
+        "issued_ns": 558390368125,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-36",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 558391561801,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 559289499527,
+        "actual_bytes": null,
+        "issued_ns": 558890457047,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-37",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 558892880902,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 559289499527,
+        "actual_bytes": null,
+        "issued_ns": 558892915004,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-38",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 558894863644,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 559790015030,
+        "actual_bytes": null,
+        "issued_ns": 559390425687,
+        "operation": "ping",
+        "operation_id": "observation-cache-old-2-39",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 559391002495,
+        "work_class": "observation_cache"
+      },
+      {
+        "absolute_deadline_ns": 559790015030,
+        "actual_bytes": null,
+        "issued_ns": 559391033411,
+        "operation": "info",
+        "operation_id": "observation-cache-old-2-40",
+        "outcome": "completed",
+        "reserved_bytes": 65536,
+        "retry_ordinal": 1,
+        "source": "old_cache",
+        "target_owner": "old-2",
+        "task_id": "observer:old-2",
+        "terminal_ns": 559392054187,
+        "work_class": "observation_cache"
+      }
+    ]
+  },
+  "database_pool": {
+    "background": {
+      "connections_ms": 12,
+      "connections_num": 1,
+      "observed_max_concurrency": 1,
+      "pool_available": 1,
+      "pool_max": 1,
+      "pool_min": 0,
+      "pool_size": 1,
+      "requests_num": 38,
+      "requests_queued": 1,
+      "requests_wait_ms": 12,
+      "requests_waiting": 0,
+      "usage_ms": 61
+    },
+    "cancelled_operations": 0,
+    "discarded_connections": 0,
+    "foreground": {
+      "connections_ms": 29,
+      "connections_num": 4,
+      "observed_max_concurrency": 4,
+      "pool_available": 4,
+      "pool_max": 4,
+      "pool_min": 0,
+      "pool_size": 4,
+      "requests_num": 68,
+      "requests_queued": 4,
+      "requests_wait_ms": 69,
+      "requests_waiting": 0
+    },
+    "issuance_stopped": false,
+    "quarantined_operations": 0
+  },
+  "db_probes": [
+    {
+      "absolute_deadline_ns": 550287632031,
+      "actual_bytes": null,
+      "issued_ns": 549889742215,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-1",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 549913471263,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 550788420302,
+      "actual_bytes": null,
+      "issued_ns": 550392651415,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-2",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 550412107397,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 551288687689,
+      "actual_bytes": null,
+      "issued_ns": 550889133589,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-3",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 550916906950,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 551788513116,
+      "actual_bytes": null,
+      "issued_ns": 551389173059,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-4",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 551407477984,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 552288619867,
+      "actual_bytes": null,
+      "issued_ns": 551902137097,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-5",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 551932401899,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 552787928272,
+      "actual_bytes": null,
+      "issued_ns": 552388411348,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-6",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 552406733455,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 553288173305,
+      "actual_bytes": null,
+      "issued_ns": 552888569080,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-7",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 552906119536,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 553788460553,
+      "actual_bytes": null,
+      "issued_ns": 553392108810,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-8",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 553410193841,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 554288703501,
+      "actual_bytes": null,
+      "issued_ns": 553899947918,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-9",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 553924430029,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 554788036656,
+      "actual_bytes": null,
+      "issued_ns": 554388568186,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-10",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 554409318449,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 555288301583,
+      "actual_bytes": null,
+      "issued_ns": 554888761184,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-11",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 554913443276,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 555787914247,
+      "actual_bytes": null,
+      "issued_ns": 555392777852,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-12",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 555410184933,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 556288339305,
+      "actual_bytes": null,
+      "issued_ns": 555888963584,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-13",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 555912676994,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 556788157194,
+      "actual_bytes": null,
+      "issued_ns": 556388817998,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-14",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 556412128512,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 557288470818,
+      "actual_bytes": null,
+      "issued_ns": 556894789351,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-15",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 556912779263,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 557788514792,
+      "actual_bytes": null,
+      "issued_ns": 557388912771,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-16",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 557410760044,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 558288534505,
+      "actual_bytes": null,
+      "issued_ns": 557889466627,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-17",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 557914265364,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 558788618063,
+      "actual_bytes": null,
+      "issued_ns": 558389284125,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-18",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 558413952166,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 559289499527,
+      "actual_bytes": null,
+      "issued_ns": 558890890779,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-19",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 558913661025,
+      "work_class": "observation_database"
+    },
+    {
+      "absolute_deadline_ns": 559790015030,
+      "actual_bytes": null,
+      "issued_ns": 559390581141,
+      "operation": "same_query_probe",
+      "operation_id": "observation-db-20",
+      "outcome": "completed",
+      "reserved_bytes": 65536,
+      "retry_ordinal": 1,
+      "source": "database",
+      "target_owner": "database",
+      "task_id": "observer:database",
+      "terminal_ns": 559411234078,
+      "work_class": "observation_database"
+    }
+  ],
+  "diagnostic_operations": 0,
+  "eligible": true,
+  "horizon_ns": 559861559178,
+  "measurement_ended_ns": 559863032200,
+  "measurement_origin_ns": 549861559178,
+  "mixed_summaries": {
+    "discretionary_database_warmup": {
+      "completed": 16,
+      "issued": 16,
+      "max_dispatch_ms": 3.444761,
+      "offered": 16,
+      "p95_ms": 38.86828475,
+      "payloads_ok": true
+    },
+    "foreground_database": {
+      "completed": 64,
+      "issued": 64,
+      "max_dispatch_ms": 4.014499,
+      "offered": 64,
+      "p95_ms": 33.26748885,
+      "payloads_ok": true
+    }
+  },
+  "nominal_total_attempt_rate": 12.0,
+  "observations": [
+    {
+      "ended_ns": 549913542270,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 4.630564,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 3.288786,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1161088,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 5.569106,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 4.060086,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1651080,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 5.402155,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 3.626304,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1624376,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 3,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 4,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 23.782229,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 71.633547,
+            "observed_at_ns": 546768880120,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 549913472826,
+          "reason": "same_query_probe_ms=23.782",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 549893710553,
+          "reason": "ping_ms=3.289;bundle_ms=4.631;memory_fraction=0.034603;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 549893478724,
+          "reason": "ping_ms=4.060;bundle_ms=5.569;memory_fraction=0.049206;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 549893925797,
+          "reason": "ping_ms=3.626;bundle_ms=5.402;memory_fraction=0.048410;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 549887632031
+    },
+    {
+      "ended_ns": 550412177553,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 1.297983,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.429846,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1145728,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 4.562913,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 3.784572,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1635720,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 2.209293,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.524003,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1609016,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 5,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 5,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 23.116377,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 33.174409,
+            "observed_at_ns": 550396190628,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 29.474354,
+            "observed_at_ns": 550392615211,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 550412109610,
+          "reason": "same_query_probe_ms=23.116",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 550390202202,
+          "reason": "ping_ms=0.430;bundle_ms=1.298;memory_fraction=0.034145;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 550393050055,
+          "reason": "ping_ms=3.785;bundle_ms=4.563;memory_fraction=0.048748;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 550390940352,
+          "reason": "ping_ms=1.524;bundle_ms=2.209;memory_fraction=0.047952;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 550388420302
+    },
+    {
+      "ended_ns": 550916971978,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 2.62668,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.286855,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1146752,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 2.68574,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.426946,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1636744,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 1.884874,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.614034,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1589568,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 7,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 9,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 27.800992,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 21.884083,
+            "observed_at_ns": 550885519324,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 19.345966,
+            "observed_at_ns": 550883107266,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 550916908863,
+          "reason": "same_query_probe_ms=27.801",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 550891680009,
+          "reason": "ping_ms=1.287;bundle_ms=2.627;memory_fraction=0.034176;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 550891417014,
+          "reason": "ping_ms=1.427;bundle_ms=2.686;memory_fraction=0.048779;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 550890854367,
+          "reason": "ping_ms=0.614;bundle_ms=1.885;memory_fraction=0.047373;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 550888687689
+    },
+    {
+      "ended_ns": 551407526467,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 1.765435,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.020064,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1128328,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 1.80814,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.767123,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1618320,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 2.49368,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.071251,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1591616,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 9,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 13,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 18.334841,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 19.356201,
+            "observed_at_ns": 551381627531,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 23.180423,
+            "observed_at_ns": 551385334426,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 551407479116,
+          "reason": "same_query_probe_ms=18.335",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 551390691823,
+          "reason": "ping_ms=1.020;bundle_ms=1.765;memory_fraction=0.033627;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 551390366724,
+          "reason": "ping_ms=0.767;bundle_ms=1.808;memory_fraction=0.048230;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 551391205585,
+          "reason": "ping_ms=1.071;bundle_ms=2.494;memory_fraction=0.047434;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 551388513116
+    },
+    {
+      "ended_ns": 551932458244,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 12.033719,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 5.888497,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1131400,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 11.483651,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.053555,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1621392,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 11.607868,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.959137,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594688,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 11,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 17,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 42.794027,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 54.772077,
+            "observed_at_ns": 551919523936,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 36.925345,
+            "observed_at_ns": 551901936355,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 551932403452,
+          "reason": "same_query_probe_ms=42.794",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 551901135821,
+          "reason": "ping_ms=5.888;bundle_ms=12.034;memory_fraction=0.033718;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 551900186893,
+          "reason": "ping_ms=1.054;bundle_ms=11.484;memory_fraction=0.048321;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 551900596690,
+          "reason": "ping_ms=1.959;bundle_ms=11.608;memory_fraction=0.047525;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 551888619867
+    },
+    {
+      "ended_ns": 552406789419,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 1.680156,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.417558,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1131400,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 2.218357,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.105643,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1621392,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 1.387407,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.314262,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594688,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 13,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 21,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 18.349247,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 19.36858,
+            "observed_at_ns": 552381709689,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 18.427635,
+            "observed_at_ns": 552380892710,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 552406735027,
+          "reason": "same_query_probe_ms=18.349",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 552390004043,
+          "reason": "ping_ms=0.418;bundle_ms=1.680;memory_fraction=0.033718;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 552390195131,
+          "reason": "ping_ms=1.106;bundle_ms=2.218;memory_fraction=0.048321;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 552389631954,
+          "reason": "ping_ms=0.314;bundle_ms=1.387;memory_fraction=0.047525;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 552387928272
+    },
+    {
+      "ended_ns": 552906219386,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 1.807138,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.389125,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1131400,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 2.260239,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.086484,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1621392,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 1.704434,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.36581,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594688,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 15,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 25,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 17.576946,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 21.783101,
+            "observed_at_ns": 552883995868,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 17.694863,
+            "observed_at_ns": 552879774739,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 552906120558,
+          "reason": "same_query_probe_ms=17.577",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 552890271341,
+          "reason": "ping_ms=0.389;bundle_ms=1.807;memory_fraction=0.033718;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 552890480355,
+          "reason": "ping_ms=1.086;bundle_ms=2.260;memory_fraction=0.048321;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 552890077960,
+          "reason": "ping_ms=0.366;bundle_ms=1.704;memory_fraction=0.047525;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 552888173305
+    },
+    {
+      "ended_ns": 553410247361,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 1.82863,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.494715,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1131400,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 2.857177,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.723538,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1621392,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 1.619616,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.71188,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594688,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 17,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 29,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 21.167146,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 32.139909,
+            "observed_at_ns": 553394836022,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 29.143392,
+            "observed_at_ns": 553392074308,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 553410195333,
+          "reason": "same_query_probe_ms=21.167",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 553390746982,
+          "reason": "ping_ms=0.495;bundle_ms=1.829;memory_fraction=0.033718;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 553391395517,
+          "reason": "ping_ms=0.724;bundle_ms=2.857;memory_fraction=0.048321;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 553390440611,
+          "reason": "ping_ms=0.712;bundle_ms=1.620;memory_fraction=0.047525;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 553388460553
+    },
+    {
+      "ended_ns": 553924482698,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 3.257359,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 2.325678,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1131400,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 2.541041,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.221016,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1621392,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 3.126022,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.552214,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594688,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 19,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 33,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 34.535687,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 27.50016,
+            "observed_at_ns": 553890485131,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 37.058771,
+            "observed_at_ns": 553899906015,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 553924431922,
+          "reason": "same_query_probe_ms=34.536",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 553892299069,
+          "reason": "ping_ms=2.326;bundle_ms=3.257;memory_fraction=0.033718;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 553891312785,
+          "reason": "ping_ms=1.221;bundle_ms=2.541;memory_fraction=0.048321;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 553892096765,
+          "reason": "ping_ms=1.552;bundle_ms=3.126;memory_fraction=0.047525;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 553888703501
+    },
+    {
+      "ended_ns": 554409370047,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 1.641209,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.670648,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1131400,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 1.755621,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.613202,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1621392,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 2.251126,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.65162,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594688,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 21,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 37,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 20.787519,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 20.969182,
+            "observed_at_ns": 554383243557,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 21.642175,
+            "observed_at_ns": 554383794536,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 554409320011,
+          "reason": "same_query_probe_ms=20.788",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 554390060911,
+          "reason": "ping_ms=0.671;bundle_ms=1.641;memory_fraction=0.033718;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 554389849433,
+          "reason": "ping_ms=0.613;bundle_ms=1.756;memory_fraction=0.048321;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 554390529786,
+          "reason": "ping_ms=0.652;bundle_ms=2.251;memory_fraction=0.047525;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 554388036656
+    },
+    {
+      "ended_ns": 554913497067,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 2.607552,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.150921,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1131400,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 3.541366,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.907629,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1621392,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 2.375733,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.109749,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594688,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 23,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 41,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 24.712498,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 21.162864,
+            "observed_at_ns": 554885161650,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 20.20941,
+            "observed_at_ns": 554884395047,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 554913444648,
+          "reason": "same_query_probe_ms=24.712",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 554891192651,
+          "reason": "ping_ms=1.151;bundle_ms=2.608;memory_fraction=0.033718;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 554891889959,
+          "reason": "ping_ms=1.908;bundle_ms=3.541;memory_fraction=0.048321;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 554890888333,
+          "reason": "ping_ms=1.110;bundle_ms=2.376;memory_fraction=0.047525;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 554888301583
+    },
+    {
+      "ended_ns": 555410250681,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 3.435947,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.704714,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1124232,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 3.631132,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.612075,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1614224,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 2.746401,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.454117,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1587520,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 25,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 45,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 21.644353,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 28.008224,
+            "observed_at_ns": 555391669876,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 28.958765,
+            "observed_at_ns": 555392751312,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 555410186485,
+          "reason": "same_query_probe_ms=21.644",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 555391888945,
+          "reason": "ping_ms=1.705;bundle_ms=3.436;memory_fraction=0.033505;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 555391611238,
+          "reason": "ping_ms=1.612;bundle_ms=3.631;memory_fraction=0.048108;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 555391121922,
+          "reason": "ping_ms=1.454;bundle_ms=2.746;memory_fraction=0.047312;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 555387914247
+    },
+    {
+      "ended_ns": 555912735332,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 2.817137,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.801366,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1125256,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 2.218927,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.788005,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1615248,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 2.450516,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.828285,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1588544,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 27,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 49,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 23.772609,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 21.334712,
+            "observed_at_ns": 555884088752,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 21.245078,
+            "observed_at_ns": 555884151376,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 555912678536,
+          "reason": "same_query_probe_ms=23.773",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 555891520369,
+          "reason": "ping_ms=0.801;bundle_ms=2.817;memory_fraction=0.033535;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 555890617992,
+          "reason": "ping_ms=0.788;bundle_ms=2.219;memory_fraction=0.048138;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 555891007648,
+          "reason": "ping_ms=0.828;bundle_ms=2.451;memory_fraction=0.047342;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 555888339305
+    },
+    {
+      "ended_ns": 556412185267,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 2.143453,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.682497,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1127304,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 2.05503,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.785511,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1617296,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 2.489314,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.665511,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1590592,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 29,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 53,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 23.488582,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 24.259316,
+            "observed_at_ns": 556387053183,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 22.740101,
+            "observed_at_ns": 556385777905,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 556412130034,
+          "reason": "same_query_probe_ms=23.489",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 556390673558,
+          "reason": "ping_ms=0.682;bundle_ms=2.143;memory_fraction=0.033596;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 556390258614,
+          "reason": "ping_ms=0.786;bundle_ms=2.055;memory_fraction=0.048199;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 556390926659,
+          "reason": "ping_ms=0.666;bundle_ms=2.489;memory_fraction=0.047403;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 556388157194
+    },
+    {
+      "ended_ns": 556912863039,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 3.542387,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.898151,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1131400,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 4.130502,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.768416,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1621392,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 2.210254,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.643168,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594688,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 31,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 57,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 23.650386,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 30.060476,
+            "observed_at_ns": 556894714739,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 30.245124,
+            "observed_at_ns": 556894765846,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 556912781066,
+          "reason": "same_query_probe_ms=23.650",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 556892417323,
+          "reason": "ping_ms=0.898;bundle_ms=3.542;memory_fraction=0.033718;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 556892666368,
+          "reason": "ping_ms=0.768;bundle_ms=4.131;memory_fraction=0.048321;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 556890958459,
+          "reason": "ping_ms=0.643;bundle_ms=2.210;memory_fraction=0.047525;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 556888470818
+    },
+    {
+      "ended_ns": 557410845823,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 2.271457,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.095708,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1131400,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 2.18069,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.952032,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1621392,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 2.564167,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.286044,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594688,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 33,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 61,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 21.876477,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 21.260616,
+            "observed_at_ns": 557384303178,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 20.06624,
+            "observed_at_ns": 557383242593,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 557410761686,
+          "reason": "same_query_probe_ms=21.876",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 557391094302,
+          "reason": "ping_ms=1.096;bundle_ms=2.271;memory_fraction=0.033718;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 557390743214,
+          "reason": "ping_ms=0.952;bundle_ms=2.181;memory_fraction=0.048321;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 557391288634,
+          "reason": "ping_ms=1.286;bundle_ms=2.564;memory_fraction=0.047525;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 557388514792
+    },
+    {
+      "ended_ns": 557914340577,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 3.585693,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 2.710717,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1131400,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 2.588603,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.17068,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1621392,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 2.358116,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.303962,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594688,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 35,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 65,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 24.836754,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 21.165613,
+            "observed_at_ns": 557884050911,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 23.370439,
+            "observed_at_ns": 557886380004,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 557914266906,
+          "reason": "same_query_probe_ms=24.837",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 557892932720,
+          "reason": "ping_ms=2.711;bundle_ms=3.586;memory_fraction=0.033718;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 557891202858,
+          "reason": "ping_ms=1.171;bundle_ms=2.589;memory_fraction=0.048321;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 557891616820,
+          "reason": "ping_ms=1.304;bundle_ms=2.358;memory_fraction=0.047525;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 557888534505
+    },
+    {
+      "ended_ns": 558414337666,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 2.544347,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.255488,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1131400,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 2.645729,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.055468,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1621392,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 2.461432,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.23702,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594688,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 36,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 68,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 24.716764,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 25.364418,
+            "observed_at_ns": 558263285482,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 23.370439,
+            "observed_at_ns": 557886380004,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 558413954179,
+          "reason": "same_query_probe_ms=24.717",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 558391728882,
+          "reason": "ping_ms=1.255;bundle_ms=2.544;memory_fraction=0.033718;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 558391328490,
+          "reason": "ping_ms=1.055;bundle_ms=2.646;memory_fraction=0.048321;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 558391562161,
+          "reason": "ping_ms=1.237;bundle_ms=2.461;memory_fraction=0.047525;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 558388618063
+    },
+    {
+      "ended_ns": 558913716619,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 4.643614,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 2.50688,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1131400,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 4.768321,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 2.521893,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1621392,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 4.450413,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 2.467512,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594688,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 37,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 68,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 22.822074,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 25.364418,
+            "observed_at_ns": 558263285482,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 23.370439,
+            "observed_at_ns": 557886380004,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 558913662548,
+          "reason": "same_query_probe_ms=22.822",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 558895147772,
+          "reason": "ping_ms=2.507;bundle_ms=4.644;memory_fraction=0.033718;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 558894336161,
+          "reason": "ping_ms=2.522;bundle_ms=4.768;memory_fraction=0.048321;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 558894864195,
+          "reason": "ping_ms=2.468;bundle_ms=4.450;memory_fraction=0.047525;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 558889499527
+    },
+    {
+      "ended_ns": 559411286828,
+      "raw_cache_samples": {
+        "new": {
+          "active": 0,
+          "bundle_ms": 2.231737,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.017841,
+          "real_classes": {
+            "0": {},
+            "1": {}
+          },
+          "used_memory": 1131400,
+          "waiting": 0
+        },
+        "old-1": {
+          "active": 0,
+          "bundle_ms": 2.414973,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 1.020595,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.736127,
+                "observed_at_ns": 548745037085,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.205669,
+                "observed_at_ns": 546567185523,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1621392,
+          "waiting": 0
+        },
+        "old-2": {
+          "active": 0,
+          "bundle_ms": 1.674438,
+          "evicted_keys": 0,
+          "maxmemory": 33554432,
+          "ping_ms": 0.622587,
+          "real_classes": {
+            "0": {},
+            "1": {
+              "read": {
+                "latency_ms": 0.701515,
+                "observed_at_ns": 548688894037,
+                "outcome": "completed"
+              },
+              "write": {
+                "latency_ms": 0.228744,
+                "observed_at_ns": 546567427967,
+                "outcome": "completed"
+              }
+            }
+          },
+          "used_memory": 1594688,
+          "waiting": 0
+        }
+      },
+      "raw_database_sample": {
+        "background_waiting": 0,
+        "foreground_waiting": 0,
+        "pools": {
+          "background": {
+            "connections_ms": 12,
+            "connections_num": 1,
+            "observed_max_concurrency": 1,
+            "pool_available": 1,
+            "pool_max": 1,
+            "pool_min": 0,
+            "pool_size": 1,
+            "requests_num": 38,
+            "requests_queued": 1,
+            "requests_wait_ms": 12,
+            "requests_waiting": 0,
+            "usage_ms": 61
+          },
+          "cancelled_operations": 0,
+          "discarded_connections": 0,
+          "foreground": {
+            "connections_ms": 29,
+            "connections_num": 4,
+            "observed_max_concurrency": 4,
+            "pool_available": 4,
+            "pool_max": 4,
+            "pool_min": 0,
+            "pool_size": 4,
+            "requests_num": 68,
+            "requests_queued": 4,
+            "requests_wait_ms": 69,
+            "requests_waiting": 0
+          },
+          "issuance_stopped": false,
+          "quarantined_operations": 0
+        },
+        "probe_ms": 20.689693,
+        "real_classes": {
+          "foreground": {
+            "latency_ms": 25.364418,
+            "observed_at_ns": 558263285482,
+            "outcome": "completed"
+          },
+          "warmup": {
+            "latency_ms": 23.370439,
+            "observed_at_ns": 557886380004,
+            "outcome": "completed"
+          }
+        }
+      },
+      "samples": {
+        "database": {
+          "observed_at_ns": 559411234930,
+          "reason": "same_query_probe_ms=20.690",
+          "state": "safe"
+        },
+        "new": {
+          "observed_at_ns": 559392699357,
+          "reason": "ping_ms=1.018;bundle_ms=2.232;memory_fraction=0.033718;evicted_keys=0;run_id=f0a23b84e4d5d46e0b6d33263faf1d307db8f4b6",
+          "state": "safe"
+        },
+        "old-1": {
+          "observed_at_ns": 559392497644,
+          "reason": "ping_ms=1.021;bundle_ms=2.415;memory_fraction=0.048321;evicted_keys=0;run_id=ba2e3ec286951a9d559ffe529215610de4ca3b3f",
+          "state": "safe"
+        },
+        "old-2": {
+          "observed_at_ns": 559392054607,
+          "reason": "ping_ms=0.623;bundle_ms=1.674;memory_fraction=0.047525;evicted_keys=0;run_id=5a55c56fc5e1acd454e8ad72ccb7e99adb9aa2a5",
+          "state": "safe"
+        }
+      },
+      "started_ns": 559390015030
+    }
+  ],
+  "operations": [
+    {
+      "issued_ns": 550363153175,
+      "key": "key-00000000",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0000",
+      "scheduled_arrival_ns": 550361559178,
+      "submitted_ns": 550363134597,
+      "terminal_ns": 550392627750,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 550363050391,
+      "key": "key-00000000",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0000",
+      "scheduled_arrival_ns": 550361559178,
+      "submitted_ns": 550362998994,
+      "terminal_ns": 550396202506,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 550487038157,
+      "key": "key-00000001",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0001",
+      "scheduled_arrival_ns": 550486559178,
+      "submitted_ns": 550486984977,
+      "terminal_ns": 550508250635,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 550613707561,
+      "key": "key-00000002",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0002",
+      "scheduled_arrival_ns": 550611559178,
+      "submitted_ns": 550613653380,
+      "terminal_ns": 550638997257,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 550737503479,
+      "key": "key-00000003",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0003",
+      "scheduled_arrival_ns": 550736559178,
+      "submitted_ns": 550737452723,
+      "terminal_ns": 550759216405,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 550863774620,
+      "key": "key-00000001",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0001",
+      "scheduled_arrival_ns": 550861559178,
+      "submitted_ns": 550863754960,
+      "terminal_ns": 550883122879,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 550863671515,
+      "key": "key-00000004",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0004",
+      "scheduled_arrival_ns": 550861559178,
+      "submitted_ns": 550863618004,
+      "terminal_ns": 550885527706,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 550988287987,
+      "key": "key-00000005",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0005",
+      "scheduled_arrival_ns": 550986559178,
+      "submitted_ns": 550988191882,
+      "terminal_ns": 551010986374,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 551112406099,
+      "key": "key-00000006",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0006",
+      "scheduled_arrival_ns": 551111559178,
+      "submitted_ns": 551112341632,
+      "terminal_ns": 551131266525,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 551237863381,
+      "key": "key-00000007",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0007",
+      "scheduled_arrival_ns": 551236559178,
+      "submitted_ns": 551237790811,
+      "terminal_ns": 551261746721,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 551362284118,
+      "key": "key-00000008",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0008",
+      "scheduled_arrival_ns": 551361559178,
+      "submitted_ns": 551362265330,
+      "terminal_ns": 551381642623,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 551362187363,
+      "key": "key-00000002",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0002",
+      "scheduled_arrival_ns": 551361559178,
+      "submitted_ns": 551362138539,
+      "terminal_ns": 551385344621,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 551487401478,
+      "key": "key-00000009",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0009",
+      "scheduled_arrival_ns": 551486559178,
+      "submitted_ns": 551487339906,
+      "terminal_ns": 551510388942,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 551613044454,
+      "key": "key-00000010",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0010",
+      "scheduled_arrival_ns": 551611559178,
+      "submitted_ns": 551612991425,
+      "terminal_ns": 551636411899,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 551737974629,
+      "key": "key-00000011",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0011",
+      "scheduled_arrival_ns": 551736559178,
+      "submitted_ns": 551737923772,
+      "terminal_ns": 551757769184,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 551865031400,
+      "key": "key-00000003",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0003",
+      "scheduled_arrival_ns": 551861559178,
+      "submitted_ns": 551865003939,
+      "terminal_ns": 551901950586,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 551864877008,
+      "key": "key-00000012",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0012",
+      "scheduled_arrival_ns": 551861559178,
+      "submitted_ns": 551864693242,
+      "terminal_ns": 551919545038,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 551987320972,
+      "key": "key-00000013",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0013",
+      "scheduled_arrival_ns": 551986559178,
+      "submitted_ns": 551987268954,
+      "terminal_ns": 552009015120,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 552113463870,
+      "key": "key-00000014",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0014",
+      "scheduled_arrival_ns": 552111559178,
+      "submitted_ns": 552113411411,
+      "terminal_ns": 552132937067,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 552238693244,
+      "key": "key-00000015",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0015",
+      "scheduled_arrival_ns": 552236559178,
+      "submitted_ns": 552238513203,
+      "terminal_ns": 552256933036,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 552362477093,
+      "key": "key-00000004",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0004",
+      "scheduled_arrival_ns": 552361559178,
+      "submitted_ns": 552362459617,
+      "terminal_ns": 552380907562,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 552362376833,
+      "key": "key-00000016",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0016",
+      "scheduled_arrival_ns": 552361559178,
+      "submitted_ns": 552362324564,
+      "terminal_ns": 552381717050,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 552487670623,
+      "key": "key-00000017",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0017",
+      "scheduled_arrival_ns": 552486559178,
+      "submitted_ns": 552487619396,
+      "terminal_ns": 552509437240,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 552614000582,
+      "key": "key-00000018",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0018",
+      "scheduled_arrival_ns": 552611559178,
+      "submitted_ns": 552613892509,
+      "terminal_ns": 552634779664,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 552737307279,
+      "key": "key-00000019",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0019",
+      "scheduled_arrival_ns": 552736559178,
+      "submitted_ns": 552737256133,
+      "terminal_ns": 552756562994,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 552862114228,
+      "key": "key-00000005",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0005",
+      "scheduled_arrival_ns": 552861559178,
+      "submitted_ns": 552862062280,
+      "terminal_ns": 552879789041,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 552862225545,
+      "key": "key-00000020",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0020",
+      "scheduled_arrival_ns": 552861559178,
+      "submitted_ns": 552862206997,
+      "terminal_ns": 552884033604,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 552987212805,
+      "key": "key-00000021",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0021",
+      "scheduled_arrival_ns": 552986559178,
+      "submitted_ns": 552987158804,
+      "terminal_ns": 553007099965,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 553112588581,
+      "key": "key-00000022",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0022",
+      "scheduled_arrival_ns": 553111559178,
+      "submitted_ns": 553112537854,
+      "terminal_ns": 553138829798,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 553237347589,
+      "key": "key-00000023",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0023",
+      "scheduled_arrival_ns": 553236559178,
+      "submitted_ns": 553237297333,
+      "terminal_ns": 553257222285,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 553362946079,
+      "key": "key-00000006",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0006",
+      "scheduled_arrival_ns": 553361559178,
+      "submitted_ns": 553362925138,
+      "terminal_ns": 553392084433,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 553362731026,
+      "key": "key-00000024",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0024",
+      "scheduled_arrival_ns": 553361559178,
+      "submitted_ns": 553362679759,
+      "terminal_ns": 553394844625,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 553487107459,
+      "key": "key-00000025",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0025",
+      "scheduled_arrival_ns": 553486559178,
+      "submitted_ns": 553487041300,
+      "terminal_ns": 553508042535,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 553613516028,
+      "key": "key-00000026",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0026",
+      "scheduled_arrival_ns": 553611559178,
+      "submitted_ns": 553613457690,
+      "terminal_ns": 553648729259,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 553737329749,
+      "key": "key-00000027",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0027",
+      "scheduled_arrival_ns": 553736559178,
+      "submitted_ns": 553737277381,
+      "terminal_ns": 553762399324,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 553862999462,
+      "key": "key-00000028",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0028",
+      "scheduled_arrival_ns": 553861559178,
+      "submitted_ns": 553862979642,
+      "terminal_ns": 553890494325,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 553862883307,
+      "key": "key-00000007",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0007",
+      "scheduled_arrival_ns": 553861559178,
+      "submitted_ns": 553862826602,
+      "terminal_ns": 553899919755,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 553987314933,
+      "key": "key-00000029",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0029",
+      "scheduled_arrival_ns": 553986559178,
+      "submitted_ns": 553987261703,
+      "terminal_ns": 554015980947,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 554112391915,
+      "key": "key-00000030",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0030",
+      "scheduled_arrival_ns": 554111559178,
+      "submitted_ns": 554112340397,
+      "terminal_ns": 554133515515,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 554239035858,
+      "key": "key-00000031",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0031",
+      "scheduled_arrival_ns": 554236559178,
+      "submitted_ns": 554238966664,
+      "terminal_ns": 554261688418,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 554362287284,
+      "key": "key-00000032",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0032",
+      "scheduled_arrival_ns": 554361559178,
+      "submitted_ns": 554362268796,
+      "terminal_ns": 554383259671,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 554362186593,
+      "key": "key-00000008",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0008",
+      "scheduled_arrival_ns": 554361559178,
+      "submitted_ns": 554362135526,
+      "terminal_ns": 554383890340,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 554487313158,
+      "key": "key-00000033",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0033",
+      "scheduled_arrival_ns": 554486559178,
+      "submitted_ns": 554487260289,
+      "terminal_ns": 554507599179,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 554613151125,
+      "key": "key-00000034",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0034",
+      "scheduled_arrival_ns": 554611559178,
+      "submitted_ns": 554613097514,
+      "terminal_ns": 554633757752,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 554738238366,
+      "key": "key-00000035",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0035",
+      "scheduled_arrival_ns": 554736559178,
+      "submitted_ns": 554738187760,
+      "terminal_ns": 554758331892,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 554864199738,
+      "key": "key-00000009",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0009",
+      "scheduled_arrival_ns": 554861559178,
+      "submitted_ns": 554864179328,
+      "terminal_ns": 554884410781,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 554864076443,
+      "key": "key-00000036",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0036",
+      "scheduled_arrival_ns": 554861559178,
+      "submitted_ns": 554863978776,
+      "terminal_ns": 554885169963,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 554987523978,
+      "key": "key-00000037",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0037",
+      "scheduled_arrival_ns": 554986559178,
+      "submitted_ns": 554987474514,
+      "terminal_ns": 555008445980,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 555113929743,
+      "key": "key-00000038",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0038",
+      "scheduled_arrival_ns": 555111559178,
+      "submitted_ns": 555113869092,
+      "terminal_ns": 555133162650,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 555238656318,
+      "key": "key-00000039",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0039",
+      "scheduled_arrival_ns": 555236559178,
+      "submitted_ns": 555238596949,
+      "terminal_ns": 555258220818,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 555363697345,
+      "key": "key-00000040",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0040",
+      "scheduled_arrival_ns": 555361559178,
+      "submitted_ns": 555363644055,
+      "terminal_ns": 555391678559,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 555363830115,
+      "key": "key-00000010",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0010",
+      "scheduled_arrival_ns": 555361559178,
+      "submitted_ns": 555363787911,
+      "terminal_ns": 555392758423,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 555487206404,
+      "key": "key-00000041",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0041",
+      "scheduled_arrival_ns": 555486559178,
+      "submitted_ns": 555487150690,
+      "terminal_ns": 555505849443,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 555612435799,
+      "key": "key-00000042",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0042",
+      "scheduled_arrival_ns": 555611559178,
+      "submitted_ns": 555612383791,
+      "terminal_ns": 555632161026,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 555737629642,
+      "key": "key-00000043",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0043",
+      "scheduled_arrival_ns": 555736559178,
+      "submitted_ns": 555737580147,
+      "terminal_ns": 555757124312,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 555862789142,
+      "key": "key-00000044",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0044",
+      "scheduled_arrival_ns": 555861559178,
+      "submitted_ns": 555862675742,
+      "terminal_ns": 555884105918,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 555862920089,
+      "key": "key-00000011",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0011",
+      "scheduled_arrival_ns": 555861559178,
+      "submitted_ns": 555862901271,
+      "terminal_ns": 555884156544,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 555988102284,
+      "key": "key-00000045",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0045",
+      "scheduled_arrival_ns": 555986559178,
+      "submitted_ns": 555988051417,
+      "terminal_ns": 556011955073,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 556112425236,
+      "key": "key-00000046",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0046",
+      "scheduled_arrival_ns": 556111559178,
+      "submitted_ns": 556112364805,
+      "terminal_ns": 556131530245,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 556238129030,
+      "key": "key-00000047",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0047",
+      "scheduled_arrival_ns": 556236559178,
+      "submitted_ns": 556238013036,
+      "terminal_ns": 556257286113,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 556363052186,
+      "key": "key-00000012",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0012",
+      "scheduled_arrival_ns": 556361559178,
+      "submitted_ns": 556363031755,
+      "terminal_ns": 556385792377,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 556362879506,
+      "key": "key-00000048",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0048",
+      "scheduled_arrival_ns": 556361559178,
+      "submitted_ns": 556362776822,
+      "terminal_ns": 556387061766,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 556487219990,
+      "key": "key-00000049",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0049",
+      "scheduled_arrival_ns": 556486559178,
+      "submitted_ns": 556487165438,
+      "terminal_ns": 556509188340,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 556613683387,
+      "key": "key-00000050",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0050",
+      "scheduled_arrival_ns": 556611559178,
+      "submitted_ns": 556613632059,
+      "terminal_ns": 556634595934,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 556737085504,
+      "key": "key-00000051",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0051",
+      "scheduled_arrival_ns": 556736559178,
+      "submitted_ns": 556737035949,
+      "terminal_ns": 556759486205,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 556864681714,
+      "key": "key-00000052",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0052",
+      "scheduled_arrival_ns": 556861559178,
+      "submitted_ns": 556864649005,
+      "terminal_ns": 556894724904,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 556864558989,
+      "key": "key-00000013",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0013",
+      "scheduled_arrival_ns": 556861559178,
+      "submitted_ns": 556864503576,
+      "terminal_ns": 556894770082,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 556987713745,
+      "key": "key-00000053",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0053",
+      "scheduled_arrival_ns": 556986559178,
+      "submitted_ns": 556987660405,
+      "terminal_ns": 557008553123,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 557114029304,
+      "key": "key-00000054",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0054",
+      "scheduled_arrival_ns": 557111559178,
+      "submitted_ns": 557113966139,
+      "terminal_ns": 557132571306,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 557238072276,
+      "key": "key-00000055",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0055",
+      "scheduled_arrival_ns": 557236559178,
+      "submitted_ns": 557238023753,
+      "terminal_ns": 557257603791,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 557363189312,
+      "key": "key-00000014",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0014",
+      "scheduled_arrival_ns": 557361559178,
+      "submitted_ns": 557363171005,
+      "terminal_ns": 557383257084,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 557363077154,
+      "key": "key-00000056",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0056",
+      "scheduled_arrival_ns": 557361559178,
+      "submitted_ns": 557363025496,
+      "terminal_ns": 557384310819,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 557488246058,
+      "key": "key-00000057",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0057",
+      "scheduled_arrival_ns": 557486559178,
+      "submitted_ns": 557487990334,
+      "terminal_ns": 557515583434,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 557613062714,
+      "key": "key-00000058",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0058",
+      "scheduled_arrival_ns": 557611559178,
+      "submitted_ns": 557612941391,
+      "terminal_ns": 557641583735,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 557738952097,
+      "key": "key-00000059",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0059",
+      "scheduled_arrival_ns": 557736559178,
+      "submitted_ns": 557738883273,
+      "terminal_ns": 557762353457,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 557862921292,
+      "key": "key-00000060",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0060",
+      "scheduled_arrival_ns": 557861559178,
+      "submitted_ns": 557862866961,
+      "terminal_ns": 557884071552,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 557863023085,
+      "key": "key-00000015",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "discretionary_database_warmup-0015",
+      "scheduled_arrival_ns": 557861559178,
+      "submitted_ns": 557863004547,
+      "terminal_ns": 557886390029,
+      "work_class": "discretionary_database_warmup"
+    },
+    {
+      "issued_ns": 557990680457,
+      "key": "key-00000061",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0061",
+      "scheduled_arrival_ns": 557986559178,
+      "submitted_ns": 557990573677,
+      "terminal_ns": 558017111159,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 558112591393,
+      "key": "key-00000062",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0062",
+      "scheduled_arrival_ns": 558111559178,
+      "submitted_ns": 558112539044,
+      "terminal_ns": 558130219060,
+      "work_class": "foreground_database"
+    },
+    {
+      "issued_ns": 558237954314,
+      "key": "key-00000063",
+      "outcome": "completed",
+      "payload_ok": true,
+      "request_id": "foreground_database-0063",
+      "scheduled_arrival_ns": 558236559178,
+      "submitted_ns": 558237903548,
+      "terminal_ns": 558263300915,
+      "work_class": "foreground_database"
+    }
+  ],
+  "preparation_seconds": 3.500916624,
+  "process_cpu_seconds": 0.20224567000000004,
+  "resources": {
+    "after": {
+      "cache-new": {
+        "cpu_stat": {
+          "burst_usec": 0,
+          "nice_usec": 0,
+          "nr_bursts": 0,
+          "nr_periods": 114,
+          "nr_throttled": 0,
+          "system_usec": 53675,
+          "throttled_usec": 0,
+          "usage_usec": 306307,
+          "user_usec": 252632
+        },
+        "image": "redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+        "memory_limit_bytes": 134217728,
+        "nano_cpus": 500000000,
+        "observed_ns": 560023648794
+      },
+      "cache-old-1": {
+        "cpu_stat": {
+          "burst_usec": 0,
+          "nice_usec": 0,
+          "nr_bursts": 0,
+          "nr_periods": 128,
+          "nr_throttled": 0,
+          "system_usec": 99586,
+          "throttled_usec": 0,
+          "usage_usec": 331435,
+          "user_usec": 231849
+        },
+        "image": "redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+        "memory_limit_bytes": 134217728,
+        "nano_cpus": 500000000,
+        "observed_ns": 560043521658
+      },
+      "cache-old-2": {
+        "cpu_stat": {
+          "burst_usec": 0,
+          "nice_usec": 0,
+          "nr_bursts": 0,
+          "nr_periods": 125,
+          "nr_throttled": 0,
+          "system_usec": 115600,
+          "throttled_usec": 0,
+          "usage_usec": 331385,
+          "user_usec": 215785
+        },
+        "image": "redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+        "memory_limit_bytes": 134217728,
+        "nano_cpus": 500000000,
+        "observed_ns": 560005405401
+      },
+      "database": {
+        "cpu_stat": {
+          "burst_usec": 0,
+          "nice_usec": 0,
+          "nr_bursts": 0,
+          "nr_periods": 121,
+          "nr_throttled": 4,
+          "system_usec": 505782,
+          "throttled_usec": 47084,
+          "usage_usec": 3136330,
+          "user_usec": 2630548
+        },
+        "image": "postgres@sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24",
+        "memory_limit_bytes": 536870912,
+        "nano_cpus": 1000000000,
+        "observed_ns": 560023315898
+      }
+    },
+    "before": {
+      "cache-new": {
+        "cpu_stat": {
+          "burst_usec": 0,
+          "nice_usec": 0,
+          "nr_bursts": 0,
+          "nr_periods": 41,
+          "nr_throttled": 0,
+          "system_usec": 27737,
+          "throttled_usec": 0,
+          "usage_usec": 145859,
+          "user_usec": 118121
+        },
+        "image": "redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+        "memory_limit_bytes": 134217728,
+        "nano_cpus": 500000000,
+        "observed_ns": 549812447169
+      },
+      "cache-old-1": {
+        "cpu_stat": {
+          "burst_usec": 0,
+          "nice_usec": 0,
+          "nr_bursts": 0,
+          "nr_periods": 48,
+          "nr_throttled": 0,
+          "system_usec": 45611,
+          "throttled_usec": 0,
+          "usage_usec": 143024,
+          "user_usec": 97412
+        },
+        "image": "redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+        "memory_limit_bytes": 134217728,
+        "nano_cpus": 500000000,
+        "observed_ns": 549751915800
+      },
+      "cache-old-2": {
+        "cpu_stat": {
+          "burst_usec": 0,
+          "nice_usec": 0,
+          "nr_bursts": 0,
+          "nr_periods": 49,
+          "nr_throttled": 0,
+          "system_usec": 53507,
+          "throttled_usec": 0,
+          "usage_usec": 150749,
+          "user_usec": 97242
+        },
+        "image": "redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+        "memory_limit_bytes": 134217728,
+        "nano_cpus": 500000000,
+        "observed_ns": 549744379385
+      },
+      "database": {
+        "cpu_stat": {
+          "burst_usec": 0,
+          "nice_usec": 0,
+          "nr_bursts": 0,
+          "nr_periods": 29,
+          "nr_throttled": 4,
+          "system_usec": 371391,
+          "throttled_usec": 47084,
+          "usage_usec": 938437,
+          "user_usec": 567046
+        },
+        "image": "postgres@sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24",
+        "memory_limit_bytes": 536870912,
+        "nano_cpus": 1000000000,
+        "observed_ns": 549750288142
+      }
+    }
+  }
+}

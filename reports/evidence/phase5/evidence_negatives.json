@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_phase5_evidence.py",
+    "-v"
+  ],
+  "elapsed_seconds": 0.8565159439999661,
+  "ended_utc": "2026-10-19T04:49:53.383518+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-19T04:49:52.526977+00:00",
+  "stderr": "test_corrupt_expected_epoch_fails_route_replay (test_phase5_evidence.Phase5EvidenceNegatives.test_corrupt_expected_epoch_fails_route_replay) ... ok\ntest_early_token_issue_is_rejected (test_phase5_evidence.Phase5EvidenceNegatives.test_early_token_issue_is_rejected) ... ok\ntest_fabricated_summary_is_recomputed (test_phase5_evidence.Phase5EvidenceNegatives.test_fabricated_summary_is_recomputed) ... ok\ntest_missing_successful_payload_cannot_hide_behind_resealed_evidence (test_phase5_evidence.Phase5EvidenceNegatives.test_missing_successful_payload_cannot_hide_behind_resealed_evidence) ... ok\ntest_retained_raw_fixture_passes_accounting_audit (test_phase5_evidence.Phase5EvidenceNegatives.test_retained_raw_fixture_passes_accounting_audit) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.483s\n\nOK",
+  "stdout": ""
+}

@@ -1,0 +1,15 @@
+{
+  "protocol": "docs/PHASE5_PILOT_PROTOCOL.md",
+  "eligible_runs": [
+    "p5mix8_v1_20261019",
+    "p5mix12_v1_20261019"
+  ],
+  "selected_foreground": 12,
+  "warmup": 2,
+  "fixed_observation_upper": 2,
+  "safe_total_db_rate": 16,
+  "safety_reserve": 2,
+  "units": "issued attempts/s, every retry charged",
+  "validation": "mixed_validation_v1.json",
+  "scope": "short Linux-host mixed-pool operating point; no peak/saturation guarantee"
+}

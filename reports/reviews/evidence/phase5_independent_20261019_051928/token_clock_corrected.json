@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_phase5_token_clock.py",
+    "-v"
+  ],
+  "elapsed_seconds": 0.1733368810000684,
+  "ended_utc": "2026-10-19T05:54:04.934263+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-19T05:54:04.760901+00:00",
+  "stderr": "test_rate_change_and_acquisition_credit_share_one_clock_boundary (test_phase5_token_clock.ClockLinearization.test_rate_change_and_acquisition_credit_share_one_clock_boundary) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK",
+  "stdout": ""
+}

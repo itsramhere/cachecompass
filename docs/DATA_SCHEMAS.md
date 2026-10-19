@@ -75,3 +75,21 @@ Schema or reconciliation failure makes the run `invalid_measurement`; it is not 
 Pressure-sampling supplement: ControllerObservation also requires finite nonnegative `observation_db_rate_upper`. OBSERVATION_CACHE and OBSERVATION_DATABASE are separate WorkClass values in accounting events; sampler tasks use deterministic observer IDs and never emit request or migration-attempt records. Each policy gets the same fixed finite sampling grants/pools/deadlines, including when idle or paused. The DB allowance charges the observation rate once. Cache sampling returns pressure, never positive key-residency evidence. See the normative rules for PING/INFO and same-query-mix DB sampling.
 
 Phase 3 independent-review clarification: cache writes return `CacheWriteReceipt.valid_until_ns` for conservative residency confirmation after TTL conversion. Operation `actual_bytes` is null when the full protocol exchange is unknown; separately labeled `payload_bytes` is not protocol traffic. Actual issuance is recorded after client connection acquisition. The two fixed cache-delete fault injections in the functional scaffold are separately recorded as `functional_diagnostic_cache` and are forbidden as hidden work in later policy/calibration comparisons. Initial warming and post-horizon artifact inspection are outside offered workload time. The canonical source manifest now excludes ignored `test_out`, local agent/build/cache state and credential files; historical manifests retain their original definition and hashes.
+
+Phase 5 observations add `coverage_valid_until_ns` per affected bucket. It is
+the earliest expiry or maximum-evidence-age deadline among positively credited
+resident keys. At decision time, reaching that deadline removes all positive
+coverage credit for the bucket until a new observation recomputes it. Legacy
+observations without that field earn positive coverage only at their as-of
+instant. This prevents a value expiring between observation and publication
+from authorizing a stale admission estimate.
+
+Phase 5 independent evidence schema 6 adds an explicit foreground-estimator
+known flag; per-component sample times; fixed sampler cutoff; token
+init/rate/acquire/refund/forfeit events linked to actual operations; actual
+payload hashes and write receipts; per-key terminal timestamps; and publication
+and residency-invalidation/reset timestamps. Token and interval-grant accounting
+are separate and both must reconcile. Unissued waits do not consume retry
+ordinals. Capacity records identify two validated mixed-pool splits and their
+runtime/configuration scope; a bare numeric rate is functional-only evidence.
+Legacy records remain immutable and cannot prove schema-6 review eligibility.

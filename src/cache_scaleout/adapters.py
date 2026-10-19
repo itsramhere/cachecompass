@@ -226,7 +226,9 @@ class RedisCacheAdapter:
                 raise TimeoutError("value expired while preparing Redis write")
             # Windows CPython 3.12 monotonic ticks can be coarse. Subtract both
             # clock resolutions so clock quantization cannot mint physical TTL.
-            uncertainty = math.ceil((time.get_clock_info('monotonic').resolution
+            # Redis samples/caches wall time at millisecond granularity, even
+            # when Python's clocks report nanosecond resolution on Linux.
+            uncertainty = 1_000_000 + math.ceil((time.get_clock_info('monotonic').resolution
                                      + time.get_clock_info('time').resolution) * 1e9)
             if remaining <= uncertainty + 1_000_000:
                 raise TimeoutError('TTL too short for conservative clock conversion')
@@ -549,6 +551,7 @@ class PostgresDatabaseAdapter:
                  else PressureState.SAFE)
         self.last_pressure_detail = {'probe_ms':latency_ms, 'real_classes':dict(self.real_operations),
             'foreground_waiting':self._foreground_limit.waiting, 'background_waiting':self._background_limit.waiting,
+            'foreground_active':self._foreground_limit.active, 'background_active':self._background_limit.active,
             'pools':self.pool_summary()}
         return ComponentPressure(state, ended, f"same_query_probe_ms={latency_ms:.3f}")
 

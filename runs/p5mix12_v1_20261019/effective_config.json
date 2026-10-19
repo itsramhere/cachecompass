@@ -1,0 +1,226 @@
+{
+  "bursts": {
+    "background_db_operations": 1,
+    "destination_write_bytes": 4096,
+    "destination_write_operations": 2,
+    "donor_bytes": 4096,
+    "donor_operations": 2
+  },
+  "dataset": {
+    "keys": 512,
+    "seed": 505,
+    "value_bytes": 1024
+  },
+  "policy": {
+    "allow_db_fallback": true,
+    "alpha": 1.2,
+    "cold_reserve_per_bucket": 0.05,
+    "demand_max_age_seconds": 1.5,
+    "demand_windows": 2,
+    "fixed_origin_seconds": 0.5,
+    "foreground_margin": 1.0,
+    "old_lower_margin": 1.0,
+    "ordering": "fifo_hash",
+    "reserve_db_rate": 2.0,
+    "residency_max_age_seconds": 6.0,
+    "safe_total_db_rate": null,
+    "safe_windows": 2,
+    "signal_max_age_seconds": 1.5,
+    "unsafe_donor_multiplier": 0.5
+  },
+  "policy_pressure": {
+    "cache_probe_lower_ms": 20.0,
+    "cache_probe_upper_ms": 50.0,
+    "db_probe_lower_ms": 100.0,
+    "db_probe_upper_ms": 150.0,
+    "db_rate_lower": 16.0,
+    "db_rate_upper": 20.0,
+    "memory_lower": 0.85,
+    "memory_upper": 0.95,
+    "queue_lower": 0,
+    "queue_upper": 2,
+    "real_lower_ms": 100.0,
+    "real_upper_ms": 150.0
+  },
+  "provisional": true,
+  "purpose": "Phase5 provisional bounded pilot and comparison behavior; no superiority inference",
+  "resources": {
+    "background_cache_connections_per_node": 1,
+    "background_db_connections": 1,
+    "foreground_cache_connections_per_node": 8,
+    "foreground_db_connections": 4,
+    "max_buffered_payload_bytes": 2048,
+    "max_coalesced_keys": 64,
+    "max_inflight_requests": 128,
+    "max_pending_metric_records": 12000,
+    "max_pending_migration_tasks": 128,
+    "migration_workers": 1
+  },
+  "retries": {
+    "destination_write": {
+      "attempt_timeout_seconds": 0.4,
+      "backoff_seconds": [
+        0.01
+      ],
+      "max_attempts": 2
+    },
+    "donor_read": {
+      "attempt_timeout_seconds": 0.4,
+      "backoff_seconds": [
+        0.01
+      ],
+      "max_attempts": 2
+    },
+    "foreground_cache": {
+      "attempt_timeout_seconds": 0.4,
+      "backoff_seconds": [],
+      "max_attempts": 1
+    },
+    "foreground_database": {
+      "attempt_timeout_seconds": 1.0,
+      "backoff_seconds": [],
+      "max_attempts": 1
+    },
+    "foreground_fill_write": {
+      "attempt_timeout_seconds": 0.4,
+      "backoff_seconds": [],
+      "max_attempts": 1
+    },
+    "warmup_database": {
+      "attempt_timeout_seconds": 1.0,
+      "backoff_seconds": [
+        0.01
+      ],
+      "max_attempts": 2
+    }
+  },
+  "routing": {
+    "destination": "new",
+    "final_nodes": [
+      "old-1",
+      "old-2",
+      "new"
+    ],
+    "mapping_seed": 20261019,
+    "old_nodes": [
+      "old-1",
+      "old-2"
+    ],
+    "virtual_buckets": 64
+  },
+  "schema_version": 1,
+  "services": {
+    "cache": {
+      "eviction_policy": "allkeys-lru",
+      "host": "127.0.0.1",
+      "maxmemory_bytes": 33554432,
+      "ports": [
+        16379,
+        16380,
+        16381
+      ],
+      "socket_timeout_seconds": 1.0
+    },
+    "database": {
+      "dbname": "paper2_research",
+      "host": "127.0.0.1",
+      "password_env": "PAPER2_DB_PASSWORD",
+      "pool_timeout_seconds": 2.0,
+      "port": 15432,
+      "query_cpu_rounds": 20000,
+      "statement_timeout_ms": 1500,
+      "user": "paper2_research"
+    }
+  },
+  "settings": {
+    "A": {
+      "admission_cap": 4,
+      "ceilings": {
+        "background_db_operations": 2.0,
+        "destination_write_bytes": 131072.0,
+        "destination_write_operations": 64.0,
+        "donor_bytes": 131072.0,
+        "donor_operations": 64.0
+      },
+      "fixed_count": 4,
+      "fixed_interval_seconds": 0.5,
+      "fixed_rates": {
+        "background_db_operations": 2.0,
+        "destination_write_bytes": 131072.0,
+        "destination_write_operations": 64.0,
+        "donor_bytes": 131072.0,
+        "donor_operations": 64.0
+      },
+      "increments": {
+        "background_db_operations": 1.0,
+        "destination_write_bytes": 65536.0,
+        "destination_write_operations": 32.0,
+        "donor_bytes": 65536.0,
+        "donor_operations": 32.0
+      }
+    },
+    "B": {
+      "admission_cap": 8,
+      "ceilings": {
+        "background_db_operations": 4.0,
+        "destination_write_bytes": 262144.0,
+        "destination_write_operations": 128.0,
+        "donor_bytes": 262144.0,
+        "donor_operations": 128.0
+      },
+      "fixed_count": 8,
+      "fixed_interval_seconds": 1.0,
+      "fixed_rates": {
+        "background_db_operations": 4.0,
+        "destination_write_bytes": 262144.0,
+        "destination_write_operations": 128.0,
+        "donor_bytes": 262144.0,
+        "donor_operations": 128.0
+      },
+      "increments": {
+        "background_db_operations": 2.0,
+        "destination_write_bytes": 131072.0,
+        "destination_write_operations": 64.0,
+        "donor_bytes": 131072.0,
+        "donor_operations": 64.0
+      }
+    }
+  },
+  "timing": {
+    "calibration_seconds": 12.0,
+    "cleanup_timeout_seconds": 1.0,
+    "expansion_at_seconds": 2.0,
+    "expansion_seconds": 9.5,
+    "first_arrival_seconds": 0.5,
+    "handover_deadline_seconds": 6.0,
+    "latency_target_ms": 100.0,
+    "measurement_horizon_seconds": 10.0,
+    "observation_interval_seconds": 0.5,
+    "observation_timeout_seconds": 0.4,
+    "request_timeout_seconds": 1.0,
+    "stability_min_requests": 2,
+    "stability_subwindow_seconds": 0.5,
+    "stability_subwindows": 2,
+    "task_lifetime_seconds": 4.0
+  },
+  "warm_stability": {
+    "maximum_p95_ms": 100,
+    "maximum_p95_spread_ms": 30,
+    "rate": 36,
+    "seconds": 1.0,
+    "windows": 2
+  },
+  "workload": {
+    "affected_share": 0.8,
+    "calibration_rates": [
+      12,
+      24,
+      36
+    ],
+    "confirmation_repetitions": 3,
+    "offered_rate": 36.0,
+    "warm_prefix_max_misses": 0,
+    "warm_prefix_requests": 128,
+    "zipf_exponent": 1.15
+  }
+}

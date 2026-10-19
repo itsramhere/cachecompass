@@ -1,0 +1,5 @@
+# Phase 0 selected versions. Transitive versions and wheel hashes: requirements.lock.
+redis==6.4.0
+psycopg[binary,pool]==3.2.10
+PyYAML==6.0.2
+

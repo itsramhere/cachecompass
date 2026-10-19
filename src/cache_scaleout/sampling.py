@@ -5,7 +5,7 @@ import time
 
 class PressureSampler:
     def __init__(self, *, caches, database, key, interval_seconds, timeout_seconds,
-                 on_round, residency=None, maximum_rounds=64):
+                 on_round, residency=None, maximum_rounds=64, stop_at_ns=None):
         if interval_seconds <= 0 or timeout_seconds <= 0:
             raise ValueError('finite positive sampling timing required')
         self.caches = caches
@@ -20,6 +20,7 @@ class PressureSampler:
         self._stop = asyncio.Event()
         self._evictions = {node: 0 for node in caches}
         self.maximum_rounds = maximum_rounds
+        self.stop_at_ns=stop_at_ns
 
     async def start(self):
         if self._task is not None:
@@ -39,18 +40,21 @@ class PressureSampler:
                 except TimeoutError:
                     pass
             started = time.monotonic_ns()
+            if self._stop.is_set() or self.stop_at_ns is not None and started>=self.stop_at_ns:break
             deadline = started + int(self.timeout*1e9)
             # One task per service and no overlapping rounds. Migration uses the
             # same bounded background pools; foreground pools remain reserved.
             results = await asyncio.gather(
                 *(cache.sample_pressure(deadline_ns=deadline) for cache in self.caches.values()),
                 self.database.sample_pressure(self.key, deadline_ns=deadline))
+            residency_reset_ns=None
             if self.residency is not None:
                 for node, cache in self.caches.items():
                     if cache.evicted_keys > self._evictions[node] and node == self.residency.destination:
                         self.residency.reset()
+                        residency_reset_ns=time.monotonic_ns()
                     self._evictions[node] = cache.evicted_keys
-            row = {'started_ns': started, 'ended_ns': time.monotonic_ns(),
+            row = {'started_ns': started, 'ended_ns': time.monotonic_ns(),'residency_reset_ns':residency_reset_ns,
                    'raw_cache_samples':{node:dict(cache.last_pressure_detail) for node,cache in self.caches.items()},
                    'raw_database_sample':dict(self.database.last_pressure_detail),
                    'samples': {node: {'state': result.state.value, 'reason': result.reason,

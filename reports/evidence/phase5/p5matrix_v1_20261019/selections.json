@@ -1,0 +1,152 @@
+{
+  "adaptive_budget_migration_before_cutover": {
+    "options": [
+      {
+        "run_id": "p5matrix_v1_20261019_tune2A",
+        "score": [
+          false,
+          0,
+          4.005308829,
+          "A"
+        ],
+        "setting": "A"
+      },
+      {
+        "run_id": "p5matrix_v1_20261019_tune2B",
+        "score": [
+          false,
+          0,
+          3.00600784,
+          "B"
+        ],
+        "setting": "B"
+      }
+    ],
+    "selected_setting": "B"
+  },
+  "fixed_gradual_handover": {
+    "options": [
+      {
+        "run_id": "p5matrix_v1_20261019_tune3A",
+        "score": [
+          false,
+          0,
+          4.50488405,
+          "A"
+        ],
+        "setting": "A"
+      },
+      {
+        "run_id": "p5matrix_v1_20261019_tune3B",
+        "score": [
+          false,
+          0,
+          3.507752994,
+          "B"
+        ],
+        "setting": "B"
+      }
+    ],
+    "selected_setting": "B"
+  },
+  "immediate_cutover": {
+    "options": [
+      {
+        "run_id": "p5matrix_v1_20261019_tune0A",
+        "score": [
+          false,
+          0,
+          1.003634197,
+          "A"
+        ],
+        "setting": "A"
+      },
+      {
+        "run_id": "p5matrix_v1_20261019_tune0B",
+        "score": [
+          false,
+          0,
+          1.004646136,
+          "B"
+        ],
+        "setting": "B"
+      }
+    ],
+    "selected_setting": "A"
+  },
+  "migration_before_cutover": {
+    "options": [
+      {
+        "run_id": "p5matrix_v1_20261019_tune1A",
+        "score": [
+          false,
+          0,
+          3.004602123,
+          "A"
+        ],
+        "setting": "A"
+      },
+      {
+        "run_id": "p5matrix_v1_20261019_tune1B",
+        "score": [
+          false,
+          0,
+          2.005247652,
+          "B"
+        ],
+        "setting": "B"
+      }
+    ],
+    "selected_setting": "B"
+  },
+  "traffic_only_adaptation": {
+    "options": [
+      {
+        "run_id": "p5matrix_v1_20261019_tune5A",
+        "score": [
+          false,
+          0,
+          4.504822253,
+          "A"
+        ],
+        "setting": "A"
+      },
+      {
+        "run_id": "p5matrix_v1_20261019_tune5B",
+        "score": [
+          false,
+          0,
+          2.505845713,
+          "B"
+        ],
+        "setting": "B"
+      }
+    ],
+    "selected_setting": "B"
+  },
+  "warmup_only_adaptation": {
+    "options": [
+      {
+        "run_id": "p5matrix_v1_20261019_tune4A",
+        "score": [
+          false,
+          0,
+          5.505799938,
+          "A"
+        ],
+        "setting": "A"
+      },
+      {
+        "run_id": "p5matrix_v1_20261019_tune4B",
+        "score": [
+          false,
+          3,
+          4.504571297,
+          "B"
+        ],
+        "setting": "B"
+      }
+    ],
+    "selected_setting": "A"
+  }
+}

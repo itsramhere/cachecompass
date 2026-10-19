@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_phase5_independent.py",
+    "-v"
+  ],
+  "elapsed_seconds": 0.9876841390000664,
+  "ended_utc": "2026-10-19T05:34:35.570337+00:00",
+  "exit_code": 0,
+  "retry_of": "reports/reviews/evidence/phase5_independent_20261019_051928/submitted_negatives.json",
+  "started_utc": "2026-10-19T05:34:34.582629+00:00",
+  "stderr": "test_duplicate_window_cannot_claim_uninstalled_all_at_once_admissions (test_phase5_independent.ControllerCounterexamples.test_duplicate_window_cannot_claim_uninstalled_all_at_once_admissions) ... ok\ntest_expired_staged_action_cannot_publish_or_install_grant (test_phase5_independent.ControllerCounterexamples.test_expired_staged_action_cannot_publish_or_install_grant) ... ok\ntest_old_unissued_refund_cannot_restore_zeroed_tokens (test_phase5_independent.GrantCounterexamples.test_old_unissued_refund_cannot_restore_zeroed_tokens) ... ok\ntest_service_connection_failure_is_infrastructure_failure (test_phase5_independent.GrantCounterexamples.test_service_connection_failure_is_infrastructure_failure) ... ok\ntest_unissued_replacements_do_not_consume_retry_ordinals (test_phase5_independent.GrantCounterexamples.test_unissued_replacements_do_not_consume_retry_ordinals) ... ok\ntest_sampler_cannot_start_another_round_after_horizon_without_close (test_phase5_independent.HorizonCounterexamples.test_sampler_cannot_start_another_round_after_horizon_without_close) ... ok\ntest_foreground_db_latency_is_not_attributed_to_cache (test_phase5_independent.ObservationCounterexamples.test_foreground_db_latency_is_not_attributed_to_cache) ... ok\ntest_individual_component_timestamp_is_not_freshened_by_bundle (test_phase5_independent.ObservationCounterexamples.test_individual_component_timestamp_is_not_freshened_by_bundle) ... ok\ntest_inflight_operation_older_than_one_slot_still_exerts_pressure (test_phase5_independent.ObservationCounterexamples.test_inflight_operation_older_than_one_slot_still_exerts_pressure) ... ok\ntest_missing_cache_resource_bundle_is_unknown (test_phase5_independent.ObservationCounterexamples.test_missing_cache_resource_bundle_is_unknown) ... ok\ntest_missing_windows_cannot_reuse_old_estimator_history (test_phase5_independent.ObservationCounterexamples.test_missing_windows_cannot_reuse_old_estimator_history) ... ok\ntest_burst_and_parent_chronology_cannot_hide_in_long_integral (test_phase5_independent.RawCounterexamples.test_burst_and_parent_chronology_cannot_hide_in_long_integral) ... ok\ntest_matched_comparison_checks_query_mix (test_phase5_independent.RawCounterexamples.test_matched_comparison_checks_query_mix) ... ok\ntest_mixed_operations_match_key_and_schedule_not_just_boolean (test_phase5_independent.RawCounterexamples.test_mixed_operations_match_key_and_schedule_not_just_boolean) ... ok\ntest_unsafe_admission_in_resealed_action_log_is_rejected (test_phase5_independent.RawCounterexamples.test_unsafe_admission_in_resealed_action_log_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.571s\n\nOK",
+  "stdout": ""
+}

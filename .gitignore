@@ -44,6 +44,8 @@ Desktop.ini
 /.codex/
 /.cache/
 /runs/.locks/
+/runs/cloud-onboarding-health-*/
+/runs/cloud-start-check-*/
 /reports/.scratch/
 
 # Research reports, literature, and run evidence are intentionally versioned.

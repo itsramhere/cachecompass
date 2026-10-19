@@ -1,0 +1,16 @@
+{
+  "initial_revision": "186c3ddb4daf36c2a8dbe7884a82dfb929381ba1",
+  "phase4_revision": "a659f237c1f2940d83b714814e0bbf458f009c5d",
+  "initial_fingerprint": "33ec4f14a17cf290153be0db26b01621f358bf7e0a83bbb42bb4beada7e82bdb",
+  "phase4_checkout_fingerprint": "6eff273d12011eeef4571bc10bcc2baa7b73e47d417301cca82937a549f8abd6",
+  "preserved_untracked": [
+    "runs/cloud-onboarding-health-20261019/",
+    "runs/cloud-start-check-20261019T040414-4189/"
+  ],
+  "source_update": "fast-forward from configured origin; no new commit or push",
+  "network_attempts": [
+    "default sandbox proxy connection failed",
+    "automatic review capacity failure, same action retried successfully",
+    "GitHub connector verified Phase4 commit; git fetch and fast-forward succeeded"
+  ]
+}

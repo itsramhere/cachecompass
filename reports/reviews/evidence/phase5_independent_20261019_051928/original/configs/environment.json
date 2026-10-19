@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "compose_project": "paper2-research",
+  "compose_file": "infra/compose.yaml",
+  "image_lock": "infra/images.env",
+  "cache": {
+    "host": "127.0.0.1",
+    "ports": [16379, 16380, 16381],
+    "maxmemory_bytes": 33554432,
+    "eviction_policy": "allkeys-lru",
+    "max_connections": 4,
+    "socket_timeout_seconds": 3
+  },
+  "database": {
+    "host": "127.0.0.1",
+    "port": 15432,
+    "dbname": "paper2_research",
+    "user": "paper2_research",
+    "password_env": "PAPER2_DB_PASSWORD",
+    "pool_min_size": 1,
+    "pool_max_size": 2,
+    "timeout_seconds": 5
+  },
+  "health_timeout_seconds": 20
+}
+

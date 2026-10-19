@@ -144,3 +144,120 @@ Decision: shared post-connection issuance, bounded cancel/drain/discard and quar
 Reason: These changes close observed mechanism/provenance defects rather than tune comparative policies. See ISSUE-0017 through ISSUE-0020 and normative clarification.
 Effect on correctness, comparability, or claims: All policies retain the same foreground source/owner/deadline/retry/coalescing rules and shared resource/metadata costs. Cache encoding gains 12 bytes; callers consume conservative write receipts. Full wire bytes remain unknown where not measured. No new capacity, safety, performance or novelty claim. Phases 4 onward remain unstarted.
 Verification: 90 final checks including 17 actual-client cases, 39 repeated-run audits, exact-source accounted policy failure, preserved historical/source bytes; independent review `reports/reviews/phase_03_independent_20261019.md`. Final SHA256 8454ae425d5546a546d59e1b7b2258b4ec1c844eebb35e2609f7a4ab98e15c19.
+
+## DECISION-0014: Complete six Phase 5 controls through shared mechanisms
+
+Time: 2026-10-19 UTC
+Phase: 5
+Context: User authorizes Phase 5 only; the original five-control plan omits the
+adaptive-budget migration comparator required by corrected Phase 2/H1/H4.
+Decision: implement all six experimental controls; reject joint_control in the
+Phase 5 factory. Use the same router, physical pools, retries, observations,
+expiry, scheduler, empty-start tokens, finite passes, byte limits and cleanup.
+Reason: isolates documented warming/admission controls without privileged
+ordering or a separate foreground path. No full ElMem reproduction is claimed.
+Verification: focused checks, full actual-client suite, bounded matrix and raw
+validation under reports/evidence/phase5/. No commit or push is authorized.
+
+## DECISION-0015: Supplemental cloud-host mixed-pool operating check and finite pilot
+
+Time: 2026-10-19 UTC
+Phase: 5
+Context: Available checkout initially ended at Phase 3. Fast-forwarded configured
+origin to user-named a659f237c1f2940d83b714814e0bbf458f009c5d, preserving both
+unrelated cloud run directories. Windows local path is not mounted here.
+Decision: retain the actual 20,000-round SQL mix, image digests/quotas and 4/1
+DB pools on Linux Python 3.12.14. The two predeclared 8+2 and 12+2 mixed-pool
+checks both pass including the fixed 2/s probes. Select total 16 attempts/s
+and subtract 2/s reserve plus probes, foreground and planned warming/pending.
+Reason: Phase 4's 24 foreground/s is not an uncharged total DB allowance and
+its Windows host does not certify this pool mix on this cloud host.
+Effect: conditional functional smoke configuration only, no peak capacity,
+saturation or improvement claim. Two settings per control, then fresh seed606
+comparisons; unsuccessful settings remain. Final evaluation freezing is Phase7.
+Verification: mixed_validation_v1.json, mixed_selection.json; protocol registered
+before runs. Ordinary sandbox network failed and automatic review once failed
+with model-capacity error; the identical reviewed fetch then succeeded.
+
+## DECISION-0016: Preserve positive-coverage validity through decision time
+
+Time: 2026-10-19 UTC
+Phase: 5
+Context: A coverage snapshot can be fresh while a credited key expires between
+collection and publication. Complete closed demand windows also need a bounded
+open slot that cannot evict their oldest closed data during collection.
+Decision: reserve one extra open subwindow, preserve immutable closed snapshots,
+and include the earliest credited expiry/evidence-age deadline per bucket in
+ControllerObservation. Remove coverage credit after that deadline at decision.
+Reason: avoids admitting on expired positive evidence without uncharged probes.
+Effect: conservative, possibly excessive estimated load; not a safety guarantee.
+The refinement happened during development tuning before traffic_only_adaptation
+ran. Earlier immediate/fixed/all-at-once settings do not consume coverage for
+admission; all fresh comparison smokes load the corrected shared implementation.
+Per-run source manifests remain the exact authority; registration identity is
+not misrepresented as a frozen evaluation identity. No extra tuning points.
+Verification: coverage_expiry_checks.json, final complete live suite, and
+matched fresh smoke source identities. No Phase 6 implementation.
+
+
+## DECISION-0017: Independent corrected common-profile matrix
+
+Time: 2026-10-19 UTC
+Phase: 5 independent review
+Context: Fourteen reproduced semantic/accounting failures and two reproduced
+selection failures invalidate reuse of owner comparisons. Independent A/B
+selection could give warmup-only a different fixed handover schedule and
+traffic-only different fixed warming rates. The owner mixed checks omit 4/s W.
+Options considered: retain individual profile selection and accept confounding;
+choose a common A/B profile after equal pilot effort; expand tuning substantially.
+Decision: preregister docs/PHASE5_INDEPENDENT_PROTOCOL.md; perform exactly two
+mixed splits, 12 equally allocated tuning cases, one shared aggregate-profile
+selection, six fresh seed606 comparisons, and three explicit failure boundaries.
+Keep the original two-point ranges. Add pool-derived active-count hysteresis;
+retain all other thresholds. No search extension or favorable ranking criterion.
+Reason: isolates the required behavioral differences under common constraints
+without pretending a two-point grid establishes optimal settings.
+Effect: all older runs and the blocked v2 command remain preserved, but none
+certifies the corrected runtime. Capacity is conditional total-attempt accounting,
+not saturation or universal safety. No Phase6 code or later evaluation claim.
+Verification: initial selection negatives tuning_before.json; corrected full
+157-test live suite live_frozen.json; matrix p5ind_20261019_m1 in progress.
+
+## DECISION-0018: Replace all first-review cases after token-clock defect
+
+Time: 2026-10-19 UTC
+Phase: 5 independent review
+Context: Independent replay stopped warmup-only tune4A despite process completion;
+recorded deficits and a fresh deterministic negative establish inconsistent token
+balance/event clocks. The earlier 157-test source and first-review matrix are
+superseded, including favorable cells. The outer 180-second recorder timeout is
+separately recorded as ISSUE-0033, not a policy failure.
+Decision: use one balance-change clock for token events, retain replay tolerance,
+archive the old runtime and add the advancing-clock regression. Repeat the full
+matrix on stable corrected source, with one extra adaptive zero-budget boundary
+to test cold atomic cutover for both migration controls.
+Effect: no Phase6 work, no relaxed limits, no favorable-case reuse. New full suite
+has158 checks including23 actual-client cases. Protocol amendments bound all
+additional measurements. Verification: token_clock_before/corrected.json,
+token_replay_diagnostic.json, live_lower_final.json and final matrix raw audits.
+
+## DECISION-0019: Retain failed16 operating point; test one lower common12 point
+
+Time: 2026-10-19 UTC
+Phase: 5 independent review
+Context: Corrected-source mixed12+2 with fixed2/s probes has full raw/payload
+reconciliation and p95s within100ms, but max dispatch52.376628ms exceeds50ms.
+The matrix stopped before tuning. This is a rejected operating setting, not DB
+saturation; PostgreSQL averaged about0.38 core with no added throttling count.
+Options considered: relax dispatch assertion; retry16 until favorable; stop
+without corrected comparisons; preregister one conservative lower common point.
+Decision: preserve the negative and unchanged criteria, then check total12 with
+8+2 and6+4 real queries plus2/s probes. Both must pass before the same fair
+A/B tuning and fresh smokes proceed. No other point or automatic retry allowed.
+Reason: the plan permits empirical operating parameters; lowering is a new
+conditional choice, not a claimed fix for unexplained host scheduling jitter.
+Effect: all controls receive identical total12/reserve2 and the same profile
+selection rule. The failed16 result remains visible, accepted limitation
+ISSUE-0035. No general capacity/safety or controller improvement claim.
+Verification: both final lower mixed cases pass raw validation and criteria;
+full p5ind_20261019_m3 matrix executing under archived stable source.

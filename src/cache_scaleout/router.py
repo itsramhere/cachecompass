@@ -257,8 +257,10 @@ class CacheAsideRouter:
             if self.residency is not None and route.state is BucketState.NEW:
                 from .contracts import ResidencyState
                 if cache_result.value is None:
+                    invalidated_ns=self.clock_ns()
                     self.residency.invalidate(key, state=ResidencyState.EVICTED,
-                                              observed_at_ns=self.clock_ns())
+                                              observed_at_ns=invalidated_ns)
+                    next(row for row in reversed(self.ledger.records) if row['request_id']==request_id and row['operation']=='cache_read')['residency_invalidated_ns']=invalidated_ns
             if cache_result is not None and cache_result.value is not None:
                 now = self.clock_ns()
                 if now <= deadline and (cache_result.value.absolute_expiry_ns is None or now < cache_result.value.absolute_expiry_ns):

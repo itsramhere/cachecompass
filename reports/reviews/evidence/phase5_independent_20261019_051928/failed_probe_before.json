@@ -1,0 +1,14 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "reports/reviews/evidence/phase5_independent_20261019_051928/test_failed_probe_records.py"
+  ],
+  "elapsed_seconds": 1.4447607760002938,
+  "ended_utc": "2026-10-19T06:04:20.549866+00:00",
+  "exit_code": 1,
+  "retry_of": null,
+  "started_utc": "2026-10-19T06:04:19.105084+00:00",
+  "stderr": "test_actual_failed_ping_has_no_info_and_remains_valid_measurement (__main__.FailedProbeRecords.test_actual_failed_ping_has_no_info_and_remains_valid_measurement) ... FAIL\ntest_missing_info_from_successful_bundle_still_rejects (__main__.FailedProbeRecords.test_missing_info_from_successful_bundle_still_rejects) ... ok\ntest_unissued_db_probe_has_unknown_bundle_and_remains_valid_measurement (__main__.FailedProbeRecords.test_unissued_db_probe_has_unknown_bundle_and_remains_valid_measurement) ... FAIL\n\n======================================================================\nFAIL: test_actual_failed_ping_has_no_info_and_remains_valid_measurement (__main__.FailedProbeRecords.test_actual_failed_ping_has_no_info_and_remains_valid_measurement)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/cachecompass/reports/reviews/evidence/phase5_independent_20261019_051928/test_failed_probe_records.py\", line 29, in test_actual_failed_ping_has_no_info_and_remains_valid_measurement\n    r=self.alter('new',True);self.assertTrue(r['valid'],r['errors'])\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true : ['common_noncatchup_probes']\n\n======================================================================\nFAIL: test_unissued_db_probe_has_unknown_bundle_and_remains_valid_measurement (__main__.FailedProbeRecords.test_unissued_db_probe_has_unknown_bundle_and_remains_valid_measurement)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/cachecompass/reports/reviews/evidence/phase5_independent_20261019_051928/test_failed_probe_records.py\", line 31, in test_unissued_db_probe_has_unknown_bundle_and_remains_valid_measurement\n    r=self.alter('database',True);self.assertTrue(r['valid'],r['errors'])\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true : ['common_noncatchup_probes']\n\n----------------------------------------------------------------------\nRan 3 tests in 1.046s\n\nFAILED (failures=2)",
+  "stdout": ""
+}

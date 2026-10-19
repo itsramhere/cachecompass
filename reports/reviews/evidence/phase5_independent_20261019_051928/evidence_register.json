@@ -1,0 +1,410 @@
+{
+  "utc": "2026-10-19T06:13:08.042266+00:00",
+  "overlays_only": true,
+  "original_status_files_unchanged": true,
+  "records": [
+    {
+      "run_id": "p5ind_20261019_m3_mixed8_2",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "mixed"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_mixed6_4",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "mixed"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_tune0A",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "tuning"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_tune0B",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "tuning"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_tune1A",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "tuning"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_tune1B",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "tuning"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_tune2A",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "tuning"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_tune2B",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "tuning"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_tune3A",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "tuning"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_tune3B",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "tuning"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_tune4A",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "tuning"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_tune4B",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "tuning"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_tune5A",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "tuning"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_tune5B",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "tuning"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_smoke0",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "smoke"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_smoke1",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "smoke"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_smoke2",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "smoke"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_smoke3",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "smoke"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_smoke4",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "smoke"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_smoke5",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "smoke"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_boundary_zero",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "boundary"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_boundary_deadline",
+      "raw_status": "policy_failure",
+      "classification": "policy_failure",
+      "review_eligible": true,
+      "role": "boundary"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_boundary_nonprogress",
+      "raw_status": "policy_failure",
+      "classification": "policy_failure",
+      "review_eligible": true,
+      "role": "boundary"
+    },
+    {
+      "run_id": "p5ind_20261019_m3_boundary_adaptive_zero",
+      "raw_status": "completed",
+      "classification": "completed",
+      "review_eligible": true,
+      "role": "boundary"
+    },
+    {
+      "run_id": "p5ind_20261019_m1_mixed10_4",
+      "classification": "invalid_measurement",
+      "review_eligible": false,
+      "reason": "superseded token-clock runtime; no favorable-cell reuse",
+      "replacement_prefix": "p5ind_20261019_m3"
+    },
+    {
+      "run_id": "p5ind_20261019_m1_mixed12_2",
+      "classification": "invalid_measurement",
+      "review_eligible": false,
+      "reason": "superseded token-clock runtime; no favorable-cell reuse",
+      "replacement_prefix": "p5ind_20261019_m3"
+    },
+    {
+      "run_id": "p5ind_20261019_m1_tune0A",
+      "classification": "invalid_measurement",
+      "review_eligible": false,
+      "reason": "superseded token-clock runtime; no favorable-cell reuse",
+      "replacement_prefix": "p5ind_20261019_m3"
+    },
+    {
+      "run_id": "p5ind_20261019_m1_tune0B",
+      "classification": "invalid_measurement",
+      "review_eligible": false,
+      "reason": "superseded token-clock runtime; no favorable-cell reuse",
+      "replacement_prefix": "p5ind_20261019_m3"
+    },
+    {
+      "run_id": "p5ind_20261019_m1_tune1A",
+      "classification": "invalid_measurement",
+      "review_eligible": false,
+      "reason": "superseded token-clock runtime; no favorable-cell reuse",
+      "replacement_prefix": "p5ind_20261019_m3"
+    },
+    {
+      "run_id": "p5ind_20261019_m1_tune1B",
+      "classification": "invalid_measurement",
+      "review_eligible": false,
+      "reason": "superseded token-clock runtime; no favorable-cell reuse",
+      "replacement_prefix": "p5ind_20261019_m3"
+    },
+    {
+      "run_id": "p5ind_20261019_m1_tune2A",
+      "classification": "invalid_measurement",
+      "review_eligible": false,
+      "reason": "superseded token-clock runtime; no favorable-cell reuse",
+      "replacement_prefix": "p5ind_20261019_m3"
+    },
+    {
+      "run_id": "p5ind_20261019_m1_tune2B",
+      "classification": "invalid_measurement",
+      "review_eligible": false,
+      "reason": "superseded token-clock runtime; no favorable-cell reuse",
+      "replacement_prefix": "p5ind_20261019_m3"
+    },
+    {
+      "run_id": "p5ind_20261019_m1_tune3A",
+      "classification": "infrastructure_failure",
+      "review_eligible": false,
+      "reason": "incomplete orchestration lifecycle",
+      "replacement_prefix": "p5ind_20261019_m3"
+    },
+    {
+      "run_id": "p5ind_20261019_m1_tune3A_r1",
+      "classification": "invalid_measurement",
+      "review_eligible": false,
+      "reason": "superseded token-clock runtime; no favorable-cell reuse",
+      "replacement_prefix": "p5ind_20261019_m3"
+    },
+    {
+      "run_id": "p5ind_20261019_m1_tune3B",
+      "classification": "invalid_measurement",
+      "review_eligible": false,
+      "reason": "superseded token-clock runtime; no favorable-cell reuse",
+      "replacement_prefix": "p5ind_20261019_m3"
+    },
+    {
+      "run_id": "p5ind_20261019_m1_tune4A",
+      "classification": "invalid_measurement",
+      "review_eligible": false,
+      "reason": "superseded token-clock runtime; no favorable-cell reuse",
+      "replacement_prefix": "p5ind_20261019_m3"
+    },
+    {
+      "run_id": "p5ind_20261019_m2_mixed12_2",
+      "classification": "completed",
+      "capacity_eligible": false,
+      "review_eligible": false,
+      "reason": "retained valid negative operating-point outcome: max dispatch52.376628ms >50ms; not DB saturation",
+      "replacement_mixed_cases": [
+        "p5ind_20261019_m3_mixed8_2",
+        "p5ind_20261019_m3_mixed6_4"
+      ]
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_boundary_deadline",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_boundary_deadline"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_boundary_zero",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_boundary_zero"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_smoke0",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_smoke0"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_smoke1",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_smoke1"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_smoke2",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_smoke2"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_smoke3",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_smoke3"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_smoke4",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_smoke4"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_smoke5",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_smoke5"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune0A",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_tune0A"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune0B",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_tune0B"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune1A",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_tune1A"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune1B",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_tune1B"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune2A",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_tune2A"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune2B",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_tune2B"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune3A",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_tune3A"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune3B",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_tune3B"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune4A",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_tune4A"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune4B",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_tune4B"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune5A",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_tune5A"
+    },
+    {
+      "run_id": "p5matrix_v1_20261019_tune5B",
+      "classification": "superseded_for_corrected_comparison",
+      "review_eligible": false,
+      "reason": "ISSUE-0027/0029/0030/0032; original bytes unchanged",
+      "replacement": "p5ind_20261019_m3_tune5B"
+    }
+  ]
+}
