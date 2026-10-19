@@ -1,0 +1,50 @@
+{
+  "checksum": "d24cb9ed37f9854f7d8d9709a43594aeba59660c7b274ac0672cd24fd21954f1",
+  "requests": [
+    {
+      "key": "key-00000030",
+      "relative_arrival_ns": 0,
+      "request_id": "pre-miss-0"
+    },
+    {
+      "key": "key-00000030",
+      "relative_arrival_ns": 0,
+      "request_id": "pre-miss-1"
+    },
+    {
+      "key": "key-00000030",
+      "relative_arrival_ns": 1000000,
+      "request_id": "post-000"
+    },
+    {
+      "key": "key-00000043",
+      "relative_arrival_ns": 2000000,
+      "request_id": "post-001"
+    },
+    {
+      "key": "key-00000002",
+      "relative_arrival_ns": 3000000,
+      "request_id": "post-002"
+    },
+    {
+      "key": "key-00000006",
+      "relative_arrival_ns": 4000000,
+      "request_id": "post-003"
+    },
+    {
+      "key": "key-00000009",
+      "relative_arrival_ns": 5000000,
+      "request_id": "post-004"
+    },
+    {
+      "key": "key-00000015",
+      "relative_arrival_ns": 6000000,
+      "request_id": "post-005"
+    },
+    {
+      "key": "key-00000045",
+      "relative_arrival_ns": 7000000,
+      "request_id": "post-006"
+    }
+  ]
+}

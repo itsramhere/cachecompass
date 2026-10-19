@@ -1,6 +1,6 @@
 # Local cache scale-out research
 
-Phases 0 through 2 establish the local service environment, verified literature foundation, and implementation-ready architecture/contracts. The network request path, service clients for scale-out, dataset preparation, workload runner, and experiments remain later-phase work. Read [current status](reports/STATUS.md), [Phase 2 handoff](reports/phase_02.md), [architecture](docs/ARCHITECTURE.md), [policy specifications](docs/POLICIES.md), [schemas](docs/DATA_SCHEMAS.md), [invariants](docs/INVARIANTS.md), and [issue index](reports/ISSUE_INDEX.md) before resuming.
+Phases 0 through 3 establish the local service environment, verified literature foundation, corrected architecture/contracts, and a verified minimal scale-out system. Phase 3 implements deterministic data and ownership, actual bounded Redis/PostgreSQL adapters, cache-aside reads with per-key shared fills, bounded selective migration, causal observations, append-only telemetry, and a deterministic repeated small run. Comparative policies, capacity calibration, performance experiments, and measured-gain claims remain later-phase work. Read [current status](reports/STATUS.md), [Phase 3 handoff](reports/phase_03.md), [Phase 2 execution contract](docs/PHASE2_EXECUTION_CONTRACT.md), [architecture](docs/ARCHITECTURE.md), [schemas](docs/DATA_SCHEMAS.md), [invariants](docs/INVARIANTS.md), and [issue index](reports/ISSUE_INDEX.md) before resuming.
 
 Supported bootstrap: native Windows PowerShell 5.1, existing CPython 3.12.10 amd64 and Docker Desktop with a running Linux engine. Use the Windows workspace path below; this path and .venv are not WSL processes. Compatibility rationale and official sources are in [docs/ENVIRONMENT_COMPATIBILITY.md](docs/ENVIRONMENT_COMPATIBILITY.md).
 
@@ -31,7 +31,7 @@ $env:PYTHONPATH = Join-Path (Get-Location) 'src'
 & .\.venv\Scripts\python.exe -m cache_scaleout health --config configs/environment.json --run-id phase0-health-cli-review
 ```
 
-Only doctor/health are executable CLI operations now. Phase 2 adds typed Python contracts and pure policy/accounting checks, not a runnable router. The plan's prepare/run/matrix/validate/analyze experiment commands and result regeneration become available in their designated later phases. `scripts/validate_phase0.py` validates the retained service health evidence. It is not the future scientific run validator.
+Doctor and health remain available. Phase 3 adds `phase3-run` and `phase3-validate` for functional verification. They are deliberately separate from the future calibrated experiment `run/matrix/analyze` interface. `scripts/validate_phase0.py` still validates only retained environment health evidence.
 
 For an auditable command record, use `& .\.venv\Scripts\python.exe scripts/record_phase0.py --step health --run-id phase0-health-audit --record reports/evidence/phase0/health-audit.json`. This runs the same PowerShell entry point and records the exact invocation, UTC times, duration, stdout, stderr and exit code. Named steps also cover bootstrap/start/doctor/validate/fingerprint/shutdown; use a new record path each time. Validate requires `--output` and the health run ID.
 
@@ -40,6 +40,47 @@ Reviewer evidence: [reports/phase_00.md](reports/phase_00.md), [reports/environm
 Phase 1 supplies the [literature matrix](docs/LITERATURE_MATRIX.md), [verified bibliography](docs/BIBLIOGRAPHY.md), [hypotheses](docs/HYPOTHESES.md), [candidate contribution](docs/CANDIDATE_CONTRIBUTION.md) and [search provenance](docs/LITERATURE_SEARCH.md). ElMem is the nearest fully read direct research comparison; substantial prior overlap supports a characterization study. AdaptCache full text remains inaccessible (ISSUE-0004). No scientific performance experiment has run.
 
 Phase 2 supplies typed contracts in `src/cache_scaleout/contracts.py`, protocols in `interfaces.py`, and the seven-policy catalog plus pure admission arithmetic in `policies.py`. The independent review corrected invalid record acceptance, atomic batch/budget interfaces, bounded immutable observations and coverage provenance, retry-aware new-minus-old DB estimates and pending reserves, destination byte limits, cleanup and reset rules. The [normative execution contract](docs/PHASE2_EXECUTION_CONTRACT.md) specifies exact algorithms and required parameter domains. Six policies are controls; only `joint_control` is the candidate. Numerical settings remain provisional until calibration. These are specifications and pure helpers, not implemented policy loops.
+
+Phase 3 implements the functional mechanisms in `dataset.py`, `adapters.py`, `router.py`, `migration.py`, `observations.py`, `telemetry.py`, and `phase3.py`. The smoke orchestrator uses one fixed donor-first pass and atomic handover solely to verify mechanism behavior; it is not a Phase 5 baseline or the Phase 6 joint controller. The 48-key/16-bucket settings, pressure thresholds, deadlines and grants in [configs/phase3_smoke.yaml](configs/phase3_smoke.yaml) are explicitly provisional.
+
+Run the complete two-run functional cycle from native PowerShell. It recreates the verified disposable cache/database project before each run, compares complete logical initial states and distinct Redis process IDs, validates both runs, and removes the research services in `finally`:
+
+```powershell
+Set-Location -LiteralPath 'C:\Users\ramst\Documents\antigravity\paper2'
+& .\scripts\phase3_cycle.ps1 `
+  -FirstRunId phase3-review-a `
+  -SecondRunId phase3-review-b `
+  -ValidationOutput reports/evidence/phase3/reset-comparison-review.json
+```
+
+Run the fake-client behavioral suite without services:
+
+```powershell
+& .\.venv\Scripts\python.exe -B -m unittest tests.test_phase3_behavior tests.test_phase3_independent -v
+```
+
+Run actual-client integration against already-started verified disposable services:
+
+```powershell
+& .\scripts\start.ps1
+$env:PAPER2_INTEGRATION = '1'
+& .\.venv\Scripts\python.exe -B -m unittest tests.test_phase3_integration -v
+& .\scripts\shutdown.ps1
+```
+
+For a standalone retained-run validation, expose the source-layout package explicitly:
+
+```powershell
+$env:PYTHONPATH = Join-Path (Get-Location) 'src'
+& .\.venv\Scripts\python.exe -B -m cache_scaleout phase3-validate `
+  --run runs/phase3-publication-a-20261019 `
+  --compare-run runs/phase3-publication-b-20261019 `
+  --output reports/evidence/phase3/reset-comparison-review-2.json
+```
+
+The submitted Phase 3 evidence remains under `reports/evidence/phase3/` and the original smoke run directories. Its gate claim is superseded by the [independent runtime review](reports/reviews/phase_03_independent_20261019.md). Corrective commands, original source, failures and fresh results are under `reports/reviews/evidence/phase3_20261019_independent/`; the final pair is `runs/phase3-publication-{a,b}-20261019/`. Validation derives counts, token/burst/byte/pool bounds, payload hashes, task parents and drain state from individual records, and compares complete logical initial states plus distinct physical Redis processes. Historical booleans or contract-test passes do not certify runtime behavior.
+
+The functional run dispatches persisted absolute offers independently of responses and samples pressure throughout a fixed horizon. Cache foreground and background pools are distinct. Redis values carry an original-expiry header; old formats require fresh disposable resets. Full encoded wire bytes are null where the drivers do not expose them; conservative encoded-byte reservations are enforced separately. `phase3-run` refuses physically nonempty caches and unrecognized database tables. Use the reset-cycle entry point for a fresh run; it label-checks the disposable project before recreation. These are provisional correctness settings, with no calibrated capacity or performance-gain claim.
 
 The focused Phase 2 checks require no services or third-party imports:
 

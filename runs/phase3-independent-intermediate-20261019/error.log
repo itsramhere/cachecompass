@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "C:\Users\ramst\Documents\antigravity\paper2\src\cache_scaleout\router.py", line 231, in read
+    record = self._terminal_record(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramst\Documents\antigravity\paper2\src\cache_scaleout\router.py", line 115, in _terminal_record
+    return RequestRecord(
+           ^^^^^^^^^^^^^^
+  File "<string>", line 20, in __init__
+  File "C:\Users\ramst\Documents\antigravity\paper2\src\cache_scaleout\contracts.py", line 656, in __post_init__
+    raise ValueError("submission cannot precede scheduled arrival")
+ValueError: submission cannot precede scheduled arrival
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ramst\Documents\antigravity\paper2\src\cache_scaleout\phase3.py", line 298, in run_phase3
+    responses = await generator
+                ^^^^^^^^^^^^^^^
+  File "C:\Users\ramst\Documents\antigravity\paper2\src\cache_scaleout\load.py", line 25, in dispatch_offers
+    responses = await asyncio.gather(*tasks)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramst\Documents\antigravity\paper2\src\cache_scaleout\router.py", line 298, in read
+    record = self._terminal_record(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramst\Documents\antigravity\paper2\src\cache_scaleout\router.py", line 115, in _terminal_record
+    return RequestRecord(
+           ^^^^^^^^^^^^^^
+  File "<string>", line 20, in __init__
+  File "C:\Users\ramst\Documents\antigravity\paper2\src\cache_scaleout\contracts.py", line 656, in __post_init__
+    raise ValueError("submission cannot precede scheduled arrival")
+ValueError: submission cannot precede scheduled arrival

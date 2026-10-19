@@ -37,5 +37,11 @@ Desktop.ini
 *.swp
 *.swo
 
+# Local agent state and transient runtime coordination; retain research evidence.
+/.codex/
+/.cache/
+/runs/.locks/
+/reports/.scratch/
+
 # Research reports, literature, and run evidence are intentionally versioned.
 

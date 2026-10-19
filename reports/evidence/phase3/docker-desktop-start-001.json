@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Users\\ramst\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "desktop",
+    "start"
+  ],
+  "elapsed_seconds": 11.625,
+  "ended_utc": "2026-10-18T20:32:43.504430+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-18T20:32:31.874144+00:00",
+  "stderr": "",
+  "stdout": "\u2713 Starting Docker Desktop"
+}

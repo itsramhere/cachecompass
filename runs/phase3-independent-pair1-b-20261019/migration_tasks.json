@@ -1,0 +1,58 @@
+[
+  {
+    "attempts": 2,
+    "bucket": 8,
+    "disposition": "warmed",
+    "key": "key-00000002",
+    "reason": "written",
+    "source": "donor_cache"
+  },
+  {
+    "attempts": 2,
+    "bucket": 8,
+    "disposition": "warmed",
+    "key": "key-00000006",
+    "reason": "written",
+    "source": "donor_cache"
+  },
+  {
+    "attempts": 2,
+    "bucket": 8,
+    "disposition": "warmed",
+    "key": "key-00000009",
+    "reason": "written",
+    "source": "donor_cache"
+  },
+  {
+    "attempts": 2,
+    "bucket": 8,
+    "disposition": "warmed",
+    "key": "key-00000015",
+    "reason": "written",
+    "source": "donor_cache"
+  },
+  {
+    "attempts": 2,
+    "bucket": 0,
+    "disposition": "warmed",
+    "key": "key-00000030",
+    "reason": "written",
+    "source": "donor_cache"
+  },
+  {
+    "attempts": 2,
+    "bucket": 2,
+    "disposition": "warmed",
+    "key": "key-00000043",
+    "reason": "written",
+    "source": "donor_cache"
+  },
+  {
+    "attempts": 3,
+    "bucket": 8,
+    "disposition": "warmed",
+    "key": "key-00000045",
+    "reason": "written",
+    "source": "database"
+  }
+]

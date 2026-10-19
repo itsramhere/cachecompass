@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "cache_scaleout",
+    "phase3-validate",
+    "--run",
+    "runs/phase3-smoke-b-20261018",
+    "--output",
+    "reports/evidence/phase3/validation-second-002.json"
+  ],
+  "elapsed_seconds": 1.0319999999999254,
+  "ended_utc": "2026-10-18T20:38:28.312248+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-18T20:38:27.281907+00:00",
+  "stderr": "",
+  "stdout": "{\"checks\": {\"all_affected_buckets_new\": true, \"append_only_checksums\": true, \"bounded_workers\": true, \"config_fingerprint\": true, \"issued_attempts_reconcile\": true, \"no_foreground_donor_fallback\": true, \"no_unbudgeted_db_prefetch\": true, \"offered_request_reconciliation\": true, \"offered_schedule_checksum\": true, \"payloads_authoritative\": true, \"run_completed\": true, \"schedule_arrival_terminal_equality\": true, \"source_fingerprint\": true}, \"compare_run\": null, \"run\": \"phase3-smoke-b-20261018\", \"valid\": true}"
+}

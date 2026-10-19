@@ -1,0 +1,17 @@
+{
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "scripts/start.ps1"
+  ],
+  "elapsed_seconds": 2.4220000000000255,
+  "ended_utc": "2026-10-18T20:32:09.801934+00:00",
+  "exit_code": 1,
+  "retry_of": null,
+  "started_utc": "2026-10-18T20:32:07.376930+00:00",
+  "stderr": "failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\nA healthy Linux Docker engine is required; no engine settings are changed automatically.\r\nAt C:\\Users\\ramst\\Documents\\antigravity\\paper2\\scripts\\start.ps1:5 char:52\r\n+ ...  'linux') { throw 'A healthy Linux Docker engine is required; no engi ...\r\n+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : OperationStopped: (A healthy Linux... automatically.:String) [], RuntimeException\r\n    + FullyQualifiedErrorId : A healthy Linux Docker engine is required; no engine settings are changed automatically.",
+  "stdout": ""
+}

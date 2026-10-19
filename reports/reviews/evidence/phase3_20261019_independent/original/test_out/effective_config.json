@@ -1,0 +1,12 @@
+{
+  "sources": [
+    {
+      "id": "test-success",
+      "url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+    },
+    {
+      "id": "test-fail",
+      "url": "http://example.com/fail"
+    }
+  ]
+}

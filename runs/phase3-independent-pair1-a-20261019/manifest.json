@@ -1,0 +1,15 @@
+{
+  "boundary": "Functional Phase 3 verification only; no calibration or performance comparison.",
+  "config_path": "configs/phase3_smoke.yaml",
+  "config_sha256": "4ac54bf8564dce13832d02f517c0969c8e39b6eb92d45c0dba881f6fab127376",
+  "elapsed_seconds": 5.094,
+  "ended_utc": "2026-10-18T21:27:55.453245+00:00",
+  "error": null,
+  "exit_code": 0,
+  "kind": "phase3_minimal_scaleout",
+  "retry_of": null,
+  "run_id": "phase3-independent-pair1-a-20261019",
+  "source_sha256": "43ffd3449b635c1a486e01b7e15067b74d0fbcc723d1855d7f520044e87a233c",
+  "started_utc": "2026-10-18T21:27:50.350440+00:00",
+  "status": "completed"
+}

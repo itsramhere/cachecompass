@@ -1,0 +1,18 @@
+{
+  "boundary": "Functional Phase 3 verification only; no calibration or performance comparison.",
+  "config_path": "reports/reviews/evidence/phase3_20261019_independent/no_background_grant.yaml",
+  "config_sha256": "501954e2f84b0a64f0508f5269b8da148eb75b6dcb2a32fc78af9f500eebae56",
+  "elapsed_seconds": 5.078,
+  "ended_utc": "2026-10-18T21:51:12.466374+00:00",
+  "error": {
+    "message": "minimal migration pass did not warm every affected key",
+    "type": "PolicyFailure"
+  },
+  "exit_code": 1,
+  "kind": "phase3_minimal_scaleout",
+  "retry_of": null,
+  "run_id": "phase3-independent-no-grant-20261019",
+  "source_sha256": "90d2157b66298da01786e81b99980015a04a1e9ba8148a5a21d252a728f82ff5",
+  "started_utc": "2026-10-18T21:51:07.396725+00:00",
+  "status": "policy_failure"
+}

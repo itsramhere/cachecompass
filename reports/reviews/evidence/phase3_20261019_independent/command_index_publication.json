@@ -1,0 +1,770 @@
+[
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase3_independent",
+      "tests.test_phase3_behavior",
+      "-v"
+    ],
+    "elapsed_seconds": 6.405999999999949,
+    "ended_utc": "2026-10-18T21:35:14.542004+00:00",
+    "exit_code": 0,
+    "record": "actual_issuance_behavior.json",
+    "retry_of": null,
+    "source_sha256": "2803ca648eafb270256d7a58483e415b73d60cac777c8879d942563616d004c2",
+    "started_utc": "2026-10-18T21:35:08.136194+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase3_independent",
+      "tests.test_phase3_behavior",
+      "-v"
+    ],
+    "elapsed_seconds": 1.155999999999949,
+    "ended_utc": "2026-10-18T21:24:41.082438+00:00",
+    "exit_code": 0,
+    "record": "behavioral_corrected.json",
+    "retry_of": null,
+    "source_sha256": "99721b3d11b2db8821b338b4f909ce48d646572fc2b76dfb00a903ea552bef29",
+    "started_utc": "2026-10-18T21:24:39.914745+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase3_integration.ActualClientIntegrationTests.test_unresponsive_cancel_handshake_discards_within_cleanup_bound",
+      "-v"
+    ],
+    "elapsed_seconds": 2.436999999999898,
+    "ended_utc": "2026-10-18T22:01:56.446104+00:00",
+    "exit_code": 1,
+    "record": "cancel_unresponsive_before.json",
+    "retry_of": null,
+    "source_sha256": "e77cd3b6fd0866cde17160d13ad1d8aa5145fc1ee71133f3af33a2f949006fa2",
+    "started_utc": "2026-10-18T22:01:54.013811+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase3_integration.ActualClientIntegrationTests.test_unresponsive_cancel_handshake_discards_within_cleanup_bound",
+      "-v"
+    ],
+    "elapsed_seconds": 1.6719999999995707,
+    "ended_utc": "2026-10-18T22:02:34.960477+00:00",
+    "exit_code": 0,
+    "record": "cancel_unresponsive_corrected.json",
+    "retry_of": "cancel_unresponsive_before.json",
+    "source_sha256": "a216d24144e59144a836089e94634211a5a675595b3b33491a82a9ff203fc916",
+    "started_utc": "2026-10-18T22:02:33.301525+00:00"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/start.ps1"
+    ],
+    "elapsed_seconds": 6.467999999999847,
+    "ended_utc": "2026-10-18T22:01:48.161789+00:00",
+    "exit_code": 0,
+    "record": "cleanup_fault_start.json",
+    "retry_of": null,
+    "source_sha256": "e77cd3b6fd0866cde17160d13ad1d8aa5145fc1ee71133f3af33a2f949006fa2",
+    "started_utc": "2026-10-18T22:01:41.679500+00:00"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase3_cycle.ps1",
+      "-FirstRunId",
+      "phase3-independent-verified-a-20261019",
+      "-SecondRunId",
+      "phase3-independent-verified-b-20261019",
+      "-RetryOfFirst",
+      "phase3-independent-final-a-20261019",
+      "-RetryOfSecond",
+      "phase3-independent-final-b-20261019",
+      "-ValidationOutput",
+      "reports/reviews/evidence/phase3_20261019_independent/complete_pair_validation.json"
+    ],
+    "elapsed_seconds": 36.51599999999962,
+    "ended_utc": "2026-10-18T22:04:58.096906+00:00",
+    "exit_code": 0,
+    "record": "complete_cycle.json",
+    "retry_of": "final_cycle.json",
+    "source_sha256": "0a66132a905c16db8765bc463d2697e31343b18ecb8e761155841ac443014212",
+    "started_utc": "2026-10-18T22:04:21.571944+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "scripts/capture_source.py",
+      "--output",
+      "reports/reviews/evidence/phase3_20261019_independent/source_complete.json"
+    ],
+    "elapsed_seconds": 0.6409999999996217,
+    "ended_utc": "2026-10-18T22:04:20.938249+00:00",
+    "exit_code": 0,
+    "record": "complete_source_capture.json",
+    "retry_of": null,
+    "source_sha256": "0a66132a905c16db8765bc463d2697e31343b18ecb8e761155841ac443014212",
+    "started_utc": "2026-10-18T22:04:20.292883+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase3_integration",
+      "-v"
+    ],
+    "elapsed_seconds": 3.4840000000003783,
+    "ended_utc": "2026-10-18T21:22:00.827728+00:00",
+    "exit_code": 1,
+    "record": "expanded_live_checks.json",
+    "retry_of": null,
+    "source_sha256": "5ada49a809b8aa2ee5b0d72d143847bc6f15fa581b244c2f133bfdb4000cf8f7",
+    "started_utc": "2026-10-18T21:21:57.346164+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase3_integration",
+      "-v"
+    ],
+    "elapsed_seconds": 3.95299999999952,
+    "ended_utc": "2026-10-18T21:22:36.496214+00:00",
+    "exit_code": 0,
+    "record": "expanded_live_ttl_corrected.json",
+    "retry_of": null,
+    "source_sha256": "1657c421f9da6fdfff186c57597f7a5f910188d0b1633e0b3d1885c458fe4e24",
+    "started_utc": "2026-10-18T21:22:32.550354+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "cache_scaleout",
+      "phase3-run",
+      "--config",
+      "configs/phase3_smoke.yaml",
+      "--run-id",
+      "phase3-independent-dispatch-20261019",
+      "--retry-of",
+      "phase3-independent-intermediate-20261019"
+    ],
+    "elapsed_seconds": 5.265999999999622,
+    "ended_utc": "2026-10-18T21:23:58.745767+00:00",
+    "exit_code": 0,
+    "record": "expansion_dispatch_corrected.json",
+    "retry_of": null,
+    "source_sha256": "76f032fa2bcd29459c3f444f65c5a420c3d5a06d7cc3d3de5aba7960d0b383ed",
+    "started_utc": "2026-10-18T21:23:53.476437+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "cache_scaleout",
+      "phase3-run",
+      "--config",
+      "configs/phase3_smoke.yaml",
+      "--run-id",
+      "phase3-independent-intermediate-20261019",
+      "--retry-of",
+      "phase3-smoke-final2-a-20261018"
+    ],
+    "elapsed_seconds": 4.625,
+    "ended_utc": "2026-10-18T21:23:43.321741+00:00",
+    "exit_code": 1,
+    "record": "expansion_intermediate.json",
+    "retry_of": null,
+    "source_sha256": "b9938ca4fc0d966f4a453d2aaadd012d1d5b9bfa1a1562ff7aec7e5c2e4d3599",
+    "started_utc": "2026-10-18T21:23:38.697635+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase3_20261019_independent/run_failure_case_complete.py"
+    ],
+    "elapsed_seconds": 19.375,
+    "ended_utc": "2026-10-18T22:05:24.390557+00:00",
+    "exit_code": 0,
+    "record": "expected_failure_complete.json",
+    "retry_of": "expected_failure_final.json",
+    "source_sha256": "0a66132a905c16db8765bc463d2697e31343b18ecb8e761155841ac443014212",
+    "started_utc": "2026-10-18T22:05:05.019259+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase3_20261019_independent/run_failure_case.py"
+    ],
+    "elapsed_seconds": 19.35899999999947,
+    "ended_utc": "2026-10-18T21:51:16.121905+00:00",
+    "exit_code": 0,
+    "record": "expected_failure_cycle.json",
+    "retry_of": null,
+    "source_sha256": "90d2157b66298da01786e81b99980015a04a1e9ba8148a5a21d252a728f82ff5",
+    "started_utc": "2026-10-18T21:50:56.769663+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase3_20261019_independent/run_failure_case_final.py"
+    ],
+    "elapsed_seconds": 18.967999999999847,
+    "ended_utc": "2026-10-18T21:59:46.911887+00:00",
+    "exit_code": 0,
+    "record": "expected_failure_final.json",
+    "retry_of": "expected_failure_cycle.json",
+    "source_sha256": "29e5e708a1d1380003fc5c3e8c1e3c69b68acdd5382f0993f1a02d6627985d52",
+    "started_utc": "2026-10-18T21:59:27.929449+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase3_20261019_independent/run_failure_case_publication.py"
+    ],
+    "elapsed_seconds": 18.436999999999898,
+    "ended_utc": "2026-10-18T22:14:26.489142+00:00",
+    "exit_code": 0,
+    "record": "expected_failure_publication.json",
+    "retry_of": "expected_failure_complete.json",
+    "source_sha256": "8454ae425d5546a546d59e1b7b2258b4ec1c844eebb35e2609f7a4ab98e15c19",
+    "started_utc": "2026-10-18T22:14:08.038693+00:00"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase3_cycle.ps1",
+      "-FirstRunId",
+      "phase3-independent-final-a-20261019",
+      "-SecondRunId",
+      "phase3-independent-final-b-20261019",
+      "-RetryOfFirst",
+      "phase3-independent-pair1-a-20261019",
+      "-RetryOfSecond",
+      "phase3-independent-pair1-b-20261019",
+      "-ValidationOutput",
+      "reports/reviews/evidence/phase3_20261019_independent/final_pair_validation.json"
+    ],
+    "elapsed_seconds": 37.39099999999962,
+    "ended_utc": "2026-10-18T21:59:09.721917+00:00",
+    "exit_code": 0,
+    "record": "final_cycle.json",
+    "retry_of": "paired_cycle_intermediate.json",
+    "source_sha256": "29e5e708a1d1380003fc5c3e8c1e3c69b68acdd5382f0993f1a02d6627985d52",
+    "started_utc": "2026-10-18T21:58:32.327632+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "elapsed_seconds": 13.032000000000153,
+    "ended_utc": "2026-10-18T21:49:17.513413+00:00",
+    "exit_code": 0,
+    "record": "final_live_suite.json",
+    "retry_of": "full_live_final_candidate.json",
+    "source_sha256": "a556c26379c9dd7a951c04b4ff81996e941f99c365648caad4dd809d1a60e38d",
+    "started_utc": "2026-10-18T21:49:04.483527+00:00"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/shutdown.ps1"
+    ],
+    "elapsed_seconds": 3.686999999999898,
+    "ended_utc": "2026-10-18T21:37:38.877077+00:00",
+    "exit_code": 0,
+    "record": "final_prep_shutdown.json",
+    "retry_of": null,
+    "source_sha256": "3d2c7f80746dabe3eec221e8e8f6502d4d790289ddf5fc2c859b10b156631ef4",
+    "started_utc": "2026-10-18T21:37:35.182580+00:00"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/start.ps1"
+    ],
+    "elapsed_seconds": 8.70299999999952,
+    "ended_utc": "2026-10-18T21:38:16.337016+00:00",
+    "exit_code": 0,
+    "record": "final_prep_start.json",
+    "retry_of": null,
+    "source_sha256": "65481ff36088134994e09770840c38c13b8873c52cd094c5f1b3c0e36fe5b072",
+    "started_utc": "2026-10-18T21:38:07.638147+00:00"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/start.ps1"
+    ],
+    "elapsed_seconds": 7.79700000000048,
+    "ended_utc": "2026-10-18T21:55:37.071217+00:00",
+    "exit_code": 0,
+    "record": "final_services_start.json",
+    "retry_of": null,
+    "source_sha256": "3271f7f95348738ae8872bd0f65f508e7c659f76eba5e8f7ad4d211dc2144de2",
+    "started_utc": "2026-10-18T21:55:29.277882+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "scripts/capture_source.py",
+      "--output",
+      "reports/reviews/evidence/phase3_20261019_independent/source_final.json"
+    ],
+    "elapsed_seconds": 0.625,
+    "ended_utc": "2026-10-18T21:55:28.701231+00:00",
+    "exit_code": 0,
+    "record": "final_source_capture.json",
+    "retry_of": null,
+    "source_sha256": "3271f7f95348738ae8872bd0f65f508e7c659f76eba5e8f7ad4d211dc2144de2",
+    "started_utc": "2026-10-18T21:55:28.084402+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "elapsed_seconds": 12.266000000000531,
+    "ended_utc": "2026-10-18T21:39:12.268201+00:00",
+    "exit_code": 1,
+    "record": "full_live_candidate.json",
+    "retry_of": "negatives_before_corrected_harness.json",
+    "source_sha256": "4f977b016a9ee5ecdcb2f945ce1290f11b985ba03c656693851b3a3bf47de514",
+    "started_utc": "2026-10-18T21:38:59.996334+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "elapsed_seconds": 12.29700000000048,
+    "ended_utc": "2026-10-18T21:42:03.051459+00:00",
+    "exit_code": 0,
+    "record": "full_live_final_candidate.json",
+    "retry_of": "full_live_candidate.json",
+    "source_sha256": "cce663e2c4c19456c14ed328eec438d47c0940d9e4c9e01457c436bb89a2764e",
+    "started_utc": "2026-10-18T21:41:50.756136+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase3_behavior.ObservationAndTelemetryTests.test_grants_replace_unissued_credit_and_reject_duplicate_decisions",
+      "-v"
+    ],
+    "elapsed_seconds": 0.5,
+    "ended_utc": "2026-10-18T21:30:13.834293+00:00",
+    "exit_code": 1,
+    "record": "grant_epoch_typo_failure.json",
+    "retry_of": null,
+    "source_sha256": "0f20f332c8ed17e2c62611bc9882cb351c49b6ac4e83b07b0c033d246dd19c02",
+    "started_utc": "2026-10-18T21:30:13.322628+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase3_independent",
+      "tests.test_phase3_behavior",
+      "-v"
+    ],
+    "elapsed_seconds": 7.280999999999949,
+    "ended_utc": "2026-10-18T21:54:13.448633+00:00",
+    "exit_code": 0,
+    "record": "grant_generation_interleavings.json",
+    "retry_of": null,
+    "source_sha256": "700baddcaedb06f14e026dc760ccfb29d768ce4a07f67aa990376fa3c831cafb",
+    "started_utc": "2026-10-18T21:54:06.166804+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase3_independent",
+      "tests.test_phase3_behavior",
+      "-v"
+    ],
+    "elapsed_seconds": 6.092999999999847,
+    "ended_utc": "2026-10-18T21:30:20.989415+00:00",
+    "exit_code": 0,
+    "record": "grant_wait_corrected.json",
+    "retry_of": null,
+    "source_sha256": "91ee95dfe2f760627ad69585cbd425f4dac4ce9a6e69b634f0328e2523d1c468",
+    "started_utc": "2026-10-18T21:30:14.895163+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase3_integration",
+      "-v"
+    ],
+    "elapsed_seconds": 2.530999999999949,
+    "ended_utc": "2026-10-18T21:21:01.781086+00:00",
+    "exit_code": 0,
+    "record": "integration_cleanup_corrected.json",
+    "retry_of": null,
+    "source_sha256": "811174472ef185de69cb8fa02c3e5b4b506e4cfdb97422551bb2d2c2b845ebce",
+    "started_utc": "2026-10-18T21:20:59.250633+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase3_integration",
+      "-v"
+    ],
+    "elapsed_seconds": 1.8900000000003274,
+    "ended_utc": "2026-10-18T21:20:37.728692+00:00",
+    "exit_code": 1,
+    "record": "integration_intermediate.json",
+    "retry_of": null,
+    "source_sha256": "3f4f63017cda826ece39133c4a12cf9928942114fea2191e2d2c016f5074fa18",
+    "started_utc": "2026-10-18T21:20:35.850112+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase3_integration",
+      "-v"
+    ],
+    "elapsed_seconds": 5.04700000000048,
+    "ended_utc": "2026-10-18T21:32:33.796445+00:00",
+    "exit_code": 0,
+    "record": "live_races_expanded.json",
+    "retry_of": null,
+    "source_sha256": "906f48bb0f7f1b5b66fc27c7deadcec7e75cf6f3d17356207bdee4f9bd16bde5",
+    "started_utc": "2026-10-18T21:32:28.743124+00:00"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/start.ps1"
+    ],
+    "elapsed_seconds": 7.594000000000051,
+    "ended_utc": "2026-10-18T21:32:12.143414+00:00",
+    "exit_code": 0,
+    "record": "live_start_final_precheck.json",
+    "retry_of": null,
+    "source_sha256": "906f48bb0f7f1b5b66fc27c7deadcec7e75cf6f3d17356207bdee4f9bd16bde5",
+    "started_utc": "2026-10-18T21:32:04.541163+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase3_independent",
+      "-v"
+    ],
+    "elapsed_seconds": 1.0470000000000255,
+    "ended_utc": "2026-10-18T21:14:08.246894+00:00",
+    "exit_code": 1,
+    "record": "negatives_before.json",
+    "retry_of": null,
+    "source_sha256": "46826da43604c944055515aa5c1466cf622d9c1cd9e4968b0000a54958c1a4db",
+    "started_utc": "2026-10-18T21:14:07.204100+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_phase3_independent",
+      "-v"
+    ],
+    "elapsed_seconds": 0.9839999999999236,
+    "ended_utc": "2026-10-18T21:14:19.755481+00:00",
+    "exit_code": 1,
+    "record": "negatives_before_corrected_harness.json",
+    "retry_of": null,
+    "source_sha256": "aee44bb794e7fc807e2ba2b56bf1ecbe5ac8b9c09abaae7923be57acdf1e6d8b",
+    "started_utc": "2026-10-18T21:14:18.767237+00:00"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase3_cycle.ps1",
+      "-FirstRunId",
+      "phase3-independent-pair1-a-20261019",
+      "-SecondRunId",
+      "phase3-independent-pair1-b-20261019",
+      "-ValidationOutput",
+      "reports/reviews/evidence/phase3_20261019_independent/pair1_validation.json"
+    ],
+    "elapsed_seconds": 34.82799999999952,
+    "ended_utc": "2026-10-18T21:28:13.711258+00:00",
+    "exit_code": 0,
+    "record": "paired_cycle_intermediate.json",
+    "retry_of": null,
+    "source_sha256": "43ffd3449b635c1a486e01b7e15067b74d0fbcc723d1855d7f520044e87a233c",
+    "started_utc": "2026-10-18T21:27:38.884710+00:00"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/phase3_cycle.ps1",
+      "-FirstRunId",
+      "phase3-publication-a-20261019",
+      "-SecondRunId",
+      "phase3-publication-b-20261019",
+      "-RetryOfFirst",
+      "phase3-independent-verified-a-20261019",
+      "-RetryOfSecond",
+      "phase3-independent-verified-b-20261019",
+      "-ValidationOutput",
+      "reports/reviews/evidence/phase3_20261019_independent/publication_pair_validation.json"
+    ],
+    "elapsed_seconds": 37.4369999999999,
+    "ended_utc": "2026-10-18T22:12:49.073780+00:00",
+    "exit_code": 0,
+    "record": "publication_cycle.json",
+    "retry_of": "complete_cycle.json",
+    "source_sha256": "8454ae425d5546a546d59e1b7b2258b4ec1c844eebb35e2609f7a4ab98e15c19",
+    "started_utc": "2026-10-18T22:12:11.646299+00:00"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/start.ps1"
+    ],
+    "elapsed_seconds": 16.04699999999957,
+    "ended_utc": "2026-10-18T22:11:27.742425+00:00",
+    "exit_code": 0,
+    "record": "publication_services_start.json",
+    "retry_of": null,
+    "source_sha256": "598a2ece648034abda038dd53782f3e32e11adc51b45adcaac085200f87d9709",
+    "started_utc": "2026-10-18T22:11:11.707906+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "scripts/capture_source.py",
+      "--output",
+      "reports/reviews/evidence/phase3_20261019_independent/source_publication.json"
+    ],
+    "elapsed_seconds": 0.6869999999998981,
+    "ended_utc": "2026-10-18T22:12:03.106650+00:00",
+    "exit_code": 0,
+    "record": "publication_source_capture.json",
+    "retry_of": null,
+    "source_sha256": "8454ae425d5546a546d59e1b7b2258b4ec1c844eebb35e2609f7a4ab98e15c19",
+    "started_utc": "2026-10-18T22:12:02.423591+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "reports/reviews/evidence/phase3_20261019_independent/replay_submitted_negatives.py"
+    ],
+    "elapsed_seconds": 1.1099999999996726,
+    "ended_utc": "2026-10-18T22:15:28.429838+00:00",
+    "exit_code": 0,
+    "record": "replay_submitted_negatives.json",
+    "retry_of": null,
+    "source_sha256": "8454ae425d5546a546d59e1b7b2258b4ec1c844eebb35e2609f7a4ab98e15c19",
+    "started_utc": "2026-10-18T22:15:27.323193+00:00"
+  },
+  {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-File",
+      "scripts/start.ps1"
+    ],
+    "elapsed_seconds": 15.984000000000378,
+    "ended_utc": "2026-10-18T21:20:17.802811+00:00",
+    "exit_code": 0,
+    "record": "start_services.json",
+    "retry_of": null,
+    "source_sha256": "b0f0cefa9827c5a8610bb945867c65b1e3c5ed33e64aa5d6a0011af93368af87",
+    "started_utc": "2026-10-18T21:20:01.816549+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "elapsed_seconds": 14.405999999999949,
+    "ended_utc": "2026-10-18T22:03:23.739062+00:00",
+    "exit_code": 0,
+    "record": "tests_complete.json",
+    "retry_of": "tests_verified.json",
+    "source_sha256": "0a66132a905c16db8765bc463d2697e31343b18ecb8e761155841ac443014212",
+    "started_utc": "2026-10-18T22:03:09.334096+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "elapsed_seconds": 13.311999999999898,
+    "ended_utc": "2026-10-18T21:55:56.612642+00:00",
+    "exit_code": 1,
+    "record": "tests_final.json",
+    "retry_of": "final_live_suite.json",
+    "source_sha256": "3271f7f95348738ae8872bd0f65f508e7c659f76eba5e8f7ad4d211dc2144de2",
+    "started_utc": "2026-10-18T21:55:43.296776+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "elapsed_seconds": 14.984999999999673,
+    "ended_utc": "2026-10-18T22:12:01.553967+00:00",
+    "exit_code": 0,
+    "record": "tests_publication.json",
+    "retry_of": "tests_complete.json",
+    "source_sha256": "8454ae425d5546a546d59e1b7b2258b4ec1c844eebb35e2609f7a4ab98e15c19",
+    "started_utc": "2026-10-18T22:11:46.580531+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "elapsed_seconds": 14.234000000000378,
+    "ended_utc": "2026-10-18T21:57:35.107070+00:00",
+    "exit_code": 0,
+    "record": "tests_verified.json",
+    "retry_of": "tests_final.json",
+    "source_sha256": "29e5e708a1d1380003fc5c3e8c1e3c69b68acdd5382f0993f1a02d6627985d52",
+    "started_utc": "2026-10-18T21:57:20.878910+00:00"
+  },
+  {
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "scripts/capture_source.py",
+      "--output",
+      "reports/reviews/evidence/phase3_20261019_independent/source_verified.json"
+    ],
+    "elapsed_seconds": 0.6869999999998981,
+    "ended_utc": "2026-10-18T21:58:31.695452+00:00",
+    "exit_code": 0,
+    "record": "verified_source_capture.json",
+    "retry_of": null,
+    "source_sha256": "29e5e708a1d1380003fc5c3e8c1e3c69b68acdd5382f0993f1a02d6627985d52",
+    "started_utc": "2026-10-18T21:58:31.007869+00:00"
+  }
+]

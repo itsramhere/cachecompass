@@ -1,0 +1,6 @@
+{
+  "command": ".venv/Scripts/python.exe -B reports/reviews/evidence/phase3_20261019_independent/audit_staged_bytes_final.py",
+  "exit_code": 1,
+  "failure": "Windows default text decoding converted the copied UTF-8 BOM into mojibake; helper failed before auditing any index blobs.",
+  "correction": "Explicit utf-8-sig read and utf-8 output in audit_staged_bytes_final_corrected.py; failed helper retained."
+}

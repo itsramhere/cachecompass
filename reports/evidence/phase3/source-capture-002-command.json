@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "-B",
+    "scripts/capture_source.py",
+    "--output",
+    "reports/evidence/phase3/source-final-002.json"
+  ],
+  "elapsed_seconds": 0.7029999999999745,
+  "ended_utc": "2026-10-18T20:43:12.108689+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-18T20:43:11.409377+00:00",
+  "stderr": "",
+  "stdout": "69b5d9776b9291a335c279265fa7cba882c60a771f276bc0fd777c728486aaa2"
+}

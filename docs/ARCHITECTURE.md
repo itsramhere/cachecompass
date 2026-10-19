@@ -1,6 +1,6 @@
 # Phase 2 architecture and contract boundary
 
-Status: specified and contract-checked; the Phase 3 request path and service implementations do not exist yet. All capacities, pressure thresholds, deadlines, observation widths, latency targets, pool sizes, and rate limits are configuration inputs that remain provisional until calibration and protocol freeze. This design supports a characterization study; it makes no novelty or performance claim.
+Status: this is the Phase 2 specification; shared runtime mechanisms now exist in Phase 3 and are assessed by the independent review under `reports/reviews/phase_03_independent_20261019.md`. Comparative policy loops remain later work. All capacities, pressure thresholds, deadlines, observation widths, latency targets, pool sizes, and rate limits remain provisional until calibration and protocol freeze. This design supports a characterization study; it makes no novelty or performance claim.
 
 The [normative execution rules](PHASE2_EXECUTION_CONTRACT.md) define exact policy updates, configuration domains, grant replacement, retry/pending-admission accounting, cleanup, reset and stability behavior. They resolve the independent review findings and take precedence over shorthand here.
 

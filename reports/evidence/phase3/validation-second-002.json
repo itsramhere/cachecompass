@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "all_affected_buckets_new": true,
+    "append_only_checksums": true,
+    "bounded_workers": true,
+    "config_fingerprint": true,
+    "issued_attempts_reconcile": true,
+    "no_foreground_donor_fallback": true,
+    "no_unbudgeted_db_prefetch": true,
+    "offered_request_reconciliation": true,
+    "offered_schedule_checksum": true,
+    "payloads_authoritative": true,
+    "run_completed": true,
+    "schedule_arrival_terminal_equality": true,
+    "source_fingerprint": true
+  },
+  "compare_run": null,
+  "run": "phase3-smoke-b-20261018",
+  "valid": true
+}

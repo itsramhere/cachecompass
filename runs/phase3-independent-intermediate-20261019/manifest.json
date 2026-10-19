@@ -1,0 +1,18 @@
+{
+  "boundary": "Functional Phase 3 verification only; no calibration or performance comparison.",
+  "config_path": "configs/phase3_smoke.yaml",
+  "config_sha256": "1933351c63cd4c6982a861e6ccd143f6346902dd410add8f78c73069f2adb8df",
+  "elapsed_seconds": 3.375,
+  "ended_utc": "2026-10-18T21:23:43.105376+00:00",
+  "error": {
+    "message": "submission cannot precede scheduled arrival",
+    "type": "ValueError"
+  },
+  "exit_code": 1,
+  "kind": "phase3_minimal_scaleout",
+  "retry_of": "phase3-smoke-final2-a-20261018",
+  "run_id": "phase3-independent-intermediate-20261019",
+  "source_sha256": "b9938ca4fc0d966f4a453d2aaadd012d1d5b9bfa1a1562ff7aec7e5c2e4d3599",
+  "started_utc": "2026-10-18T21:23:39.738157+00:00",
+  "status": "infrastructure_failure"
+}

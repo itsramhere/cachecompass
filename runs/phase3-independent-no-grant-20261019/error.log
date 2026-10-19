@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\ramst\Documents\antigravity\paper2\src\cache_scaleout\phase3.py", line 379, in run_phase3
+    raise PolicyFailure("minimal migration pass did not warm every affected key")
+cache_scaleout.phase3.PolicyFailure: minimal migration pass did not warm every affected key

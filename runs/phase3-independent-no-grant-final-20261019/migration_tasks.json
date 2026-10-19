@@ -1,0 +1,58 @@
+[
+  {
+    "attempts": 0,
+    "bucket": 8,
+    "disposition": "not_warmed",
+    "key": "key-00000002",
+    "reason": "destination_grant_exhausted_or_pressure_paused",
+    "source": null
+  },
+  {
+    "attempts": 0,
+    "bucket": 8,
+    "disposition": "not_warmed",
+    "key": "key-00000006",
+    "reason": "destination_grant_exhausted_or_pressure_paused",
+    "source": null
+  },
+  {
+    "attempts": 0,
+    "bucket": 8,
+    "disposition": "not_warmed",
+    "key": "key-00000009",
+    "reason": "destination_grant_exhausted_or_pressure_paused",
+    "source": null
+  },
+  {
+    "attempts": 0,
+    "bucket": 8,
+    "disposition": "not_warmed",
+    "key": "key-00000015",
+    "reason": "destination_grant_exhausted_or_pressure_paused",
+    "source": null
+  },
+  {
+    "attempts": 0,
+    "bucket": 0,
+    "disposition": "not_warmed",
+    "key": "key-00000030",
+    "reason": "source_exhausted_or_db_budget_unavailable",
+    "source": null
+  },
+  {
+    "attempts": 0,
+    "bucket": 2,
+    "disposition": "not_warmed",
+    "key": "key-00000043",
+    "reason": "source_exhausted_or_db_budget_unavailable",
+    "source": null
+  },
+  {
+    "attempts": 0,
+    "bucket": 8,
+    "disposition": "not_warmed",
+    "key": "key-00000045",
+    "reason": "destination_grant_exhausted_or_pressure_paused",
+    "source": null
+  }
+]

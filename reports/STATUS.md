@@ -1,42 +1,31 @@
 # Project status
 
-Updated: 2026-10-18T18:58:00Z
-Active phase: 2 - Independent review, scoped fixes and verification
+Updated: 2026-10-18T22:15:40.978552+00:00
+Active phase: 3 - independently reviewed minimal system
 Phase status: complete
-Source state: No project Git HEAD; SHA256 fc85008dd9b76d6d3e7d3c3d1ef5359264a11604631b6699a7e505e9733bdd41 (69 source/config files); reports/reviews/evidence/phase2_20261018_1821/source_complete.json.
-Environment: reports/environment.json (historical Phase 0 snapshot; services not started in Phase 2)
+Source state: 8454ae425d5546a546d59e1b7b2258b4ec1c844eebb35e2609f7a4ab98e15c19 (78 canonical files); `reports/reviews/evidence/phase3_20261019_independent/source_publication.json`
+Environment: native Windows CPython 3.12.10; pinned disposable Redis/PostgreSQL; research containers stopped after verification
 
 ## Outcome so far
 
-Phase 2 gate PASS after independent audit and scoped correction, superseding the submitted assessment. Corrected contracts/specifications define atomic batch ownership, grant installation, bounded immutable observations and coverage provenance, retry-aware positive new-minus-old DB demand and pending reserves, destination byte limits, finite cleanup/pass rules, independent offered-schedule reconciliation, fresh-instance resets and stable-traffic completion. See reports/reviews/phase_02_independent_20261018_1821.md and docs/PHASE2_EXECUTION_CONTRACT.md. No Phase 3 runtime was built.
-
-Immediate, migration-before-cutover, adaptive-budget migration-before-cutover, fixed gradual, warmup-only, and traffic-only are experimental controls. Joint control is the candidate policy. This remains a characterization study; no novelty or measured gain is claimed.
+Phase 3 gate **PASS after independent corrections**, superseding the implementation-owner assessment. Ten original negative checks failed; ISSUE-0017 through ISSUE-0020 now have verified fixes. Shared foreground semantics, bounded actual pools/deadlines/cleanup, generation-safe fills/grants, token/byte limits, conservative expiry/residency, periodic charged observations, independent offers and physical resets executed against actual clients. No Phase 4 calibration or performance inference was performed.
 
 ## Current evidence
 
-- Submitted source reproduced exactly (67 files, b8e0d798...); original 13 tests passed again. Historical evidence remains valid for its limited scope.
-- Negative regression reproduction: exit 1; 25 tests, failures=15 across 12 new tests including four invalid-limit subcases; reports/reviews/evidence/phase2_20261018_1821/tests_regressions_before.json.
-- Final corrected suite: exit 0; 39 tests passed in 0.005 s; tests_complete.json in the same directory, linked to the retained failure. Includes fixed idle-pressure sampling interfaces and explicit observation DB charge. Existing CPython 3.12.10 via approved native execution; no installs. Both earlier 38-test passes remain retained.
-- Fresh source capture: exit 0; 69 files, SHA256 above; source_complete.json. Exact test-run source is also in tests_complete.json.
-- Final preservation/source/link checks: preservation_complete.json and audit_complete.json in that directory. Only four living report/ledger files are authorized historical changes; 196 historical files were checked.
-- Phase 2 specification/gate record: reports/phase_02.md and docs/ARCHITECTURE.md, DATA_SCHEMAS.md, INVARIANTS.md, POLICIES.md.
-- Failed initial launcher invocation and successful native reruns retained: reports/evidence/phase2/test-001.json, test-002.json, and reports/issues/ISSUE-0005.md.
-- Phase 1 and Phase 0 historical evidence/source manifests remain unchanged and retained.
+- `tests_publication.json`: exit 0, 90 checks, no skips; 17 actual-client, 34 behavioral, 39 contract checks.
+- `publication_cycle.json` / `publication_pair_validation.json`: two completed exact-source expansions; 39 passing artifact checks; physical resets and shutdown verified.
+- `expected_failure_publication.json`: expected policy failure with zero discretionary grants, 10 accounted offers and 310 terminal issued operations.
+- `preservation_final.json`: 162 historical files unchanged; all 80 submitted source files archived exactly.
+- Independent report: [review](reviews/phase_03_independent_20261019.md); evidence lives under `reports/reviews/evidence/phase3_20261019_independent/`.
 
 ## Open issues and impact
 
-- ISSUE-0004: AdaptCache full text remains inaccessible; limits exhaustive novelty claims but does not block characterization implementation.
-- ISSUE-0005: verified workaround for restricted sandbox venv-base access. It does not block Phase 2; future agent execution may need the established approved native boundary.
-- ISSUE-0006/0007/0008: verified within Phase 2 contract/specification scope; runtime obligations remain future implementation work.
-- Historical Phase 1 reviewer F04/F05 is preserved and not recertified here; the Phase 2 gate does not certify all literature tooling failure paths or historical Phase 1 source recapture.
-- No open correctness defect blocks Phase 3. Contract checks are not live-system verification.
+ISSUE-0017/0018/0019/0020 are verified. No essential Phase 3 blocker remains. ISSUE-0004 remains the accepted literature-access limitation. Historical failed commands and superseded gate claims remain retained.
 
 ## Next actions
 
-1. Begin the next authorized Phase 3 task from docs/PHASE2_EXECUTION_CONTRACT.md and the corrected protocols; implement stable maps, atomic snapshots and the bounded request/shared-fill path first.
-2. Add fake-client race/cancellation/timeout/expiry/reset tests, then actual Redis/PostgreSQL integration; retain failures by protocol.
-3. Keep performance settings provisional until Phase 4 calibration and freeze evaluation settings only in Phase 7.
+Phase 3 publication is authorized; the commit/push result is reported in the final handoff. Stop before Phase 4; later capacity calibration requires a new task. Use fresh IDs and `scripts/phase3_cycle.ps1` for another equivalent small run.
 
 ## Remaining scope and limitations
 
-Phases 3-10 not started. No scale-out request path, token bucket, service migration, workload runner, experiment, capacity calibration, measured penalty, policy evaluation, figures or manuscript exists. The 39 tests cover pure contracts only. Actual cancellation/pool cleanup, sampling, grant enforcement, TTLs, complete offered accounting and reset equivalence need behavioral and real-client integration evidence. Immutable single-router/no-foreground-fallback scope and equal-cost query-mix assumptions remain. Numerical thresholds, margins, rates, bounds, deadlines, sample minima and latency target are provisional. No performance, universal-safety, production or novelty claim is supported. No scientific results were invalidated or replaced.
+Immutable data, one router/host and independent Redis instances. Numeric rates, pressure thresholds and deadlines are provisional correctness settings. Full wire bytes, exact allocator/LRU timing, cross-host/restart/clock-jump behavior, mutable data, multiple routers and performance improvements are not certified. Phases 4-10 remain unstarted; comparative policy loops are later work. Config SHA256: deb785c8cb5e2b63b82551ef0a03294c72e5149b650587f1b8fc1e52f6fa9fe0.

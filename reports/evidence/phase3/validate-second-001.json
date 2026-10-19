@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "cache_scaleout",
+    "phase3-validate",
+    "--run",
+    "runs/phase3-smoke-b-20261018",
+    "--output",
+    "reports/evidence/phase3/validation-second-001.json"
+  ],
+  "elapsed_seconds": 0.1410000000000764,
+  "ended_utc": "2026-10-18T20:37:18.936553+00:00",
+  "exit_code": 1,
+  "retry_of": null,
+  "started_utc": "2026-10-18T20:37:18.801786+00:00",
+  "stderr": "C:\\Users\\ramst\\Documents\\antigravity\\paper2\\.venv\\Scripts\\python.exe: No module named cache_scaleout",
+  "stdout": ""
+}

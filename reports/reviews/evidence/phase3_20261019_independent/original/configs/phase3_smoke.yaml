@@ -1,0 +1,82 @@
+schema_version: 1
+purpose: deterministic Phase 3 functional verification
+provisional: true
+
+dataset:
+  seed: 42
+  keys: 48
+  value_bytes: 128
+
+routing:
+  mapping_seed: 2026
+  virtual_buckets: 16
+  old_nodes: [old-1, old-2]
+  final_nodes: [old-1, old-2, new]
+  destination: new
+
+services:
+  cache:
+    host: 127.0.0.1
+    ports: [16379, 16380, 16381]
+    socket_timeout_seconds: 1.0
+    maxmemory_bytes: 33554432
+    eviction_policy: allkeys-lru
+  database:
+    host: 127.0.0.1
+    port: 15432
+    dbname: paper2_research
+    user: paper2_research
+    password_env: PAPER2_DB_PASSWORD
+    pool_timeout_seconds: 2.0
+    statement_timeout_ms: 1000
+
+resources:
+  foreground_db_connections: 2
+  background_db_connections: 1
+  foreground_cache_connections_per_node: 2
+  background_cache_connections_per_node: 1
+  migration_workers: 2
+  max_inflight_requests: 8
+  max_coalesced_keys: 4
+  max_pending_migration_tasks: 64
+  max_pending_metric_records: 512
+  max_buffered_payload_bytes: 512
+
+timing:
+  run_timeout_seconds: 30
+  foreground_timeout_seconds: 2.0
+  cleanup_timeout_seconds: 1.0
+  migration_attempt_timeout_seconds: 1.0
+  metric_timeout_seconds: 1.0
+  flush_timeout_seconds: 5.0
+
+retries:
+  foreground_cache: {max_attempts: 1, attempt_timeout_seconds: 1.0, backoff_seconds: []}
+  foreground_database: {max_attempts: 2, attempt_timeout_seconds: 1.0, backoff_seconds: [0.01]}
+  foreground_fill_write: {max_attempts: 2, attempt_timeout_seconds: 1.0, backoff_seconds: [0.01]}
+  donor_read: {max_attempts: 2, attempt_timeout_seconds: 1.0, backoff_seconds: [0.01]}
+  warmup_database: {max_attempts: 2, attempt_timeout_seconds: 1.0, backoff_seconds: [0.01]}
+  destination_write: {max_attempts: 2, attempt_timeout_seconds: 1.0, backoff_seconds: [0.01]}
+
+observations:
+  subwindow_ns: 1000000000
+  retained_subwindows: 4
+  max_age_ns: 5000000000
+  max_total_keys: 64
+  max_keys_per_bucket: 64
+
+migration_grant:
+  donor_operations: 96
+  donor_bytes: 12288
+  background_db_operations: 2
+  destination_write_operations: 96
+  destination_write_bytes: 12288
+  valid_for_seconds: 20
+
+provisional_pressure:
+  cache_latency_upper_ms: 250
+  db_latency_upper_ms: 250
+  memory_upper_fraction: 0.99
+
+workload:
+  post_cutover_requests: 8

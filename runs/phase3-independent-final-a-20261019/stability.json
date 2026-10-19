@@ -1,0 +1,20 @@
+{
+  "final_publication_ns": 6754406000000,
+  "measurement_ended_ns": 6758109000000,
+  "windows": [
+    {
+      "completed": 4,
+      "destination_share": 1.0,
+      "end_ns": 6756490000000,
+      "start_ns": 6756390000000,
+      "submitted_affected": 4
+    },
+    {
+      "completed": 4,
+      "destination_share": 1.0,
+      "end_ns": 6756590000000,
+      "start_ns": 6756490000000,
+      "submitted_affected": 4
+    }
+  ]
+}

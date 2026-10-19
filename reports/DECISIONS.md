@@ -20,7 +20,7 @@ Options considered: Create a nested repository/commit; pin version tags alone; r
 Decision: Source/config SHA256 manifest, seven hash-locked Windows wheels, and immutable official Redis 7.4/PostgreSQL 17 image digests. Record resolved package/server versions.
 Reason: Identifies the actual local state without altering the unrelated parent repository. Pool package has its own release cycle; lock its resolved version separately.
 Effect on correctness, comparability, or claims: Fingerprints exclude mutable reports/runs/venv/wheels/secrets and explicitly define canonical input serialization. Health artifacts contain their execution source snapshot. No novelty/performance claim.
-Verification: scripts/validate_phase0.py passed nine checks; reports/source_state.json agrees with executed doctor/health source checksum a657f503705b75d360cf31f8ef0d3aa38f20b31751ad0fa003f00223ca4ee005.
+Verification: scripts/validate_phase0.py passed nine checks; reports/source_state.json agrees with executed doctor/health source checksum a657f503705b75d360cf31f8ef0d3aa38f20b31051ad0fa003f00223ca4ee005.
 
 ## DECISION-0003: Use disposable startup quotas and preserve uncalibrated workload values
 
@@ -97,6 +97,28 @@ Options considered: Pass high-level intent to Phase 3; build runtime to discover
 Decision: Add docs/PHASE2_EXECUTION_CONTRACT.md as normative behavioral detail and align architecture/schemas/policies. Use atomic expected-epoch batches; replacing finite grants with conservative byte reservations; positive retry-aware new-minus-old DB load plus pending reserve; immutable bounded observation/coverage provenance; exact pressure/ramp/pass/schedule rules; shielded shared fills with creator deadlines and bounded connection-discard cleanup; independent offered schedules; fresh disposable caches and full initial summaries; fixed measurement horizons and per-subwindow stability evidence.
 Reason: These choices affect correctness, comparability and policy outcomes. Namespace isolation does not reset physical cache memory/eviction history. Old-owner lower credit avoids adding displaced misses twice; unknown data earns zero credit.
 Effect on correctness, comparability, or claims: Six controls retain matched foreground/resource/metadata/ordering rules, with their declared differences in admission/soft-pressure adaptation. Source-missing keys can finish a finite pass cold, explicitly accounted. Strict deadlines can cause valid policy failures. Numerical capacities, margins, sample minima, ramps and thresholds remain uncalibrated. No runtime protection or improvement is certified.
-Verification: Final 39 tests pass (exit 0, 0.005 s), reports/reviews/evidence/phase2_20261018_1821/tests_complete.json, linked to the retained 25-test negative run (exit 1, failures=15). Final 69-file SHA256: fc85008dd9b76d6d3e7d3c3d1ef5359264a11604631b6699a7e505e9733bdd41. Earlier 38-test passes/captures remain intermediate evidence. Full audit: reports/reviews/phase_02_independent_20261018_1821.md.
+Verification: Final 39 tests pass (exit 0, 0.005 s), reports/reviews/evidence/phase2_20261018_1821/tests_publication.json, linked to the retained 25-test negative run (exit 1, failures=15). Final 69-file SHA256: fc85008dd9b76d6d3e7d3c3d1ef5359264a11604631b6699a7e505e9733bdd41. Earlier 38-test passes/captures remain intermediate evidence. Full audit: reports/reviews/phase_02_independent_20261018_1821.md.
 
 Supplement, 2026-10-18T18:58Z: The pressure classifier needs a signal producer while caches/DB are idle and migration paused. Specify a common finite PING/INFO/same-query DB sampler, identical across all policies, using bounded background pools and independent fixed observation grants. It cannot assert residency. OBSERVATION_DATABASE is charged separately in allowance and global DB reconciliation. No samples or runtime were generated; only interfaces, accounting arithmetic and algorithm obligations were verified. This closes a startup specification gap without presuming UNKNOWN is SAFE.
+
+## DECISION-0010: Keep Phase 3 orchestration functional and physically recreate caches for repeatability evidence
+
+Time: 2026-10-18T20:37:04Z
+Phase: 3
+Context: Phase 3 must exercise expansion and verify mechanisms without implementing or tuning the Phase 5/6 comparative policies. Namespace-only cache reset cannot establish equivalent physical Redis state under bounded memory/LRU.
+Options considered: implement a preliminary comparative controller; run two namespaces on reused Redis processes; use one fixed donor-first pass and recreate the verified disposable Compose project for each equivalent run.
+Decision: Use one deterministic fixed functional pass with explicit finite grants, one forced donor miss for budgeted DB warming, atomic `OLD -> COPYING -> ELIGIBLE -> NEW` publication, and a fixed observation round. The two-run entry point removes and recreates only the verified `paper2-research` project before each run, then compares complete logical initial states and disjoint Redis run IDs.
+Reason: This verifies the Phase 3 request/migration/accounting/reset mechanisms while respecting the phase boundary. Physical recreation avoids allocator/LRU history reuse that a namespace cannot remove.
+Effect on correctness, comparability, or claims: The Phase 3 gate can assess functional correctness and repeatability. All smoke rates, thresholds, grants, key counts and deadlines remain provisional. The run is not evidence about policy performance, calibrated headroom, or measured gains.
+Verification: `reports/evidence/phase3/cycle-003.json` exit 0; both final exact-source runs completed. `reset-comparison-final-002.json` passes transition, complete-state, distinct-instance, checksum, fingerprint and accounting checks.
+
+## DECISION-0011: Complete Phase 3 runtime obligations without changing policy foreground semantics
+
+Time: 2026-10-18T22:08:25.778452+00:00
+Phase: 3 independent review/correction
+Context: Ten negative runtime failures, actual TTL extension and failed-cancel cleanup reproduction contradicted the submitted PASS. Prior contract/owner tests were insufficient.
+Options considered: accept happy-path evidence; defer lifecycle/resource/accounting choices to policies; enforce the reviewed obligations now and preserve every failure.
+Decision: shared post-connection issuance, bounded cancel/drain/discard and quarantine, deferred creator accounting, generation-renewed reservations, independent empty-start tokens/encoded grants, separate pools and priority observations, fixed independent offers/horizon/stability, complete raw validation and physical resets. Add an original-expiry envelope/write receipt; identify the two existing fixed diagnostic deletes separately and forbid them in comparative/calibration workloads. Exclude ignored outputs/local state from canonical source identity while retaining historical definitions.
+Reason: These changes close observed mechanism/provenance defects rather than tune comparative policies. See ISSUE-0017 through ISSUE-0020 and normative clarification.
+Effect on correctness, comparability, or claims: All policies retain the same foreground source/owner/deadline/retry/coalescing rules and shared resource/metadata costs. Cache encoding gains 12 bytes; callers consume conservative write receipts. Full wire bytes remain unknown where not measured. No new capacity, safety, performance or novelty claim. Phases 4 onward remain unstarted.
+Verification: 90 final checks including 17 actual-client cases, 39 repeated-run audits, exact-source accounted policy failure, preserved historical/source bytes; independent review `reports/reviews/phase_03_independent_20261019.md`. Final SHA256 8454ae425d5546a546d59e1b7b2258b4ec1c844eebb35e2609f7a4ab98e15c19.

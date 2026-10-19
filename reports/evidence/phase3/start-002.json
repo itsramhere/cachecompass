@@ -1,0 +1,17 @@
+{
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "scripts/start.ps1"
+  ],
+  "elapsed_seconds": 9.531999999999925,
+  "ended_utc": "2026-10-18T20:33:21.883326+00:00",
+  "exit_code": 0,
+  "retry_of": "reports\\evidence\\phase3\\start-001.json",
+  "started_utc": "2026-10-18T20:33:12.365038+00:00",
+  "stderr": "Network paper2-research_default Creating \n Network paper2-research_default Creating \n Network paper2-research_default Created \n Network paper2-research_default Created \n Container paper2-research-database-1 Creating \n Container paper2-research-cache-new-1 Creating \n Container paper2-research-cache-old-2-1 Creating \n Container paper2-research-cache-old-1-1 Creating \n Container paper2-research-cache-old-2-1 Created \n Container paper2-research-cache-old-1-1 Created \n Container paper2-research-cache-new-1 Created \n Container paper2-research-database-1 Created \n Container paper2-research-database-1 Starting \n Container paper2-research-cache-old-1-1 Starting \n Container paper2-research-cache-old-2-1 Starting \n Container paper2-research-cache-new-1 Starting \n Container paper2-research-database-1 Started \n Container paper2-research-cache-old-1-1 Started \n Container paper2-research-cache-old-2-1 Started \n Container paper2-research-cache-new-1 Started \n Container paper2-research-database-1 Waiting \n Container paper2-research-cache-old-1-1 Waiting \n Container paper2-research-cache-old-2-1 Waiting \n Container paper2-research-cache-new-1 Waiting \n Container paper2-research-cache-old-1-1 Healthy \n Container paper2-research-cache-old-2-1 Healthy \n Container paper2-research-cache-new-1 Healthy \n Container paper2-research-database-1 Healthy",
+  "stdout": ""
+}

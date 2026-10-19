@@ -1,0 +1,37 @@
+{
+  "boundary": "Extraction is not proof of manual relevant-section reading.",
+  "captured_utc": "2026-10-09T18:43:04.289681+00:00",
+  "config_sha256": "6cd366e59cdd6b2f099123a9ab7473e1b7ff4a8594d676aed391c96f8d897a49",
+  "retry_of": null,
+  "sources": [
+    {
+      "content_type": "application/pdf; qs=0.001",
+      "elapsed_seconds": 0.25,
+      "ended_utc": "2026-10-09T18:43:04.285632+00:00",
+      "http_status": 200,
+      "id": "test-success",
+      "pages": 1,
+      "pages_sha256": "87e5946045855d6ac22960e20bd21672a01afe54a11849bab538a3b021f93061",
+      "pdf_sha256": "3df79d34abbca99308e79cb94461c1893582604d68329a41fd4bec1885e6adb4",
+      "resolved_url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      "started_utc": "2026-10-09T18:43:04.040296+00:00",
+      "status": "retrieved_and_extracted",
+      "text_sha256": "069387a213ec4da787171777f1d5ff5750f0542e7a9937e1f14da6cab9df75ca",
+      "url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+    },
+    {
+      "elapsed_seconds": 0.1569999999992433,
+      "ended_utc": "2026-10-09T18:43:04.199676+00:00",
+      "error": {
+        "body": "<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain</title><style>html{color-scheme:light dark;background:light-dark(#eee,#222)}body{font:16px/1.6 system-ui,sans-serif;max-width:26em;margin:auto;padding:25vh 2em 2em;text-align:center}</style></head><body><p>This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.</p><script src=/s.js></script></body></html>\n",
+        "message": "HTTP Error 404: Not Found",
+        "type": "HTTPError"
+      },
+      "http_status": 404,
+      "id": "test-fail",
+      "started_utc": "2026-10-09T18:43:04.041307+00:00",
+      "status": "retrieval_failure",
+      "url": "http://example.com/fail"
+    }
+  ]
+}

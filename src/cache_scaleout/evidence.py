@@ -25,14 +25,18 @@ def source_fingerprint() -> dict:
     files = []
     for path in sorted(ROOT.rglob('*')):
         relative = path.relative_to(ROOT)
-        if relative.parts[0] in {'.venv', '.wheelhouse', '.git', 'reports', 'runs'}:
+        if (relative.parts[0] in {'.wheelhouse', '.git', 'reports', 'runs', 'test_out', 'venv',
+                                 'build', 'dist', 'htmlcov', '.codex', '.cache', '.aws', '.agents',
+                                 '.idea', '.vscode', '.pytest_cache', '.mypy_cache', '.ruff_cache'}
+                or relative.parts[0].startswith('.venv')):
             continue
-        if '__pycache__' in relative.parts or not path.is_file() or path.suffix == '.pyc' or path.name == '.env':
+        if ('__pycache__' in relative.parts or not path.is_file() or path.suffix in {'.pyc','.pem','.key'}
+                or path.name == '.env' or (path.name.startswith('.env.') and path.name not in {'.env.example','.env.sample'})):
             continue
         files.append({'path': relative.as_posix(), 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()})
     canonical = json.dumps(files, sort_keys=True, separators=(',', ':')).encode()
     return {'algorithm': 'sha256', 'aggregate_sha256': hashlib.sha256(canonical).hexdigest(),
-            'definition': 'SHA256 of canonical JSON file list; excludes reports, runs, virtualenv, wheels, bytecode and secrets',
+            'definition': 'SHA256 of canonical JSON file list; excludes reports, runs, ignored test_out/build/cache/agent state, virtualenvs, wheels, bytecode and secrets',
             'files': files}
 
 

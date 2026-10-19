@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "tests.test_phase3_behavior",
+    "-v"
+  ],
+  "elapsed_seconds": 0.7180000000000746,
+  "ended_utc": "2026-10-18T20:38:16.279131+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-18T20:38:15.554339+00:00",
+  "stderr": "test_db_budget_exhaustion_issues_no_unbudgeted_prefetch (tests.test_phase3_behavior.MigrationBehaviorTests.test_db_budget_exhaustion_issues_no_unbudgeted_prefetch) ... ok\r\ntest_destination_limit_prevents_extra_donor_read (tests.test_phase3_behavior.MigrationBehaviorTests.test_destination_limit_prevents_extra_donor_read) ... ok\r\ntest_destination_pressure_zero_grant_prevents_source_io (tests.test_phase3_behavior.MigrationBehaviorTests.test_destination_pressure_zero_grant_prevents_source_io) ... ok\r\ntest_expired_data_is_not_copied (tests.test_phase3_behavior.MigrationBehaviorTests.test_expired_data_is_not_copied) ... ok\r\ntest_retry_charging_and_selective_donor_copy (tests.test_phase3_behavior.MigrationBehaviorTests.test_retry_charging_and_selective_donor_copy) ... ok\r\ntest_dataset_mapping_and_atomic_snapshot_are_deterministic (tests.test_phase3_behavior.ObservationAndTelemetryTests.test_dataset_mapping_and_atomic_snapshot_are_deterministic) ... ok\r\ntest_demand_memory_is_bounded_and_half_open (tests.test_phase3_behavior.ObservationAndTelemetryTests.test_demand_memory_is_bounded_and_half_open) ... ok\r\ntest_grants_replace_unissued_credit_and_reject_duplicate_decisions (tests.test_phase3_behavior.ObservationAndTelemetryTests.test_grants_replace_unissued_credit_and_reject_duplicate_decisions) ... ok\r\ntest_independent_schedule_reconciliation_detects_omission (tests.test_phase3_behavior.ObservationAndTelemetryTests.test_independent_schedule_reconciliation_detects_omission) ... ok\r\ntest_database_timeout_is_terminal_and_charged (tests.test_phase3_behavior.RouterBehaviorTests.test_database_timeout_is_terminal_and_charged) ... ok\r\ntest_final_waiter_cancels_fill_and_releases_cleanup (tests.test_phase3_behavior.RouterBehaviorTests.test_final_waiter_cancels_fill_and_releases_cleanup) ... ok\r\ntest_inflight_cutover_retains_captured_old_owner (tests.test_phase3_behavior.RouterBehaviorTests.test_inflight_cutover_retains_captured_old_owner) ... ok\r\ntest_simultaneous_misses_share_one_authoritative_fill (tests.test_phase3_behavior.RouterBehaviorTests.test_simultaneous_misses_share_one_authoritative_fill) ... ok\r\ntest_waiter_cancellation_is_independent (tests.test_phase3_behavior.RouterBehaviorTests.test_waiter_cancellation_is_independent) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 14 tests in 0.267s\r\n\r\nOK",
+  "stdout": ""
+}

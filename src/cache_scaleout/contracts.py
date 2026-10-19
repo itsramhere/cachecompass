@@ -70,6 +70,7 @@ class WorkClass(str, Enum):
     DISCRETIONARY_DATABASE_WARMUP = "discretionary_database_warmup"
     OBSERVATION_CACHE = "observation_cache"
     OBSERVATION_DATABASE = "observation_database"
+    FUNCTIONAL_DIAGNOSTIC_CACHE = "functional_diagnostic_cache"
 
 
 class OperationOutcome(str, Enum):
@@ -180,6 +181,16 @@ class CacheValue:
         if self.absolute_expiry_ns is None:
             return None
         return max(0, self.absolute_expiry_ns - now_ns)
+
+
+@dataclass(frozen=True, slots=True)
+class CacheWriteReceipt:
+    """Conservative expiry for positive residency evidence after acknowledged IO."""
+    valid_until_ns: int | None
+
+    def __post_init__(self) -> None:
+        if self.valid_until_ns is not None:
+            _integer(self.valid_until_ns, 'valid_until_ns')
 
 
 @dataclass(frozen=True, slots=True)

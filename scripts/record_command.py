@@ -21,6 +21,11 @@ if not argv:
 started = utc_now()
 result = command(argv, timeout=180)
 write_json(args.output, {'started_utc':started, 'ended_utc':utc_now(), 'retry_of':str(args.retry_of) if args.retry_of else None, **result})
-print(result.get('stdout', ''))
-print(result.get('stderr', result.get('error','')), file=sys.stderr)
+def emit(stream, value):
+    data = (value + ('\n' if value and not value.endswith('\n') else '')).encode('utf-8', errors='replace')
+    stream.buffer.write(data)
+    stream.buffer.flush()
+
+emit(sys.stdout, result.get('stdout', ''))
+emit(sys.stderr, result.get('stderr', result.get('error','')))
 raise SystemExit(result['exit_code'] if result['exit_code'] is not None else 1)

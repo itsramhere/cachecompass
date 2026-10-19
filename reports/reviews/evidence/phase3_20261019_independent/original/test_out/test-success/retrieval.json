@@ -1,0 +1,15 @@
+{
+  "content_type": "application/pdf; qs=0.001",
+  "elapsed_seconds": 0.25,
+  "ended_utc": "2026-10-09T18:43:04.285632+00:00",
+  "http_status": 200,
+  "id": "test-success",
+  "pages": 1,
+  "pages_sha256": "87e5946045855d6ac22960e20bd21672a01afe54a11849bab538a3b021f93061",
+  "pdf_sha256": "3df79d34abbca99308e79cb94461c1893582604d68329a41fd4bec1885e6adb4",
+  "resolved_url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+  "started_utc": "2026-10-09T18:43:04.040296+00:00",
+  "status": "retrieved_and_extracted",
+  "text_sha256": "069387a213ec4da787171777f1d5ff5750f0542e7a9937e1f14da6cab9df75ca",
+  "url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+}

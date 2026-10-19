@@ -8,7 +8,7 @@ from .contracts import (
     BucketId, BucketState, CacheReadResult, CacheValue, ControllerAction,
     ControllerObservation, DataSource, DemandSnapshot, EventRecord, Key,
     MigrationAttemptRecord, MigrationTask, NodeId, RequestRecord, RouteCapture,
-    RoutingEpoch, BucketAdvance, ComponentPressure,
+    RoutingEpoch, BucketAdvance, ComponentPressure, CacheWriteReceipt,
 )
 
 
@@ -31,7 +31,7 @@ class CacheClient(Protocol):
     @property
     def node_id(self) -> NodeId: ...
     async def read(self, key: Key, *, source: DataSource, deadline_ns: int) -> CacheReadResult: ...
-    async def write(self, key: Key, value: CacheValue, *, deadline_ns: int) -> None: ...
+    async def write(self, key: Key, value: CacheValue, *, deadline_ns: int) -> CacheWriteReceipt: ...
     async def sample_pressure(self, *, deadline_ns: int) -> ComponentPressure:
         """Fixed shared PING/INFO grant; never a key-residency probe."""
         ...

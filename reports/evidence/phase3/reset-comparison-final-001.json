@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "all_affected_buckets_new": true,
+    "append_only_checksums": true,
+    "bounded_workers": true,
+    "complete_initial_state_equivalence": true,
+    "config_fingerprint": true,
+    "issued_attempts_reconcile": true,
+    "no_foreground_donor_fallback": true,
+    "no_unbudgeted_db_prefetch": true,
+    "offered_request_reconciliation": true,
+    "offered_schedule_checksum": true,
+    "payloads_authoritative": true,
+    "physical_cache_instances_recreated": true,
+    "run_completed": true,
+    "same_config": true,
+    "same_executed_source": true,
+    "schedule_arrival_terminal_equality": true,
+    "source_fingerprint": true
+  },
+  "compare_run": "phase3-smoke-final-b-20261018",
+  "run": "phase3-smoke-final-a-20261018",
+  "valid": true
+}

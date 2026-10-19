@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "search_cutoff": "2026-10-09",
+  "pdf_tool": "pypdf==6.1.1",
+  "sources": [
+    {"id":"R01","required":true,"title":"Scaling Memcache at Facebook","landing_url":"https://www.usenix.org/conference/nsdi13/technical-sessions/presentation/nishtala","url":"https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final170_update.pdf"},
+    {"id":"R02","required":true,"title":"ElMem: Towards an Elastic Memcached System","landing_url":"https://www3.cs.stonybrook.edu/~anshul/icdcs18_elmem.pdf","url":"https://www3.cs.stonybrook.edu/~anshul/icdcs18_elmem.pdf"},
+    {"id":"R03","required":true,"title":"Warming Up Storage-Level Caches with Bonfire","landing_url":"https://www.usenix.org/conference/fast13/technical-sessions/presentation/zhang","url":"https://www.usenix.org/system/files/conference/fast13/fast13-final118_0.pdf"},
+    {"id":"R04","required":true,"title":"When is the Cache Warm? Manufacturing a Rule of Thumb","landing_url":"https://www.usenix.org/conference/hotcloud20/presentation/zhang-lei","url":"https://www.usenix.org/system/files/hotcloud20_paper_zhang-lei.pdf"},
+    {"id":"R05","required":true,"title":"A large scale analysis of hundreds of in-memory cache clusters at Twitter","landing_url":"https://www.usenix.org/conference/osdi20/presentation/yang","url":"https://www.usenix.org/system/files/osdi20-yang.pdf"},
+    {"id":"R06","required":false,"title":"In-Memory Key-Value Store Live Migration with NetMigrate","landing_url":"https://www.usenix.org/conference/fast24/presentation/zhu","url":"https://www.usenix.org/system/files/fast24-zhu.pdf"},
+    {"id":"R07","required":false,"title":"ELICA: Efficient and Load Balanced I/O Cache Architecture for Hyperconverged Infrastructures","landing_url":"https://6gmobile.fel.cvut.cz/publication/Kishani_IEEE_TPDS_MEC.pdf","url":"https://6gmobile.fel.cvut.cz/publication/Kishani_IEEE_TPDS_MEC.pdf"},
+    {"id":"R08","required":false,"title":"Pegasus: Tolerating Skewed Workloads in Distributed Storage with In-Network Coherence Directories","landing_url":"https://www.usenix.org/conference/osdi20/presentation/li-jialin","url":"https://www.usenix.org/system/files/osdi20-li_jialin.pdf"},
+    {"id":"R09","required":false,"title":"Metastable Failures in the Wild","landing_url":"https://www.usenix.org/conference/osdi22/presentation/huang-lexiang","url":"https://www.usenix.org/system/files/osdi22-huang-lexiang.pdf"}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "tests.test_phase3_integration",
+    "-v"
+  ],
+  "elapsed_seconds": 2.5620000000001255,
+  "ended_utc": "2026-10-18T20:36:17.287513+00:00",
+  "exit_code": 0,
+  "retry_of": "reports\\evidence\\phase3\\integration-tests-003.json",
+  "started_utc": "2026-10-18T20:36:14.717421+00:00",
+  "stderr": "test_actual_pressure_sampling_and_instance_identity (tests.test_phase3_integration.ActualClientIntegrationTests.test_actual_pressure_sampling_and_instance_identity) ... ok\r\ntest_cancelled_and_timed_out_query_connection_is_reusable (tests.test_phase3_integration.ActualClientIntegrationTests.test_cancelled_and_timed_out_query_connection_is_reusable) ... ok\r\ntest_postgres_pools_are_separate_bounded_and_payloads_authoritative (tests.test_phase3_integration.ActualClientIntegrationTests.test_postgres_pools_are_separate_bounded_and_payloads_authoritative) ... ok\r\ntest_redis_atomic_payload_ttl_copy_never_extends_expiry (tests.test_phase3_integration.ActualClientIntegrationTests.test_redis_atomic_payload_ttl_copy_never_extends_expiry) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 1.450s\r\n\r\nOK",
+  "stdout": ""
+}

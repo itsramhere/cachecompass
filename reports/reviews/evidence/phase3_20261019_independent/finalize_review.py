@@ -1,0 +1,229 @@
+"""Write the independent gate only after checking the final retained evidence."""
+import hashlib
+import json
+from pathlib import Path
+import re
+import sys
+
+ROOT = Path(__file__).resolve().parents[4]
+BASE = Path(__file__).parent
+sys.path.insert(0,str(ROOT/'src'))
+from cache_scaleout.evidence import utc_now, source_fingerprint
+
+def read(path):
+    return json.loads(path.read_text(encoding='utf-8-sig'))
+
+source = read(BASE/'source_complete.json')
+tests = read(BASE/'tests_complete.json')
+pair = read(BASE/'complete_pair_validation.json')
+failure = read(BASE/'expected_failure_complete.json')
+preservation = read(BASE/'preservation_final.json')
+run_ids = ['phase3-independent-verified-a-20261019','phase3-independent-verified-b-20261019']
+run_dirs = [ROOT/'runs'/name for name in run_ids]
+manifests = [read(path/'manifest.json') for path in run_dirs]
+results = [read(path/'results.json') for path in run_dirs]
+failure_dir = ROOT/'runs/phase3-independent-no-grant-verified-20261019'
+failure_manifest = read(failure_dir/'manifest.json')
+failure_accounting = read(failure_dir/'failure_accounting.json')
+assert source['aggregate_sha256'] == source_fingerprint()['aggregate_sha256']
+assert tests['exit_code'] == 0 and 'Ran 90 tests' in tests['stderr'] and 'skipped=' not in tests['stderr']
+assert tests['source']['aggregate_sha256'] == source['aggregate_sha256']
+assert pair['valid'] and all(pair['checks'].values())
+assert all(m['status'] == 'completed' and m['source_sha256'] == source['aggregate_sha256'] for m in manifests)
+assert failure['exit_code'] == 0 and failure_manifest['status'] == 'policy_failure'
+assert failure_manifest['source_sha256'] == source['aggregate_sha256']
+assert failure_accounting['complete'] and failure_accounting['all_issued_terminal']
+assert preservation['preserved']
+timestamp = utc_now()
+digest = source['aggregate_sha256']
+config_digest = manifests[0]['config_sha256']
+evidence_link = 'evidence/phase3_20261019_independent/'
+review_path = ROOT/'reports/reviews/phase_03_independent_20261019.md'
+assert not review_path.exists()
+commands = []
+for path in sorted(BASE.glob('*.json')):
+    try:
+        record = read(path)
+    except (ValueError,UnicodeError):
+        continue
+    if isinstance(record,dict) and 'command' in record:
+        commands.append({'record':path.name, **{k:record.get(k) for k in
+            ('command','exit_code','started_utc','ended_utc','elapsed_seconds','retry_of')},
+            'source_sha256':record.get('source',{}).get('aggregate_sha256')})
+with (BASE/'command_index.json').open('x',encoding='utf-8') as f:
+    json.dump(commands,f,indent=2,sort_keys=True)
+summary = {'verdict':'PASS','scope':'Phase 3 correctness only','completed_utc':timestamp,
+           'source_sha256':digest,'source_files':len(source['files']),'config_sha256':config_digest,
+           'tests':90,'actual_client_tests':17,'behavioral_tests':34,'contract_tests':39,
+           'pair_checks':len(pair['checks']),'runs':run_ids,'failure_accounting':failure_accounting,
+           'historical_files_preserved':preservation['historical_files'],'submitted_archive_files':80}
+with (BASE/'review_summary.json').open('x',encoding='utf-8') as f:
+    json.dump(summary,f,indent=2,sort_keys=True)
+
+review = f'''# Independent Phase 3 runtime review and correction
+
+Completed: {timestamp}
+Verdict: **PASS after substantive corrections, for Phase 3 only.** The submitted PASS was not supported by its tests. Ten focused checks failed against the submitted runtime; later actual-client checks also exposed TTL and cancellation defects. No Phase 4 calibration, policy comparison, performance experiment or improvement inference was performed. No agents were spawned.
+
+Final tested source: **{digest}**, {len(source['files'])} canonical source/config files; [manifest]({evidence_link}source_complete.json). The full live suite, both final expansion runs and the controlled failure run used this exact source. Config SHA256: `{config_digest}`. Submitted source was `69b5d9776b9291a335c279265fa7cba882c60a771f276bc0fd777c728486aaa2`, 80 files; all 80 original file contents are independently archived and verified.
+
+## Scope and evidence standard
+
+Read the applicable ancestor/workspace instruction locations (no AGENTS.md found), RESEARCH_IMPLEMENTATION_PLAN.md including the Phase 3 gate, AGENT_REPORTING_TEMPLATES.md, status, decisions, index, ISSUE-0001 through ISSUE-0016, Phase 2 independent review and normative execution contract, Phase 3 report, architecture/policies/schemas/invariants, runtime modules, test code, scripts/configuration and retained request/event/migration/reset evidence. Existing dirty changes were the submitted Phase 3 implementation, not discarded or reset. No installed dependencies, service images, calibrated rates or later-phase policies were changed.
+
+Contract constructors and owner assertions were not accepted as runtime proof. Verification uses asynchronous interleavings, actual pinned Redis/PostgreSQL clients, actual returned bytes/DB payload checksums, individual issued records, deadlines, connection replacement and recreated processes. The 39 Phase 2 tests remain contract checks, separately identified below.
+
+## Findings and fixes
+
+| Finding | Severity / record | Reproduction and correction |
+| --- | --- | --- |
+| F3-01: Creator/follower deadlines, cancellation outcomes, late creator accounting and refusal demand diverged. Cache-fill write/backoff errors could discard valid DB data. Closing entries could accept later waiters. | High; [ISSUE-0017](../issues/ISSUE-0017.md) | Four initial router negatives failed. Enforce attempt/creator deadlines; terminally finish every issued attempt; retain creator ownership through deferred final reconciliation; serialize emission; protect closing generations; count refusals as submissions; preserve valid DB values. Actual-client tests exercise both cutover during a blocked Redis read and creator deadline with a later PostgreSQL follower. |
+| F3-02: Worker faults stranded queue.join; caller cancellation left IO alive; stale reservations credited replacement grants; destination issuance ignored expiry. Rate/burst enforcement was absent. | High; [ISSUE-0018](../issues/ISSUE-0018.md) | Four migration negatives failed. Structured finite workers/producer drain on faults/cancellation. Generation-specific reservations renew within the same pass/deadline and cannot authorize source IO under a zero replacement destination grant. Five empty-start monotonic token dimensions, separate encoded-byte/operation grants, payload/queue/history bounds and finite retries now execute. Only never-issued provisional work refunds. |
+| F3-03: Foreground/background cache pools were combined; client waits escaped deadlines; driver-specific transient exceptions bypassed retry rules. Sampling happened only at the end and charged two calls while issuing four. | High; [ISSUE-0019](../issues/ISSUE-0019.md) | Separate physical client pools, deadline-bounded connection acquisition and actual post-acquisition issue notifications. Explicit zero Redis driver retries and normalized socket/network exceptions. Periodic priority observation rounds run while idle/paused: one PING/one INFO per cache and one same-query DB read, with individual charges and raw signal/resource detail. A real Redis socket timeout executes exactly two configured charged attempts. |
+| F3-04: The retained TTL fix still extended a donor deadline by 8 ms in an actual-client rerun. Residency confirmation used a later deadline than conservative Redis TTL conversion. | High; [ISSUE-0019](../issues/ISSUE-0019.md) | Preserve the original expiry in a 12-byte envelope, cap reconstructed expiry, subtract clock-resolution uncertainty and floor PXAT. Refuse TTLs too short for safe conversion. A write receipt supplies the conservative residency expiry; registry caps, observed misses, expiry and eviction signals invalidate credit. Physical PTTL and donor/destination expiry checks pass, including 12 repeated clock-tick copies. |
+| F3-05: A failed PostgreSQL cancel handshake could block pool rollback beyond cleanup, leaving a query exception unconsumed. | High; [ISSUE-0019](../issues/ISSUE-0019.md) | A real lock-blocked query with a dropped cancel handshake reproduced **1.031 s**, violating the 0.35 s regression guard with a 30 ms request and 100 ms configured cleanup. Reserve cleanup time for hard discard; unregister Selector descriptors before closing; drain/consume the query task; use explicit pool get/put so uncertain queries never enter automatic rollback/reuse. Unconfirmed state is quarantined and stops issuance. The linked actual-client rerun passes and verifies a different backend PID. |
+| F3-06: Offered relative arrivals were replaced at dispatch; post requests awaited responses sequentially. Reconciliation accepted wrong keys/times and nonterminal outcomes. Validation trusted aggregate booleans. | High; [ISSUE-0020](../issues/ISSUE-0020.md) | Two initial reconciliation negatives failed. Persist absolute arrivals, dispatch independently, retain due arrival/non-submission records on generator cancellation, and keep the fixed horizon on policy failure. Derive validation from individual operations, payload hashes, task parents, chronology, grant/rate/burst/byte/pool/queue/drain evidence and complete artifacts. Validate the comparison run independently and compare normalized offered schedules. |
+| F3-07: Initial checks omitted foreign physical keys; DB preparation overwrote unrecognized tables and checked versions rather than actual stored payloads. | High; [ISSUE-0020](../issues/ISSUE-0020.md) | Require empty physical caches before warming and exact physical key counts/no evictions afterward. Check the complete expected initial payload population. Verify all actual DB payload hashes/expiry/sizes against the deterministic checksum; refuse unmarked tables and verify disposable identities/labels before destructive reset. Final runs have equal complete logical initial states and disjoint Redis run IDs. |
+
+## Exact executed gate checks
+
+Workspace: `C:/Users/ramst/Documents/antigravity/paper2`. The evidence runner uses the existing `.venv/Scripts/python.exe -B`, records exact child argv/stdout/stderr/UTC/monotonic duration/exit code/source fingerprint, and refuses overwriting. [command_index.json]({evidence_link}command_index.json) lists every retained command record, including intermediate failures and linked corrections; those records are the exact-command authority.
+
+| Check / exact command | Observed outcome | Evidence |
+| --- | --- | --- |
+| `-m unittest tests.test_phase3_independent -v` against submitted runtime, corrected ten-check harness | Exit 1; **10 failures**. The first harness record also preserves two author mistakes and accidental imported tests. | [original negative record]({evidence_link}negatives_before_corrected_harness.json) |
+| `PAPER2_INTEGRATION=1`; `-m unittest discover -s tests -p test_*.py -v` | Exit 0; **90 tests in 13.295 s, no skips**: 39 contract, 34 behavioral, **17 actual-client**. | [final complete suite]({evidence_link}tests_complete.json) |
+| `-m unittest tests.test_phase3_integration.ActualClientIntegrationTests.test_unresponsive_cancel_handshake_discards_within_cleanup_bound -v` | Original exit 1 with 1.031 s and unconsumed query exception; linked correction exit 0, bounded completion/discard/replacement. Also passes in the final complete suite. | [failure]({evidence_link}cancel_unresponsive_before.json), [correction]({evidence_link}cancel_unresponsive_corrected.json) |
+| `powershell.exe -NoProfile -File scripts/phase3_cycle.ps1 -FirstRunId {run_ids[0]} -SecondRunId {run_ids[1]} -RetryOfFirst phase3-independent-final-a-20261019 -RetryOfSecond phase3-independent-final-b-20261019 -ValidationOutput reports/reviews/evidence/phase3_20261019_independent/complete_pair_validation.json` | Exit 0; two completed actual-client expansions, physical recreation before each, final verified shutdown; **{len(pair['checks'])}/{len(pair['checks'])} checks pass**. | [exact cycle]({evidence_link}complete_cycle.json), [validation]({evidence_link}complete_pair_validation.json) |
+| `reports/reviews/evidence/phase3_20261019_independent/run_failure_case_complete.py` | Wrapper exit 0 verifies expected child exit 1 / `policy_failure` with zero donor/DB-warmup grants. All offers and issued work reconcile; observation and foreground traffic continue. | [controlled failure]({evidence_link}expected_failure_complete.json), `runs/phase3-independent-no-grant-verified-20261019/` |
+| `scripts/capture_source.py --output reports/reviews/evidence/phase3_20261019_independent/source_complete.json` | Exit 0; exact source above matches full suite and three final runs. | [source capture]({evidence_link}complete_source_capture.json) |
+| `audit_evidence.py preservation_final` | Exit 0; **162 historical files unchanged**, all 80 submitted source files byte-identical to their owner manifest. | [preservation]({evidence_link}preservation_final.json) |
+
+Other executed focused checks include no-I/O permit timeouts, actual query timeout/cancellation/replacement, real Redis retry/cancellation/discard, observer priority/idle rounds, wrong-payload worker faults, pass cancellation, grant replacement while waiting, expired destination reservations, bounded complete demand windows/overflow, TTL/registry caps, explicit failed/timed-out/refused/unsubmitted accounting and missing-artifact rejection. Meaningful new regression tests are in `tests/test_phase3_independent.py` and the expanded integration suite. Existing checks were strengthened for complete demand windows and the write receipt; assertions were not removed to obtain a PASS.
+
+## What the complete runs actually establish
+
+Each final run prepared and verified all 48 authoritative 128-byte rows over 16 stable buckets; 3 buckets/7 keys moved. All 10 offers have matching persisted IDs/keys/scheduled times and terminal records, and every returned payload hash matches the dataset. Each run issued 1 foreground DB read, 7 donor reads (6 values/1 miss), 1 budgeted DB warm-up and 7 destination writes. All migration attempts have charged individual records and write-to-read links. Two deliberate no-retry delete injections are separately charged diagnostic work, not policy/probe work. Every complete operation has one unique terminal ID.
+
+Both final runs observed at most 2 foreground requests, 1 shared-fill key, 2 migration workers, 7 queued tasks and 256 buffered payload bytes, with no remaining workers/buffers/fills. Configured maxima are 8, 4, 2, 64 and 512 respectively. Cache foreground/background maxima are checked separately against 2/1 per node; DB maxima against 2/1. Seven donor and destination reservations each charge 1152 encoded bytes, totaling 8064 bytes in each dimension. Actual issue times satisfy empty-start rate and burst envelopes as well as absolute grant ceilings. This is bounded functional behavior, not calibrated throughput protection.
+
+The fixed 4.2 s horizon retains idle observations after handover. Raw sampler counts, timings, failures/classes and cache/DB resource details are retained. Traffic stability uses two complete 100 ms windows, each requiring at least two actual affected submissions; counts derive from raw submission times, including the declared outcomes. Full initial values/TTL summaries, physical DB sizes/evictions, memory policy, fresh namespaces, identical relative offered schedules and disjoint Redis process IDs establish the tested reset equivalence. Exact allocator/LRU timing equivalence is not claimed.
+
+The deliberately paused run retains `{failure_manifest['status']}` rather than relabeling non-progress a success: {failure_accounting['offered']}/{failure_accounting['terminal']} offers/terminal records and {failure_accounting['issued_operations']} issued operations/events reconcile, all terminal. Zero discretionary grants do not suppress foreground or independent observation work. Failed runs are not silently replaced.
+
+## Preservation, corrections and downstream impact
+
+Original failures, original six owner smoke runs, prior reviews/evidence and the full submitted runtime remain retained. The initial archive audit identified fourteen omitted hidden/ignored/unmodified ancillary files; each was copied only after its current bytes matched the submitted manifest. The corrected preservation audit has no mismatch. No historical run file was rewritten. Living status/index/decisions/handoff records are updated; the old Phase 3 PASS is expressly superseded.
+
+Review-introduced failures are also retained: initial harness mistakes; unsafe immediate socket close on Windows; a coarse-timer early dispatch; a misspelled grant epoch field; and a 30 ms cold-connection test setup timeout. Corrective reruns are linked. The retry test now separates a finite 200 ms socket timeout from a deliberate 500 ms service pause and asserts exactly two charged attempts; it does not relax foreground runtime requirements. The source fingerprint now excludes ignored `test_out`/local build/cache/agent state and secrets. Historical hashes keep their original definition; final identities use the corrected definition and cannot be compared as if the definitions were unchanged.
+
+DECISION-0011 and the appended normative clarification document the expiry envelope/receipt, encoded-byte reservation units, actual issue notifications, generation renewal, fixed observation priority, diagnostic class and source boundary. Later policies must use the same router, pools, deadlines, retries, bytes, demand/residency and charged sampler. No policy-specific foreground shortcut, unbudgeted prefetch or design weakening was introduced. Diagnostic forced misses must be disabled in calibration/comparative workloads.
+
+## Gate and limits
+
+**PASS for Phase 3.** Required actual-client integration, complete accounting, bounded resources, complete expansion and repeatable physical reset checks executed successfully. No essential Phase 3 check is left unexecuted. All four material review issues are verified against the final evidence. No later phase was run.
+
+This remains an immutable-data, single-router, single-host mechanism system, not native Redis cluster resharding. No calibrated C_safe, universal overload guarantee, performance improvement or uncertainty estimate is supported. SQL/full driver-encoded wire bytes remain null when unknown; enforced conservative reservations must not be reported as measured physical bandwidth. Wall-clock steps, cross-host expiry transport/restarts, mutable data and multiple routers are outside the verified architecture. The repeated pair and twelve TTL iterations are correctness checks, not a reliability distribution or performance study. Full policy loops, capacity calibration, workload/pilot freeze and comparative evaluation remain Phases 4 onward. ISSUE-0004 remains the inherited literature-access limitation.
+
+Stop before Phase 4. The next permitted work in this task is the user-authorized Phase 3 commit/push after preserving this verified state. Future reproduction uses fresh run IDs with the documented reset cycle; standalone validation needs `PYTHONPATH=src`. The Phase 3 handoff supplies runnable commands and links; no analysis figures require regeneration because no performance evaluation exists.
+'''
+review_path.write_text(review,encoding='utf-8')
+
+status = f'''# Project status
+
+Updated: {timestamp}
+Active phase: 3 - independently reviewed minimal system
+Phase status: complete
+Source state: {digest} ({len(source['files'])} canonical files); `reports/reviews/evidence/phase3_20261019_independent/source_complete.json`
+Environment: native Windows CPython 3.12.10; pinned disposable Redis/PostgreSQL; research containers stopped after verification
+
+## Outcome so far
+
+Phase 3 gate **PASS after independent corrections**, superseding the implementation-owner assessment. Ten original negative checks failed; ISSUE-0017 through ISSUE-0020 now have verified fixes. Shared foreground semantics, bounded actual pools/deadlines/cleanup, generation-safe fills/grants, token/byte limits, conservative expiry/residency, periodic charged observations, independent offers and physical resets executed against actual clients. No Phase 4 calibration or performance inference was performed.
+
+## Current evidence
+
+- `tests_complete.json`: exit 0, 90 checks, no skips; 17 actual-client, 34 behavioral, 39 contract checks.
+- `complete_cycle.json` / `complete_pair_validation.json`: two completed exact-source expansions; {len(pair['checks'])} passing artifact checks; physical resets and shutdown verified.
+- `expected_failure_complete.json`: expected policy failure with zero discretionary grants, {failure_accounting['terminal']} accounted offers and {failure_accounting['issued_operations']} terminal issued operations.
+- `preservation_final.json`: 162 historical files unchanged; all 80 submitted source files archived exactly.
+- Independent report: [review](reviews/phase_03_independent_20261019.md); evidence lives under `reports/reviews/evidence/phase3_20261019_independent/`.
+
+## Open issues and impact
+
+ISSUE-0017/0018/0019/0020 are verified. No essential Phase 3 blocker remains. ISSUE-0004 remains the accepted literature-access limitation. Historical failed commands and superseded gate claims remain retained.
+
+## Next actions
+
+Complete the explicitly authorized Phase 3 commit/push. Stop before Phase 4; later capacity calibration requires a new task. Use fresh IDs and `scripts/phase3_cycle.ps1` for another equivalent small run.
+
+## Remaining scope and limitations
+
+Immutable data, one router/host and independent Redis instances. Numeric rates, pressure thresholds and deadlines are provisional correctness settings. Full wire bytes, exact allocator/LRU timing, cross-host/restart/clock-jump behavior, mutable data, multiple routers and performance improvements are not certified. Phases 4-10 remain unstarted; comparative policy loops are later work. Config SHA256: {config_digest}.
+'''
+(ROOT/'reports/STATUS.md').write_text(status,encoding='utf-8')
+handoff = ROOT/'reports/phase_03.md'
+old = handoff.read_text(encoding='utf-8')
+old = old.replace('# Phase 03: Implement and verify the minimal system\n',
+    '# Phase 03: Implement and verify the minimal system\n\n> The submitted assessment below is historical and superseded by the independent correction addendum at the end and [independent review](reviews/phase_03_independent_20261019.md).\n',1)
+old += f'''
+
+## Independent correction and verified handoff ({timestamp})
+
+Current status: **complete; Phase 3 PASS after correction**. The original PASS and earlier source/run claims above do not establish the corrected runtime gate. See [independent review](reviews/phase_03_independent_20261019.md), ISSUE-0017 through ISSUE-0020 and DECISION-0011.
+
+Final source SHA256: `{digest}`, {len(source['files'])} files; config `{config_digest}`. The final complete suite passed 90 tests with no skips (17 actual-client, 34 behavioral, 39 contract). The exact-source pair `{run_ids[0]}` / `{run_ids[1]}` completed and passed {len(pair['checks'])} artifact checks. The exact-source zero-background-grant case remained `policy_failure` with {failure_accounting['terminal']} accounted offers and {failure_accounting['issued_operations']} terminal operation events. Services were removed. Original failures and 162 historical files are unchanged; 80 submitted source files are archived and hash verified.
+
+| Final check | Exact entry point / scope | Result | Evidence |
+| --- | --- | --- | --- |
+| Complete suite | `PAPER2_INTEGRATION=1`; `.venv/Scripts/python.exe -B -m unittest discover -s tests -p test_*.py -v` | Exit 0; 90, no skips | `reviews/evidence/phase3_20261019_independent/tests_complete.json` |
+| Repeated expansion/reset | `scripts/phase3_cycle.ps1` with the verified pair IDs, previous pair retry links and fresh validation output | Exit 0; 2 complete runs; {len(pair['checks'])} checks | `complete_cycle.json`, `complete_pair_validation.json` in the same evidence directory |
+| Expected non-progress | `run_failure_case_complete.py` | Expected child exit 1 / policy_failure; checker exit 0; complete accounting | `expected_failure_complete.json` |
+| Source/preservation | `source_complete.json`, `audit_evidence.py preservation_final` | Exact-source match; 162 historical / 80 original files unchanged | `source_complete.json`, `preservation_final.json` |
+
+The corrections include actual connection-acquisition issue recording, bounded query cancellation/hard discard, creator/follower and closing-generation races, finite migration worker/queue drain, generation renewal and five token dimensions, encoded-byte grants, expiry envelope/receipt, demand/refusal/residency fixes, priority periodic probes, independent absolute offers, fixed horizon/stability and raw artifact verification. The normative contract clarification records the interface/encoding/accounting impact. All later policies share these mechanisms.
+
+Reproduce another small pair with fresh IDs using `.\\scripts\\phase3_cycle.ps1 -FirstRunId phase3-next-a -SecondRunId phase3-next-b -ValidationOutput reports/reviews/next-pair-validation.json`. It recreates only the label-verified disposable project. For live tests use `scripts/start.ps1`, set `$env:PAPER2_INTEGRATION='1'`, run the suite above, then `scripts/shutdown.ps1`. Standalone validation uses `$env:PYTHONPATH='src'` and `python -m cache_scaleout phase3-validate --run runs/{run_ids[0]} --compare-run runs/{run_ids[1]} --output <fresh-report.json>`.
+
+Stop before Phase 4. The user authorized commit/push once this gate passes. Rates/thresholds/deadlines remain provisional; the two forced-miss diagnostics are correctness scaffolds and must be disabled for future calibration/comparisons. Full wire bytes remain null when unknown. No performance figures/results exist to regenerate. Single-host immutable scope and inherited ISSUE-0004 remain the limits detailed in the independent review.
+'''
+handoff.write_text(old,encoding='utf-8')
+decisions = ROOT/'reports/DECISIONS.md'
+with decisions.open('a',encoding='utf-8') as f:
+    f.write(f'''
+## DECISION-0011: Complete Phase 3 runtime obligations without changing policy foreground semantics
+
+Time: {timestamp}
+Phase: 3 independent review/correction
+Context: Ten negative runtime failures, actual TTL extension and failed-cancel cleanup reproduction contradicted the submitted PASS. Prior contract/owner tests were insufficient.
+Options considered: accept happy-path evidence; defer lifecycle/resource/accounting choices to policies; enforce the reviewed obligations now and preserve every failure.
+Decision: shared post-connection issuance, bounded cancel/drain/discard and quarantine, deferred creator accounting, generation-renewed reservations, independent empty-start tokens/encoded grants, separate pools and priority observations, fixed independent offers/horizon/stability, complete raw validation and physical resets. Add an original-expiry envelope/write receipt; identify the two existing fixed diagnostic deletes separately and forbid them in comparative/calibration workloads. Exclude ignored outputs/local state from canonical source identity while retaining historical definitions.
+Reason: These changes close observed mechanism/provenance defects rather than tune comparative policies. See ISSUE-0017 through ISSUE-0020 and normative clarification.
+Effect on correctness, comparability, or claims: All policies retain the same foreground source/owner/deadline/retry/coalescing rules and shared resource/metadata costs. Cache encoding gains 12 bytes; callers consume conservative write receipts. Full wire bytes remain unknown where not measured. No new capacity, safety, performance or novelty claim. Phases 4 onward remain unstarted.
+Verification: 90 final checks including 17 actual-client cases, {len(pair['checks'])} repeated-run audits, exact-source accounted policy failure, preserved historical/source bytes; independent review `reports/reviews/phase_03_independent_20261019.md`. Final SHA256 {digest}.
+''')
+for number in range(17,21):
+    path = ROOT/f'reports/issues/ISSUE-{number:04d}.md'
+    text = path.read_text().replace('Status: fixed_unverified','Status: verified')
+    text = re.sub(r'Last updated: .*',f'Last updated: {timestamp}',text,count=1)
+    text += f'''
+## Final verification and closure
+
+Verified {timestamp}. Final exact source `{digest}` passed `tests_complete.json` (90 checks including 17 actual-client), `complete_cycle.json` / `complete_pair_validation.json` ({len(pair['checks'])} checks, two recreated-cache expansions) and `expected_failure_complete.json` (all offers/issued work retained on policy failure). All records live under `reports/reviews/evidence/phase3_20261019_independent/`. The late failed-cancel reproduction is retained in `cancel_unresponsive_before.json`, with `cancel_unresponsive_corrected.json` and the complete suite verifying bounded drain/discard and replacement. Source/encoding/interface/accounting corrections and limits are recorded in the independent review and DECISION-0011. Earlier pending-verification paragraphs above are historical milestones, superseded by this closure.
+'''
+    path.write_text(text,encoding='utf-8')
+index = ROOT/'reports/ISSUE_INDEX.md'
+lines = index.read_text().splitlines()
+for i,line in enumerate(lines):
+    if line.startswith('| ISSUE-0016 '):
+        lines[i+1:i+1] = [f'| ISSUE-{n:04d} | 3 independent review | verified | {label} | [Record](issues/ISSUE-{n:04d}.md) |'
+            for n,label in [(17,'Shared-fill lifecycle and final accounting corrected'),
+                            (18,'Worker/grant/token/byte bounds and renewal corrected'),
+                            (19,'Actual pools, cancellation, TTL and periodic sampling corrected'),
+                            (20,'Independent offered/reset/raw evidence and validation corrected')]]
+        break
+for i,line in enumerate(lines):
+    if line.startswith('Phase 3 has no open correctness'):
+        lines[i] = 'The original Phase 3 implementation-owner PASS is superseded by the independent runtime review. ISSUE-0017 through ISSUE-0020 are now verified with 90 final checks, 17 actual-client cases, two recreated-cache expansion runs and complete failure-path accounting. Historical failures/runs remain unchanged. Current evidence and limits: [independent review](reviews/phase_03_independent_20261019.md). No Phase 4 calibration or performance evaluation was performed.'
+index.write_text('\n'.join(lines)+'\n',encoding='utf-8')
+print(json.dumps(summary,sort_keys=True))

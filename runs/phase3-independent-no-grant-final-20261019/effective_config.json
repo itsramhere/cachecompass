@@ -1,0 +1,157 @@
+{
+  "dataset": {
+    "keys": 48,
+    "seed": 42,
+    "value_bytes": 128
+  },
+  "migration_bursts": {
+    "background_db_operations": 1,
+    "destination_write_bytes": 1152,
+    "destination_write_operations": 1,
+    "donor_bytes": 1152,
+    "donor_operations": 1
+  },
+  "migration_grant": {
+    "background_db_operations": 0,
+    "destination_write_bytes": 12288,
+    "destination_write_operations": 96,
+    "donor_bytes": 12288,
+    "donor_operations": 0,
+    "valid_for_seconds": 20
+  },
+  "migration_rates": {
+    "background_db_operations": 10.0,
+    "destination_write_bytes": 57600.0,
+    "destination_write_operations": 50.0,
+    "donor_bytes": 57600.0,
+    "donor_operations": 50.0
+  },
+  "observations": {
+    "max_age_ns": 5000000000,
+    "max_keys_per_bucket": 64,
+    "max_total_keys": 64,
+    "maximum_rounds": 64,
+    "probe_byte_ceiling": 65536,
+    "retained_subwindows": 4,
+    "subwindow_ns": 1000000000
+  },
+  "provisional": true,
+  "provisional_pressure": {
+    "cache_latency_upper_ms": 250,
+    "db_latency_upper_ms": 250,
+    "memory_upper_fraction": 0.99
+  },
+  "purpose": "Phase 3 expected no-background-grant policy failure; independent accounting check",
+  "resources": {
+    "background_cache_connections_per_node": 1,
+    "background_db_connections": 1,
+    "foreground_cache_connections_per_node": 2,
+    "foreground_db_connections": 2,
+    "max_buffered_payload_bytes": 512,
+    "max_coalesced_keys": 4,
+    "max_inflight_requests": 8,
+    "max_pending_metric_records": 512,
+    "max_pending_migration_tasks": 64,
+    "migration_workers": 2
+  },
+  "retries": {
+    "destination_write": {
+      "attempt_timeout_seconds": 1.0,
+      "backoff_seconds": [
+        0.01
+      ],
+      "max_attempts": 2
+    },
+    "donor_read": {
+      "attempt_timeout_seconds": 1.0,
+      "backoff_seconds": [
+        0.01
+      ],
+      "max_attempts": 2
+    },
+    "foreground_cache": {
+      "attempt_timeout_seconds": 1.0,
+      "backoff_seconds": [],
+      "max_attempts": 1
+    },
+    "foreground_database": {
+      "attempt_timeout_seconds": 1.0,
+      "backoff_seconds": [
+        0.01
+      ],
+      "max_attempts": 2
+    },
+    "foreground_fill_write": {
+      "attempt_timeout_seconds": 1.0,
+      "backoff_seconds": [
+        0.01
+      ],
+      "max_attempts": 2
+    },
+    "warmup_database": {
+      "attempt_timeout_seconds": 1.0,
+      "backoff_seconds": [
+        0.01
+      ],
+      "max_attempts": 2
+    }
+  },
+  "routing": {
+    "destination": "new",
+    "final_nodes": [
+      "old-1",
+      "old-2",
+      "new"
+    ],
+    "mapping_seed": 2026,
+    "old_nodes": [
+      "old-1",
+      "old-2"
+    ],
+    "virtual_buckets": 16
+  },
+  "schema_version": 1,
+  "services": {
+    "cache": {
+      "eviction_policy": "allkeys-lru",
+      "host": "127.0.0.1",
+      "maxmemory_bytes": 33554432,
+      "ports": [
+        16379,
+        16380,
+        16381
+      ],
+      "socket_timeout_seconds": 1.0
+    },
+    "database": {
+      "dbname": "paper2_research",
+      "host": "127.0.0.1",
+      "password_env": "PAPER2_DB_PASSWORD",
+      "pool_timeout_seconds": 2.0,
+      "port": 15432,
+      "statement_timeout_ms": 1000,
+      "user": "paper2_research"
+    }
+  },
+  "timing": {
+    "cleanup_timeout_seconds": 1.0,
+    "expansion_at_seconds": 0.25,
+    "flush_timeout_seconds": 5.0,
+    "foreground_timeout_seconds": 2.0,
+    "handover_deadline_seconds": 3.0,
+    "measurement_horizon_seconds": 4.2,
+    "metric_timeout_seconds": 1.0,
+    "migration_attempt_timeout_seconds": 1.0,
+    "observation_interval_seconds": 0.1,
+    "observation_timeout_seconds": 0.5,
+    "run_timeout_seconds": 30,
+    "stability_min_requests": 2,
+    "stability_start_seconds": 2.5,
+    "stability_subwindow_seconds": 0.1,
+    "stability_subwindows": 2,
+    "task_lifetime_seconds": 1.5
+  },
+  "workload": {
+    "post_cutover_requests": 8
+  }
+}

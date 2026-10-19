@@ -1,0 +1,61 @@
+{
+  "reason": "Initial scoped rg copy omitted hidden/ignored and unmodified ancillary files; each current byte hash verified against submitted manifest before copying.",
+  "copied": [
+    {
+      "path": "AGENT_REPORTING_TEMPLATES.md",
+      "sha256": "9821105fe2e15c4ba9a48005e09b5c45ffee34beab14c44b790695892abeae85"
+    },
+    {
+      "path": "analysis/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "infra/compose.yaml",
+      "sha256": "76b0a829b55a808d1d0dd048864c53d8dddd4f7d5971fc05acaccb69a17fe885"
+    },
+    {
+      "path": "infra/images.env",
+      "sha256": "951eaeb84aa16cde86016b4f2e5231f5720d37b184b878e5b022abdb0abc39d7"
+    },
+    {
+      "path": "paper/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "paper/references.bib",
+      "sha256": "1ad812f1925d30168563cb6968d91af329d41901462c7d5d681fc1b44ff9baf9"
+    },
+    {
+      "path": "test_out/effective_config.json",
+      "sha256": "06efb4509d114de74f900dbd433c45e4f2929f04650c11d375c9619463d83e7f"
+    },
+    {
+      "path": "test_out/manifest.json",
+      "sha256": "f3c947c17d259a0fd690baa234e671460d6b908a88fc2177780a2c6b88a2a07e"
+    },
+    {
+      "path": "test_out/test-fail/retrieval.json",
+      "sha256": "c2fcfa13c154b883b67972b762b01cddccd54caf6b46277cfc16150668cd93b0"
+    },
+    {
+      "path": "test_out/test-success/pages.json",
+      "sha256": "87e5946045855d6ac22960e20bd21672a01afe54a11849bab538a3b021f93061"
+    },
+    {
+      "path": "test_out/test-success/retrieval.json",
+      "sha256": "690c0a58c3e60c6c32d8fe0f358773a463cf92bbf9850f558e675d2c6a701a30"
+    },
+    {
+      "path": "test_out/test-success/source.pdf",
+      "sha256": "3df79d34abbca99308e79cb94461c1893582604d68329a41fd4bec1885e6adb4"
+    },
+    {
+      "path": "test_out/test-success/text.txt",
+      "sha256": "069387a213ec4da787171777f1d5ff5750f0542e7a9937e1f14da6cab9df75ca"
+    },
+    {
+      "path": "tests/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    }
+  ]
+}

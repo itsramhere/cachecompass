@@ -1,0 +1,22 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "cache_scaleout",
+    "phase3-validate",
+    "--run",
+    "runs/phase3-smoke-a-20261018",
+    "--compare-run",
+    "runs/phase3-smoke-b-20261018",
+    "--output",
+    "reports/evidence/phase3/reset-comparison-002.json"
+  ],
+  "elapsed_seconds": 1.109000000000151,
+  "ended_utc": "2026-10-18T20:38:22.354379+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-18T20:38:21.254610+00:00",
+  "stderr": "",
+  "stdout": "{\"checks\": {\"all_affected_buckets_new\": true, \"append_only_checksums\": true, \"bounded_workers\": true, \"complete_initial_state_equivalence\": true, \"config_fingerprint\": true, \"issued_attempts_reconcile\": true, \"no_foreground_donor_fallback\": true, \"no_unbudgeted_db_prefetch\": true, \"offered_request_reconciliation\": true, \"offered_schedule_checksum\": true, \"payloads_authoritative\": true, \"physical_cache_instances_recreated\": true, \"run_completed\": true, \"same_config\": true, \"same_executed_source\": true, \"schedule_arrival_terminal_equality\": true, \"source_fingerprint\": true}, \"compare_run\": \"phase3-smoke-b-20261018\", \"run\": \"phase3-smoke-a-20261018\", \"valid\": true}"
+}

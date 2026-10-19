@@ -1,0 +1,30 @@
+{
+  "actual_client_tests": 17,
+  "behavioral_tests": 34,
+  "completed_utc": "2026-10-18T22:08:25.778452+00:00",
+  "config_sha256": "deb785c8cb5e2b63b82551ef0a03294c72e5149b650587f1b8fc1e52f6fa9fe0",
+  "contract_tests": 39,
+  "failure_accounting": {
+    "all_issued_terminal": true,
+    "complete": true,
+    "issued_events": 317,
+    "issued_operations": 317,
+    "offered": 10,
+    "reasons": [],
+    "submitted": 10,
+    "terminal": 10,
+    "unsubmitted": 0
+  },
+  "historical_files_preserved": 162,
+  "pair_checks": 39,
+  "runs": [
+    "phase3-independent-verified-a-20261019",
+    "phase3-independent-verified-b-20261019"
+  ],
+  "scope": "Phase 3 correctness only",
+  "source_files": 77,
+  "source_sha256": "0a66132a905c16db8765bc463d2697e31343b18ecb8e761155841ac443014212",
+  "submitted_archive_files": 80,
+  "tests": 90,
+  "verdict": "PASS"
+}
