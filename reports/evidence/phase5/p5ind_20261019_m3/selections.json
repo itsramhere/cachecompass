@@ -1,0 +1,230 @@
+{
+  "adaptive_budget_migration_before_cutover": {
+    "common_aggregate_scores": {
+      "A": [
+        0,
+        0,
+        21.515604776
+      ],
+      "B": [
+        0,
+        0,
+        15.519744249
+      ]
+    },
+    "individual_preference": "B",
+    "options": [
+      {
+        "run_id": "p5ind_20261019_m3_tune2A",
+        "score": [
+          false,
+          0,
+          4.002374036,
+          "A"
+        ],
+        "setting": "A"
+      },
+      {
+        "run_id": "p5ind_20261019_m3_tune2B",
+        "score": [
+          false,
+          0,
+          3.005346028,
+          "B"
+        ],
+        "setting": "B"
+      }
+    ],
+    "selected_setting": "B"
+  },
+  "fixed_gradual_handover": {
+    "common_aggregate_scores": {
+      "A": [
+        0,
+        0,
+        21.515604776
+      ],
+      "B": [
+        0,
+        0,
+        15.519744249
+      ]
+    },
+    "individual_preference": "B",
+    "options": [
+      {
+        "run_id": "p5ind_20261019_m3_tune3A",
+        "score": [
+          false,
+          0,
+          4.503698539,
+          "A"
+        ],
+        "setting": "A"
+      },
+      {
+        "run_id": "p5ind_20261019_m3_tune3B",
+        "score": [
+          false,
+          0,
+          3.50395606,
+          "B"
+        ],
+        "setting": "B"
+      }
+    ],
+    "selected_setting": "B"
+  },
+  "immediate_cutover": {
+    "common_aggregate_scores": {
+      "A": [
+        0,
+        0,
+        21.515604776
+      ],
+      "B": [
+        0,
+        0,
+        15.519744249
+      ]
+    },
+    "individual_preference": "B",
+    "options": [
+      {
+        "run_id": "p5ind_20261019_m3_tune0A",
+        "score": [
+          false,
+          1,
+          1.002556362,
+          "A"
+        ],
+        "setting": "A"
+      },
+      {
+        "run_id": "p5ind_20261019_m3_tune0B",
+        "score": [
+          false,
+          0,
+          1.004365111,
+          "B"
+        ],
+        "setting": "B"
+      }
+    ],
+    "selected_setting": "B"
+  },
+  "migration_before_cutover": {
+    "common_aggregate_scores": {
+      "A": [
+        0,
+        0,
+        21.515604776
+      ],
+      "B": [
+        0,
+        0,
+        15.519744249
+      ]
+    },
+    "individual_preference": "B",
+    "options": [
+      {
+        "run_id": "p5ind_20261019_m3_tune1A",
+        "score": [
+          false,
+          0,
+          3.002795117,
+          "A"
+        ],
+        "setting": "A"
+      },
+      {
+        "run_id": "p5ind_20261019_m3_tune1B",
+        "score": [
+          false,
+          0,
+          2.003808403,
+          "B"
+        ],
+        "setting": "B"
+      }
+    ],
+    "selected_setting": "B"
+  },
+  "traffic_only_adaptation": {
+    "common_aggregate_scores": {
+      "A": [
+        0,
+        0,
+        21.515604776
+      ],
+      "B": [
+        0,
+        0,
+        15.519744249
+      ]
+    },
+    "individual_preference": "B",
+    "options": [
+      {
+        "run_id": "p5ind_20261019_m3_tune5A",
+        "score": [
+          false,
+          0,
+          4.502826777,
+          "A"
+        ],
+        "setting": "A"
+      },
+      {
+        "run_id": "p5ind_20261019_m3_tune5B",
+        "score": [
+          false,
+          0,
+          2.503067091,
+          "B"
+        ],
+        "setting": "B"
+      }
+    ],
+    "selected_setting": "B"
+  },
+  "warmup_only_adaptation": {
+    "common_aggregate_scores": {
+      "A": [
+        0,
+        0,
+        21.515604776
+      ],
+      "B": [
+        0,
+        0,
+        15.519744249
+      ]
+    },
+    "individual_preference": "B",
+    "options": [
+      {
+        "run_id": "p5ind_20261019_m3_tune4A",
+        "score": [
+          false,
+          0,
+          5.503910307,
+          "A"
+        ],
+        "setting": "A"
+      },
+      {
+        "run_id": "p5ind_20261019_m3_tune4B",
+        "score": [
+          false,
+          0,
+          4.503566667,
+          "B"
+        ],
+        "setting": "B"
+      }
+    ],
+    "selected_setting": "B"
+  }
+}

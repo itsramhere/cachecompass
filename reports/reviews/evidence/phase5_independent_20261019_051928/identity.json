@@ -1,0 +1,11 @@
+{
+  "evidence_dir": "reports/reviews/evidence/phase5_independent_20261019_051928",
+  "git_status": " M README.md\n M docs/DATA_SCHEMAS.md\n M docs/POLICIES.md\n M reports/DECISIONS.md\n M reports/ISSUE_INDEX.md\n M reports/STATUS.md\n M src/cache_scaleout/adapters.py\n M src/cache_scaleout/contracts.py\n M src/cache_scaleout/migration.py\n M src/cache_scaleout/observations.py\n?? analysis/phase5_audit.py\n?? analysis/phase5_validation.py\n?? configs/phase5_pilot.yaml\n?? docs/PHASE5_PILOT_PROTOCOL.md\n?? reports/HANDOFF_PHASE5.md\n?? reports/evidence/phase5/\n?? reports/issues/ISSUE-0026.md\n?? reports/issues/ISSUE-0027.md\n?? reports/issues/ISSUE-0028.md\n?? reports/phase_05.md\n?? reports/reviews/evidence/phase5_independent_20261019_051928/\n?? runs/cloud-onboarding-health-20261019/\n?? runs/cloud-start-check-20261019T040414-4189/\n?? runs/p5matrix_v1_20261019_boundary_deadline/\n?? runs/p5matrix_v1_20261019_boundary_zero/\n?? runs/p5matrix_v1_20261019_smoke0/\n?? runs/p5matrix_v1_20261019_smoke1/\n?? runs/p5matrix_v1_20261019_smoke2/\n?? runs/p5matrix_v1_20261019_smoke3/\n?? runs/p5matrix_v1_20261019_smoke4/\n?? runs/p5matrix_v1_20261019_smoke5/\n?? runs/p5matrix_v1_20261019_tune0A/\n?? runs/p5matrix_v1_20261019_tune0B/\n?? runs/p5matrix_v1_20261019_tune1A/\n?? runs/p5matrix_v1_20261019_tune1B/\n?? runs/p5matrix_v1_20261019_tune2A/\n?? runs/p5matrix_v1_20261019_tune2B/\n?? runs/p5matrix_v1_20261019_tune3A/\n?? runs/p5matrix_v1_20261019_tune3B/\n?? runs/p5matrix_v1_20261019_tune4A/\n?? runs/p5matrix_v1_20261019_tune4B/\n?? runs/p5matrix_v1_20261019_tune5A/\n?? runs/p5matrix_v1_20261019_tune5B/\n?? runs/p5mix12_v1_20261019/\n?? runs/p5mix8_v1_20261019/\n?? scripts/phase5_cycle.py\n?? scripts/phase5_matrix.py\n?? src/cache_scaleout/baselines.py\n?? src/cache_scaleout/phase5.py\n?? src/cache_scaleout/policy_observations.py\n?? tests/test_phase5_baselines.py\n?? tests/test_phase5_evidence.py\n?? tests/test_phase5_grant_renewal.py\n",
+  "preserved_files": 2288,
+  "report": "reports/reviews/phase_05_independent_20261019_051928.md",
+  "review_id": "phase5_independent_20261019_051928",
+  "revision": "a659f237c1f2940d83b714814e0bbf458f009c5d",
+  "started_utc": "2026-10-19T05:19:29.727720+00:00",
+  "submitted_files": 100,
+  "submitted_sha256": "796910788bedc489fc047e656ebc5b3115926d899bc28df4c1b740644784613e"
+}

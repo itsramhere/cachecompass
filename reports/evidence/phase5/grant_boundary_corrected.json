@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_phase5_grant_renewal.py",
+    "-v"
+  ],
+  "elapsed_seconds": 0.4415928680000434,
+  "ended_utc": "2026-10-19T04:49:21.120653+00:00",
+  "exit_code": 0,
+  "retry_of": "reports/evidence/phase5/grant_boundary_before.json",
+  "started_utc": "2026-10-19T04:49:20.679035+00:00",
+  "stderr": "test_destination_old_timeout_renews_live_replacement (test_phase5_grant_renewal.GrantBoundaryRenewal.test_destination_old_timeout_renews_live_replacement) ... ok\ntest_source_old_timeout_renews_live_replacement (test_phase5_grant_renewal.GrantBoundaryRenewal.test_source_old_timeout_renews_live_replacement) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.005s\n\nOK",
+  "stdout": ""
+}

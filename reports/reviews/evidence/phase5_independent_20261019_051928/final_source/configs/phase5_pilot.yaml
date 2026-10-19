@@ -1,0 +1,194 @@
+schema_version: 1
+purpose: Phase5 provisional bounded pilot and comparison behavior; no superiority
+  inference
+dataset:
+  seed: 505
+  keys: 512
+  value_bytes: 1024
+routing:
+  mapping_seed: 20261019
+  virtual_buckets: 64
+  old_nodes:
+  - old-1
+  - old-2
+  final_nodes:
+  - old-1
+  - old-2
+  - new
+  destination: new
+services:
+  cache:
+    host: 127.0.0.1
+    ports:
+    - 16379
+    - 16380
+    - 16381
+    socket_timeout_seconds: 1.0
+    maxmemory_bytes: 33554432
+    eviction_policy: allkeys-lru
+  database:
+    host: 127.0.0.1
+    port: 15432
+    dbname: paper2_research
+    user: paper2_research
+    password_env: PAPER2_DB_PASSWORD
+    pool_timeout_seconds: 2.0
+    statement_timeout_ms: 1500
+    query_cpu_rounds: 20000
+resources:
+  foreground_db_connections: 4
+  background_db_connections: 1
+  foreground_cache_connections_per_node: 8
+  background_cache_connections_per_node: 1
+  migration_workers: 1
+  max_inflight_requests: 128
+  max_coalesced_keys: 64
+  max_pending_migration_tasks: 128
+  max_pending_metric_records: 12000
+  max_buffered_payload_bytes: 2048
+timing:
+  request_timeout_seconds: 1.0
+  calibration_seconds: 12.0
+  expansion_seconds: 9.5
+  expansion_at_seconds: 2.0
+  first_arrival_seconds: 0.5
+  observation_interval_seconds: 0.5
+  observation_timeout_seconds: 0.4
+  cleanup_timeout_seconds: 1.0
+  latency_target_ms: 100.0
+  measurement_horizon_seconds: 10.0
+  task_lifetime_seconds: 4.0
+  handover_deadline_seconds: 6.0
+  stability_subwindow_seconds: 0.5
+  stability_subwindows: 2
+  stability_min_requests: 2
+warm_stability:
+  windows: 2
+  seconds: 1.0
+  rate: 36
+  maximum_p95_ms: 100
+  maximum_p95_spread_ms: 30
+workload:
+  zipf_exponent: 1.15
+  affected_share: 0.8
+  offered_rate: 36.0
+  confirmation_repetitions: 3
+  calibration_rates:
+  - 12
+  - 24
+  - 36
+  warm_prefix_requests: 128
+  warm_prefix_max_misses: 0
+retries:
+  foreground_cache:
+    max_attempts: 1
+    attempt_timeout_seconds: 0.4
+    backoff_seconds: []
+  foreground_database:
+    max_attempts: 1
+    attempt_timeout_seconds: 1.0
+    backoff_seconds: []
+  foreground_fill_write:
+    max_attempts: 1
+    attempt_timeout_seconds: 0.4
+    backoff_seconds: []
+  donor_read:
+    max_attempts: 2
+    attempt_timeout_seconds: 0.4
+    backoff_seconds:
+    - 0.01
+  warmup_database:
+    max_attempts: 2
+    attempt_timeout_seconds: 1.0
+    backoff_seconds:
+    - 0.01
+  destination_write:
+    max_attempts: 2
+    attempt_timeout_seconds: 0.4
+    backoff_seconds:
+    - 0.01
+provisional: true
+policy:
+  safe_windows: 2
+  demand_windows: 2
+  signal_max_age_seconds: 1.5
+  demand_max_age_seconds: 1.5
+  residency_max_age_seconds: 6.0
+  alpha: 1.2
+  foreground_margin: 1.0
+  old_lower_margin: 1.0
+  cold_reserve_per_bucket: 0.05
+  ordering: fifo_hash
+  unsafe_donor_multiplier: 0.5
+  reserve_db_rate: 2.0
+  safe_total_db_rate: null
+  fixed_origin_seconds: 0.5
+  allow_db_fallback: true
+policy_pressure:
+  db_probe_lower_ms: 100.0
+  db_probe_upper_ms: 150.0
+  cache_probe_lower_ms: 20.0
+  cache_probe_upper_ms: 50.0
+  real_lower_ms: 100.0
+  real_upper_ms: 150.0
+  queue_lower: 0
+  queue_upper: 2
+  memory_lower: 0.85
+  memory_upper: 0.95
+  db_rate_lower: 16.0
+  db_rate_upper: 20.0
+  db_inflight_lower: 3
+  db_inflight_upper: 4
+  cache_inflight_lower: 8
+  cache_inflight_upper: 9
+settings:
+  A:
+    fixed_rates:
+      donor_operations: 64.0
+      donor_bytes: 131072.0
+      background_db_operations: 2.0
+      destination_write_operations: 64.0
+      destination_write_bytes: 131072.0
+    ceilings:
+      donor_operations: 64.0
+      donor_bytes: 131072.0
+      background_db_operations: 2.0
+      destination_write_operations: 64.0
+      destination_write_bytes: 131072.0
+    increments:
+      donor_operations: 32.0
+      donor_bytes: 65536.0
+      background_db_operations: 1.0
+      destination_write_operations: 32.0
+      destination_write_bytes: 65536.0
+    fixed_interval_seconds: 0.5
+    fixed_count: 4
+    admission_cap: 4
+  B:
+    fixed_rates:
+      donor_operations: 128.0
+      donor_bytes: 262144.0
+      background_db_operations: 4.0
+      destination_write_operations: 128.0
+      destination_write_bytes: 262144.0
+    ceilings:
+      donor_operations: 128.0
+      donor_bytes: 262144.0
+      background_db_operations: 4.0
+      destination_write_operations: 128.0
+      destination_write_bytes: 262144.0
+    increments:
+      donor_operations: 64.0
+      donor_bytes: 131072.0
+      background_db_operations: 2.0
+      destination_write_operations: 64.0
+      destination_write_bytes: 131072.0
+    fixed_interval_seconds: 1.0
+    fixed_count: 8
+    admission_cap: 8
+bursts:
+  donor_operations: 2
+  donor_bytes: 4096
+  background_db_operations: 1
+  destination_write_operations: 2
+  destination_write_bytes: 4096

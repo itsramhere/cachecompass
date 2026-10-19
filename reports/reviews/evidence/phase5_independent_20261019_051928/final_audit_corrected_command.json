@@ -1,0 +1,14 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "reports/reviews/evidence/phase5_independent_20261019_051928/final_audit_corrected.py"
+  ],
+  "elapsed_seconds": 8.985622047000106,
+  "ended_utc": "2026-10-19T06:08:54.918668+00:00",
+  "exit_code": 0,
+  "retry_of": "reports/reviews/evidence/phase5_independent_20261019_051928/final_audit_command.json",
+  "started_utc": "2026-10-19T06:08:45.933023+00:00",
+  "stderr": "",
+  "stdout": "{\n  \"valid\": true,\n  \"totals\": {\n    \"offered\": 7684,\n    \"database_attempts\": 886,\n    \"db_probes\": 480,\n    \"cache_probes\": 2880\n  },\n  \"selected_profile\": \"B\",\n  \"preservation\": {\n    \"pre_review_files\": 2288,\n    \"unchanged\": 2286,\n    \"intentional_living_changes\": [\n      \"reports/DECISIONS.md\",\n      \"reports/STATUS.md\"\n    ],\n    \"unexpected_changes\": [],\n    \"superseded_review_files\": 537,\n    \"superseded_changes\": []\n  }\n}"
+}

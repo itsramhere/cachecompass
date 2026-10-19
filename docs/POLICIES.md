@@ -119,3 +119,48 @@ Demand ordering is held constant across this matrix. FIFO/hash and recency compa
 ## Required configuration before execution
 
 An experiment cannot instantiate these policies until configuration supplies: fixed/adaptive donor and DB ceilings/bursts; worker/pool maxima; observation/subwindow widths and maximum ages; exact registry bounds; safe-window/hysteresis/ramp rules; calibrated `C_safe`, reserve, and pressure thresholds; coverage uncertainty rule; fixed schedule and admission cap; source-missing disposition; retry/timeout rules; deadline and traffic-stability sample rule. Phase 2 intentionally assigns no calibrated values.
+
+## Phase 5 executable implementation
+
+`baselines.BaselineController` now implements the six experimental controls listed
+above. `joint_control` is explicitly refused; it remains Phase 6. The additional
+adaptive-budget migration control resolves the original plan's five-control
+list against the corrected Phase 2 contracts and H1/H4.
+
+`decide` stages private hysteresis/pending state. `install_action` validates the
+entire expected-epoch routing publication and grant generation before a
+non-awaiting installation, then commits the staged policy state. An epoch
+conflict changes neither grant nor controller state. Each grant replaces unused
+work. The common scheduler retains empty-start rate/burst/byte enforcement,
+finite retries, donor-first sources, original expiry and bounded cleanup.
+Adaptive rate changes accrue tokens under the old rate only up to installation;
+zeroing a dimension removes its unused tokens. Duplicate observations cannot
+mint another grant; unsafe duplicate adaptive observations revoke work.
+
+`policy_observations.ObservationBuilder` uses exact complete closed demand
+windows, rolling-max foreground attempts and conservative old-bucket lower
+rates. It sees actual submissions/issued operations, not offered future keys.
+The demand tracker reserves an explicitly bounded extra open subwindow so
+incoming traffic cannot evict the oldest closed-window data before collection.
+Coverage uses destination evidence/expiry/age. Foreground fills and copies share
+residency invalidation. Unknown old-owner evidence earns zero displaced credit;
+pending reserves persist across straddling windows until a wholly post-cutover
+foreground window is available. The common fixed probes supply idle signals;
+real classes, queue/memory/evictions and DB attempt rate enter separate threshold
+checks with lower/upper hysteresis. Fixed controls observe these same inputs
+without adapting their fixed rates or scheduled admissions.
+
+Every run logs the complete observation/action, rejected cost, remaining
+allowance, pending reserves, pressure reasons and rates. Fixed ticks admit a
+contiguous eligible prefix once, with no catch-up or leapfrogging. Both
+migration-before-cutover controls wait for all captured tasks, then mark and
+admit the whole affected set. Missing/exhausted/expired keys can terminate cold;
+pass termination is never a claim of complete residency.
+
+The finite protocol is [PHASE5_PILOT_PROTOCOL.md](PHASE5_PILOT_PROTOCOL.md).
+Versioned parameters live in `configs/phase5_pilot.yaml`; A/B are a bounded
+implementation grid, not final evaluation tuning. The Linux host requires the
+recorded supplemental mixed-pool checks. Calibration is conditional; every
+probe and issued retry consumes the total DB allowance. Source reservation bytes
+remain distinct from unknown physical wire bytes. No Phase 5 smoke ranking
+establishes superiority.

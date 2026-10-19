@@ -1,0 +1,38 @@
+[
+  {
+    "checks": {
+      "actual_physical_limits": true,
+      "actual_pool_bounds": true,
+      "artifact_seal": true,
+      "common_noncatchup_probes": true,
+      "complete_initial_state": true,
+      "empty_physical_reset": true,
+      "exact_common_horizon": true,
+      "fixed_horizon": true,
+      "individual_probe_charges": true,
+      "mixed_exact_offered_schedule": true,
+      "mixed_numeric_eligibility_replay": true,
+      "mixed_offer_terminal_identity": true,
+      "mixed_operation_offer_fields": true,
+      "mixed_payload_and_chronology": true,
+      "mixed_raw_payload_hashes": true,
+      "no_diagnostics": true,
+      "no_new_observations_after_horizon": true,
+      "no_router_migration": true,
+      "offer_arrival_identity": true,
+      "required_artifacts": true,
+      "source_identity": true,
+      "stable_images_and_limits": true,
+      "warm_stability_numeric_replay": true,
+      "warm_stability_raw": true
+    },
+    "counts": {
+      "db_attempts": 132,
+      "offered": 112
+    },
+    "errors": [],
+    "review_eligible": true,
+    "run_id": "p5ind_20261019_m2_mixed12_2",
+    "valid": true
+  }
+]

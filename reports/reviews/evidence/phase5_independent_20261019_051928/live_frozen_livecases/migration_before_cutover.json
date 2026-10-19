@@ -1,0 +1,985 @@
+{
+  "policy": "migration_before_cutover",
+  "functional_scope": "actual-client partial donor availability; no comparison/pressure/stability inference",
+  "actions": [
+    {
+      "decided_at_ns": 4671465747090,
+      "budget": {
+        "donor_operations": 10,
+        "donor_bytes": 10880,
+        "background_db_operations": 1,
+        "destination_write_operations": 10,
+        "valid_for_ns": 100000000,
+        "destination_write_bytes": 10880
+      },
+      "admit_buckets": [],
+      "reason_codes": [
+        "fixed_rates_ignore_soft_pressure",
+        "waiting_entire_finite_pass",
+        "no_admission"
+      ],
+      "expected_routing_epoch": 1,
+      "observation_as_of_ns": 4671465631376
+    },
+    {
+      "decided_at_ns": 4671567159062,
+      "budget": {
+        "donor_operations": 10,
+        "donor_bytes": 10880,
+        "background_db_operations": 1,
+        "destination_write_operations": 10,
+        "valid_for_ns": 100000000,
+        "destination_write_bytes": 10880
+      },
+      "admit_buckets": [],
+      "reason_codes": [
+        "fixed_rates_ignore_soft_pressure",
+        "waiting_entire_finite_pass",
+        "no_admission"
+      ],
+      "expected_routing_epoch": 1,
+      "observation_as_of_ns": 4671566991189
+    },
+    {
+      "decided_at_ns": 4671668194546,
+      "budget": {
+        "donor_operations": 10,
+        "donor_bytes": 10880,
+        "background_db_operations": 1,
+        "destination_write_operations": 10,
+        "valid_for_ns": 100000000,
+        "destination_write_bytes": 10880
+      },
+      "admit_buckets": [],
+      "reason_codes": [
+        "fixed_rates_ignore_soft_pressure",
+        "waiting_entire_finite_pass",
+        "no_admission"
+      ],
+      "expected_routing_epoch": 1,
+      "observation_as_of_ns": 4671667925852
+    },
+    {
+      "decided_at_ns": 4671769725040,
+      "budget": {
+        "donor_operations": 10,
+        "donor_bytes": 10880,
+        "background_db_operations": 1,
+        "destination_write_operations": 10,
+        "valid_for_ns": 100000000,
+        "destination_write_bytes": 10880
+      },
+      "admit_buckets": [],
+      "reason_codes": [
+        "fixed_rates_ignore_soft_pressure",
+        "waiting_entire_finite_pass",
+        "no_admission"
+      ],
+      "expected_routing_epoch": 1,
+      "observation_as_of_ns": 4671769569636
+    },
+    {
+      "decided_at_ns": 4671871728426,
+      "budget": {
+        "donor_operations": 10,
+        "donor_bytes": 10880,
+        "background_db_operations": 1,
+        "destination_write_operations": 10,
+        "valid_for_ns": 100000000,
+        "destination_write_bytes": 10880
+      },
+      "admit_buckets": [],
+      "reason_codes": [
+        "fixed_rates_ignore_soft_pressure",
+        "waiting_entire_finite_pass",
+        "no_admission"
+      ],
+      "expected_routing_epoch": 1,
+      "observation_as_of_ns": 4671871462145
+    },
+    {
+      "decided_at_ns": 4671973183416,
+      "budget": {
+        "donor_operations": 10,
+        "donor_bytes": 10880,
+        "background_db_operations": 1,
+        "destination_write_operations": 10,
+        "valid_for_ns": 100000000,
+        "destination_write_bytes": 10880
+      },
+      "admit_buckets": [
+        0,
+        2,
+        8
+      ],
+      "reason_codes": [
+        "fixed_rates_ignore_soft_pressure",
+        "entire_finite_pass_terminal_cutover_all"
+      ],
+      "expected_routing_epoch": 2,
+      "observation_as_of_ns": 4671972931728
+    }
+  ],
+  "requests": [
+    {
+      "schema_version": 1,
+      "run_id": "p5-live-157f0cf754a14240bb4adaec5e8f3902",
+      "request_id": "request-0",
+      "scheduled_arrival_ns": 4671973595266,
+      "submitted_ns": 4671973612211,
+      "completed_ns": 4671982380449,
+      "timeout_seconds": 1.0,
+      "outcome": "completed",
+      "route": {
+        "epoch": 3,
+        "bucket": 8,
+        "owner": "new",
+        "state": "new"
+      },
+      "source": "new_cache",
+      "work_class": "foreground_cache",
+      "cache_attempts": 1,
+      "database_attempts": 0,
+      "coalesced_to_request_id": null,
+      "reason": "cache_hit",
+      "key": "key-00000002",
+      "cache_write_attempts": 0
+    },
+    {
+      "schema_version": 1,
+      "run_id": "p5-live-157f0cf754a14240bb4adaec5e8f3902",
+      "request_id": "request-1",
+      "scheduled_arrival_ns": 4671982510144,
+      "submitted_ns": 4671982521120,
+      "completed_ns": 4671983582587,
+      "timeout_seconds": 1.0,
+      "outcome": "completed",
+      "route": {
+        "epoch": 3,
+        "bucket": 8,
+        "owner": "new",
+        "state": "new"
+      },
+      "source": "new_cache",
+      "work_class": "foreground_cache",
+      "cache_attempts": 1,
+      "database_attempts": 0,
+      "coalesced_to_request_id": null,
+      "reason": "cache_hit",
+      "key": "key-00000006",
+      "cache_write_attempts": 0
+    },
+    {
+      "schema_version": 1,
+      "run_id": "p5-live-157f0cf754a14240bb4adaec5e8f3902",
+      "request_id": "request-2",
+      "scheduled_arrival_ns": 4671983685001,
+      "submitted_ns": 4671983690229,
+      "completed_ns": 4671985279268,
+      "timeout_seconds": 1.0,
+      "outcome": "completed",
+      "route": {
+        "epoch": 3,
+        "bucket": 8,
+        "owner": "new",
+        "state": "new"
+      },
+      "source": "new_cache",
+      "work_class": "foreground_cache",
+      "cache_attempts": 1,
+      "database_attempts": 0,
+      "coalesced_to_request_id": null,
+      "reason": "cache_hit",
+      "key": "key-00000009",
+      "cache_write_attempts": 0
+    },
+    {
+      "schema_version": 1,
+      "run_id": "p5-live-157f0cf754a14240bb4adaec5e8f3902",
+      "request_id": "request-3",
+      "scheduled_arrival_ns": 4671985378317,
+      "submitted_ns": 4671985382934,
+      "completed_ns": 4671987310779,
+      "timeout_seconds": 1.0,
+      "outcome": "completed",
+      "route": {
+        "epoch": 3,
+        "bucket": 8,
+        "owner": "new",
+        "state": "new"
+      },
+      "source": "new_cache",
+      "work_class": "foreground_cache",
+      "cache_attempts": 1,
+      "database_attempts": 0,
+      "coalesced_to_request_id": null,
+      "reason": "cache_hit",
+      "key": "key-00000015",
+      "cache_write_attempts": 0
+    },
+    {
+      "schema_version": 1,
+      "run_id": "p5-live-157f0cf754a14240bb4adaec5e8f3902",
+      "request_id": "request-4",
+      "scheduled_arrival_ns": 4671987410319,
+      "submitted_ns": 4671987415387,
+      "completed_ns": 4671989264608,
+      "timeout_seconds": 1.0,
+      "outcome": "completed",
+      "route": {
+        "epoch": 3,
+        "bucket": 0,
+        "owner": "new",
+        "state": "new"
+      },
+      "source": "new_cache",
+      "work_class": "foreground_cache",
+      "cache_attempts": 1,
+      "database_attempts": 0,
+      "coalesced_to_request_id": null,
+      "reason": "cache_hit",
+      "key": "key-00000030",
+      "cache_write_attempts": 0
+    }
+  ],
+  "foreground_operations": [
+    {
+      "operation_id": "fg-00000001",
+      "request_id": "request-0",
+      "operation": "cache_read",
+      "source": "new_cache",
+      "target_owner": "new",
+      "work_class": "foreground_cache",
+      "absolute_deadline_ns": 4672473656588,
+      "issued_ns": 4671980273650,
+      "terminal_ns": 4671982368711,
+      "outcome": "completed",
+      "reserved_bytes": 3072,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "payload_bytes": 64
+    },
+    {
+      "operation_id": "fg-00000002",
+      "request_id": "request-1",
+      "operation": "cache_read",
+      "source": "new_cache",
+      "target_owner": "new",
+      "work_class": "foreground_cache",
+      "absolute_deadline_ns": 4672482560479,
+      "issued_ns": 4671982879569,
+      "terminal_ns": 4671983576407,
+      "outcome": "completed",
+      "reserved_bytes": 3072,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "payload_bytes": 64
+    },
+    {
+      "operation_id": "fg-00000003",
+      "request_id": "request-2",
+      "operation": "cache_read",
+      "source": "new_cache",
+      "target_owner": "new",
+      "work_class": "foreground_cache",
+      "absolute_deadline_ns": 4672483713564,
+      "issued_ns": 4671984350341,
+      "terminal_ns": 4671985273289,
+      "outcome": "completed",
+      "reserved_bytes": 3072,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "payload_bytes": 64
+    },
+    {
+      "operation_id": "fg-00000004",
+      "request_id": "request-3",
+      "operation": "cache_read",
+      "source": "new_cache",
+      "target_owner": "new",
+      "work_class": "foreground_cache",
+      "absolute_deadline_ns": 4672485405328,
+      "issued_ns": 4671986038821,
+      "terminal_ns": 4671987304660,
+      "outcome": "completed",
+      "reserved_bytes": 3072,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "payload_bytes": 64
+    },
+    {
+      "operation_id": "fg-00000005",
+      "request_id": "request-4",
+      "operation": "cache_read",
+      "source": "new_cache",
+      "target_owner": "new",
+      "work_class": "foreground_cache",
+      "absolute_deadline_ns": 4672487438642,
+      "issued_ns": 4671988043021,
+      "terminal_ns": 4671989259981,
+      "outcome": "completed",
+      "reserved_bytes": 3072,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "payload_bytes": 64
+    }
+  ],
+  "migration_operations": [
+    {
+      "operation_id": "migration-00000001",
+      "key": "key-00000002",
+      "bucket": 8,
+      "task_id": "donor:8:key-00000002",
+      "parent_task_id": null,
+      "operation": "donor",
+      "source": "donor_cache",
+      "target_owner": "old-1",
+      "work_class": "donor_read",
+      "absolute_deadline_ns": 4671977035588,
+      "issued_ns": 4671479963573,
+      "terminal_ns": 4671480717927,
+      "outcome": "completed",
+      "reserved_bytes": 1088,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "token_event_id": 2,
+      "timeout_seconds": 0.5,
+      "grant_generation_ns": 4671465747090,
+      "payload_sha256": "6f444c64a431c81308755de1d84d11fdcd33836e598edc6e35e45fb15a9e8554",
+      "payload_bytes": 64
+    },
+    {
+      "operation_id": "migration-00000002",
+      "key": "key-00000002",
+      "bucket": 8,
+      "task_id": "write:8:key-00000002",
+      "parent_task_id": "donor:8:key-00000002",
+      "operation": "write",
+      "source": "new_cache",
+      "target_owner": "new",
+      "work_class": "destination_write",
+      "absolute_deadline_ns": 4671980781643,
+      "issued_ns": 4671483236746,
+      "terminal_ns": 4671483889067,
+      "outcome": "completed",
+      "reserved_bytes": 1088,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "token_event_id": 3,
+      "timeout_seconds": 0.5,
+      "payload_sha256": "6f444c64a431c81308755de1d84d11fdcd33836e598edc6e35e45fb15a9e8554",
+      "payload_bytes": 64,
+      "grant_generation_ns": 4671465747090,
+      "residency_valid_until_ns": null,
+      "residency_confirmed_ns": 4671483913754
+    },
+    {
+      "operation_id": "migration-00000003",
+      "key": "key-00000006",
+      "bucket": 8,
+      "task_id": "donor:8:key-00000006",
+      "parent_task_id": null,
+      "operation": "donor",
+      "source": "donor_cache",
+      "target_owner": "old-1",
+      "work_class": "donor_read",
+      "absolute_deadline_ns": 4671986476158,
+      "issued_ns": 4671486758042,
+      "terminal_ns": 4671487855913,
+      "outcome": "completed",
+      "reserved_bytes": 1088,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "token_event_id": 4,
+      "timeout_seconds": 0.5,
+      "grant_generation_ns": 4671465747090,
+      "payload_sha256": null,
+      "payload_bytes": null
+    },
+    {
+      "operation_id": "migration-00000004",
+      "key": "key-00000006",
+      "bucket": 8,
+      "task_id": "database:8:key-00000006",
+      "parent_task_id": null,
+      "operation": "database",
+      "source": "database",
+      "target_owner": "database",
+      "work_class": "discretionary_database_warmup",
+      "absolute_deadline_ns": 4672067541888,
+      "issued_ns": 4671567786325,
+      "terminal_ns": 4671591454983,
+      "outcome": "completed",
+      "reserved_bytes": 1088,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "token_event_id": 6,
+      "timeout_seconds": 0.5,
+      "grant_generation_ns": 4671567159062,
+      "payload_sha256": "1720074b8fb99c8899e86ac1e7d9f3eb447156fd4d5b69cf7a26af7cfbd476e1",
+      "payload_bytes": 64
+    },
+    {
+      "operation_id": "migration-00000005",
+      "key": "key-00000006",
+      "bucket": 8,
+      "task_id": "write:8:key-00000006",
+      "parent_task_id": "database:8:key-00000006",
+      "operation": "write",
+      "source": "new_cache",
+      "target_owner": "new",
+      "work_class": "destination_write",
+      "absolute_deadline_ns": 4672091540392,
+      "issued_ns": 4671592137159,
+      "terminal_ns": 4671592697081,
+      "outcome": "completed",
+      "reserved_bytes": 1088,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "token_event_id": 7,
+      "timeout_seconds": 0.5,
+      "payload_sha256": "1720074b8fb99c8899e86ac1e7d9f3eb447156fd4d5b69cf7a26af7cfbd476e1",
+      "payload_bytes": 64,
+      "grant_generation_ns": 4671567159062,
+      "residency_valid_until_ns": null,
+      "residency_confirmed_ns": 4671592728378
+    },
+    {
+      "operation_id": "migration-00000006",
+      "key": "key-00000009",
+      "bucket": 8,
+      "task_id": "donor:8:key-00000009",
+      "parent_task_id": null,
+      "operation": "donor",
+      "source": "donor_cache",
+      "target_owner": "old-1",
+      "work_class": "donor_read",
+      "absolute_deadline_ns": 4672092954829,
+      "issued_ns": 4671593210494,
+      "terminal_ns": 4671594865743,
+      "outcome": "completed",
+      "reserved_bytes": 1088,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "token_event_id": 8,
+      "timeout_seconds": 0.5,
+      "grant_generation_ns": 4671567159062,
+      "payload_sha256": null,
+      "payload_bytes": null
+    },
+    {
+      "operation_id": "migration-00000007",
+      "key": "key-00000009",
+      "bucket": 8,
+      "task_id": "database:8:key-00000009",
+      "parent_task_id": null,
+      "operation": "database",
+      "source": "database",
+      "target_owner": "database",
+      "work_class": "discretionary_database_warmup",
+      "absolute_deadline_ns": 4672168588118,
+      "issued_ns": 4671668837193,
+      "terminal_ns": 4671697790669,
+      "outcome": "completed",
+      "reserved_bytes": 1088,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "token_event_id": 10,
+      "timeout_seconds": 0.5,
+      "grant_generation_ns": 4671668194546,
+      "payload_sha256": "d4eb151f5b7872324c701cfbb30a1cf8d2a7e7af7557dad04886c36de3b2eb7f",
+      "payload_bytes": 64
+    },
+    {
+      "operation_id": "migration-00000008",
+      "key": "key-00000009",
+      "bucket": 8,
+      "task_id": "write:8:key-00000009",
+      "parent_task_id": "database:8:key-00000009",
+      "operation": "write",
+      "source": "new_cache",
+      "target_owner": "new",
+      "work_class": "destination_write",
+      "absolute_deadline_ns": 4672197976288,
+      "issued_ns": 4671698341688,
+      "terminal_ns": 4671698994349,
+      "outcome": "completed",
+      "reserved_bytes": 1088,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "token_event_id": 11,
+      "timeout_seconds": 0.5,
+      "payload_sha256": "d4eb151f5b7872324c701cfbb30a1cf8d2a7e7af7557dad04886c36de3b2eb7f",
+      "payload_bytes": 64,
+      "grant_generation_ns": 4671668194546,
+      "residency_valid_until_ns": null,
+      "residency_confirmed_ns": 4671699009652
+    },
+    {
+      "operation_id": "migration-00000009",
+      "key": "key-00000015",
+      "bucket": 8,
+      "task_id": "donor:8:key-00000015",
+      "parent_task_id": null,
+      "operation": "donor",
+      "source": "donor_cache",
+      "target_owner": "old-1",
+      "work_class": "donor_read",
+      "absolute_deadline_ns": 4672199141581,
+      "issued_ns": 4671699367521,
+      "terminal_ns": 4671700355937,
+      "outcome": "completed",
+      "reserved_bytes": 1088,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "token_event_id": 12,
+      "timeout_seconds": 0.5,
+      "grant_generation_ns": 4671668194546,
+      "payload_sha256": null,
+      "payload_bytes": null
+    },
+    {
+      "operation_id": "migration-00000010",
+      "key": "key-00000015",
+      "bucket": 8,
+      "task_id": "database:8:key-00000015",
+      "parent_task_id": null,
+      "operation": "database",
+      "source": "database",
+      "target_owner": "database",
+      "work_class": "discretionary_database_warmup",
+      "absolute_deadline_ns": 4672270309619,
+      "issued_ns": 4671770535449,
+      "terminal_ns": 4671799205019,
+      "outcome": "completed",
+      "reserved_bytes": 1088,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "token_event_id": 16,
+      "timeout_seconds": 0.5,
+      "grant_generation_ns": 4671769725040,
+      "payload_sha256": "636c9f8220b3cd91f97b7b92be394e33e3aa8331c0a7830669c03342cc798bc2",
+      "payload_bytes": 64
+    },
+    {
+      "operation_id": "migration-00000011",
+      "key": "key-00000015",
+      "bucket": 8,
+      "task_id": "write:8:key-00000015",
+      "parent_task_id": "database:8:key-00000015",
+      "operation": "write",
+      "source": "new_cache",
+      "target_owner": "new",
+      "work_class": "destination_write",
+      "absolute_deadline_ns": 4672299301114,
+      "issued_ns": 4671799641125,
+      "terminal_ns": 4671800560858,
+      "outcome": "completed",
+      "reserved_bytes": 1088,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "token_event_id": 17,
+      "timeout_seconds": 0.5,
+      "payload_sha256": "636c9f8220b3cd91f97b7b92be394e33e3aa8331c0a7830669c03342cc798bc2",
+      "payload_bytes": 64,
+      "grant_generation_ns": 4671769725040,
+      "residency_valid_until_ns": null,
+      "residency_confirmed_ns": 4671800576061
+    },
+    {
+      "operation_id": "migration-00000012",
+      "key": "key-00000030",
+      "bucket": 0,
+      "task_id": "donor:0:key-00000030",
+      "parent_task_id": null,
+      "operation": "donor",
+      "source": "donor_cache",
+      "target_owner": "old-1",
+      "work_class": "donor_read",
+      "absolute_deadline_ns": 4672300707439,
+      "issued_ns": 4671800990845,
+      "terminal_ns": 4671801697768,
+      "outcome": "completed",
+      "reserved_bytes": 1088,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "token_event_id": 18,
+      "timeout_seconds": 0.5,
+      "grant_generation_ns": 4671769725040,
+      "payload_sha256": null,
+      "payload_bytes": null
+    },
+    {
+      "operation_id": "migration-00000013",
+      "key": "key-00000030",
+      "bucket": 0,
+      "task_id": "database:0:key-00000030",
+      "parent_task_id": null,
+      "operation": "database",
+      "source": "database",
+      "target_owner": "database",
+      "work_class": "discretionary_database_warmup",
+      "absolute_deadline_ns": 4672372345914,
+      "issued_ns": 4671872555339,
+      "terminal_ns": 4671900607821,
+      "outcome": "completed",
+      "reserved_bytes": 1088,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "token_event_id": 22,
+      "timeout_seconds": 0.5,
+      "grant_generation_ns": 4671871728426,
+      "payload_sha256": "ed6c439ce10b538a092eebd9091729153a5c55d54762176820b534239b756cd3",
+      "payload_bytes": 64
+    },
+    {
+      "operation_id": "migration-00000014",
+      "key": "key-00000030",
+      "bucket": 0,
+      "task_id": "write:0:key-00000030",
+      "parent_task_id": "database:0:key-00000030",
+      "operation": "write",
+      "source": "new_cache",
+      "target_owner": "new",
+      "work_class": "destination_write",
+      "absolute_deadline_ns": 4672400701982,
+      "issued_ns": 4671901140151,
+      "terminal_ns": 4671901841136,
+      "outcome": "completed",
+      "reserved_bytes": 1088,
+      "actual_bytes": null,
+      "retry_ordinal": 1,
+      "token_event_id": 23,
+      "timeout_seconds": 0.5,
+      "payload_sha256": "ed6c439ce10b538a092eebd9091729153a5c55d54762176820b534239b756cd3",
+      "payload_bytes": 64,
+      "grant_generation_ns": 4671871728426,
+      "residency_valid_until_ns": null,
+      "residency_confirmed_ns": 4671901864361
+    }
+  ],
+  "pass_results": [
+    {
+      "key": "key-00000002",
+      "bucket": 8,
+      "disposition": "warmed",
+      "source": "donor_cache",
+      "attempts": 2,
+      "reason": "written",
+      "terminal_ns": 4671483926844
+    },
+    {
+      "key": "key-00000006",
+      "bucket": 8,
+      "disposition": "warmed",
+      "source": "database",
+      "attempts": 3,
+      "reason": "written",
+      "terminal_ns": 4671592817803
+    },
+    {
+      "key": "key-00000009",
+      "bucket": 8,
+      "disposition": "warmed",
+      "source": "database",
+      "attempts": 3,
+      "reason": "written",
+      "terminal_ns": 4671699025076
+    },
+    {
+      "key": "key-00000015",
+      "bucket": 8,
+      "disposition": "warmed",
+      "source": "database",
+      "attempts": 3,
+      "reason": "written",
+      "terminal_ns": 4671800592105
+    },
+    {
+      "key": "key-00000030",
+      "bucket": 0,
+      "disposition": "warmed",
+      "source": "database",
+      "attempts": 3,
+      "reason": "written",
+      "terminal_ns": 4671901885122
+    }
+  ],
+  "tokens": [
+    {
+      "event_id": 0,
+      "kind": "init",
+      "at_ns": 4671465511576,
+      "rates": {
+        "donor_operations": 0.0,
+        "donor_bytes": 0.0,
+        "background_db_operations": 0.0,
+        "destination_write_operations": 0.0,
+        "destination_write_bytes": 0.0
+      },
+      "bursts": {
+        "donor_operations": 2,
+        "donor_bytes": 2176,
+        "background_db_operations": 2,
+        "destination_write_operations": 2,
+        "destination_write_bytes": 2176
+      }
+    },
+    {
+      "event_id": 1,
+      "kind": "rates",
+      "at_ns": 4671465853981,
+      "rates": {
+        "donor_operations": 100.0,
+        "donor_bytes": 108800.0,
+        "background_db_operations": 10.0,
+        "destination_write_operations": 100.0,
+        "destination_write_bytes": 108800.0
+      }
+    },
+    {
+      "event_id": 2,
+      "kind": "acquire",
+      "at_ns": 4671477009930,
+      "amounts": {
+        "donor_operations": 1,
+        "donor_bytes": 1088
+      }
+    },
+    {
+      "event_id": 3,
+      "kind": "acquire",
+      "at_ns": 4671480764307,
+      "amounts": {
+        "destination_write_operations": 1,
+        "destination_write_bytes": 1088
+      }
+    },
+    {
+      "event_id": 4,
+      "kind": "acquire",
+      "at_ns": 4671486454536,
+      "amounts": {
+        "donor_operations": 1,
+        "donor_bytes": 1088
+      }
+    },
+    {
+      "event_id": 5,
+      "kind": "rates",
+      "at_ns": 4671567313394,
+      "rates": {
+        "donor_operations": 100.0,
+        "donor_bytes": 108800.0,
+        "background_db_operations": 10.0,
+        "destination_write_operations": 100.0,
+        "destination_write_bytes": 108800.0
+      }
+    },
+    {
+      "event_id": 6,
+      "kind": "acquire",
+      "at_ns": 4671567524902,
+      "amounts": {
+        "background_db_operations": 1
+      }
+    },
+    {
+      "event_id": 7,
+      "kind": "acquire",
+      "at_ns": 4671591522044,
+      "amounts": {
+        "destination_write_operations": 1,
+        "destination_write_bytes": 1088
+      }
+    },
+    {
+      "event_id": 8,
+      "kind": "acquire",
+      "at_ns": 4671592940227,
+      "amounts": {
+        "donor_operations": 1,
+        "donor_bytes": 1088
+      }
+    },
+    {
+      "event_id": 9,
+      "kind": "rates",
+      "at_ns": 4671668345503,
+      "rates": {
+        "donor_operations": 100.0,
+        "donor_bytes": 108800.0,
+        "background_db_operations": 10.0,
+        "destination_write_operations": 100.0,
+        "destination_write_bytes": 108800.0
+      }
+    },
+    {
+      "event_id": 10,
+      "kind": "acquire",
+      "at_ns": 4671668570952,
+      "amounts": {
+        "background_db_operations": 1
+      }
+    },
+    {
+      "event_id": 11,
+      "kind": "acquire",
+      "at_ns": 4671697898992,
+      "amounts": {
+        "destination_write_operations": 1,
+        "destination_write_bytes": 1088
+      }
+    },
+    {
+      "event_id": 12,
+      "kind": "acquire",
+      "at_ns": 4671699127470,
+      "amounts": {
+        "donor_operations": 1,
+        "donor_bytes": 1088
+      }
+    },
+    {
+      "event_id": 13,
+      "kind": "acquire",
+      "at_ns": 4671766950867,
+      "amounts": {
+        "background_db_operations": 1
+      }
+    },
+    {
+      "event_id": 14,
+      "kind": "refund",
+      "at_ns": 4671766989415,
+      "amounts": {
+        "background_db_operations": 1
+      },
+      "acquire_event_id": 13
+    },
+    {
+      "event_id": 15,
+      "kind": "rates",
+      "at_ns": 4671769979853,
+      "rates": {
+        "donor_operations": 100.0,
+        "donor_bytes": 108800.0,
+        "background_db_operations": 10.0,
+        "destination_write_operations": 100.0,
+        "destination_write_bytes": 108800.0
+      }
+    },
+    {
+      "event_id": 16,
+      "kind": "acquire",
+      "at_ns": 4671770295328,
+      "amounts": {
+        "background_db_operations": 1
+      }
+    },
+    {
+      "event_id": 17,
+      "kind": "acquire",
+      "at_ns": 4671799282626,
+      "amounts": {
+        "destination_write_operations": 1,
+        "destination_write_bytes": 1088
+      }
+    },
+    {
+      "event_id": 18,
+      "kind": "acquire",
+      "at_ns": 4671800693708,
+      "amounts": {
+        "donor_operations": 1,
+        "donor_bytes": 1088
+      }
+    },
+    {
+      "event_id": 19,
+      "kind": "acquire",
+      "at_ns": 4671869468006,
+      "amounts": {
+        "background_db_operations": 1
+      }
+    },
+    {
+      "event_id": 20,
+      "kind": "refund",
+      "at_ns": 4671869513124,
+      "amounts": {
+        "background_db_operations": 1
+      },
+      "acquire_event_id": 19
+    },
+    {
+      "event_id": 21,
+      "kind": "rates",
+      "at_ns": 4671872075938,
+      "rates": {
+        "donor_operations": 100.0,
+        "donor_bytes": 108800.0,
+        "background_db_operations": 10.0,
+        "destination_write_operations": 100.0,
+        "destination_write_bytes": 108800.0
+      }
+    },
+    {
+      "event_id": 22,
+      "kind": "acquire",
+      "at_ns": 4671872330732,
+      "amounts": {
+        "background_db_operations": 1
+      }
+    },
+    {
+      "event_id": 23,
+      "kind": "acquire",
+      "at_ns": 4671900682803,
+      "amounts": {
+        "destination_write_operations": 1,
+        "destination_write_bytes": 1088
+      }
+    },
+    {
+      "event_id": 24,
+      "kind": "rates",
+      "at_ns": 4671973313572,
+      "rates": {
+        "donor_operations": 100.0,
+        "donor_bytes": 108800.0,
+        "background_db_operations": 10.0,
+        "destination_write_operations": 100.0,
+        "destination_write_bytes": 108800.0
+      }
+    }
+  ],
+  "pools": {
+    "issuance_stopped": false,
+    "quarantined_operations": 0,
+    "foreground": {
+      "pool_min": 0,
+      "pool_max": 4,
+      "pool_size": 0,
+      "pool_available": 0,
+      "requests_waiting": 0,
+      "observed_max_concurrency": 0
+    },
+    "background": {
+      "requests_num": 5,
+      "requests_queued": 1,
+      "connections_num": 1,
+      "connections_ms": 8,
+      "requests_wait_ms": 9,
+      "usage_ms": 36,
+      "pool_min": 0,
+      "pool_max": 1,
+      "pool_size": 1,
+      "pool_available": 1,
+      "requests_waiting": 0,
+      "observed_max_concurrency": 1
+    },
+    "cancelled_operations": 0,
+    "discarded_connections": 0
+  }
+}

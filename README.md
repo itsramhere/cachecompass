@@ -120,3 +120,36 @@ To reproduce the literature retrieval/extraction from the workspace root after t
 The final audit validates the retained canonical Phase 1 evidence and source state, even when new retrievals have been added under reports/. Live PDFs can change; compare their new hashes to the original manifests. The web check exits 1 if any requested source is unavailable; inspect per-source records rather than treating partial success as full recovery. Verification outputs refuse overwrite. For a failed PDF fetch, preserve it and rerun with a new ID and `--retry-of reports/literature/<failed-id>/manifest.json`.
 
 Use `scripts/record_command.py --output <new-record.json> -- <command and arguments>` for exact argv/stdout/stderr/UTC/duration/exit-code capture. It supports `--retry-of <original-record.json>`. Manual source reading and interpretation must still be performed; extraction and the audit do not certify semantic claims. Evidence and reproduction commands are in [reports/phase_01.md](reports/phase_01.md); final source identity is [reports/source_state_phase1.json](reports/source_state_phase1.json). The historical independent review [reports/reviews/phase_01.md](reports/reviews/phase_01.md) assessed the earlier absent submission; it has been preserved for renewed reviewer assessment.
+
+### Phase 5 executable controls
+
+Six controls are implemented through the same reviewed router, pools, adapters,
+observer, residency tracker and migration scheduler: immediate, fixed gradual,
+fixed migration-before-cutover, warmup-only adaptation, traffic-only adaptation,
+and adaptive-budget migration-before-cutover. The joint controller remains
+Phase 6. Read [the independent correction protocol](docs/PHASE5_INDEPENDENT_PROTOCOL.md),
+[the historical pilot protocol](docs/PHASE5_PILOT_PROTOCOL.md) and
+[policy details](docs/POLICIES.md) before interpreting results.
+
+On the managed Linux host, use the existing Python 3.12 environment and pinned
+images. The cycle validates disposable labels before resetting and always stops
+services. A fresh reproduction after the mixed-pool check selects a conditional total DB
+attempt rate only after both splits pass. The registered lower setting is
+12/s including 2/s fixed probes and a further 2/s reserve:
+
+```bash
+.venv/bin/python scripts/phase5_matrix.py --prefix p5-reproduce-fresh
+.venv/bin/python analysis/phase5_validation.py --runs p5-reproduce-fresh_smoke1 --output reports/evidence/phase5/reproduce-validation-fresh.json
+.venv/bin/python scripts/phase5_cycle.py --run-id p5-tests-fresh --record reports/evidence/phase5/tests-fresh.json --tests
+```
+
+Run IDs/output paths are exclusive. The Windows wheel-only lock is historical;
+Linux execution uses the recorded installed versions, not a claim that Windows
+wheel hashes install on Linux. The shared Redis expiry conversion now also
+charges Redis's millisecond clock granularity. Raw failures remain retained.
+Phase 5 handoff and gate: `reports/HANDOFF_PHASE5.md`, `reports/phase_05.md`.
+The matrix performs both mixed checks before admitting its conditional total,
+then 12 tuning, six fresh matched smoke and three boundary cases. Validate an
+individual retained case using its full ID, such as `p5-reproduce-fresh_smoke1`.
+An individual numeric `--total-db-rate` without an applicable capacity record
+is a functional run and cannot satisfy the independent review gate.

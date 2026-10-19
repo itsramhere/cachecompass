@@ -1,0 +1,14 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "reports/reviews/evidence/phase5_independent_20261019_051928/test_schema6_final_resealed.py"
+  ],
+  "elapsed_seconds": 5.363015640999947,
+  "ended_utc": "2026-10-19T06:07:41.647523+00:00",
+  "exit_code": 0,
+  "retry_of": null,
+  "started_utc": "2026-10-19T06:07:36.284434+00:00",
+  "stderr": "test_acquire_before_tokens_exist (__main__.CorrectedRawNegatives.test_acquire_before_tokens_exist) ... ok\ntest_changed_query_cannot_use_existing_capacity (__main__.CorrectedRawNegatives.test_changed_query_cannot_use_existing_capacity) ... ok\ntest_changed_token_rates_cannot_hide_behind_correct_action (__main__.CorrectedRawNegatives.test_changed_token_rates_cannot_hide_behind_correct_action) ... ok\ntest_false_terminal_attempt_count (__main__.CorrectedRawNegatives.test_false_terminal_attempt_count) ... ok\ntest_foreground_donor_shortcut (__main__.CorrectedRawNegatives.test_foreground_donor_shortcut) ... ok\ntest_forged_coverage (__main__.CorrectedRawNegatives.test_forged_coverage) ... ok\ntest_forged_foreground_upper_bound (__main__.CorrectedRawNegatives.test_forged_foreground_upper_bound) ... ok\ntest_forged_pressure_even_with_synced_action_events (__main__.CorrectedRawNegatives.test_forged_pressure_even_with_synced_action_events) ... ok\ntest_freshened_component_timestamp (__main__.CorrectedRawNegatives.test_freshened_component_timestamp) ... ok\ntest_issued_tokens_cannot_refund (__main__.CorrectedRawNegatives.test_issued_tokens_cannot_refund) ... ok\ntest_observation_after_horizon (__main__.CorrectedRawNegatives.test_observation_after_horizon) ... ok\ntest_omitted_observation_charge (__main__.CorrectedRawNegatives.test_omitted_observation_charge) ... ok\ntest_unreconciled_token_lease (__main__.CorrectedRawNegatives.test_unreconciled_token_lease) ... ok\ntest_untampered_is_valid_and_eligible (__main__.CorrectedRawNegatives.test_untampered_is_valid_and_eligible) ... ok\ntest_write_cannot_precede_its_source (__main__.CorrectedRawNegatives.test_write_cannot_precede_its_source) ... ok\ntest_wrong_actual_source_payload (__main__.CorrectedRawNegatives.test_wrong_actual_source_payload) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 4.948s\n\nOK",
+  "stdout": ""
+}

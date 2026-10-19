@@ -1,0 +1,34 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-f",
+        "infra/compose.yaml",
+        "--project-name",
+        "paper2-research",
+        "down",
+        "--volumes",
+        "--remove-orphans"
+      ],
+      "returncode": 0,
+      "stderr": " Container paper2-research-database-1  Stopping\n Container paper2-research-cache-old-2-1  Stopping\n Container paper2-research-cache-old-1-1  Stopping\n Container paper2-research-cache-new-1  Stopping\n Container paper2-research-database-1  Stopped\n Container paper2-research-database-1  Removing\n Container paper2-research-cache-old-1-1  Stopped\n Container paper2-research-cache-old-1-1  Removing\n Container paper2-research-cache-new-1  Stopped\n Container paper2-research-cache-new-1  Removing\n Container paper2-research-cache-old-1-1  Removed\n Container paper2-research-database-1  Removed\n Container paper2-research-cache-old-2-1  Stopped\n Container paper2-research-cache-old-2-1  Removing\n Container paper2-research-cache-new-1  Removed\n Container paper2-research-cache-old-2-1  Removed\n Network paper2-research_default  Removing\n Network paper2-research_default  Removed\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-q",
+        "--filter",
+        "label=com.docker.compose.project=paper2-research"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "stopped": true,
+  "utc": "2026-10-19T05:48:54.302671+00:00"
+}

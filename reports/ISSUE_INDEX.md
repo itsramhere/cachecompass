@@ -27,14 +27,16 @@
 | ISSUE-0023 | 4 independent review | verified | Common probes, isolated pools, workload and warm/horizon accounting verified by complete replacement matrix | [Record](issues/ISSUE-0023.md) |
 | ISSUE-0024 | 4 independent review | verified | Raw fail-closed inference, run-level uncertainty and exact table/figure regeneration verified | [Record](issues/ISSUE-0024.md) |
 | ISSUE-0025 | 4 independent review | verified | Expired-acquisition orphan fixed; 107 tests and all replacement runs pass without stopped issuance | [Record](issues/ISSUE-0025.md) |
+| ISSUE-0026 | 5 independent review | verified | Shared Linux TTL guard retained; actual-client regression passes | [Record](issues/ISSUE-0026.md) |
+| ISSUE-0027 | 5 independent review | verified | Grant renewal plus independent token/retry corrections verified | [Record](issues/ISSUE-0027.md) |
+| ISSUE-0028 | 5 independent review | verified | Current environment executes corrected matrix; historical blocked launch preserved | [Record](issues/ISSUE-0028.md) |
+| ISSUE-0029 | 5 independent review | verified | Pressure provenance, in-flight work and known history corrected | [Record](issues/ISSUE-0029.md) |
+| ISSUE-0030 | 5 independent review | verified | Staged admissions, generation returns and issued-only retries verified | [Record](issues/ISSUE-0030.md) |
+| ISSUE-0031 | 5 independent review | verified | Fixed observation horizon and explicit failure accounting verified | [Record](issues/ISSUE-0031.md) |
+| ISSUE-0032 | 5 independent review | verified | Raw replay, shared tuning and conditional mixed capacity verified | [Record](issues/ISSUE-0032.md) |
+| ISSUE-0033 | 5 independent review | verified | Outer watchdog failure preserved; bounded full replacement completed | [Record](issues/ISSUE-0033.md) |
+| ISSUE-0034 | 5 independent review | verified | Token balance/event clock unified; strict replay passes | [Record](issues/ISSUE-0034.md) |
+| ISSUE-0035 | 5 independent review | accepted_limitation | 16/s operating point rejected by dispatch criterion; common12 conditional point used | [Record](issues/ISSUE-0035.md) |
+| ISSUE-0036 | 5 independent review | verified | Failed observation prefixes validated without inventing unissued work | [Record](issues/ISSUE-0036.md) |
 
-No open Phase 0 blocker. Failed bootstrap.log/bootstrap-error.txt and original inspection are retained; successful bootstrap-rerun.json, doctor-001.json and phase0-health-001 explicitly provide their corrective verification. Duplicate-run-guard.json has expected exit 1 and is a successful preservation check, not an incident or scientific failed run.
-
-Phase 1 has no dependency blocker for characterization. ISSUE-0004 remains an accepted access limitation, not a fixed defect. No performance experiment has run; failed HTTP access and successful alternate metadata diagnostics are retained together. The existing reviewer finding R1 concerned the earlier absent Phase 1 submission; the implementation handoff at reports/phase_01.md supplies the requested deliverables for renewed review without changing that historical review.
-
-Phase 2 has no open gate blocker. ISSUE-0005 preserves the failed sandbox launcher invocation and the unchanged successful suite through the established approved native Python 3.12 boundary. No services or scientific runs were started; no results were invalidated.
-
-The independent Phase 2 review supersedes the original assessment after correcting ISSUE-0006 through ISSUE-0008. Original source, initial pass, negative failures, linked reruns and preservation results are under reports/reviews/evidence/phase2_20261018_1821/. Historical Phase 1 reviewer F04/F05 tooling/reporting concerns are not recertified by this Phase 2 gate; no claim is made that every literature retrieval failure path is repaired. ISSUE-0004 remains an accepted access limitation.
-
-The original Phase 3 implementation-owner PASS is superseded by the independent runtime review. ISSUE-0017 through ISSUE-0020 are now verified with 90 final checks, 17 actual-client cases, two recreated-cache expansion runs and complete failure-path accounting. Historical failures/runs remain unchanged. Current evidence and limits: [independent review](reviews/phase_03_independent_20261019.md). No Phase 4 calibration or performance evaluation was performed.
-
+Phase5 passes after independent corrections. Authority: [phase_05_independent_20261019_051928.md](reviews/phase_05_independent_20261019_051928.md). All original source, failures and superseded cases remain retained. ISSUE-0004 literature access and ISSUE-0035 conditional operating-point variability are accepted limitations, not fixed defects. No Phase6 implementation, commit or push. Earlier phase assessments remain in their immutable reviews and reports; this living index records current issue states.

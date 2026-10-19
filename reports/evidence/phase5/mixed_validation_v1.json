@@ -1,0 +1,57 @@
+{
+  "runs": [
+    {
+      "checks": {
+        "actual_pool_bounds": true,
+        "artifact_seal": true,
+        "common_noncatchup_probes": true,
+        "complete_initial_state": true,
+        "empty_physical_reset": true,
+        "fixed_horizon": true,
+        "individual_probe_charges": true,
+        "mixed_offer_terminal_identity": true,
+        "mixed_payload_and_chronology": true,
+        "no_diagnostics": true,
+        "no_router_migration": true,
+        "offer_arrival_identity": true,
+        "required_artifacts": true,
+        "source_identity": true,
+        "warm_stability_raw": true
+      },
+      "counts": {
+        "db_attempts": 100,
+        "offered": 80
+      },
+      "errors": [],
+      "run_id": "p5mix8_v1_20261019",
+      "valid": true
+    },
+    {
+      "checks": {
+        "actual_pool_bounds": true,
+        "artifact_seal": true,
+        "common_noncatchup_probes": true,
+        "complete_initial_state": true,
+        "empty_physical_reset": true,
+        "fixed_horizon": true,
+        "individual_probe_charges": true,
+        "mixed_offer_terminal_identity": true,
+        "mixed_payload_and_chronology": true,
+        "no_diagnostics": true,
+        "no_router_migration": true,
+        "offer_arrival_identity": true,
+        "required_artifacts": true,
+        "source_identity": true,
+        "warm_stability_raw": true
+      },
+      "counts": {
+        "db_attempts": 132,
+        "offered": 112
+      },
+      "errors": [],
+      "run_id": "p5mix12_v1_20261019",
+      "valid": true
+    }
+  ],
+  "valid": true
+}

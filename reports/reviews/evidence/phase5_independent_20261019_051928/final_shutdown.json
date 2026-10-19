@@ -1,0 +1,16 @@
+{
+  "command": {
+    "argv": [
+      "docker",
+      "ps",
+      "-q",
+      "--filter",
+      "label=com.docker.compose.project=paper2-research"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "stopped": true,
+  "utc": "2026-10-19T06:13:56.546856+00:00"
+}

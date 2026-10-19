@@ -1,0 +1,632 @@
+[
+  {
+    "run_id": "p5matrix_v1_20261019_smoke0",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "forbidden_discretionary_budget": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "donor_bytes": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "donor_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_smoke1",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "forbidden_warming_adaptation": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 251224.1741004799
+      },
+      "destination_write_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.66805375999995
+      },
+      "donor_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250783.179997184
+      },
+      "donor_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.452724608
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_smoke2",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250205.92344268804
+      },
+      "destination_write_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.17086105600002
+      },
+      "donor_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250024.472608768
+      },
+      "donor_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.082262016
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_smoke3",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "independent_fixed_tick_prefix": true,
+      "forbidden_warming_adaptation": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250260.58387455993
+      },
+      "destination_write_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.19755071999997
+      },
+      "donor_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250123.98483046406
+      },
+      "donor_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.13085196800003
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_smoke4",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "independent_fixed_tick_prefix": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250111.896190976
+      },
+      "destination_write_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.124949312
+      },
+      "donor_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 249988.10392985604
+      },
+      "donor_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.06450387200002
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_smoke5",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "forbidden_warming_adaptation": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250324.80312524806
+      },
+      "destination_write_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.22890777600003
+      },
+      "donor_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250189.31216384005
+      },
+      "donor_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.16275008000002
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_tune0A",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "forbidden_discretionary_budget": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "donor_bytes": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "donor_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_tune0B",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "forbidden_discretionary_budget": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "donor_bytes": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "donor_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_tune1A",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "forbidden_warming_adaptation": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250058.99684249598
+      },
+      "destination_write_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.09911955199999
+      },
+      "donor_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 249981.2368056321
+      },
+      "donor_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.06115078400005
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_tune1B",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "forbidden_warming_adaptation": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250309.00947353596
+      },
+      "destination_write_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.22119603199998
+      },
+      "donor_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250165.87072307192
+      },
+      "donor_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.15130406399996
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_tune2A",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250175.04137216
+      },
+      "destination_write_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.15578192
+      },
+      "donor_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250084.9460183039
+      },
+      "donor_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.11179004799995
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_tune2B",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250257.7963663359
+      },
+      "destination_write_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.19618963199996
+      },
+      "donor_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250127.78185523194
+      },
+      "donor_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.13270598399997
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_tune3A",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "independent_fixed_tick_prefix": true,
+      "forbidden_warming_adaptation": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250154.5461022722
+      },
+      "destination_write_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.1457744640001
+      },
+      "donor_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250060.16207257603
+      },
+      "donor_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.09968851200001
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_tune3B",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "independent_fixed_tick_prefix": true,
+      "forbidden_warming_adaptation": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 251904.0,
+        "integrated_empty_start_rate_units": 266160.57665945607
+      },
+      "destination_write_operations": {
+        "issued_units": 123.0,
+        "integrated_empty_start_rate_units": 129.96121907200003
+      },
+      "donor_bytes": {
+        "issued_units": 251904.0,
+        "integrated_empty_start_rate_units": 264664.01674854406
+      },
+      "donor_operations": {
+        "issued_units": 123.0,
+        "integrated_empty_start_rate_units": 129.23047692800003
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_tune4A",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "independent_fixed_tick_prefix": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250267.16119859213
+      },
+      "destination_write_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.20076230400007
+      },
+      "donor_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250195.25837619195
+      },
+      "donor_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.16565350399998
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_tune4B",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "independent_fixed_tick_prefix": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250313.68468070394
+      },
+      "destination_write_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.22347884799997
+      },
+      "donor_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250214.71535923207
+      },
+      "donor_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.17515398400003
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_tune5A",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "forbidden_warming_adaptation": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250350.22086963203
+      },
+      "destination_write_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.24131878400001
+      },
+      "donor_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 249950.34601881605
+      },
+      "donor_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.04606739200003
+      }
+    },
+    "failed": []
+  },
+  {
+    "run_id": "p5matrix_v1_20261019_tune5B",
+    "checks": {
+      "successful_payload_required": true,
+      "raw_summary_recomputed": true,
+      "independent_atomic_epoch_route_replay": true,
+      "foreground_source_owner_identity": true,
+      "finite_retry_ceilings": true,
+      "empty_start_cumulative_token_envelopes": true,
+      "forbidden_warming_adaptation": true
+    },
+    "tokens": {
+      "background_db_operations": {
+        "issued_units": 0.0,
+        "integrated_empty_start_rate_units": 0.0
+      },
+      "destination_write_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250275.23641344003
+      },
+      "destination_write_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.20470528000001
+      },
+      "donor_bytes": {
+        "issued_units": 249856.0,
+        "integrated_empty_start_rate_units": 250091.02494105595
+      },
+      "donor_operations": {
+        "issued_units": 122.0,
+        "integrated_empty_start_rate_units": 122.11475827199997
+      }
+    },
+    "failed": []
+  }
+]

@@ -14,13 +14,14 @@ from .contracts import (
 class BoundedDemandTracker:
     def __init__(self, *, subwindow_ns: int, retained_subwindows: int,
                  max_total_keys: int, max_keys_per_bucket: int, max_buckets: int,
-                 max_age_ns: int, origin_ns: int = 0) -> None:
+                 max_age_ns: int, origin_ns: int = 0, reserve_open_subwindow: bool = False) -> None:
         values = (subwindow_ns, retained_subwindows, max_total_keys,
                   max_keys_per_bucket, max_buckets, max_age_ns)
         if any(type(value) is not int or value < 1 for value in values):
             raise ValueError("all demand bounds must be positive integers")
         self.subwindow_ns = subwindow_ns
         self.retained_subwindows = retained_subwindows
+        self._history_slots = retained_subwindows + int(reserve_open_subwindow)
         self.max_total_keys = max_total_keys
         self.max_keys_per_bucket = max_keys_per_bucket
         self.max_buckets = max_buckets
@@ -54,17 +55,17 @@ class BoundedDemandTracker:
         return MappingProxyType(dict(self._registry))
 
     def _rotate(self, slot: int) -> None:
-        if self._slots and slot < max(self._slots)-(self.retained_subwindows-1)*self.subwindow_ns:
+        if self._slots and slot < max(self._slots)-(self._history_slots-1)*self.subwindow_ns:
             raise ValueError('observation older than retained demand history')
         self._slots.setdefault(slot, {})
         self._overflow.setdefault(slot, {})
         self._slots = OrderedDict(sorted(self._slots.items()))
         latest = max(self._slots)
         for old in tuple(self._slots):
-            if old < latest-(self.retained_subwindows-1)*self.subwindow_ns:
+            if old < latest-(self._history_slots-1)*self.subwindow_ns:
                 self._slots.pop(old)
                 self._overflow.pop(old, None)
-        while len(self._slots) > self.retained_subwindows:
+        while len(self._slots) > self._history_slots:
             old, _ = self._slots.popitem(last=False)
             self._overflow.pop(old, None)
 

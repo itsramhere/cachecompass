@@ -1,0 +1,179 @@
+{
+  "records": [
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/continuation_command.json",
+      "sha256": "35fd6acd2be633e5b9b3ac392b550db085e6054006c1a52811e87d9d457b4258",
+      "exit_code": 1,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/failed_probe_before.json",
+      "sha256": "8ec14957f47486d22b33478d44fe731df6d4b55f2e976a9878a9aa066fc1f78e",
+      "exit_code": 1,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/failed_probe_corrected.json",
+      "sha256": "20cca46e2a1e51c3ae43209f9236a786d369650fcc5ce7e314e0f6f8099afbd1",
+      "exit_code": 0,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/final_audit_command.json",
+      "sha256": "a6a150de22fe04d1407544a9e6fca5418d6796d51d2afd725a659bea950826c3",
+      "exit_code": 1,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/final_audit_corrected_command.json",
+      "sha256": "4ef15447e73df38da8e5e282454b49020ae6a95d965a4e848899b987ef0f43cf",
+      "exit_code": 0,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/final_service_free.json",
+      "sha256": "db1359a10717d077fcd25cc0c7cfbf6acbcda4eb7ea3576933a80ad03b8dfadc",
+      "exit_code": 0,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/final_shutdown.json",
+      "sha256": "0586d54f110c6cc22d611751efbcd711047763988eca12d3232942de60d3283d",
+      "exit_code": null,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/independent_corrected_first.json",
+      "sha256": "a8a3404b066f1aa96b9c1e2120e120d3a0af6a619ae347b2a7a7edd2151e9ca2",
+      "exit_code": 0,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/interrupted_matrix_shutdown.json",
+      "sha256": "2f2e04d9c804fde595eb269dbeb24f0843fccb2a24c96399b44ff94ad74d56f0",
+      "exit_code": null,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/live_final.json",
+      "sha256": "1500ce8aa5cd09834889bb004005cd6b44035c82c9b182c68868c48df4f9a73e",
+      "exit_code": null,
+      "services_stopped": true
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/live_first.json",
+      "sha256": "373a7487dc88553334e1c18749f6e5f0704c48958b71618a5f79f44c0eb03b1f",
+      "exit_code": null,
+      "services_stopped": true
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/live_frozen.json",
+      "sha256": "d94c394c0b2b67bf1b26d2d1b4ae804d4a3a02be9eb565f61aecafbbf69878bb",
+      "exit_code": null,
+      "services_stopped": true
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/live_lower_final.json",
+      "sha256": "c92944fa458f226cff0d8ad8bfaf24efa2bf261f971032eae83ca53d15f5c03a",
+      "exit_code": null,
+      "services_stopped": true
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/live_probe_failure.json",
+      "sha256": "d9f1dfbd37e4f9408069ba6b97d098f544ca1ba52f6f61194b49a1f8ee05fcdc",
+      "exit_code": null,
+      "services_stopped": true
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/lower_replacement_command.json",
+      "sha256": "f222665c6ca1e6758399495602509810de39028c79b4b2b49fd77bd5ad00ffe1",
+      "exit_code": 0,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/matrix_command.json",
+      "sha256": "a398745ad93beca47259d61ef402a64e13febbd187199c77f4dfbec9d3164fd6",
+      "exit_code": null,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/post_analysis_regressions.json",
+      "sha256": "18c9caf5efcd0b0fa9f521317bdab39c9a85efcdb8371b31b6bffbd166a6dfaa",
+      "exit_code": 0,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/publication_verify_command.json",
+      "sha256": "590c2798ed0377d0e05ee7d96db8d3dfba96ed335e3ce9f3c0a0322cd63c6a43",
+      "exit_code": 0,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/replacement_command.json",
+      "sha256": "c926598506cb8005abc413219325fee43faff15a204b91c542fe6b8cd64ec2ce",
+      "exit_code": 1,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/runtime_correction_first.json",
+      "sha256": "ec37e16a16897b0925efbc886041e80bc86296f5ea2761818ec44b1728e96edb",
+      "exit_code": 1,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/schema6_final_resealed_checks.json",
+      "sha256": "4dfd1bbab2a1efe615f030d456c263060e3c02597a4802faeb39ec33ec4bbaa8",
+      "exit_code": 0,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/schema6_resealed_checks.json",
+      "sha256": "271e4d557d15418f96c17f9015f51245f72c5c4dc46e98348c2d5d622d98f5e7",
+      "exit_code": 0,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/service_free_corrected.json",
+      "sha256": "562bf07895e067003c4e9b90db43c591dcba4de6d6b70dc22e912b00c0be9d68",
+      "exit_code": 0,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/service_free_first.json",
+      "sha256": "e1d718eb12e774e3848a408bbd43a76b4fd520240a641f8e567a891904913006",
+      "exit_code": 1,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/submitted_negatives.json",
+      "sha256": "916ab3b22e4e9ad1cdbc3545b2b9ede232078b633ebce8550fadd3b2ddcaf795",
+      "exit_code": 1,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/token_clock_before.json",
+      "sha256": "ab1c1aa2bf3f694161ff6ca3aa080a3a1582a0917dc054d1579fc36cafed54be",
+      "exit_code": 1,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/token_clock_corrected.json",
+      "sha256": "c9a8297bcf476fcc91d15d515ca2bb03ed8c4c2932b630ae7c76e80c8aaa8228",
+      "exit_code": 0,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/token_replay_diagnostic.json",
+      "sha256": "4ad3537116caa3624d2a958ad52efb4d962315e085be4e67708d78b081cc3ce4",
+      "exit_code": 0,
+      "services_stopped": null
+    },
+    {
+      "path": "reports/reviews/evidence/phase5_independent_20261019_051928/tuning_before.json",
+      "sha256": "449803653e437c0989d8292bf546d3315bec324950b604e816f216d8d3407fef",
+      "exit_code": 1,
+      "services_stopped": null
+    }
+  ],
+  "note": "Retains failed, superseded and successful commands separately; matrix child records are in reports/evidence/phase5/p5ind_20261019_m3/."
+}

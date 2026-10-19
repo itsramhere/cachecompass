@@ -18,12 +18,18 @@ from .issuance import issuing
 TRANSIENT_ERRORS = (TimeoutError, OSError, ConnectionError)
 
 
+class UnissuedRetry(TimeoutError):
+    """A provisional client wait did not issue; retain its retry ordinal."""
+
+
 @dataclass(slots=True)
 class _DestinationReservation:
     enforcer: "GrantEnforcer"
     reserved_bytes: int
     issued: bool = False
     generation: int = 0
+    source_token_event: int | None = None
+    write_token_event: int | None = None
 
     def issue(self) -> None:
         self.issued = True
@@ -147,11 +153,12 @@ class MigrationResult:
     source: str | None
     attempts: int
     reason: str
+    terminal_ns: int = 0
 
 
 class TokenBuckets:
     """Five independent monotonic token dimensions, empty on expansion."""
-    def __init__(self, rates: dict[str, float], bursts: dict[str, int], clock=time.monotonic_ns):
+    def __init__(self, rates: dict[str, float], bursts: dict[str, int], clock=time.monotonic_ns, max_events=16384):
         self.clock = clock
         self.rates = dict(rates)
         self.bursts = dict(bursts)
@@ -162,6 +169,29 @@ class TokenBuckets:
             raise ValueError("positive integer bursts required")
         self.tokens = {name: 0.0 for name in rates}
         self.updated = clock()
+        self.max_events=max_events
+        self.events=[]
+        self._event('init',at_ns=self.updated,rates=self.rates.copy(),bursts=self.bursts.copy())
+
+    def _event(self,kind,*,at_ns=None,**detail):
+        if len(self.events)>=self.max_events:raise BufferError('bounded token history exhausted')
+        identifier=len(self.events)
+        self.events.append({'event_id':identifier,'kind':kind,'at_ns':self.clock() if at_ns is None else at_ns,**detail})
+        return identifier
+
+    def set_rates(self,rates):
+        self.refill()
+        self.rates=dict(rates)
+        for d,value in rates.items():
+            if value==0:self.tokens[d]=0.
+        self._event('rates',at_ns=self.updated,rates=self.rates.copy())
+
+    def return_unissued(self,amounts,*,event_id,permitted):
+        self.refill()
+        if permitted:
+            for d,amount in amounts.items():
+                if self.rates[d]>0:self.tokens[d]=min(self.bursts[d],self.tokens[d]+amount)
+        self._event('refund' if permitted else 'forfeit',at_ns=self.updated,amounts=amounts.copy(),acquire_event_id=event_id)
 
     def refill(self):
         now = self.clock()
@@ -178,9 +208,10 @@ class TokenBuckets:
             if self.clock() >= deadline_ns:
                 raise TimeoutError("token/task/grant deadline expired")
             if all(self.tokens[name] >= amount for name, amount in amounts.items()):
+                event=self._event('acquire',at_ns=self.updated,amounts=amounts.copy())
                 for name, amount in amounts.items():
                     self.tokens[name] -= amount
-                return
+                return event
             delay = max((amount - self.tokens[name]) / self.rates[name]
                         if self.rates[name] else float('inf') for name, amount in amounts.items())
             remaining = (deadline_ns - self.clock()) / 1e9
@@ -225,7 +256,7 @@ class BoundedMigrationScheduler:
         dimensions = ("donor_operations", "donor_bytes", "background_db_operations",
                       "destination_write_operations", "destination_write_bytes")
         self.tokens = TokenBuckets(rates or {name: 1_000_000. for name in dimensions},
-                                  bursts or {name: 65536 for name in dimensions})
+                                  bursts or {name: 65536 for name in dimensions},max_events=max_operation_records*8)
         self.cleanup_timeout_seconds = cleanup_timeout_seconds
         self._running = False
         self.maximum_queue_depth = 0
@@ -260,7 +291,7 @@ class BoundedMigrationScheduler:
             self._buffer_condition.notify_all()
 
     async def migrate(self, items: tuple[DatasetItem, ...], *, deadline_ns: int,
-                      allow_db_fallback: bool = True) -> tuple[MigrationResult, ...]:
+                      allow_db_fallback: bool = True, order_key=None, on_result=None) -> tuple[MigrationResult, ...]:
         if self._running or self._stopped:
             raise RuntimeError("migration pass already active or stopped after cleanup failure")
         if len({item.key for item in items}) != len(items):
@@ -273,6 +304,7 @@ class BoundedMigrationScheduler:
                 raise ValueError("migration destination disagrees with final map")
         queue: asyncio.Queue[DatasetItem | None] = asyncio.Queue(self.queue_limit)
         results: list[MigrationResult] = []
+        unissued = {item.key: item for item in items}
 
         async def worker() -> None:
             while True:
@@ -280,10 +312,16 @@ class BoundedMigrationScheduler:
                 try:
                     if item is None:
                         return
+                    if order_key is not None:
+                        item = min(unissued.values(), key=order_key)
+                    unissued.pop(item.key)
                     self._active_workers += 1
                     self.maximum_workers = max(self.maximum_workers, self._active_workers)
                     try:
-                        results.append(await self._migrate_one(item, deadline_ns, allow_db_fallback))
+                        result = await self._migrate_one(item, deadline_ns, allow_db_fallback)
+                        results.append(result)
+                        if on_result is not None:
+                            on_result(result)
                     finally:
                         self._active_workers -= 1
                 finally:
@@ -318,15 +356,15 @@ class BoundedMigrationScheduler:
     async def _record(self, *, task_id: str, attempt: int, source: DataSource,
                       source_owner: str, destination_owner: str, work_class: WorkClass,
                       outcome: OperationOutcome, issued_bytes: int | None,
-                      reserved_bytes: int, started_ns: int, reason: str) -> None:
+                      reserved_bytes: int, started_ns: int, reason: str, timeout_seconds: float) -> None:
         record = MigrationAttemptRecord(
             1, self.run_id, task_id, attempt, source, source_owner, destination_owner,
-            self.attempt_timeout_seconds, work_class, outcome, 1, issued_bytes,
+            timeout_seconds, work_class, outcome, 1, issued_bytes,
             started_ns, time.monotonic_ns(), reason, reserved_bytes)
         self._attempt_records.append(record)
 
     async def _attempt(self, *, item, stage, attempt, source, source_owner, work_class,
-                       reserved_bytes, deadline_ns, operation, parent_task_id=None):
+                       reserved_bytes, deadline_ns, operation, parent_task_id=None, token_event_id=None, value_payload=None, timeout_seconds=None):
         self._attempt_sequence += 1
         started = time.monotonic_ns()
         row = {"operation_id": f"migration-{self._attempt_sequence:08d}",
@@ -337,8 +375,14 @@ class BoundedMigrationScheduler:
                "work_class": work_class.value, "absolute_deadline_ns": deadline_ns,
                "issued_ns": started, "terminal_ns": None, "outcome": None,
                "reserved_bytes": reserved_bytes, "actual_bytes": None,
-               "retry_ordinal": attempt}
+               "retry_ordinal": attempt,"token_event_id":token_event_id,
+               "timeout_seconds":timeout_seconds or self.attempt_timeout_seconds}
+        if value_payload is not None:
+            import hashlib
+            row['payload_sha256']=hashlib.sha256(value_payload).hexdigest()
+            row['payload_bytes']=len(value_payload)
         generation = self.grants.last_decided_at_ns
+        row["grant_generation_ns"] = generation
         issued = False
         def issue():
             nonlocal issued
@@ -373,13 +417,19 @@ class BoundedMigrationScheduler:
             if actual is not None and actual > reserved_bytes:
                 raise ValueError("encoded response exceeds reservation")
             row['actual_bytes'] = actual
+            observed_payload=value_payload if value_payload is not None else getattr(value,'payload',None)
+            import hashlib
+            row['payload_sha256']=hashlib.sha256(observed_payload).hexdigest() if observed_payload is not None else None
+            row['payload_bytes']=len(observed_payload) if observed_payload is not None else None
+            if hasattr(result,'valid_until_ns'):row['residency_valid_until_ns']=result.valid_until_ns
             outcome = OperationOutcome.COMPLETED
             return result
         except asyncio.CancelledError:
             outcome = OperationOutcome.CANCELLED
             raise
-        except TimeoutError:
+        except TimeoutError as error:
             outcome = OperationOutcome.TIMED_OUT
+            if not issued:raise UnissuedRetry(str(error)) from error
             raise
         finally:
             row.update(outcome=outcome.value, terminal_ns=time.monotonic_ns())
@@ -387,7 +437,7 @@ class BoundedMigrationScheduler:
                 await self._record(task_id=row['task_id'], attempt=attempt, source=source,
                     source_owner=source_owner, destination_owner=str(self.destination_cache.node_id),
                     work_class=work_class, outcome=outcome, issued_bytes=row['actual_bytes'],
-                    reserved_bytes=reserved_bytes, started_ns=row['issued_ns'], reason=stage)
+                    reserved_bytes=reserved_bytes, started_ns=row['issued_ns'], reason=stage,timeout_seconds=row['timeout_seconds'])
             else:
                 if hasattr(operation, 'close'):
                     operation.close()
@@ -395,10 +445,9 @@ class BoundedMigrationScheduler:
                 dimensions = {WorkClass.DONOR_READ: ('donor_operations','donor_bytes'),
                               WorkClass.DISCRETIONARY_DATABASE_WARMUP: ('background_db_operations',),
                               WorkClass.DESTINATION_WRITE: ('destination_write_operations','destination_write_bytes')}[work_class]
-                self.tokens.refill()
-                for dimension in dimensions:
-                    amount = reserved_bytes if dimension.endswith('bytes') else 1
-                    self.tokens.tokens[dimension] = min(self.tokens.bursts[dimension], self.tokens.tokens[dimension]+amount)
+                amounts={d:reserved_bytes if d.endswith('bytes') else 1 for d in dimensions}
+                self.tokens.return_unissued(amounts,event_id=token_event_id,
+                    permitted=generation==self.grants.last_decided_at_ns and self.grants._valid())
 
     async def _migrate_one(self, item: DatasetItem, deadline_ns: int,
                            allow_db_fallback: bool) -> MigrationResult:
@@ -413,11 +462,12 @@ class BoundedMigrationScheduler:
         attempts = 0
         value = None
         source_name = None
+        source_missing = False
         reservation = None
         acquired = False
         def terminal(reason):
             count = sum(row['key'] == item.key for row in self.operation_records)
-            return MigrationResult(item.key, bucket, "not_warmed", source_name, count, reason)
+            return MigrationResult(item.key, bucket, "not_warmed", source_name, count, reason,time.monotonic_ns())
         try:
             await self._buffer_acquire(size, deadline_ns)
             acquired = True
@@ -432,7 +482,8 @@ class BoundedMigrationScheduler:
                  "database", WorkClass.DISCRETIONARY_DATABASE_WARMUP)):
                 if value is not None or (stage == "database" and not allow_db_fallback):
                     break
-                for attempt in range(1, policy.max_attempts + 1):
+                attempt=1
+                while attempt<=policy.max_attempts and time.monotonic_ns()<deadline_ns:
                     reservation, issued = await self._source_slot(reservation, encoded_bound, stage, deadline_ns)
                     if not issued:
                         break
@@ -446,16 +497,23 @@ class BoundedMigrationScheduler:
                         result = await self._attempt(item=item, stage=stage, attempt=attempt,
                             source=source, source_owner=owner, work_class=work_class,
                             reserved_bytes=encoded_bound, deadline_ns=attempt_deadline,
-                            operation=operation)
+                            operation=operation,token_event_id=reservation.source_token_event,timeout_seconds=policy.attempt_timeout_seconds)
                         value = result.value if stage == "donor" else result
+                        if stage == "donor" and value is None:
+                            source_missing = True
                         if value is not None:
                             source_name = "donor_cache" if stage == "donor" else "database"
                         break
+                    except UnissuedRetry:
+                        continue
                     except TRANSIENT_ERRORS:
                         if attempt < policy.max_attempts:
                             await self._sleep_backoff(policy.backoff_seconds[attempt-1], deadline_ns)
+                        attempt+=1
             if value is None:
-                return terminal("source_exhausted_or_db_budget_unavailable")
+                return terminal("donor_missing_db_fallback_disabled" if source_missing and not allow_db_fallback
+                                else "donor_missing_db_budget_or_deadline" if source_missing
+                                else "source_exhausted_or_db_budget_unavailable")
             if value.payload != item.payload:
                 raise ValueError(f"authoritative payload mismatch for {item.key}")
             # Registry expiry caps both donor and authoritative values, even if a
@@ -469,7 +527,8 @@ class BoundedMigrationScheduler:
                 self.residency.invalidate(item.key, state=self.residency_state_expired,
                                           observed_at_ns=time.monotonic_ns())
                 return terminal("expired_before_destination_write")
-            for attempt in range(1, self.write_retry.max_attempts + 1):
+            attempt=1
+            while attempt<=self.write_retry.max_attempts and time.monotonic_ns()<deadline_ns:
                 if attempt > 1:
                     reservation = await self._wait_grant(self.grants.reserve_destination, encoded_bound, deadline_ns)
                 if reservation is None:
@@ -486,13 +545,18 @@ class BoundedMigrationScheduler:
                         work_class=WorkClass.DESTINATION_WRITE, reserved_bytes=encoded_bound,
                         deadline_ns=attempt_deadline,
                         operation=self.destination_cache.write(item.key, value, deadline_ns=attempt_deadline),
-                        parent_task_id=f"{'donor' if source_name == 'donor_cache' else 'database'}:{bucket}:{item.key}")
-                    self.residency.confirm(item.key, observed_at_ns=time.monotonic_ns(),
-                                           valid_until_ns=receipt.valid_until_ns)
-                    return MigrationResult(item.key, bucket, "warmed", source_name, attempts, "written")
+                        parent_task_id=f"{'donor' if source_name == 'donor_cache' else 'database'}:{bucket}:{item.key}",
+                        token_event_id=reservation.write_token_event,value_payload=value.payload,timeout_seconds=self.write_retry.attempt_timeout_seconds)
+                    confirmed=time.monotonic_ns()
+                    self.residency.confirm(item.key, observed_at_ns=confirmed,valid_until_ns=receipt.valid_until_ns)
+                    next(r for r in reversed(self.operation_records) if r['key']==item.key and r['operation']=='write' and r['outcome']=='completed')['residency_confirmed_ns']=confirmed
+                    return MigrationResult(item.key, bucket, "warmed", source_name,sum(row["key"]==item.key for row in self.operation_records), "written",time.monotonic_ns())
+                except UnissuedRetry:
+                    continue
                 except TRANSIENT_ERRORS:
                     if attempt < self.write_retry.max_attempts:
                         await self._sleep_backoff(self.write_retry.backoff_seconds[attempt-1], deadline_ns)
+                    attempt+=1
             return terminal("destination_write_retries_exhausted")
         except TimeoutError:
             return terminal("task_or_grant_deadline_expired")
@@ -507,10 +571,9 @@ class BoundedMigrationScheduler:
         from .contracts import ResidencyState
         return ResidencyState.EXPIRED
 
-    def _return_tokens(self, dimensions):
-        self.tokens.refill()
-        for name, amount in dimensions.items():
-            self.tokens.tokens[name] = min(self.tokens.bursts[name], self.tokens.tokens[name]+amount)
+    def _return_tokens(self, dimensions, *, generation, event_id):
+        self.tokens.return_unissued(dimensions,event_id=event_id,
+            permitted=generation==self.grants.last_decided_at_ns and self.grants._valid())
 
     async def _renew_destination(self, reservation, size, deadline_ns):
         if reservation is not None:
@@ -536,20 +599,22 @@ class BoundedMigrationScheduler:
                 reservation = await self._renew_destination(reservation,size,deadline_ns)
                 if reservation is None:
                     return None, False
+            waiting_generation = self.grants.last_decided_at_ns
             try:
-                await self.tokens.acquire(dimensions,min(deadline_ns,self.grants.valid_until_ns))
+                token_event=await self.tokens.acquire(dimensions,min(deadline_ns,self.grants.valid_until_ns))
             except TimeoutError:
-                if time.monotonic_ns() < deadline_ns and not self.grants._valid():
+                if time.monotonic_ns() < deadline_ns and (waiting_generation != self.grants.last_decided_at_ns or not self.grants._valid()):
                     continue
                 raise
             if reservation.generation != self.grants.last_decided_at_ns:
-                self._return_tokens(dimensions)
+                self._return_tokens(dimensions,generation=waiting_generation,event_id=token_event)
                 continue
             issued = (await self.grants.issue_donor(size) if stage == 'donor'
                       else await self.grants.issue_database())
             if issued:
+                reservation.source_token_event=token_event
                 return reservation, True
-            self._return_tokens(dimensions)
+            self._return_tokens(dimensions,generation=waiting_generation,event_id=token_event)
             try:
                 async with asyncio.timeout(max(0,(deadline_ns-time.monotonic_ns())/1e9)):
                     await self.grants.changed.wait()
@@ -565,20 +630,22 @@ class BoundedMigrationScheduler:
                 reservation = await self._renew_destination(reservation,size,deadline_ns)
                 if reservation is None:
                     return None
+            waiting_generation = self.grants.last_decided_at_ns
             try:
-                await self.tokens.acquire(dimensions,min(deadline_ns,self.grants.valid_until_ns))
+                token_event=await self.tokens.acquire(dimensions,min(deadline_ns,self.grants.valid_until_ns))
             except TimeoutError:
-                if time.monotonic_ns() < deadline_ns and not self.grants._valid():
+                if time.monotonic_ns() < deadline_ns and (waiting_generation != self.grants.last_decided_at_ns or not self.grants._valid()):
                     continue
                 raise
             if reservation.generation != self.grants.last_decided_at_ns:
-                self._return_tokens(dimensions)
+                self._return_tokens(dimensions,generation=waiting_generation,event_id=token_event)
                 continue
             try:
                 await self.grants.issue_destination(reservation)
+                reservation.write_token_event=token_event
                 return reservation
             except TimeoutError:
-                self._return_tokens(dimensions)
+                self._return_tokens(dimensions,generation=waiting_generation,event_id=token_event)
         return None
 
     async def _wait_grant(self, method, size, deadline_ns):

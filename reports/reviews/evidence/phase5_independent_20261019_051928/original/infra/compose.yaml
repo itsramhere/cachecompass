@@ -1,0 +1,44 @@
+name: paper2-research
+x-cache: &cache
+  image: ${REDIS_IMAGE:?Run scripts/lock_images.ps1 first}
+  platform: linux/amd64
+  command: [redis-server, --maxmemory, 32mb, --maxmemory-policy, allkeys-lru, --save, "", --appendonly, "no"]
+  cpus: 0.5
+  mem_limit: 128m
+  healthcheck:
+    test: [CMD, redis-cli, ping]
+    interval: 2s
+    timeout: 2s
+    retries: 15
+  labels:
+    org.paper2.purpose: disposable-research
+services:
+  cache-old-1:
+    <<: *cache
+    ports: ["127.0.0.1:16379:6379"]
+  cache-old-2:
+    <<: *cache
+    ports: ["127.0.0.1:16380:6379"]
+  cache-new:
+    <<: *cache
+    ports: ["127.0.0.1:16381:6379"]
+  database:
+    image: ${POSTGRES_IMAGE:?Run scripts/lock_images.ps1 first}
+    platform: linux/amd64
+    environment:
+      POSTGRES_DB: paper2_research
+      POSTGRES_USER: paper2_research
+      POSTGRES_PASSWORD: ${PAPER2_DB_PASSWORD:?Set disposable local DB password}
+    ports: ["127.0.0.1:15432:5432"]
+    cpus: 1.0
+    mem_limit: 512m
+    shm_size: 128m
+    healthcheck:
+      test: [CMD, pg_isready, -U, paper2_research, -d, paper2_research]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+    labels:
+      org.paper2.purpose: disposable-research
+    # No named/shared volume. `down --volumes` removes this disposable dataset.
+

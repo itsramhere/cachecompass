@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_phase5_token_clock.py",
+    "-v"
+  ],
+  "elapsed_seconds": 0.17816203299935296,
+  "ended_utc": "2026-10-19T05:53:07.415972+00:00",
+  "exit_code": 1,
+  "retry_of": null,
+  "started_utc": "2026-10-19T05:53:07.237776+00:00",
+  "stderr": "test_rate_change_and_acquisition_credit_share_one_clock_boundary (test_phase5_token_clock.ClockLinearization.test_rate_change_and_acquisition_credit_share_one_clock_boundary) ... FAIL\n\n======================================================================\nFAIL: test_rate_change_and_acquisition_credit_share_one_clock_boundary (test_phase5_token_clock.ClockLinearization.test_rate_change_and_acquisition_credit_share_one_clock_boundary)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/cachecompass/tests/test_phase5_token_clock.py\", line 17, in test_rate_change_and_acquisition_credit_share_one_clock_boundary\n    self.assertAlmostEqual(b.tokens['operations'],expected,places=10)\nAssertionError: 0.2 != 0.1 within 10 places (0.1 difference)\n\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nFAILED (failures=1)",
+  "stdout": ""
+}
