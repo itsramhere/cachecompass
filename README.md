@@ -1,5 +1,36 @@
 # Local cache scale-out research
 
+Phase 6 `joint_control` has passed independent review after fixes. Read
+[current status](reports/STATUS.md), the [independent review](reports/reviews/phase_06_independent_20261019_0901.md),
+[Phase 6 report](reports/phase_06.md), [handoff](reports/HANDOFF_PHASE6.md),
+[matching pseudocode](docs/JOINT_CONTROLLER.md) and [bounded implementation
+protocol](docs/PHASE6_PROTOCOL.md). Phase 7 remains unstarted. Historical phase
+sections below retain their original context.
+
+From this Windows checkout, with the installed Docker Desktop Linux engine
+running and the existing Python 3.12 environment, use fresh IDs:
+
+```powershell
+& .\.venv\Scripts\python.exe -B scripts/phase6_checks.py --prefix p6-tests-fresh --mode tests
+& .\.venv\Scripts\python.exe -B scripts/phase6_checks.py --prefix p6-cases-fresh --mode cases --total-db-rate 10
+& .\.venv\Scripts\python.exe -B analysis/phase6_validation.py --runs p6-cases-fresh_smoke6 --output reports/evidence/phase6/replay-fresh.json
+```
+
+The driver locates Docker, verifies disposable labels, physically resets only
+`paper2-research`, records every child command/source/config and shuts services
+down in `finally`. It runs two fresh conditional mixed-pool checks before seven
+matched smoke cases, three joint boundaries and two observation-delay checks.
+This is Phase 6 implementation validation, without a final evaluation matrix or
+favorable ranking requirement. A bare numeric capacity is functional-only.
+The historical Linux capacity evidence is not reused as capacity for Windows.
+All seven Phase6 cases use `cache_scaleout.phase6`, selecting the same high
+resolution monotonic clock before runtime imports on Windows. Standalone
+service startup/shutdown remain `scripts/start.ps1` and
+`scripts/shutdown.ps1`; isolated single cases use `scripts/phase5_cycle.py` with
+`--config configs/phase6_v1.yaml --policy joint_control --setting B --total-db-rate 10`
+through the phase6 entry point (the bounded driver records this exactly).
+All Phase 5 conditional-capacity/operating-variability limitations still apply.
+
 Phases 0 through 3 establish the local service environment, verified literature foundation, corrected architecture/contracts, and a verified minimal scale-out system. Phase 3 implements deterministic data and ownership, actual bounded Redis/PostgreSQL adapters, cache-aside reads with per-key shared fills, bounded selective migration, causal observations, append-only telemetry, and a deterministic repeated small run. Comparative policies, capacity calibration, performance experiments, and measured-gain claims remain later-phase work. Read [current status](reports/STATUS.md), [Phase 3 handoff](reports/phase_03.md), [Phase 2 execution contract](docs/PHASE2_EXECUTION_CONTRACT.md), [architecture](docs/ARCHITECTURE.md), [schemas](docs/DATA_SCHEMAS.md), [invariants](docs/INVARIANTS.md), and [issue index](reports/ISSUE_INDEX.md) before resuming.
 
 Supported bootstrap: native Windows PowerShell 5.1, existing CPython 3.12.10 amd64 and Docker Desktop with a running Linux engine. Use the Windows workspace path below; this path and .venv are not WSL processes. Compatibility rationale and official sources are in [docs/ENVIRONMENT_COMPATIBILITY.md](docs/ENVIRONMENT_COMPATIBILITY.md).
